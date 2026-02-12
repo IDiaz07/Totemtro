@@ -16,6 +16,7 @@ MonoBehaviour:
   description: A robust being covered in glowing runes. Its power grows slowly over
     time, like an eternal forge.
   portrait: {fileID: 21300000, guid: 7a337ded45cb93d4ebfe9bd8a53a4b9c, type: 3}
+  bodySprite: {fileID: 21300000, guid: 7a337ded45cb93d4ebfe9bd8a53a4b9c, type: 3}
   maxHealth: 110
   damage: 9
   moveSpeed: 4.8

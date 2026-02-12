@@ -16,6 +16,7 @@ MonoBehaviour:
   description: A taciturn hunter who has mastered the precise shot. He prefers distance,
     patience, and critical hits.
   portrait: {fileID: 21300000, guid: 6e356f97207a7344b8bc8380844ebbee, type: 3}
+  bodySprite: {fileID: 21300000, guid: 6e356f97207a7344b8bc8380844ebbee, type: 3}
   maxHealth: 85
   damage: 14
   moveSpeed: 4.5

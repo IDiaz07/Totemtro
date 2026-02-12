@@ -3,7 +3,7 @@ using UnityEngine;
 public class HeroController : MonoBehaviour
 {
     public HeroData currentHero;
-
+    public SpriteRenderer bodyRenderer;
     public float currentHealth;
 
     PlayerMovement movement;
@@ -20,8 +20,12 @@ public class HeroController : MonoBehaviour
     public void ApplyHero()
     {
         currentHealth = currentHero.maxHealth;
+
         movement.speed = currentHero.moveSpeed;
 
         weapon.SetWeapon(currentHero.startingWeapon);
+
+        bodyRenderer.sprite = currentHero.bodySprite;
     }
+
 }

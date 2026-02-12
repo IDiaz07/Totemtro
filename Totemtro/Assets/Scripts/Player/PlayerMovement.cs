@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    Vector2 recoilOffset;
+    float recoilDecay = 12f;
     public float speed = 5f;
 
     Rigidbody2D rb;
@@ -23,6 +25,27 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+        // Movimiento base
+        Vector2 move = movement * speed;
+
+        // Sumamos el recoil
+        move += recoilOffset;
+
+        // Aplicamos movimiento
+        rb.MovePosition(rb.position + move * Time.fixedDeltaTime);
+
+        // Reducimos el recoil suavemente
+        recoilOffset = Vector2.Lerp(
+            recoilOffset,
+            Vector2.zero,
+            recoilDecay * Time.fixedDeltaTime
+        );
     }
+
+
+    public void ApplyRecoil(Vector2 direction, float force)
+    {
+        recoilOffset += -direction.normalized * force;
+    }
+
 }

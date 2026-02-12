@@ -8,6 +8,9 @@ public class HeroData : ScriptableObject
     [TextArea] public string description;
     public Sprite portrait;
 
+    [Header("Visual")]
+    public Sprite bodySprite;
+
     [Header("Base Stats")]
     public float maxHealth;
     public float damage;

@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class Weapon : MonoBehaviour
@@ -7,6 +7,7 @@ public class Weapon : MonoBehaviour
     public SpriteRenderer spriteRenderer;
 
     float lastAttackTime;
+    bool isSlowed = false;
 
     public void SetWeapon(WeaponData data)
     {
@@ -16,6 +17,8 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
+        if (currentWeapon == null) return;
+
         if (Input.GetMouseButton(0))
         {
             if (Time.time >= lastAttackTime + 1f / currentWeapon.fireRate)
@@ -40,20 +43,42 @@ public class Weapon : MonoBehaviour
         }
     }
 
+    // --------------------------
+    // 🔫 DISPARO
+    // --------------------------
+
     void ShootProjectile()
     {
+        Vector2 shootDirection =
+            (Camera.main.ScreenToWorldPoint(Input.mousePosition)
+            - transform.position).normalized;
+
+        PlayerMovement movement = GetComponentInParent<PlayerMovement>();
+        movement.ApplyRecoil(shootDirection, 5f);
+
         GameObject proj = Instantiate(
             currentWeapon.projectilePrefab,
             transform.position,
-            transform.rotation
+            Quaternion.identity
         );
 
         proj.GetComponent<Projectile>()
-            .Initialize(currentWeapon.damage, currentWeapon.projectileSpeed, currentWeapon.range);
+            .Initialize(currentWeapon.damage,
+                        currentWeapon.projectileSpeed,
+                        currentWeapon.range,
+                        shootDirection);
     }
+
+    // --------------------------
+    // ⚔️ MELEE
+    // --------------------------
 
     void DoMeleeAttack()
     {
+        Vector2 attackDirection =
+            (Camera.main.ScreenToWorldPoint(Input.mousePosition)
+            - transform.position).normalized;
+
         float radius = currentWeapon.meleeRadius;
         float angle = currentWeapon.meleeAngle;
 
@@ -63,12 +88,15 @@ public class Weapon : MonoBehaviour
         {
             if (!hit.CompareTag("Enemy")) continue;
 
-            Vector2 dirToEnemy = (hit.transform.position - transform.position).normalized;
-            float enemyAngle = Vector2.Angle(transform.right, dirToEnemy);
+            Vector2 dirToEnemy =
+                (hit.transform.position - transform.position).normalized;
+
+            float enemyAngle = Vector2.Angle(attackDirection, dirToEnemy);
 
             if (enemyAngle <= angle / 2f)
             {
-                hit.GetComponent<Enemy>().TakeDamage(currentWeapon.damage);
+                hit.GetComponent<Enemy>()
+                   .TakeDamage(currentWeapon.damage);
             }
         }
 
@@ -96,4 +124,5 @@ public class Weapon : MonoBehaviour
 
         transform.localRotation = Quaternion.identity;
     }
+
 }

@@ -14,12 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Sniper Rifle
   weaponType: 0
-  weaponSprite: {fileID: 0}
+  weaponSprite: {fileID: 21300000, guid: 7030fdf15aa723c44a225e98d6e90569, type: 3}
   damage: 30
   fireRate: 0.6
+  projectilePrefab: {fileID: 249645042011101493, guid: 151d49f51b337504e9107cc3bef36efe, type: 3}
   projectileSpeed: 15
   range: 20
   projectileCount: 1
   spreadAngle: 0
   meleeRadius: 0
+  meleeAngle: 0
   areaDuration: 0
