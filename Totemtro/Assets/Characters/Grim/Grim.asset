@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b04d58ac3986ca34280179029c58f5b7, type: 3}
+  m_Name: Grim
+  m_EditorClassIdentifier: 
+  heroName: "Grim \u2013 The Runesmith"
+  description: A robust being covered in glowing runes. Its power grows slowly over
+    time, like an eternal forge.
+  portrait: {fileID: 21300000, guid: 7a337ded45cb93d4ebfe9bd8a53a4b9c, type: 3}
+  maxHealth: 110
+  damage: 9
+  moveSpeed: 4.8
+  fireRate: 1
+  startingWeapon: {fileID: 11400000, guid: adba93e6a1db9974ab1edb237fa0bbd1, type: 2}
+  unlockedByDefault: 0
+  gemCost: 850

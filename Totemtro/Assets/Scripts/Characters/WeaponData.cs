@@ -23,6 +23,7 @@ public class WeaponData : ScriptableObject
     public float fireRate;
 
     [Header("Projectile Settings")]
+    public GameObject projectilePrefab;
     public float projectileSpeed;
     public float range;
     public int projectileCount;
@@ -30,6 +31,9 @@ public class WeaponData : ScriptableObject
 
     [Header("Melee Settings")]
     public float meleeRadius;
+    public float meleeAngle;
+
+
 
     [Header("Area Settings")]
     public float areaDuration;

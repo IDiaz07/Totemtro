@@ -14,12 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: RuneBurst
   weaponType: 4
-  weaponSprite: {fileID: 0}
+  weaponSprite: {fileID: 21300000, guid: 3dc897da7db8b74429ace3597d3339bd, type: 3}
   damage: 8
   fireRate: 1
+  projectilePrefab: {fileID: 0}
   projectileSpeed: 7
   range: 10
   projectileCount: 3
   spreadAngle: 25
   meleeRadius: 0
+  meleeAngle: 0
   areaDuration: 0

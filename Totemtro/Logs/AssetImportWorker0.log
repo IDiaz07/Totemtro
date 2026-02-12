@@ -11,19 +11,19 @@ C:\Program Files\Unity\Hub\Editor\6000.0.41f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/Nitropc/Totemtro
+C:/Users/Nitropc/Documents/GitHub/Totemtro/Totemtro
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51712
+61757
 -job-worker-count
 7
 -background-job-worker-count
 8
 -gc-helper-count
 1
-Successfully changed project path to: C:/Users/Nitropc/Totemtro
-C:/Users/Nitropc/Totemtro
+Successfully changed project path to: C:/Users/Nitropc/Documents/GitHub/Totemtro/Totemtro
+C:/Users/Nitropc/Documents/GitHub/Totemtro/Totemtro
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -59,12 +59,12 @@ C:/Users/Nitropc/Totemtro
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [16784]  Target information:
+Player connection [10960]  Target information:
 
-Player connection [16784]  * "[IP] 192.168.1.64 [Port] 0 [Flags] 2 [Guid] 302464204 [EditorId] 302464204 [Version] 1048832 [Id] WindowsEditor(7,DZka1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [10960]  * "[IP] 192.168.1.64 [Port] 0 [Flags] 2 [Guid] 443846924 [EditorId] 443846924 [Version] 1048832 [Id] WindowsEditor(7,DZka1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [16784] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [16784] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [10960] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [10960] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 7
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -76,11 +76,11 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 2.12 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 2.57 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.41f1 (46e447368a18)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.41f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/Nitropc/Totemtro/Assets
+[Subsystems] Discovering subsystems at path C:/Users/Nitropc/Documents/GitHub/Totemtro/Totemtro/Assets
 GfxDevice: creating device client; kGfxThreadingModeNonThreaded
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
@@ -92,46 +92,46 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.41f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.41f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.41f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56444
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56228
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.41f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.41f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Registered in 0.004176 seconds.
+Registered in 0.003235 seconds.
 - Loaded All Assemblies, in  0.355 seconds
 Native extension for Android target not found
 Android Extension - Scanning For ADB Devices 180 ms
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.504 seconds
-Domain Reload Profiling: 857ms
-	BeginReloadAssembly (116ms)
+- Finished resetting the current domain, in  0.493 seconds
+Domain Reload Profiling: 846ms
+	BeginReloadAssembly (119ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (33ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (47ms)
-	LoadAllAssembliesAndSetupDomain (145ms)
-		LoadAssemblies (115ms)
+	RebuildCommonClasses (31ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (42ms)
+	LoadAllAssembliesAndSetupDomain (151ms)
+		LoadAssemblies (116ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (142ms)
-			TypeCache.Refresh (140ms)
-				TypeCache.ScanAssembly (128ms)
+		AnalyzeDomain (148ms)
+			TypeCache.Refresh (147ms)
+				TypeCache.ScanAssembly (136ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (504ms)
+	FinalizeReload (494ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (463ms)
+		SetupLoadedEditorAssemblies (464ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (268ms)
 			SetLoadedEditorAssemblies (3ms)
 			BeforeProcessingInitializeOnLoad (41ms)
-			ProcessInitializeOnLoadAttributes (102ms)
-			ProcessInitializeOnLoadMethodAttributes (48ms)
+			ProcessInitializeOnLoadAttributes (103ms)
+			ProcessInitializeOnLoadMethodAttributes (49ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -140,221 +140,212 @@ Domain Reload Profiling: 857ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.738 seconds
-Refreshing native plugins compatible for Editor in 1.32 ms, found 4 plugins.
+- Loaded All Assemblies, in  0.678 seconds
+Refreshing native plugins compatible for Editor in 1.49 ms, found 4 plugins.
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.705 seconds
-Domain Reload Profiling: 1438ms
-	BeginReloadAssembly (157ms)
+- Finished resetting the current domain, in  0.674 seconds
+Domain Reload Profiling: 1347ms
+	BeginReloadAssembly (138ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (27ms)
-	RebuildCommonClasses (33ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (35ms)
-	LoadAllAssembliesAndSetupDomain (495ms)
-		LoadAssemblies (332ms)
+		CreateAndSetChildDomain (24ms)
+	RebuildCommonClasses (29ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (32ms)
+	LoadAllAssembliesAndSetupDomain (465ms)
+		LoadAssemblies (306ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (257ms)
-			TypeCache.Refresh (193ms)
-				TypeCache.ScanAssembly (177ms)
-			BuildScriptInfoCaches (50ms)
+		AnalyzeDomain (237ms)
+			TypeCache.Refresh (172ms)
+				TypeCache.ScanAssembly (158ms)
+			BuildScriptInfoCaches (52ms)
 			ResolveRequiredComponents (10ms)
-	FinalizeReload (705ms)
+	FinalizeReload (674ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (557ms)
+		SetupLoadedEditorAssemblies (536ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (11ms)
-			SetLoadedEditorAssemblies (5ms)
-			BeforeProcessingInitializeOnLoad (104ms)
-			ProcessInitializeOnLoadAttributes (326ms)
-			ProcessInitializeOnLoadMethodAttributes (105ms)
-			AfterProcessingInitializeOnLoad (5ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (98ms)
+			ProcessInitializeOnLoadAttributes (328ms)
+			ProcessInitializeOnLoadMethodAttributes (93ms)
+			AfterProcessingInitializeOnLoad (4ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (5ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Refreshing native plugins compatible for Editor in 1.35 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.38 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 206 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6744 unused Assets / (7.2 MB). Loaded Objects now: 7391.
-Memory consumption went from 173.3 MB to 166.2 MB.
-Total: 8.692000 ms (FindLiveObjects: 0.676700 ms CreateObjectMapping: 0.618500 ms MarkObjects: 3.791600 ms  DeleteObjects: 3.604200 ms)
+Unloading 6719 unused Assets / (4.3 MB). Loaded Objects now: 7420.
+Memory consumption went from 174.5 MB to 170.2 MB.
+Total: 6.727800 ms (FindLiveObjects: 0.548700 ms CreateObjectMapping: 0.515900 ms MarkObjects: 3.728600 ms  DeleteObjects: 1.933900 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 17119.790927 seconds.
-  path: Assets/Sprites/Characters/Tro/PistolaTro.png
-  artifactKey: Guid(e5be470a237b9dc45acc3c92867bf0c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Characters/Tro/PistolaTro.png using Guid(e5be470a237b9dc45acc3c92867bf0c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ce813c7db552945448710d74d686b165') in 0.0953833 seconds
+  Time since last request: 17056.179201 seconds.
+  path: Assets/Characters/Orin/SniperRifle.asset
+  artifactKey: Guid(460bbed6024028a49830dc21dbeb1f15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Orin/SniperRifle.asset using Guid(460bbed6024028a49830dc21dbeb1f15) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a5ce18beaef4f68a799a85f80044ed05') in 0.0149961 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.500612 seconds.
+  path: Assets/Characters/Nyra/BloodOrb.asset
+  artifactKey: Guid(19691c3d4294a0d4d89c5f115da74e9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Nyra/BloodOrb.asset using Guid(19691c3d4294a0d4d89c5f115da74e9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e91983fc67e561c98f2d0f08fd5ed863') in 0.0011934 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.102196 seconds.
+  path: Assets/Characters/Nyra
+  artifactKey: Guid(86af1d32560606347a4fb7414666f3f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Nyra using Guid(86af1d32560606347a4fb7414666f3f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3659971a7b4c96a5f4d588b1b3a7d446') in 0.0006252 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.375042 seconds.
+  path: Assets/Characters/Nyra/Nyra.asset
+  artifactKey: Guid(e26e29385e1e32d4087072d23d1339eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Nyra/Nyra.asset using Guid(e26e29385e1e32d4087072d23d1339eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '573cf79b6ef2e23a0ad5913bc35a1717') in 0.0013978 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 37.845894 seconds.
+  path: Assets/Sprites/Characters/Nyra/Nyra.png
+  artifactKey: Guid(8bdfdad88e73cf04bb229d0726c07021) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Characters/Nyra/Nyra.png using Guid(8bdfdad88e73cf04bb229d0726c07021) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '908f0bf360c519e9aa45bd2ca589c383') in 0.0848414 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/Sprites/Characters/Grim/GrimWeapon.png
-  artifactKey: Guid(3dc897da7db8b74429ace3597d3339bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Characters/Grim/GrimWeapon.png using Guid(3dc897da7db8b74429ace3597d3339bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8c445d60198a6407d896fa4b88304e96') in 0.0199775 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+  Time since last request: 43.141459 seconds.
+  path: Assets/Characters/Grim/RuneBurst.asset
+  artifactKey: Guid(adba93e6a1db9974ab1edb237fa0bbd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Grim/RuneBurst.asset using Guid(adba93e6a1db9974ab1edb237fa0bbd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4ce603541c7f30f97777aa508590757a') in 0.0010903 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.447135 seconds.
-  path: Assets/Sprites/Characters/Kael/Kael.ase
-  artifactKey: Guid(1cd3f65fe9cfb3d40bb0bfa59e8951b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Characters/Kael/Kael.ase using Guid(1cd3f65fe9cfb3d40bb0bfa59e8951b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ee3a09f45c4beb7b09e1501a27eb2b70') in 0.4266416 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+  Time since last request: 0.347102 seconds.
+  path: Assets/Characters/Grim
+  artifactKey: Guid(72bf879e944867a47ad7fd9f5db85f06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Grim using Guid(72bf879e944867a47ad7fd9f5db85f06) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4a5236dfb4a8561b5a6f7eebb0679463') in 0.0005127 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000037 seconds.
+  Time since last request: 7.007608 seconds.
+  path: Assets/Characters/Grim/Grim.asset
+  artifactKey: Guid(b8a6b44a67d5ea1498304d0cdf05e0ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Grim/Grim.asset using Guid(b8a6b44a67d5ea1498304d0cdf05e0ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a86d8eb365aa930ecc8fc387bd977c17') in 0.0011242 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.311790 seconds.
   path: Assets/Sprites/Characters/Murray/Ancla.png
   artifactKey: Guid(4d537bf45cfd5674aa5db9dd631870b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Characters/Murray/Ancla.png using Guid(4d537bf45cfd5674aa5db9dd631870b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ef00e57e8a9c53b2d64c0ff23d049dfd') in 0.0145381 seconds
+Start importing Assets/Sprites/Characters/Murray/Ancla.png using Guid(4d537bf45cfd5674aa5db9dd631870b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fc14bf99647a97c4e1c883c0765de46c') in 0.022307 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Sprites/Characters/Orin/OrinWeapon.png
-  artifactKey: Guid(7030fdf15aa723c44a225e98d6e90569) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Characters/Orin/OrinWeapon.png using Guid(7030fdf15aa723c44a225e98d6e90569) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '48a7bbc189c6f911f5a1d40de98b4657') in 0.0146765 seconds
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Totems/Statistics Totems/Totem of Recovery.png
+  artifactKey: Guid(9fd47a6b31f29ca4eba076757c7948d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Totems/Statistics Totems/Totem of Recovery.png using Guid(9fd47a6b31f29ca4eba076757c7948d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd80c505fd1d69f27313d80efd902372c') in 0.0219744 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Sprites/Characters/Vex/Vex.png
-  artifactKey: Guid(8d5b05b1c02208e478ae4594d1511337) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Characters/Vex/Vex.png using Guid(8d5b05b1c02208e478ae4594d1511337) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f5a01ad35c441add8fd804e1fb20178c') in 0.0175725 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/Sprites/Characters/Nyra/Nyra.png
-  artifactKey: Guid(8bdfdad88e73cf04bb229d0726c07021) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Characters/Nyra/Nyra.png using Guid(8bdfdad88e73cf04bb229d0726c07021) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a24395ca8071110c9a070c4fd233a11f') in 0.0171263 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Sprites/Characters/Murray/Murray.png
-  artifactKey: Guid(5cb4147f1292e6e42a228a1a5aa5a0d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Characters/Murray/Murray.png using Guid(5cb4147f1292e6e42a228a1a5aa5a0d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4be68fca6ea4314570809444138dd3f8') in 0.0180122 seconds
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprites/Totems/Legendary Totems/Totem of Blood Price.png
+  artifactKey: Guid(4f45c34d56b353d429484b0a0ca6abf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Totems/Legendary Totems/Totem of Blood Price.png using Guid(4f45c34d56b353d429484b0a0ca6abf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ddd93a8338960492033deee708269349') in 0.0199862 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Sprites/Characters/Selene/Selene.ase
-  artifactKey: Guid(267376165158a304d91b4cf3de43ce47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Characters/Selene/Selene.ase using Guid(267376165158a304d91b4cf3de43ce47) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a096d7042aa23abd6cffa8cda1b5ca3d') in 0.0224356 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Sprites/Characters/Vex/VexWeapon.png
-  artifactKey: Guid(9d9a9b0f7c54329408bedc96638c1e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Characters/Vex/VexWeapon.png using Guid(9d9a9b0f7c54329408bedc96638c1e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '15d75c4123c6d9e9103662ef3e75e1b8') in 0.0193445 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Sprites/Characters/Nyra/Nyra.ase
-  artifactKey: Guid(02702de0e16b94a4aac6e698f40d0dd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Characters/Nyra/Nyra.ase using Guid(02702de0e16b94a4aac6e698f40d0dd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0eeb0c7e1d827d9a2b2029d9202c59da') in 0.018694 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
-
-========================================================================
-Received Import Request.
-  Time since last request: 35.851751 seconds.
+  Time since last request: 0.000016 seconds.
   path: Assets/Sprites/Characters/Grim/Grim.png
   artifactKey: Guid(7a337ded45cb93d4ebfe9bd8a53a4b9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Characters/Grim/Grim.png using Guid(7a337ded45cb93d4ebfe9bd8a53a4b9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'eeedb65fdb0b76be5889c0f027a321a3') in 0.0331399 seconds
+Start importing Assets/Sprites/Characters/Grim/Grim.png using Guid(7a337ded45cb93d4ebfe9bd8a53a4b9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'eeedb65fdb0b76be5889c0f027a321a3') in 0.0186726 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Sprites/Characters/Orin/OrinWeapon.png
-  artifactKey: Guid(7030fdf15aa723c44a225e98d6e90569) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Characters/Orin/OrinWeapon.png using Guid(7030fdf15aa723c44a225e98d6e90569) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cbe31e1b390c14b033b1ed3ac4d15d7d') in 0.030803 seconds
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprites/Characters/Grim/GrimWeapon.png
+  artifactKey: Guid(3dc897da7db8b74429ace3597d3339bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Characters/Grim/GrimWeapon.png using Guid(3dc897da7db8b74429ace3597d3339bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '28362aed94caa41b81dae8a26074bcdd') in 0.0192495 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Sprites/Characters/Vex/Vex.png
-  artifactKey: Guid(8d5b05b1c02208e478ae4594d1511337) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Characters/Vex/Vex.png using Guid(8d5b05b1c02208e478ae4594d1511337) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0326297d5195199978e64da5b049d875') in 0.0234954 seconds
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprites/Totems/Statistics Totems/Totem of Power.png
+  artifactKey: Guid(14fa7c8bca7c6174fab5f63b994bd251) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Totems/Statistics Totems/Totem of Power.png using Guid(14fa7c8bca7c6174fab5f63b994bd251) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd452b7920c97b77e45248cb138a3d9d7') in 0.017332 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/Sprites/Characters/Nyra/Nyra.png
-  artifactKey: Guid(8bdfdad88e73cf04bb229d0726c07021) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Characters/Nyra/Nyra.png using Guid(8bdfdad88e73cf04bb229d0726c07021) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '908f0bf360c519e9aa45bd2ca589c383') in 0.035089 seconds
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprites/Totems/Defensive Totems/Totem of Second Wind.png
+  artifactKey: Guid(0e30181dd6f42f24795994f35515f593) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Totems/Defensive Totems/Totem of Second Wind.png using Guid(0e30181dd6f42f24795994f35515f593) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fada978d82953904b823216d168e6f43') in 0.0210778 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.683 seconds
-Refreshing native plugins compatible for Editor in 1.32 ms, found 4 plugins.
-Native extension for Android target not found
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.756 seconds
-Domain Reload Profiling: 1440ms
-	BeginReloadAssembly (223ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (24ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (60ms)
-	RebuildCommonClasses (33ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (25ms)
-	LoadAllAssembliesAndSetupDomain (390ms)
-		LoadAssemblies (315ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (173ms)
-			TypeCache.Refresh (7ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (147ms)
-			ResolveRequiredComponents (13ms)
-	FinalizeReload (757ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (545ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (10ms)
-			SetLoadedEditorAssemblies (5ms)
-			BeforeProcessingInitializeOnLoad (113ms)
-			ProcessInitializeOnLoadAttributes (341ms)
-			ProcessInitializeOnLoadMethodAttributes (71ms)
-			AfterProcessingInitializeOnLoad (5ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (14ms)
-Refreshing native plugins compatible for Editor in 1.53 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6742 unused Assets / (8.5 MB). Loaded Objects now: 7460.
-Memory consumption went from 157.8 MB to 149.3 MB.
-Total: 9.932900 ms (FindLiveObjects: 0.752100 ms CreateObjectMapping: 0.737900 ms MarkObjects: 3.870600 ms  DeleteObjects: 4.571100 ms)
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprites/Characters/Kael/Kael.png
+  artifactKey: Guid(ce33c5afb59b8b640a30b42e9f8d5c49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Characters/Kael/Kael.png using Guid(ce33c5afb59b8b640a30b42e9f8d5c49) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd3107febeeefdf91d427d3608ccb61c4') in 0.0132028 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
-Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprites/Characters/Kael/KaelWeapon.png
+  artifactKey: Guid(2e576522dc9dc974499f98e8906c4dc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Characters/Kael/KaelWeapon.png using Guid(2e576522dc9dc974499f98e8906c4dc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b9bb77b8269fbca733adf5a79047ddf7') in 0.0195704 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Sprites/Totems/Weapon Totems/Totem of Rapid Bullets.png
+  artifactKey: Guid(b5cc18e7d8e7c8e479aa60cd73513fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Totems/Weapon Totems/Totem of Rapid Bullets.png using Guid(b5cc18e7d8e7c8e479aa60cd73513fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd752400ca4aae8e383a122aff5b6a463') in 0.0156107 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Totems/Defensive Totems/Totem of Fortitude.png
+  artifactKey: Guid(b55afec514b41454fb7b132a2afaf0fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Totems/Defensive Totems/Totem of Fortitude.png using Guid(b55afec514b41454fb7b132a2afaf0fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5fccd23a0f8b87885afc49e3968a8728') in 0.0186798 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Totems/Weapon Totems/Totem of Ricochet.png
+  artifactKey: Guid(68c897b9f2663334d8d1041eab0d6495) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Totems/Weapon Totems/Totem of Ricochet.png using Guid(68c897b9f2663334d8d1041eab0d6495) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '69a2f305bec7ba86489a8df2b953e2fa') in 0.0166855 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting
