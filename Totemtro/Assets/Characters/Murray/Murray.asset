@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b04d58ac3986ca34280179029c58f5b7, type: 3}
+  m_Name: Murray
+  m_EditorClassIdentifier: 
+  heroName: "Murray \u2013 Warrior of the Makoa Clan"
+  description: A humanoid turtle from the ancient Makoa Clan. Its shell is engraved
+    with tribal symbols, and its resilience is legendary. It carries a heavy anchor
+    in its hand, used as a devastating melee weapon capable of crushing nearby enemies
+    with brute force.
+  portrait: {fileID: 21300000, guid: 5cb4147f1292e6e42a228a1a5aa5a0d8, type: 3}
+  maxHealth: 140
+  damage: 18
+  moveSpeed: 4
+  fireRate: 0.7
+  startingWeapon: {fileID: 11400000, guid: 02a22847d41f73742bcb985077a28306, type: 2}
+  unlockedByDefault: 0
+  gemCost: 800
