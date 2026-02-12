@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5323278959373974079}
   - component: {fileID: -1340324562086236415}
   - component: {fileID: 1179428460066999613}
-  - component: {fileID: 4794473654239594244}
   m_Layer: 0
   m_Name: GrimProjectile
   m_TagString: Untagged
@@ -78,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 684675823
   m_SortingLayer: 1
-  m_SortingOrder: 5
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 3dc897da7db8b74429ace3597d3339bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -124,17 +123,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.008516088, y: -0.025548473}
+  m_Offset: {x: -0.008516088, y: -0.01209034}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.5, y: 0.5}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.31627223, y: 0.4963288}
+  m_Size: {x: 0.31627223, y: 0.34156004}
   m_EdgeRadius: 0
 --- !u!50 &1179428460066999613
 Rigidbody2D:
@@ -163,15 +162,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &4794473654239594244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4416740633809812067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9a31dc55b3a5cb48840e73a266b3e37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

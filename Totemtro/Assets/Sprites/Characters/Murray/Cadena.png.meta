@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2e576522dc9dc974499f98e8906c4dc2
+guid: 0b362d2363bd4b942ac307200c742019
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3501639256682754891
-    second: KaelWeapon_0
+      213: 238693779902295092
+    second: Cadena_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,18 +40,18 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.172, y: 0.5}
-  spritePixelsToUnits: 100
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 80
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: KaelWeapon_0
+      name: Cadena_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 11
-        width: 43
-        height: 46
+        x: 0
+        y: 18
+        width: 64
+        height: 27
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b43732af952589030800000000000000
-      internalID: 3501639256682754891
+      spriteID: 43ceb296ab2005300800000000000000
+      internalID: 238693779902295092
       vertices: []
       indices: 
       edges: []
@@ -139,7 +139,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      KaelWeapon_0: 3501639256682754891
+      Cadena_0: 238693779902295092
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

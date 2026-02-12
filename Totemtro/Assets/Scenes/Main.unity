@@ -275,6 +275,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!120 &482732053 stripped
+LineRenderer:
+  m_CorrespondingSourceObject: {fileID: 586372979548128269, guid: d1141886fab48d04988f6fe012f04115, type: 3}
+  m_PrefabInstance: {fileID: 1524466881}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,15 +380,15 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.16369359
-    y: 0.14
-    width: 0.67156345
-    height: 0.72
+    x: 0.105704695
+    y: 0.034423407
+    width: 0.7885906
+    height: 0.92943203
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5.625
+  orthographic size: 8.4375
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -428,8 +433,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ComponentVersion: 1
   m_AssetsPPU: 32
-  m_RefResolutionX: 640
-  m_RefResolutionY: 360
+  m_RefResolutionX: 940
+  m_RefResolutionY: 540
   m_CropFrame: 3
   m_GridSnapping: 0
   m_FilterMode: 0
@@ -468,7 +473,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &619394801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -549,6 +554,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 586372979548128269, guid: d1141886fab48d04988f6fe012f04115, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 586372979548128269, guid: d1141886fab48d04988f6fe012f04115, type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 866243212542460370, guid: d1141886fab48d04988f6fe012f04115, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.25
@@ -599,12 +612,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8126124704658777355, guid: d1141886fab48d04988f6fe012f04115, type: 3}
       propertyPath: minRadius
-      value: 0.03
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8316531547658512061, guid: d1141886fab48d04988f6fe012f04115, type: 3}
       propertyPath: currentHero
       value: 
-      objectReference: {fileID: 11400000, guid: 358a8c58e0a794840ba96ba293020e38, type: 2}
+      objectReference: {fileID: 11400000, guid: b8a6b44a67d5ea1498304d0cdf05e0ee, type: 2}
     - target: {fileID: 8316531547658512061, guid: d1141886fab48d04988f6fe012f04115, type: 3}
       propertyPath: bodyRenderer
       value: 
@@ -665,6 +678,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9185425225933904338, guid: d1141886fab48d04988f6fe012f04115, type: 3}
+      propertyPath: chainRenderer
+      value: 
+      objectReference: {fileID: 482732053}
     m_RemovedComponents:
     - {fileID: -7478592615737074508, guid: d1141886fab48d04988f6fe012f04115, type: 3}
     m_RemovedGameObjects: []

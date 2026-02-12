@@ -16,12 +16,12 @@ MonoBehaviour:
   weaponType: 1
   weaponSprite: {fileID: 21300000, guid: 2e576522dc9dc974499f98e8906c4dc2, type: 3}
   damage: 14
-  fireRate: 1.2
+  fireRate: 3
   projectilePrefab: {fileID: 0}
   projectileSpeed: 0
   range: 0
   projectileCount: 0
   spreadAngle: 0
-  meleeRadius: 1.5
+  meleeRadius: 270
   meleeAngle: 80
   areaDuration: 0
