@@ -2,13 +2,12 @@
 
 public enum WeaponType
 {
-    Projectile,       // Disparo simple
-    MeleeArc,         // Melee básico (Kael)
-    MurrayAnchor,// Ancla especial de Murray
-    GrimRuneBurst,
+    Projectile,       // Disparo Tro y Orin
+    MeleeArc,
+    MurrayAnchor,     // Ancla especial de Murray
+    GrimRuneBurst,    // Runas de Grim
     ConeProjectile,   // Disparo en cono (Vex)
     AreaZone,         // Zona en suelo (Selene)
-    MultiWave         // Por si lo usamos más adelante
 }
 
 [CreateAssetMenu(fileName = "NewWeapon", menuName = "Game/Weapon")]
@@ -68,5 +67,17 @@ public class WeaponData : ScriptableObject
     int vexComboStep = 0;
     Vector2 lastVexDirection = Vector2.right;
 
+    // =====================================================
+    // ⚓ MURRAY SETTINGS
+    // =====================================================
+
+    [Header("Murray Settings")]
+    public float murrayRadius = 0.5f;
+    public float murrayOpenTime = 0.25f;
+    public float murraySwingTime = 0.5f;
+    public float murrayReturnTime = 0.25f;
+    public float murrayConeAngle = 45f;
+    public float murrayAnchorDamageRadius = 0.25f;
+    public float murrayChainWidth = 0.15f;
 
 }

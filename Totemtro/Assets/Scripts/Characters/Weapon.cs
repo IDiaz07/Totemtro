@@ -8,7 +8,20 @@ public class Weapon : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public LineRenderer chainRenderer;
 
+    public bool isAiming = false;
     float lastAttackTime;
+    public Transform firePoint;
+
+    [Header("Shoot Settings")]
+    public float shootMovementLockTime = 0.35f;
+
+    [Header("Visual Recoil")]
+    public float recoilRotationAmount = 6f;
+    public float recoilReturnSpeed = 12f;
+
+    Quaternion originalPlayerRotation;
+    bool isRecoiling = false;
+
 
     // ===== GRIM COMBO =====
     HashSet<Enemy> damagedEnemies = new HashSet<Enemy>();
@@ -35,15 +48,27 @@ public class Weapon : MonoBehaviour
     {
         if (currentWeapon == null) return;
 
-        if (Input.GetMouseButton(0) && !isAttacking)
+        if (isAttacking) return;
+
+        // Mantener click → apuntar
+        if (Input.GetMouseButtonDown(0))
+        {
+            isAiming = true;
+        }
+
+        // Soltar click → disparar
+        if (Input.GetMouseButtonUp(0) && isAiming)
         {
             if (Time.time >= lastAttackTime + 1f / currentWeapon.fireRate)
             {
                 Attack();
                 lastAttackTime = Time.time;
             }
+
+            isAiming = false;
         }
     }
+
 
     void Attack()
     {
@@ -54,7 +79,7 @@ public class Weapon : MonoBehaviour
                 break;
 
             case WeaponType.MeleeArc:
-                DoMeleeAttack();
+                // Solo visual para el Aim
                 break;
 
             case WeaponType.MurrayAnchor:
@@ -84,57 +109,103 @@ public class Weapon : MonoBehaviour
 
     void ShootProjectile()
     {
+        if (firePoint == null) return;
+        if (currentWeapon.projectilePrefab == null) return;
+
+        // Dirección desde el FirePoint
         Vector2 shootDirection =
             (Camera.main.ScreenToWorldPoint(Input.mousePosition)
-            - transform.position).normalized;
+            - firePoint.position).normalized;
 
+        // Recoil
         PlayerMovement movement = GetComponentInParent<PlayerMovement>();
-        movement.ApplyRecoil(shootDirection, 3f);
+        if (movement != null)
+            movement.ApplyRecoil(shootDirection, 3f);
 
+        // Velocidad heredada del jugador
+        Rigidbody2D rb = GetComponentInParent<Rigidbody2D>();
+        Vector2 playerVelocity = rb != null ? rb.linearVelocity : Vector2.zero;
+
+        // Instanciar proyectil
         GameObject proj = Instantiate(
             currentWeapon.projectilePrefab,
-            transform.position,
+            firePoint.position,
             Quaternion.identity
         );
 
-        proj.GetComponent<Projectile>()
-            .Initialize(currentWeapon.damage,
-                        currentWeapon.projectileSpeed,
-                        currentWeapon.range,
-                        shootDirection);
-    }
+        // Inicializar proyectil
+        Projectile projectile = proj.GetComponent<Projectile>();
 
-    // =====================================================
-    // ⚔️ MELEE NORMAL
-    // =====================================================
-
-    void DoMeleeAttack()
-    {
-        Vector2 attackDirection =
-            (Camera.main.ScreenToWorldPoint(Input.mousePosition)
-            - transform.position).normalized;
-
-        float radius = currentWeapon.meleeRadius;
-        float angle = currentWeapon.meleeAngle;
-
-        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, radius);
-
-        foreach (var hit in hits)
+        if (projectile != null)
         {
-            if (!hit.CompareTag("Enemy")) continue;
-
-            Vector2 dirToEnemy =
-                (hit.transform.position - transform.position).normalized;
-
-            float enemyAngle = Vector2.Angle(attackDirection, dirToEnemy);
-
-            if (enemyAngle <= angle / 2f)
-            {
-                hit.GetComponent<Enemy>()
-                   .TakeDamage(currentWeapon.damage);
-            }
+            projectile.Initialize(
+                currentWeapon.damage,
+                currentWeapon.projectileSpeed,
+                currentWeapon.range,
+                shootDirection,
+                playerVelocity * 0.4f
+            );
         }
+
+        StartCoroutine(LockPlayerMovement(shootMovementLockTime));
+        StartCoroutine(VisualRecoil(shootDirection));
     }
+
+    IEnumerator LockPlayerMovement(float duration)
+    {
+        PlayerMovement movement = GetComponentInParent<PlayerMovement>();
+        if (movement == null) yield break;
+
+        movement.enabled = false;
+
+        yield return new WaitForSeconds(duration);
+
+        movement.enabled = true;
+    }
+
+    IEnumerator VisualRecoil(Vector2 shootDirection)
+    {
+        if (isRecoiling) yield break;
+
+        isRecoiling = true;
+
+        Transform player = transform.parent;
+        originalPlayerRotation = player.rotation;
+
+        // Dirección contraria
+        float angle = Mathf.Atan2(shootDirection.y, shootDirection.x) * Mathf.Rad2Deg;
+
+        float recoilAngle = angle + 180f; // opuesto
+        float finalZ = Mathf.Sin(recoilAngle * Mathf.Deg2Rad) * recoilRotationAmount;
+
+        Quaternion recoilRotation =
+            Quaternion.Euler(0f, 0f, finalZ);
+
+        player.rotation = recoilRotation;
+
+        yield return new WaitForSeconds(shootMovementLockTime);
+
+        // Volver suave
+        float t = 0f;
+
+        while (t < 1f)
+        {
+            player.rotation = Quaternion.Lerp(
+                player.rotation,
+                originalPlayerRotation,
+                t
+            );
+
+            t += Time.deltaTime * recoilReturnSpeed;
+            yield return null;
+        }
+
+        player.rotation = originalPlayerRotation;
+        isRecoiling = false;
+    }
+
+
+
 
     // =====================================================
     // ⚓ MURRAY ANCHOR
@@ -156,12 +227,13 @@ public class Weapon : MonoBehaviour
 
 
 
-        float openTime = 0.25f;
-        float swingTime = 0.5f;
-        float returnTime = 0.25f;
+        float openTime = currentWeapon.murrayOpenTime;
+        float swingTime = currentWeapon.murraySwingTime;
+        float returnTime = currentWeapon.murrayReturnTime;
 
-        float radius = 0.5f;
-        float coneAngle = 45f; // +10 / -10
+        float radius = currentWeapon.murrayRadius;
+        float coneAngle = currentWeapon.murrayConeAngle;
+
 
         Vector3 origin = Vector3.zero;
 
@@ -242,8 +314,8 @@ public class Weapon : MonoBehaviour
 
     void ApplyAnchorDamage()
     {
-        float anchorRadius = 0.25f;
-        float chainWidth = 0.15f;
+        float anchorRadius = currentWeapon.murrayAnchorDamageRadius;
+        float chainWidth = currentWeapon.murrayChainWidth;
 
         Vector2 originWorld = transform.parent.position;
         Vector2 anchorWorld = transform.position;
@@ -580,20 +652,34 @@ public class Weapon : MonoBehaviour
 
     void SpawnProjectile(Vector2 direction, float damageMultiplier)
     {
+        if (firePoint == null) return;
+        if (currentWeapon.projectilePrefab == null) return;
+
+        // Velocidad heredada del jugador
+        Rigidbody2D rb = GetComponentInParent<Rigidbody2D>();
+        Vector2 playerVelocity = rb != null ? rb.linearVelocity : Vector2.zero;
+
+        // Instanciar proyectil desde el FirePoint
         GameObject proj = Instantiate(
             currentWeapon.projectilePrefab,
-            transform.position,
+            firePoint.position,
             Quaternion.identity
         );
 
-        proj.GetComponent<Projectile>()
-            .Initialize(
+        Projectile projectile = proj.GetComponent<Projectile>();
+
+        if (projectile != null)
+        {
+            projectile.Initialize(
                 currentWeapon.damage * damageMultiplier,
                 currentWeapon.projectileSpeed,
                 currentWeapon.range,
-                direction
+                direction.normalized,
+                playerVelocity * 0.4f   // solo hereda parte para que no sea exagerado
             );
+        }
     }
+
 
     IEnumerator VexFinalFlash()
     {
