@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\StalkerAI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Enemies\\StalkerAI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Exploder\\ExploderAI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Enemies\\Exploder\\ExploderAI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\ThrallAI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Enemies\\ThrallAI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Summoner\\SummonerAI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Enemies\\Summoner\\SummonerAI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\EnemyProjectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Enemies\\EnemyProjectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\EnemySpawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Enemies\\EnemySpawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Spitter\\SpitterAI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Enemies\\Spitter\\SpitterAI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Brute\\BruteAI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Enemies\\Brute\\BruteAI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +39,79 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "StalkerAI.cs",
-              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\StalkerAI.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\StalkerAI.cs",
-              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\StalkerAI.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemies\\StalkerAI.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAADwvyIAAAAAAAAAAAAAAA==",
+              "Title": "ExploderAI.cs",
+              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Exploder\\ExploderAI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\Exploder\\ExploderAI.cs",
+              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Exploder\\ExploderAI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemies\\Exploder\\ExploderAI.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAADwvzcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-13T12:44:36.286Z",
+              "WhenOpened": "2026-02-16T10:35:12.202Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ThrallAI.cs",
-              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\ThrallAI.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\ThrallAI.cs",
-              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\ThrallAI.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemies\\ThrallAI.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Title": "SummonerAI.cs",
+              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Summoner\\SummonerAI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\Summoner\\SummonerAI.cs",
+              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Summoner\\SummonerAI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemies\\Summoner\\SummonerAI.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAADwvzwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-13T12:44:08.224Z",
+              "WhenOpened": "2026-02-16T10:34:25.089Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Enemy.cs",
-              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemy.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy.cs",
-              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemy.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemy.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAADwvycAAAAAAAAAAAAAAA==",
+              "Title": "EnemyProjectile.cs",
+              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\EnemyProjectile.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\EnemyProjectile.cs",
+              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\EnemyProjectile.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemies\\EnemyProjectile.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAADwvyEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-13T12:43:35.087Z",
+              "WhenOpened": "2026-02-16T10:34:00.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EnemySpawner.cs",
+              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\EnemySpawner.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\EnemySpawner.cs",
+              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\EnemySpawner.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemies\\EnemySpawner.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T10:33:52.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SpitterAI.cs",
+              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Spitter\\SpitterAI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\Spitter\\SpitterAI.cs",
+              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Spitter\\SpitterAI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemies\\Spitter\\SpitterAI.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAADwv0YAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T10:33:15.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BruteAI.cs",
+              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Brute\\BruteAI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\Brute\\BruteAI.cs",
+              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Brute\\BruteAI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemies\\Brute\\BruteAI.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAADwvysAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T10:31:40.054Z",
               "EditorCaption": ""
             }
           ]

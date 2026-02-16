@@ -55,12 +55,14 @@
     <UnityVersion>6000.0.41f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.41f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.41f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.41f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Totems\TotemInventoryUI.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Spitter\SpitterAI.cs" />
     <Compile Include="Assets\Scripts\Characters\Attack\Nyra\NyraAttack.cs" />
     <Compile Include="Assets\Scripts\InventoryGoldUI.cs" />
     <Compile Include="Assets\Scripts\GoldManager.cs" />
@@ -70,6 +72,7 @@
     <Compile Include="Assets\Scripts\Characters\Projectile.cs" />
     <Compile Include="Assets\Scripts\Player\LevelTextUI.cs" />
     <Compile Include="Assets\Scripts\Characters\Weapon.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Summoner\SummonerAI.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerExperience.cs" />
     <Compile Include="Assets\Scripts\Totems\TotemRandomGenerator.cs" />
     <Compile Include="Assets\Scripts\Enemies\CameraShake.cs" />
@@ -105,6 +108,7 @@
     <Compile Include="Assets\Scripts\Totems\TotemCardUI.cs" />
     <Compile Include="Assets\Scripts\Player\XPBarUI.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Brute\BruteAI.cs" />
     <Compile Include="Assets\Scripts\HeroUnlockManager.cs" />
     <Compile Include="Assets\Scripts\GoldSystem.cs" />
     <Compile Include="Assets\Scripts\Characters\Attack\Orin\OrinAttack.cs" />
@@ -114,6 +118,8 @@
     <Compile Include="Assets\Scripts\Totems\TotemSelectionUI.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\Enemies\Stalker\StalkerAI.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Spitter\EnemyProjectile.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Exploder\ExploderAI.cs" />
     <Compile Include="Assets\Scripts\Totems\TotemData.cs" />
     <Compile Include="Assets\Scripts\UI\LevelUpEffect.cs" />
     <Compile Include="Assets\Scripts\Characters\Attack\Kael\KaelAttack.cs" />
@@ -622,14 +628,6 @@
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@d6f9955a5d5f\Mono.Cecil.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Android.Types">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.41f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Android.Gradle">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.41f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">

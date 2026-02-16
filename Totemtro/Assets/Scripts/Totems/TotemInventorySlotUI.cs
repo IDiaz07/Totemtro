@@ -162,6 +162,6 @@ public class TotemInventorySlotUI : MonoBehaviour
         if (sellSystem != null)
             sellSystem.SellTotem(currentData);
 
-        Destroy(gameObject);
+        Setup(null);
     }
 }
