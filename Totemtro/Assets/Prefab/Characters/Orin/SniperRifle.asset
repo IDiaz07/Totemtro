@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: SniperRifle
   m_EditorClassIdentifier: 
   weaponName: Sniper Rifle
-  weaponType: 0
+  weaponType: 8
   aimLength: 2
   aimAngle: 0
+  recoilForce: 3
   weaponSprite: {fileID: 21300000, guid: 7030fdf15aa723c44a225e98d6e90569, type: 3}
   damage: 30
   fireRate: 0.6
@@ -27,12 +28,12 @@ MonoBehaviour:
   meleeRadius: 0
   meleeAngle: 0
   areaDuration: 0
-  runeScale: 5
-  runeRadius: 0.8
-  murrayRadius: 0.5
-  murrayOpenTime: 0.25
-  murraySwingTime: 0.5
-  murrayReturnTime: 0.25
-  murrayConeAngle: 45
-  murrayAnchorDamageRadius: 0.25
-  murrayChainWidth: 0.15
+  runeScale: 0
+  runeRadius: 0
+  murrayRadius: 0
+  murrayOpenTime: 0
+  murraySwingTime: 0
+  murrayReturnTime: 0
+  murrayConeAngle: 0
+  murrayAnchorDamageRadius: 0
+  murrayChainWidth: 0

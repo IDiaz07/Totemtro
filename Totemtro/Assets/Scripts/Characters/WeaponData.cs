@@ -8,6 +8,9 @@ public enum WeaponType
     GrimRuneBurst,    // Runas de Grim
     ConeProjectile,   // Disparo en cono (Vex)
     AreaZone,         // Zona en suelo (Selene)
+    NyraBloodOrb,
+    KaelBlade,
+    OrinBurst,
 }
 
 [CreateAssetMenu(fileName = "NewWeapon", menuName = "Game/Weapon")]
@@ -21,6 +24,8 @@ public class WeaponData : ScriptableObject
     public float aimLength = 2f;
     public float aimAngle = 0f; // 0 = línea
 
+    [Header("Recoil")]
+    public float recoilForce = 3f;
 
     [Header("Visual")]
     public Sprite weaponSprite;
@@ -64,7 +69,7 @@ public class WeaponData : ScriptableObject
     public float runeRadius = 0.8f;
 
     [Header("Vex Settings")]
-    int vexComboStep = 0;
+    int vexComboStep;
     Vector2 lastVexDirection = Vector2.right;
 
     // =====================================================

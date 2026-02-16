@@ -16,6 +16,7 @@ MonoBehaviour:
   weaponType: 2
   aimLength: 2
   aimAngle: 0
+  recoilForce: 3
   weaponSprite: {fileID: 21300000, guid: 4d537bf45cfd5674aa5db9dd631870b7, type: 3}
   damage: 25
   fireRate: 0.6
@@ -24,12 +25,12 @@ MonoBehaviour:
   range: 0
   projectileCount: 0
   spreadAngle: 0
-  meleeRadius: 0.7
-  meleeAngle: 60
+  meleeRadius: 0
+  meleeAngle: 0
   areaDuration: 0
-  runeScale: 5
-  runeRadius: 0.8
-  murrayRadius: 0.5
+  runeScale: 0
+  runeRadius: 0
+  murrayRadius: 0.8
   murrayOpenTime: 0.25
   murraySwingTime: 0.5
   murrayReturnTime: 0.25

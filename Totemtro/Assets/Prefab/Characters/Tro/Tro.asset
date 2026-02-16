@@ -22,6 +22,7 @@ MonoBehaviour:
   damage: 10
   moveSpeed: 5
   fireRate: 1
-  startingWeapon: {fileID: 11400000, guid: 4106ceeae1655ca4697c5e63f3f25923, type: 2}
+  weapons:
+  - {fileID: 11400000, guid: 4106ceeae1655ca4697c5e63f3f25923, type: 2}
   unlockedByDefault: 1
   gemCost: 0

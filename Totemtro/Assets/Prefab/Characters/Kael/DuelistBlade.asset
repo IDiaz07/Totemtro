@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DuelistBlade
   m_EditorClassIdentifier: 
   weaponName: Duelist Blade
-  weaponType: 1
+  weaponType: 7
   aimLength: 2
   aimAngle: 0
   weaponSprite: {fileID: 21300000, guid: 2e576522dc9dc974499f98e8906c4dc2, type: 3}

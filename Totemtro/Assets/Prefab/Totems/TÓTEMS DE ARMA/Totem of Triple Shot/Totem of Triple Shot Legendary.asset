@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deee47fb198fd4e4c9745acb32efba9a, type: 3}
+  m_Name: Totem of Triple Shot Legendary
+  m_EditorClassIdentifier: 
+  totemName: Totem of Triple Shot
+  description: Your weapon splits into multiple parallel strikes, overwhelming enemies
+    with spread fire. Fires 3 empowered projectiles in a wide spread, increasing
+    coverage and consistency.
+  price: 350
+  icon: {fileID: 21300000, guid: 0177d16f9cde0ab4db1e528c0b1c66fc, type: 3}
+  totemType: 1
+  rarity: 2
+  targetHeroes: 240

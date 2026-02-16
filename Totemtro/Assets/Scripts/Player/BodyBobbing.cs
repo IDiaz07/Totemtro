@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BodyBobbing : MonoBehaviour
 {
-    public float amplitude = 0.05f;   // cuánto se mueve
+    public float amplitude = 0.01f;   // cuánto se mueve
     public float frequency = 2.5f;    // velocidad
 
     Vector3 startPos;

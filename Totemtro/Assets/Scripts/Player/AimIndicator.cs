@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AimIndicator : MonoBehaviour
 {
@@ -54,7 +54,12 @@ public class AimIndicator : MonoBehaviour
 
     void UpdateByWeapon()
     {
-        if (weapon.currentWeapon.weaponType == WeaponType.ConeProjectile)
+        var type = weapon.currentWeapon.weaponType;
+
+        // =========================
+        // VEX
+        // =========================
+        if (type == WeaponType.ConeProjectile)
         {
             int step = weapon.GetVexStep();
 
@@ -73,14 +78,71 @@ public class AimIndicator : MonoBehaviour
                     break;
             }
         }
-        else if (weapon.currentWeapon.weaponType == WeaponType.Projectile)
+
+        // =========================
+        // GRIM
+        // =========================
+        else if (type == WeaponType.GrimRuneBurst)
         {
-            ShowLine(weapon.currentWeapon.range);
+            ShowCone(
+                weapon.currentWeapon.meleeAngle,
+                weapon.currentWeapon.meleeRadius
+            );
         }
+
+        // =========================
+        // MURRAY
+        // =========================
+        else if (type == WeaponType.MurrayAnchor)
+        {
+            ShowCone(
+                weapon.currentWeapon.murrayConeAngle,
+                weapon.currentWeapon.murrayRadius * 1.4f
+            );
+        }
+
+        // =========================
+        // ORIN (rifle + smg)
+        // =========================
+        else if (type == WeaponType.OrinBurst ||
+                 type == WeaponType.Projectile)
+        {
+            ShowLine(weapon.currentWeapon.range * 0.14f);
+        }
+
+        // =========================
+        // KAEL
+        // =========================
+        else if (type == WeaponType.KaelBlade)
+        {
+            KaelAttack kael = weapon.GetComponentInParent<KaelAttack>();
+
+            if (Input.GetMouseButton(1))
+            {
+                // Dash → línea
+                ShowLine(0.1f);
+            }
+            else
+            {
+                // Ataque normal → cono
+                ShowCone(100f, 0.1f);
+            }
+        }
+
+        // =========================
+        // NYRA
+        // =========================
+        else if (type == WeaponType.NyraBloodOrb)
+        {
+            ShowLine(weapon.currentWeapon.range * 0.14f);
+        }
+
+
         else
         {
             DisableAll();
         }
+
     }
 
     void ShowLine(float length)

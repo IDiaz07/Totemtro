@@ -3,7 +3,7 @@ using UnityEngine;
 public class BodyBreathing : MonoBehaviour
 {
     public float scaleAmount = 0.02f;
-    public float speed = 1.5f;
+    public float speed = 2.5f;
 
     Vector3 startScale;
 

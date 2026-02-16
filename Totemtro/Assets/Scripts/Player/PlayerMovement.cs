@@ -4,10 +4,20 @@ public class PlayerMovement : MonoBehaviour
 {
     Vector2 recoilOffset;
     float recoilDecay = 12f;
+
     public float speed = 5f;
 
     Rigidbody2D rb;
     Vector2 movement;
+
+    // =========================
+    // DASH
+    // =========================
+    public bool hasDash = false;
+    public float dashForce = 12f;
+    public float dashCooldown = 2f;
+
+    float lastDashTime;
 
     void Awake()
     {
@@ -16,25 +26,31 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        movement.x = Input.GetAxis("Horizontal");
-        movement.y = Input.GetAxis("Vertical");
+        // Movimiento normal
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
 
         if (movement.sqrMagnitude > 1f)
             movement.Normalize();
+
+        // DASH
+        if (hasDash && Input.GetKeyDown(KeyCode.Space))
+        {
+            if (Time.time >= lastDashTime + dashCooldown)
+            {
+                PerformDash();
+            }
+        }
     }
 
     void FixedUpdate()
     {
-        // Movimiento base
         Vector2 move = movement * speed;
-
-        // Sumamos el recoil
         move += recoilOffset;
 
-        // Aplicamos movimiento
         rb.MovePosition(rb.position + move * Time.fixedDeltaTime);
 
-        // Reducimos el recoil suavemente
+        // Recoil decay
         recoilOffset = Vector2.Lerp(
             recoilOffset,
             Vector2.zero,
@@ -42,10 +58,26 @@ public class PlayerMovement : MonoBehaviour
         );
     }
 
+    void PerformDash()
+    {
+        Vector2 dashDir = movement;
+
+        // Si no se está moviendo, dash hacia el mouse
+        if (dashDir == Vector2.zero)
+        {
+            dashDir =
+                (Camera.main.ScreenToWorldPoint(Input.mousePosition)
+                - transform.position).normalized;
+        }
+
+        rb.linearVelocity = Vector2.zero;
+        rb.AddForce(dashDir.normalized * dashForce, ForceMode2D.Impulse);
+
+        lastDashTime = Time.time;
+    }
 
     public void ApplyRecoil(Vector2 direction, float force)
     {
         recoilOffset += -direction.normalized * force;
     }
-
 }

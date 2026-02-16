@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deee47fb198fd4e4c9745acb32efba9a, type: 3}
+  m_Name: Totem of Rapid Bullets Legendary
+  m_EditorClassIdentifier: 
+  totemName: Totem of Rapid Bullets
+  description: Your attacks become faster and more aggressive, overwhelming enemies.
+    Noticeable attack speed increase.
+  price: 280
+  icon: {fileID: 21300000, guid: b5cc18e7d8e7c8e479aa60cd73513fe1, type: 3}
+  totemType: 2
+  rarity: 2
+  targetHeroes: -1

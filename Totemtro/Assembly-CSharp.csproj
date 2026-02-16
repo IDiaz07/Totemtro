@@ -55,28 +55,93 @@
     <UnityVersion>6000.0.41f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.41f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.41f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.41f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Totems\TotemInventoryUI.cs" />
+    <Compile Include="Assets\Scripts\Characters\Attack\Nyra\NyraAttack.cs" />
+    <Compile Include="Assets\Scripts\InventoryGoldUI.cs" />
+    <Compile Include="Assets\Scripts\GoldManager.cs" />
+    <Compile Include="Assets\Scripts\Drops\GoldPickup.cs" />
+    <Compile Include="Assets\Scripts\DamageNumberSpawner.cs" />
+    <Compile Include="Assets\Scripts\DamageNumber.cs" />
     <Compile Include="Assets\Scripts\Characters\Projectile.cs" />
+    <Compile Include="Assets\Scripts\Player\LevelTextUI.cs" />
     <Compile Include="Assets\Scripts\Characters\Weapon.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerExperience.cs" />
+    <Compile Include="Assets\Scripts\Totems\TotemRandomGenerator.cs" />
+    <Compile Include="Assets\Scripts\Enemies\CameraShake.cs" />
+    <Compile Include="Assets\Scripts\Characters\Attack\Nyra\NyraBloodBall.cs" />
     <Compile Include="Assets\Scripts\Player\BodyBobbing.cs" />
+    <Compile Include="Assets\Scripts\Drops\XPPickup.cs" />
+    <Compile Include="Assets\Scripts\Enemies\BodySwayEnemy.cs" />
+    <Compile Include="Assets\Scripts\Drops\XPDrop.cs" />
     <Compile Include="Assets\Scripts\Player\AimIndicator.cs" />
     <Compile Include="Assets\Scripts\Player\BodySway.cs" />
     <Compile Include="Assets\Scripts\Player\BodyBreathing.cs" />
     <Compile Include="Assets\Scripts\Player\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\Drops\GoldDrop.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Thrall\ThrallAI.cs" />
+    <Compile Include="Assets\Scripts\Totems\TotemCardFlip.cs" />
     <Compile Include="Assets\Scripts\Characters\HeroData.cs" />
-    <Compile Include="Assets\Scripts\Enemies\StalkerAI.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Player\CooldownBarUI.cs" />
     <Compile Include="Assets\Scripts\Player\HeroController.cs" />
+    <Compile Include="Assets\Scripts\Totems\TotemSynergySystem.cs" />
+    <Compile Include="Assets\Scripts\Totems\TotemInventorySlotUI.cs" />
+    <Compile Include="Assets\Scripts\Player\HealthBarUI.cs" />
+    <Compile Include="Assets\Scripts\Totems\TotemSellSystem.cs" />
+    <Compile Include="Assets\Scripts\Enemies\BodyTiltEnemy.cs" />
+    <Compile Include="Assets\Scripts\Player\TotemInventory.cs" />
+    <Compile Include="Assets\Scripts\Totems\CardHoverEffect.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\Player\WeaponOrbitDynamic.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
-    <Compile Include="Assets\Scripts\Enemies\ThrallAI.cs" />
+    <Compile Include="Assets\Scripts\Totems\TotemCardAnimator.cs" />
+    <Compile Include="Assets\Scripts\Totems\TotemTooltipUI.cs" />
+    <Compile Include="Assets\Scripts\Totems\TotemSellConfirmUI.cs" />
+    <Compile Include="Assets\Scripts\Totems\TotemCardUI.cs" />
+    <Compile Include="Assets\Scripts\Player\XPBarUI.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\HeroUnlockManager.cs" />
+    <Compile Include="Assets\Scripts\GoldSystem.cs" />
+    <Compile Include="Assets\Scripts\Characters\Attack\Orin\OrinAttack.cs" />
     <Compile Include="Assets\Scripts\Characters\WeaponData.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\GamePause.cs" />
+    <Compile Include="Assets\Scripts\Totems\TotemSelectionUI.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemySpawner.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Stalker\StalkerAI.cs" />
+    <Compile Include="Assets\Scripts\Totems\TotemData.cs" />
+    <Compile Include="Assets\Scripts\UI\LevelUpEffect.cs" />
+    <Compile Include="Assets\Scripts\Characters\Attack\Kael\KaelAttack.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -557,6 +622,14 @@
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@d6f9955a5d5f\Mono.Cecil.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Types">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.41f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Gradle">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.41f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">

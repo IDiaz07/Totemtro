@@ -4,7 +4,9 @@ using System.Collections.Generic;
 
 public class Weapon : MonoBehaviour
 {
-    public WeaponData currentWeapon;
+    public WeaponData currentWeapon;     // 👈 BASE DATA
+    PlayerStats playerStats;             // 👈 MODIFICADORES
+
     public SpriteRenderer spriteRenderer;
     public LineRenderer chainRenderer;
 
@@ -22,18 +24,26 @@ public class Weapon : MonoBehaviour
     Quaternion originalPlayerRotation;
     bool isRecoiling = false;
 
+    public float CooldownRemaining { get; private set; }
+    public float CurrentCooldownDuration { get; private set; }
 
-    // ===== GRIM COMBO =====
+
+    // =================================
+    // TOTEM MODIFIERS
+    // =================================
+    [HideInInspector] public bool hasDualFire = false;
+    [HideInInspector] public bool hasTripleShot = false;
+
+    // =================================
+    // INTERNAL
+    // =================================
     HashSet<Enemy> damagedEnemies = new HashSet<Enemy>();
     public bool isAttacking = false;
 
-    // ===== VEX COMBO =====
     int vexComboStep = 0;
     float lastVexAttackTime = 0f;
     float comboResetTime = 3f;
-
     Vector2 lastVexDirection = Vector2.right;
-
 
     public void SetWeapon(WeaponData data)
     {
@@ -42,44 +52,73 @@ public class Weapon : MonoBehaviour
 
         if (chainRenderer != null)
             chainRenderer.enabled = false;
+
+        // Cuando cambias arma, recalculamos stats base
+        playerStats?.Initialize();
     }
+
+
+    void Start()
+    {
+        playerStats = GetComponentInParent<PlayerStats>();
+        Debug.Log("PlayerStats: " + playerStats);
+    }
+
 
     void Update()
     {
-        if (currentWeapon == null) return;
+        if (currentWeapon == null || playerStats == null)
+            return;
 
-        if (isAttacking) return;
+        if (isAttacking)
+            return;
 
-        // Mantener click → apuntar
+        // =========================
+        // START AIM (Click izquierdo)
+        // =========================
         if (Input.GetMouseButtonDown(0))
         {
             isAiming = true;
         }
 
-        // Soltar click → disparar
+        // =========================
+        // DISPARAR AL SOLTAR
+        // =========================
         if (Input.GetMouseButtonUp(0) && isAiming)
         {
-            if (Time.time >= lastAttackTime + 1f / currentWeapon.fireRate)
+            float cooldown = 1f / playerStats.FireRate;
+
+            if (Time.time >= lastAttackTime + cooldown)
             {
                 Attack();
                 lastAttackTime = Time.time;
+
+                CurrentCooldownDuration = cooldown;
+                CooldownRemaining = cooldown;
             }
 
             isAiming = false;
         }
-    }
 
+        // =========================
+        // COOLDOWN VISUAL
+        // =========================
+        if (CooldownRemaining > 0f)
+        {
+            CooldownRemaining -= Time.deltaTime;
+
+            if (CooldownRemaining < 0f)
+                CooldownRemaining = 0f;
+        }
+    }
 
     void Attack()
     {
         switch (currentWeapon.weaponType)
         {
             case WeaponType.Projectile:
+            case WeaponType.OrinBurst:
                 ShootProjectile();
-                break;
-
-            case WeaponType.MeleeArc:
-                // Solo visual para el Aim
                 break;
 
             case WeaponType.MurrayAnchor:
@@ -94,61 +133,124 @@ public class Weapon : MonoBehaviour
                 VexComboAttack();
                 break;
 
+            case WeaponType.NyraBloodOrb:
+                ExecuteNyraAttack();
+                break;
+
+            case WeaponType.KaelBlade:
+                GetComponent<KaelAttack>()?.NormalAttack();
+                break;
         }
     }
 
-    public int GetVexStep()
-    {
-        return vexComboStep;
-    }
-
-
     // =====================================================
-    // 🔫 PROYECTIL
+    // 🔫 SHOOT PROJECTILE (WITH TOTEMS)
     // =====================================================
 
     void ShootProjectile()
     {
-        if (firePoint == null) return;
-        if (currentWeapon.projectilePrefab == null) return;
+        if (firePoint == null || currentWeapon.projectilePrefab == null)
+            return;
 
-        // Dirección desde el FirePoint
         Vector2 shootDirection =
             (Camera.main.ScreenToWorldPoint(Input.mousePosition)
             - firePoint.position).normalized;
 
-        // Recoil
-        PlayerMovement movement = GetComponentInParent<PlayerMovement>();
-        if (movement != null)
-            movement.ApplyRecoil(shootDirection, 3f);
-
-        // Velocidad heredada del jugador
         Rigidbody2D rb = GetComponentInParent<Rigidbody2D>();
         Vector2 playerVelocity = rb != null ? rb.linearVelocity : Vector2.zero;
 
-        // Instanciar proyectil
+        int totalProjectiles = 1 + playerStats.ExtraProjectiles;
+        float spread = 15f;
+
+        for (int i = 0; i < totalProjectiles; i++)
+        {
+            float angleOffset = 0f;
+
+            if (totalProjectiles > 1)
+            {
+                float totalSpread = spread * (totalProjectiles - 1);
+                angleOffset = -totalSpread / 2f + spread * i;
+            }
+
+            Vector2 dir = RotateVector(shootDirection, angleOffset);
+
+            GameObject proj = Instantiate(
+                currentWeapon.projectilePrefab,
+                firePoint.position,
+                Quaternion.identity
+            );
+
+            Projectile p = proj.GetComponent<Projectile>();
+
+            p.Initialize(
+                playerStats.Damage,
+                playerStats.ProjectileSpeed,
+                currentWeapon.range,
+                dir,
+                playerVelocity * 0.4f,
+                false,
+                playerStats.Pierce,
+                playerStats.Ricochet
+            );
+
+            if (Random.value < playerStats.dualFireChance)
+            {
+                Vector2 slightOffset = RotateVector(dir, Random.Range(-6f, 6f));
+
+                GameObject extra = Instantiate(
+                    currentWeapon.projectilePrefab,
+                    firePoint.position,
+                    Quaternion.identity
+                );
+
+                Projectile ep = extra.GetComponent<Projectile>();
+
+                ep.Initialize(
+                    playerStats.Damage,
+                    playerStats.ProjectileSpeed,
+                    currentWeapon.range,
+                    slightOffset,
+                    playerVelocity * 0.4f,
+                    false,
+                    playerStats.Pierce,
+                    playerStats.Ricochet
+                );
+            }
+        }
+    }
+
+
+
+    void SpawnSingleProjectile(Vector2 direction, Vector2 inheritedVelocity)
+    {
         GameObject proj = Instantiate(
             currentWeapon.projectilePrefab,
             firePoint.position,
             Quaternion.identity
         );
 
-        // Inicializar proyectil
         Projectile projectile = proj.GetComponent<Projectile>();
 
         if (projectile != null)
         {
             projectile.Initialize(
-                currentWeapon.damage,
-                currentWeapon.projectileSpeed,
+                playerStats.Damage,
+                playerStats.ProjectileSpeed,
                 currentWeapon.range,
-                shootDirection,
-                playerVelocity * 0.4f
+                direction,
+                inheritedVelocity * 0.4f,
+                false
             );
         }
+    }
 
-        StartCoroutine(LockPlayerMovement(shootMovementLockTime));
-        StartCoroutine(VisualRecoil(shootDirection));
+    void SpawnSpreadProjectile(Vector2 baseDirection, float angle, Vector2 inheritedVelocity)
+    {
+        Vector2 left = RotateVector(baseDirection, -angle);
+        Vector2 right = RotateVector(baseDirection, angle);
+
+        SpawnSingleProjectile(left, inheritedVelocity);
+        SpawnSingleProjectile(right, inheritedVelocity);
     }
 
     IEnumerator LockPlayerMovement(float duration)
@@ -157,37 +259,27 @@ public class Weapon : MonoBehaviour
         if (movement == null) yield break;
 
         movement.enabled = false;
-
         yield return new WaitForSeconds(duration);
-
         movement.enabled = true;
     }
 
     IEnumerator VisualRecoil(Vector2 shootDirection)
     {
         if (isRecoiling) yield break;
-
         isRecoiling = true;
 
         Transform player = transform.parent;
         originalPlayerRotation = player.rotation;
 
-        // Dirección contraria
         float angle = Mathf.Atan2(shootDirection.y, shootDirection.x) * Mathf.Rad2Deg;
-
-        float recoilAngle = angle + 180f; // opuesto
+        float recoilAngle = angle + 180f;
         float finalZ = Mathf.Sin(recoilAngle * Mathf.Deg2Rad) * recoilRotationAmount;
 
-        Quaternion recoilRotation =
-            Quaternion.Euler(0f, 0f, finalZ);
-
-        player.rotation = recoilRotation;
+        player.rotation = Quaternion.Euler(0f, 0f, finalZ);
 
         yield return new WaitForSeconds(shootMovementLockTime);
 
-        // Volver suave
         float t = 0f;
-
         while (t < 1f)
         {
             player.rotation = Quaternion.Lerp(
@@ -203,6 +295,14 @@ public class Weapon : MonoBehaviour
         player.rotation = originalPlayerRotation;
         isRecoiling = false;
     }
+
+    public int GetVexStep()
+    {
+        return vexComboStep;
+    }
+
+
+
 
 
 
@@ -224,16 +324,12 @@ public class Weapon : MonoBehaviour
             Debug.Log("Chain ON");
         }
 
-
-
-
         float openTime = currentWeapon.murrayOpenTime;
         float swingTime = currentWeapon.murraySwingTime;
         float returnTime = currentWeapon.murrayReturnTime;
 
         float radius = currentWeapon.murrayRadius;
         float coneAngle = currentWeapon.murrayConeAngle;
-
 
         Vector3 origin = Vector3.zero;
 
@@ -320,7 +416,7 @@ public class Weapon : MonoBehaviour
         Vector2 originWorld = transform.parent.position;
         Vector2 anchorWorld = transform.position;
 
-        // --- Ancla ---
+        // --- ANCLA ---
         Collider2D[] anchorHits =
             Physics2D.OverlapCircleAll(anchorWorld, anchorRadius);
 
@@ -332,11 +428,19 @@ public class Weapon : MonoBehaviour
             if (enemy == null) continue;
             if (damagedEnemies.Contains(enemy)) continue;
 
-            enemy.TakeDamage(currentWeapon.damage);
+            Vector2 hitDir =
+                ((Vector2)enemy.transform.position - anchorWorld).normalized;
+
+            enemy.TakeDamage(
+                playerStats.Damage,
+                hitDir,
+                false
+            );
+
             damagedEnemies.Add(enemy);
         }
 
-        // --- Cadena ---
+        // --- CADENA ---
         Vector2 direction = anchorWorld - originWorld;
         float distance = direction.magnitude;
 
@@ -357,10 +461,19 @@ public class Weapon : MonoBehaviour
             if (enemy == null) continue;
             if (damagedEnemies.Contains(enemy)) continue;
 
-            enemy.TakeDamage(currentWeapon.damage);
+            Vector2 hitDir =
+                ((Vector2)enemy.transform.position - anchorWorld).normalized;
+
+            enemy.TakeDamage(
+                playerStats.Damage,
+                hitDir,
+                false
+            );
+
             damagedEnemies.Add(enemy);
         }
     }
+
 
     // =====================================================
     // ⛓️ CADENA VISUAL
@@ -451,9 +564,9 @@ public class Weapon : MonoBehaviour
         if (currentWeapon.projectilePrefab == null) return;
 
         GameObject rune = Instantiate(
-            currentWeapon.projectilePrefab,
-            position,
-            Quaternion.identity
+                currentWeapon.projectilePrefab,
+                position,
+                Quaternion.identity
         );
 
         StartCoroutine(RuneBehaviour(rune));
@@ -464,7 +577,6 @@ public class Weapon : MonoBehaviour
         if (rune == null) yield break;
 
         float duration = 0.6f;
-        float damageTickRate = 0.15f;
         float timer = 0f;
 
         float maxScale = currentWeapon.runeScale;
@@ -493,25 +605,15 @@ public class Weapon : MonoBehaviour
 
         rune.transform.localScale = Vector3.one * maxScale;
 
-        float damageTimer = 0f;
+        // 🔥 DAÑO UNA SOLA VEZ
+        ApplyRuneDamageOnce(rune.transform.position);
 
-        // 🔹 VIDA ACTIVA
+        // 🔹 VIDA VISUAL (pero ya no hace daño)
         while (timer < duration)
         {
-            if (rune == null) yield break;
-
-            if (damageTimer <= 0f)
-            {
-                ApplyRuneDamage(rune.transform.position);
-                damageTimer = damageTickRate;
-            }
-
-            damageTimer -= Time.deltaTime;
             timer += Time.deltaTime;
             yield return null;
         }
-
-        if (rune == null) yield break;
 
         // 🔹 DESAPARECER
         float shrinkTime = 0.15f;
@@ -534,8 +636,7 @@ public class Weapon : MonoBehaviour
             Destroy(rune);
     }
 
-
-    void ApplyRuneDamage(Vector2 position)
+    void ApplyRuneDamageOnce(Vector2 position)
     {
         float radius = 0.6f;
 
@@ -548,7 +649,10 @@ public class Weapon : MonoBehaviour
             Enemy enemy = hit.GetComponent<Enemy>();
             if (enemy == null) continue;
 
-            enemy.TakeDamage(currentWeapon.damage);
+            Vector2 hitDir =
+                ((Vector2)enemy.transform.position - position).normalized;
+
+            enemy.TakeDamage(playerStats.Damage, hitDir, false);
         }
     }
 
@@ -561,6 +665,20 @@ public class Weapon : MonoBehaviour
 
         Time.timeScale = originalTimeScale;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // =====================================================
     // VEX ATTACK
@@ -614,9 +732,7 @@ public class Weapon : MonoBehaviour
     {
         SpawnProjectile(direction, damageMultiplier);
 
-        // Solo si es Tro (pistola)
-        if (currentWeapon.weaponType == WeaponType.Projectile
-            && currentWeapon.aimLength <= 3f) // pistola corta
+        if (currentWeapon.weaponType == WeaponType.Projectile && currentWeapon.aimLength <= 3f)
         {
             StartCoroutine(PistolKickVisual());
         }
@@ -655,11 +771,9 @@ public class Weapon : MonoBehaviour
         if (firePoint == null) return;
         if (currentWeapon.projectilePrefab == null) return;
 
-        // Velocidad heredada del jugador
         Rigidbody2D rb = GetComponentInParent<Rigidbody2D>();
         Vector2 playerVelocity = rb != null ? rb.linearVelocity : Vector2.zero;
 
-        // Instanciar proyectil desde el FirePoint
         GameObject proj = Instantiate(
             currentWeapon.projectilePrefab,
             firePoint.position,
@@ -671,15 +785,17 @@ public class Weapon : MonoBehaviour
         if (projectile != null)
         {
             projectile.Initialize(
-                currentWeapon.damage * damageMultiplier,
-                currentWeapon.projectileSpeed,
+                playerStats.Damage * damageMultiplier,
+                playerStats.ProjectileSpeed,
                 currentWeapon.range,
                 direction.normalized,
-                playerVelocity * 0.4f   // solo hereda parte para que no sea exagerado
+                playerVelocity * 0.4f,
+                false,
+                playerStats.Pierce,
+                playerStats.Ricochet
             );
         }
     }
-
 
     IEnumerator VexFinalFlash()
     {
@@ -720,4 +836,16 @@ public class Weapon : MonoBehaviour
         );
     }
 
+
+    // =====================================================
+    // NYRA ATTACK
+    // =====================================================
+
+    void ExecuteNyraAttack()
+    {
+        NyraAttack nyra = GetComponent<NyraAttack>();
+        if (nyra == null) return;
+
+        nyra.Execute(currentWeapon, firePoint);
+    }
 }
