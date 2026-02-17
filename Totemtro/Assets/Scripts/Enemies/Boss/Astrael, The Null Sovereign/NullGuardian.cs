@@ -2,6 +2,7 @@
 using System.Collections;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Collider2D))]
 public class NullGuardian : MonoBehaviour
 {
     [Header("Stats")]
@@ -10,13 +11,16 @@ public class NullGuardian : MonoBehaviour
     public float launchSpeed = 12f;
     public float orbitDuration = 2f;
     public float damage = 12f;
-    public int maxHealth = 1;
+    public float maxHealth = 1f;
+    public float lifeTimeAfterLaunch = 1f;
 
     Transform boss;
     Transform player;
     Rigidbody2D rb;
+
     float angle;
-    int currentHealth;
+    float currentHealth;
+    bool hasLaunched = false;
 
     void Awake()
     {
@@ -65,10 +69,15 @@ public class NullGuardian : MonoBehaviour
             yield break;
         }
 
+        hasLaunched = true;
+
         Vector2 dir =
             (player.position - transform.position).normalized;
 
+        rb.bodyType = RigidbodyType2D.Dynamic;
         rb.linearVelocity = dir * launchSpeed;
+
+        Destroy(gameObject, lifeTimeAfterLaunch);
     }
 
     void OnDestroy()
@@ -96,19 +105,27 @@ public class NullGuardian : MonoBehaviour
             return;
         }
 
-        // 🔹 Choca con muro dinámico (ArenaGuardian)
+        // 🔹 Choca con muro dinámico
         if (col.GetComponent<ArenaGuardian>() != null)
         {
             Destroy(gameObject);
+            return;
+        }
+
+        // 🔹 Recibe daño de proyectil
+        Projectile proj = col.GetComponent<Projectile>();
+        if (proj != null)
+        {
+            TakeDamage(proj.Damage);
+            Destroy(col.gameObject);
         }
     }
 
-    // 🔹 Si recibe daño externo
-    public void TakeDamage(int amount)
+    public void TakeDamage(float amount)
     {
         currentHealth -= amount;
 
-        if (currentHealth <= 0)
+        if (currentHealth <= 0f)
             Destroy(gameObject);
     }
 }

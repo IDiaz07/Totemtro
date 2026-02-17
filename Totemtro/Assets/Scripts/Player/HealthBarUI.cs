@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class HealthBarUI : MonoBehaviour
 {
     public Image fillImage;
     public HeroController hero;
+    public TMP_Text healthText;
 
     void Start()
     {
@@ -14,8 +16,16 @@ public class HealthBarUI : MonoBehaviour
 
     void UpdateBar()
     {
-        fillImage.fillAmount =
-            hero.CurrentHealth / hero.MaxHealth;
-    }
+        if (hero == null) return;
 
+        float percent =
+            hero.CurrentHealth / hero.MaxHealth;
+
+        fillImage.fillAmount = percent;
+
+        healthText.text =
+            Mathf.CeilToInt(hero.CurrentHealth) +
+            " / " +
+            Mathf.CeilToInt(hero.MaxHealth);
+    }
 }

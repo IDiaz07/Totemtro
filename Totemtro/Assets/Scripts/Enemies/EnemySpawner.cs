@@ -34,7 +34,9 @@ public class EnemySpawner : MonoBehaviour
     [Header("Boss")]
     public GameObject astraelBossPrefab;
     public float bossSpawnTime = 180f; // 3 minutos
+    public float spawnBoss = 0.5f;
     bool bossSpawned = false;
+
 
 
     private List<GameObject> aliveEnemies = new List<GameObject>();
@@ -249,7 +251,7 @@ public class EnemySpawner : MonoBehaviour
 
         // Spawnear boss en centro o cerca del jugador
         Vector2 bossPosition =
-            player.position + Vector3.up * 2f;
+            player.position + Vector3.up * spawnBoss;
 
         Instantiate(
             astraelBossPrefab,

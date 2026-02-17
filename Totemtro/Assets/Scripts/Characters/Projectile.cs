@@ -2,7 +2,7 @@
 
 public class Projectile : MonoBehaviour
 {
-    float damage;
+    public float Damage { get; private set; }
     float speed;
     float range;
     bool isCritical;
@@ -25,7 +25,7 @@ public class Projectile : MonoBehaviour
         bool crit
     )
     {
-        damage = dmg;
+        Damage = dmg;
         speed = spd;
         range = rng;
         direction = dir.normalized;
@@ -70,19 +70,34 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.CompareTag("Enemy")) return;
-
-        Enemy enemy = other.GetComponent<Enemy>();
-        if (enemy == null) return;
-
-        enemy.TakeDamage(damage, direction, isCritical);
-
-        enemiesHit++;
-
-        if (enemiesHit > pierce)
+        // 🔹 Golpea Enemy clásico
+        if (other.CompareTag("Enemy"))
         {
-            Destroy(gameObject);
+            Enemy enemy = other.GetComponent<Enemy>();
+
+            if (enemy != null)
+            {
+                enemy.TakeDamage(Damage, direction, isCritical);
+                enemiesHit++;
+
+                if (enemiesHit > pierce)
+                    Destroy(gameObject);
+
+                return;
+            }
+        }
+
+        // 🔹 Golpea NullGuardian
+        NullGuardian guardian = other.GetComponent<NullGuardian>();
+
+        if (guardian != null)
+        {
+            guardian.TakeDamage(Damage);
+
+            enemiesHit++;
+
+            if (enemiesHit > pierce)
+                Destroy(gameObject);
         }
     }
-
 }

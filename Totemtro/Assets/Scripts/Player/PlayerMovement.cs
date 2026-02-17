@@ -1,12 +1,28 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
+    // =========================
+    // MOVEMENT
+    // =========================
+    public float speed = 5f;
+
+    Rigidbody2D rb;
+    Vector2 movement;
+
+    // =========================
+    // RECOIL SYSTEM
+    // =========================
     Vector2 recoilOffset;
     float recoilDecay = 12f;
 
-    public float speed = 5f;
+    // =========================
+    // PULL SYSTEM (NullSphere)
+    // =========================
+    Vector2 pullForce;
+    float pullDecay = 8f;
+    float maxPullForce = 6f;
 
     // =========================
     // SLOW SYSTEM
@@ -14,16 +30,12 @@ public class PlayerMovement : MonoBehaviour
     float slowMultiplier = 1f;
     Coroutine slowRoutine;
 
-    Rigidbody2D rb;
-    Vector2 movement;
-
     // =========================
     // DASH
     // =========================
     public bool hasDash = false;
     public float dashForce = 12f;
     public float dashCooldown = 2f;
-
     float lastDashTime;
 
     void Awake()
@@ -33,14 +45,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // Movimiento normal
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
         if (movement.sqrMagnitude > 1f)
             movement.Normalize();
 
-        // DASH
         if (hasDash && Input.GetKeyDown(KeyCode.Space))
         {
             if (Time.time >= lastDashTime + dashCooldown)
@@ -53,15 +63,24 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 move = movement * speed * slowMultiplier;
+
         move += recoilOffset;
+        move += pullForce;
 
         rb.MovePosition(rb.position + move * Time.fixedDeltaTime);
 
-        // Recoil decay
+        // 🔹 Recoil decay
         recoilOffset = Vector2.Lerp(
             recoilOffset,
             Vector2.zero,
             recoilDecay * Time.fixedDeltaTime
+        );
+
+        // 🔹 Pull decay
+        pullForce = Vector2.Lerp(
+            pullForce,
+            Vector2.zero,
+            pullDecay * Time.fixedDeltaTime
         );
     }
 
@@ -69,7 +88,6 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 dashDir = movement;
 
-        // Si no se est� moviendo, dash hacia el mouse
         if (dashDir == Vector2.zero)
         {
             dashDir =
@@ -83,9 +101,26 @@ public class PlayerMovement : MonoBehaviour
         lastDashTime = Time.time;
     }
 
+    // =========================
+    // EXTERNAL EFFECTS
+    // =========================
+
     public void ApplyRecoil(Vector2 direction, float force)
     {
         recoilOffset += -direction.normalized * force;
+    }
+
+    public void ApplyPull(Vector2 force)
+    {
+        pullForce = Vector2.ClampMagnitude(
+            pullForce + force,
+            maxPullForce
+        );
+    }
+
+    public void ClearPull()
+    {
+        pullForce = Vector2.zero;
     }
 
     public void ApplySlow(float percent, float duration)

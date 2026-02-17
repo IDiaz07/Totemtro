@@ -123,7 +123,7 @@ MonoBehaviour:
   goldPrefab: {fileID: 2986144199003916069, guid: 531c7b8b765812e438b54e339552727b, type: 3}
   xpAmount: 75
   goldAmount: 60
-  dropForce: 3
+  dropForce: 10
   hitParticlesPrefab: {fileID: 8306175235273709235, guid: 7a05ce0bc9f898a43af2796fec674f6c, type: 3}
 --- !u!114 &3178581256467336302
 MonoBehaviour:
@@ -143,6 +143,9 @@ MonoBehaviour:
   shockwavePrefab: {fileID: 8878534162746659087, guid: d50676f1c779f7f4680f2b0a97abff1b, type: 3}
   dynamicArenaPrefab: {fileID: 647838279843151596, guid: a7e83a8c53ddaee4e83f083dfd2414c0, type: 3}
   legendaryDropPrefab: {fileID: 5197425523659630583, guid: ba5ad2023c7af9a4b9b4766a170c9c18, type: 3}
+  portalPrefab: {fileID: 1787885560300799192, guid: 69c29a705cf7060479b1e6e36e418b94, type: 3}
+  screenFade: {fileID: 0}
+  introDelayBeforeAttack: 3
   sphereCooldown: 4
   guardianCooldown: 6
   guardianCount: 4

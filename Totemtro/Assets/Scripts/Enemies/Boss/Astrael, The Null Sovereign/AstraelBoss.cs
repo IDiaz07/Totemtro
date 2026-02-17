@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class AstraelBoss : MonoBehaviour
@@ -11,6 +11,14 @@ public class AstraelBoss : MonoBehaviour
     public GameObject dynamicArenaPrefab;
     public GameObject legendaryDropPrefab;
 
+    [Header("Cinematic")]
+    public GameObject portalPrefab;
+    public CanvasGroup screenFade;       // imagen negra fullscreen
+    public float introDelayBeforeAttack = 3f;
+
+    Camera mainCamera;
+    float originalCamSize;
+    Vector3 originalCamPos;
 
     [Header("Attack Settings")]
     public float sphereCooldown = 4f;
@@ -38,12 +46,13 @@ public class AstraelBoss : MonoBehaviour
         enemy = GetComponent<Enemy>();
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
 
-        ClearAllEnemies();
-        CreateBossUI();
-        SpawnDynamicArena();
-        MusicManager.Instance.PlayMusic(bossMusic, 1.5f);
+        mainCamera = Camera.main;
+        originalCamSize = mainCamera.orthographicSize;
+        originalCamPos = mainCamera.transform.position;
 
-        StartCoroutine(Introduction());
+        ClearAllEnemies();
+
+        StartCoroutine(BossIntroSequence());
     }
 
     void Update()
@@ -75,21 +84,120 @@ public class AstraelBoss : MonoBehaviour
     // INTRO
     // ==============================
 
-    IEnumerator Introduction()
+    IEnumerator BossIntroSequence()
     {
         Time.timeScale = 0f;
 
-        yield return new WaitForSecondsRealtime(1f);
+        // Pequeño delay dramático
+        yield return new WaitForSecondsRealtime(0.5f);
 
-        CameraShake.Instance.Shake(0.8f, 1.2f);
+        // Cámara va hacia el boss
+        Camera mainCam = Camera.main;
+        Vector3 originalPos = mainCam.transform.position;
+        float originalSize = mainCam.orthographicSize;
 
-        yield return new WaitForSecondsRealtime(1f);
+        float zoomSize = originalSize - 2f;
+        float t = 0f;
+        float duration = 1f;
+
+        while (t < duration)
+        {
+            mainCam.transform.position = Vector3.Lerp(
+                originalPos,
+                new Vector3(transform.position.x, transform.position.y, originalPos.z),
+                t / duration
+            );
+
+            mainCam.orthographicSize = Mathf.Lerp(originalSize, zoomSize, t / duration);
+
+            t += Time.unscaledDeltaTime;
+            yield return null;
+        }
+
+        mainCam.transform.position =
+            new Vector3(transform.position.x, transform.position.y, originalPos.z);
+
+        mainCam.orthographicSize = zoomSize;
+
+        // 🔥 AQUÍ SE CREA LA ARENA
+        SpawnDynamicArena();
+
+        // Espera dramática
+        yield return new WaitForSecondsRealtime(3f);
+
+        // Cámara vuelve al jugador
+        t = 0f;
+
+        while (t < duration)
+        {
+            mainCam.transform.position = Vector3.Lerp(
+                mainCam.transform.position,
+                new Vector3(player.position.x, player.position.y, originalPos.z),
+                t / duration
+            );
+
+            mainCam.orthographicSize = Mathf.Lerp(zoomSize, originalSize, t / duration);
+
+            t += Time.unscaledDeltaTime;
+            yield return null;
+        }
+
+        mainCam.orthographicSize = originalSize;
 
         Time.timeScale = 1f;
 
+        // Empiezan ataques
         StartCoroutine(SphereLoop());
         StartCoroutine(GuardianLoop());
     }
+
+    IEnumerator CameraFocusOnBoss()
+    {
+        float duration = 1.2f;
+        float t = 0f;
+
+        Vector3 bossCamPos =
+            new Vector3(transform.position.x,
+                        transform.position.y,
+                        originalCamPos.z);
+
+        float zoomSize = originalCamSize * 0.6f;
+
+        while (t < duration)
+        {
+            t += Time.unscaledDeltaTime;
+
+            mainCamera.transform.position =
+                Vector3.Lerp(originalCamPos, bossCamPos, t / duration);
+
+            mainCamera.orthographicSize =
+                Mathf.Lerp(originalCamSize, zoomSize, t / duration);
+
+            yield return null;
+        }
+
+        yield return new WaitForSecondsRealtime(0.6f);
+
+        // Volver al player
+        t = 0f;
+
+        while (t < duration)
+        {
+            t += Time.unscaledDeltaTime;
+
+            mainCamera.transform.position =
+                Vector3.Lerp(bossCamPos, originalCamPos, t / duration);
+
+            mainCamera.orthographicSize =
+                Mathf.Lerp(zoomSize, originalCamSize, t / duration);
+
+            yield return null;
+        }
+
+        mainCamera.transform.position = originalCamPos;
+        mainCamera.orthographicSize = originalCamSize;
+    }
+
 
     // ==============================
     // ATAQUES
@@ -227,7 +335,7 @@ public class AstraelBoss : MonoBehaviour
 
         if (canvas == null)
         {
-            Debug.LogError("No se encontr� Canvas en la escena.");
+            Debug.LogError("No se encontró Canvas en la escena.");
             return;
         }
 
@@ -271,12 +379,11 @@ public class AstraelBoss : MonoBehaviour
         }
     }
 
-    void OnBossDeath()
-    {
-        if (isDead) return;
-        isDead = true;
-
-        StartCoroutine(DeathSequence());
+    void OnBossDeath() 
+    { 
+        if (isDead) return; 
+        isDead = true; 
+        StartCoroutine(DeathSequence()); 
     }
 
 
@@ -289,7 +396,7 @@ public class AstraelBoss : MonoBehaviour
         Time.timeScale = 0.5f;
 
         // Shake fuerte
-        CameraShake.Instance.Shake(1.5f, 1f);
+        CameraShake.Instance.Shake(1f, 1f);
 
         yield return new WaitForSecondsRealtime(1f);
 
@@ -304,7 +411,7 @@ public class AstraelBoss : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(1f);
 
-        // Transici�n acto 2
+        // Transición acto 2
         EnterActTwo();
 
         MusicManager.Instance.PlayMusic(normalMusic, 2f);
@@ -314,9 +421,10 @@ public class AstraelBoss : MonoBehaviour
         {
             Destroy(bossUI.gameObject);
             bossUI = null;
-
-            Destroy(gameObject);
         }
+
+        Destroy(gameObject);
+
 
         void SpawnLegendaryDrop()
         {

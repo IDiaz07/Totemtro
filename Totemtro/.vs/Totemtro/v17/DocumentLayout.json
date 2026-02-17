@@ -3,28 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Exploder\\ExploderAI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Enemies\\Exploder\\ExploderAI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\AstraelBoss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\AstraelBoss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Summoner\\SummonerAI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Enemies\\Summoner\\SummonerAI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\BossHealthUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\BossHealthUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\EnemyProjectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Enemies\\EnemyProjectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\CameraShake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Enemies\\CameraShake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\EnemySpawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Enemies\\EnemySpawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Spitter\\SpitterAI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Enemies\\Spitter\\SpitterAI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\NullGuardian.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\NullGuardian.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Brute\\BruteAI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Enemies\\Brute\\BruteAI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Characters\\Projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Characters\\Projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Characters\\Weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Characters\\Weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Player\\PlayerMovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Player\\PlayerMovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\NullSphere.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\NullSphere.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\ArenaGuardian.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\ArenaGuardian.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,45 +50,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ExploderAI.cs",
-              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Exploder\\ExploderAI.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\Exploder\\ExploderAI.cs",
-              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Exploder\\ExploderAI.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemies\\Exploder\\ExploderAI.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAADwvzcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T10:35:12.202Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SummonerAI.cs",
-              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Summoner\\SummonerAI.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\Summoner\\SummonerAI.cs",
-              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Summoner\\SummonerAI.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemies\\Summoner\\SummonerAI.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAADwvzwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T10:34:25.089Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "EnemyProjectile.cs",
-              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\EnemyProjectile.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\EnemyProjectile.cs",
-              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\EnemyProjectile.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemies\\EnemyProjectile.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAADwvyEAAAAAAAAAAAAAAA==",
+              "Title": "CameraShake.cs",
+              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\CameraShake.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\CameraShake.cs",
+              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\CameraShake.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemies\\CameraShake.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T10:34:00.506Z",
+              "WhenOpened": "2026-02-17T10:22:42.889Z",
               "EditorCaption": ""
             },
             {
@@ -83,35 +73,113 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\EnemySpawner.cs",
               "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\EnemySpawner.cs",
               "RelativeToolTip": "Assets\\Scripts\\Enemies\\EnemySpawner.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACQAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T10:33:52.734Z",
+              "WhenOpened": "2026-02-17T10:12:29.53Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SpitterAI.cs",
-              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Spitter\\SpitterAI.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\Spitter\\SpitterAI.cs",
-              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Spitter\\SpitterAI.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemies\\Spitter\\SpitterAI.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAADwv0YAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "Weapon.cs",
+              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Characters\\Weapon.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Characters\\Weapon.cs",
+              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Characters\\Weapon.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Characters\\Weapon.cs",
+              "ViewState": "AgIAADkDAAAAAAAAAAAmwFADAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T10:33:15.299Z",
+              "WhenOpened": "2026-02-17T09:59:06.054Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "BruteAI.cs",
-              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Brute\\BruteAI.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\Brute\\BruteAI.cs",
-              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Brute\\BruteAI.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemies\\Brute\\BruteAI.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAADwvysAAAAAAAAAAAAAAA==",
+              "Title": "Projectile.cs",
+              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Characters\\Projectile.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Characters\\Projectile.cs",
+              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Characters\\Projectile.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Characters\\Projectile.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAswF4AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T10:31:40.054Z",
+              "WhenOpened": "2026-02-17T09:58:58.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NullGuardian.cs",
+              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\NullGuardian.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\NullGuardian.cs",
+              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\NullGuardian.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\NullGuardian.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAswBYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T09:56:23.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PlayerMovement.cs",
+              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Player\\PlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerMovement.cs",
+              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Player\\PlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerMovement.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAADwv44AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T09:42:01.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "NullSphere.cs",
+              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\NullSphere.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\NullSphere.cs",
+              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\NullSphere.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\NullSphere.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAADwv3YAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T09:27:17.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ArenaGuardian.cs",
+              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\ArenaGuardian.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\ArenaGuardian.cs",
+              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\ArenaGuardian.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\ArenaGuardian.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T09:26:48.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BossHealthUI.cs",
+              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\BossHealthUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\BossHealthUI.cs",
+              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\BossHealthUI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\BossHealthUI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T09:23:22.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AstraelBoss.cs",
+              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\AstraelBoss.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\AstraelBoss.cs",
+              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\AstraelBoss.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemies\\Boss\\Astrael, The Null Sovereign\\AstraelBoss.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAmwJYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T09:21:47.871Z",
               "EditorCaption": ""
             }
           ]

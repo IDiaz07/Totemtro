@@ -5,7 +5,7 @@ using System.Collections;
 public class ArenaGuardian : MonoBehaviour
 {
     Rigidbody2D rb;
-    bool isProjectile = false;
+    bool isProjectile;
 
     void Awake()
     {

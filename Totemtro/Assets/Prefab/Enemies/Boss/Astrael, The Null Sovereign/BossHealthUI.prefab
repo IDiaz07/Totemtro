@@ -66,10 +66,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 68bc66bb7c718ef45b3b22a6663e812f, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -509,6 +509,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8726923720124352341}
   - component: {fileID: 2720972734557062420}
+  - component: {fileID: 968952593843659736}
   m_Layer: 5
   m_Name: BossHealthUI
   m_TagString: Untagged
@@ -555,3 +556,15 @@ MonoBehaviour:
   healthFill: {fileID: 3900931822281012692}
   healthText: {fileID: 3643168095598320884}
   bossNameText: {fileID: 7534649922270475530}
+--- !u!225 &968952593843659736
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8330984811753573892}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
