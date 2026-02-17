@@ -10,6 +10,11 @@ public class EnemySpawner : MonoBehaviour
     [Header("Prefabs")]
     public GameObject thrallPrefab;
     public GameObject stalkerPrefab;
+    public GameObject brutePrefab;
+    public GameObject spitterPrefab;
+    public GameObject summonerPrefab;
+    public GameObject exploderPrefab;
+
 
     [Header("Spawn Settings")]
     public float spawnInterval = 2f;
@@ -26,8 +31,22 @@ public class EnemySpawner : MonoBehaviour
     public float pressureRadius = 6f;
     public int maxEnemiesNearPlayer = 6;
 
+    [Header("Boss")]
+    public GameObject astraelBossPrefab;
+    public float bossSpawnTime = 180f; // 3 minutos
+    bool bossSpawned = false;
+
+
     private List<GameObject> aliveEnemies = new List<GameObject>();
     private float difficultyTimer;
+    bool spawningStopped = false;
+
+    bool isPaused = false;
+
+    public void PauseSpawning()
+    {
+        isPaused = true;
+    }
 
     void Start()
     {
@@ -62,12 +81,27 @@ public class EnemySpawner : MonoBehaviour
 
         // Limpia enemigos destruidos
         aliveEnemies.RemoveAll(e => e == null);
+
+        // =====================
+        // BOSS SPAWN
+        // =====================
+        if (!bossSpawned && Time.time >= bossSpawnTime)
+        {
+            SpawnBoss();
+        }
+
     }
 
     IEnumerator SpawnLoop()
     {
         while (true)
         {
+            if (spawningStopped)
+            {
+                yield return null;
+                continue;
+            }
+
             yield return new WaitForSeconds(spawnInterval);
 
             if (aliveEnemies.Count >= maxEnemiesAlive)
@@ -76,10 +110,22 @@ public class EnemySpawner : MonoBehaviour
             if (CountEnemiesNearPlayer() >= maxEnemiesNearPlayer)
                 continue;
 
+            if (isPaused)
+                continue;
+
             SpawnEnemy();
         }
     }
 
+    public void StopSpawning()
+    {
+        spawningStopped = true;
+    }
+
+    public void ResumeSpawning()
+    {
+        spawningStopped = false;
+    }
 
     void SpawnEnemy()
     {
@@ -108,16 +154,67 @@ public class EnemySpawner : MonoBehaviour
 
     GameObject ChooseEnemy()
     {
-        // Al principio casi todo Thrall
-        // Poco a poco más Stalker
+        float time = Time.time;
 
-        float stalkerChance = Mathf.Clamp01(Time.time / 90f);
+        // ========= PESOS BASE =========
+        float thrallWeight = 40f;
+        float stalkerWeight = 20f;
+        float bruteWeight = 10f;
+        float spitterWeight = 8f;
+        float exploderWeight = 6f;
+        float summonerWeight = 2f; // MUY raro
 
-        if (Random.value < stalkerChance && stalkerPrefab != null)
+        // ========= ESCALADO POR TIEMPO =========
+
+        // Brutes aumentan bastante
+        bruteWeight += time / 30f;
+
+        // Spitters aumentan moderado
+        spitterWeight += time / 45f;
+
+        // Exploders aumentan leve
+        exploderWeight += time / 60f;
+
+        // Summoner aumenta MUY lento
+        summonerWeight += time / 180f;
+
+        // ========= SUMA TOTAL =========
+        float totalWeight =
+            thrallWeight +
+            stalkerWeight +
+            bruteWeight +
+            spitterWeight +
+            exploderWeight +
+            summonerWeight;
+
+        float roll = Random.Range(0f, totalWeight);
+
+        if (roll < thrallWeight)
+            return thrallPrefab;
+
+        roll -= thrallWeight;
+
+        if (roll < stalkerWeight)
             return stalkerPrefab;
 
-        return thrallPrefab;
+        roll -= stalkerWeight;
+
+        if (roll < bruteWeight)
+            return brutePrefab;
+
+        roll -= bruteWeight;
+
+        if (roll < spitterWeight)
+            return spitterPrefab;
+
+        roll -= spitterWeight;
+
+        if (roll < exploderWeight)
+            return exploderPrefab;
+
+        return summonerPrefab;
     }
+
 
     int CountEnemiesNearPlayer()
     {
@@ -133,5 +230,35 @@ public class EnemySpawner : MonoBehaviour
 
         return count;
     }
+
+    void SpawnBoss()
+    {
+        bossSpawned = true;
+
+        // Detener spawn normal
+        StopSpawning();
+
+        // Limpiar enemigos vivos
+        foreach (var e in aliveEnemies)
+        {
+            if (e != null)
+                Destroy(e);
+        }
+
+        aliveEnemies.Clear();
+
+        // Spawnear boss en centro o cerca del jugador
+        Vector2 bossPosition =
+            player.position + Vector3.up * 2f;
+
+        Instantiate(
+            astraelBossPrefab,
+            bossPosition,
+            Quaternion.identity
+        );
+
+        Debug.Log("Astrael has entered the arena.");
+    }
+
 
 }

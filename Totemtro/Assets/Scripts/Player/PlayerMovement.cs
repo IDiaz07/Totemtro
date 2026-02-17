@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -6,6 +7,12 @@ public class PlayerMovement : MonoBehaviour
     float recoilDecay = 12f;
 
     public float speed = 5f;
+
+    // =========================
+    // SLOW SYSTEM
+    // =========================
+    float slowMultiplier = 1f;
+    Coroutine slowRoutine;
 
     Rigidbody2D rb;
     Vector2 movement;
@@ -45,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector2 move = movement * speed;
+        Vector2 move = movement * speed * slowMultiplier;
         move += recoilOffset;
 
         rb.MovePosition(rb.position + move * Time.fixedDeltaTime);
@@ -79,5 +86,22 @@ public class PlayerMovement : MonoBehaviour
     public void ApplyRecoil(Vector2 direction, float force)
     {
         recoilOffset += -direction.normalized * force;
+    }
+
+    public void ApplySlow(float percent, float duration)
+    {
+        if (slowRoutine != null)
+            StopCoroutine(slowRoutine);
+
+        slowRoutine = StartCoroutine(SlowRoutine(percent, duration));
+    }
+
+    IEnumerator SlowRoutine(float percent, float duration)
+    {
+        slowMultiplier = 1f - percent;
+
+        yield return new WaitForSeconds(duration);
+
+        slowMultiplier = 1f;
     }
 }

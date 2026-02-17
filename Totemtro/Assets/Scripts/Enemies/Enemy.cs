@@ -85,6 +85,7 @@ public class Enemy : MonoBehaviour
             transform.position,
             Quaternion.identity
         );
+        Destroy(p, 1f);
 
         if (isCritical)
         {
@@ -242,4 +243,10 @@ public class Enemy : MonoBehaviour
     {
         return isKnocked;
     }
+
+    public float GetCurrentHealth()
+    {
+        return currentHealth;
+    }
+
 }

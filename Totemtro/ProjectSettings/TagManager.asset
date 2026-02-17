@@ -15,10 +15,10 @@ TagManager:
   - Enemy
   - PlayerDash
   - Drop
-  - 
-  - 
-  - 
-  - 
+  - EnemyProjectile
+  - Ground
+  - SlimePuddle
+  - Player
   - 
   - 
   - 
