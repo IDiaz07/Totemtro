@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -14,6 +14,7 @@ public class EnemySpawner : MonoBehaviour
     public GameObject spitterPrefab;
     public GameObject summonerPrefab;
     public GameObject exploderPrefab;
+    public GameObject eliteThrall;
 
 
     [Header("Spawn Settings")]
@@ -33,7 +34,7 @@ public class EnemySpawner : MonoBehaviour
 
     [Header("Boss")]
     public GameObject astraelBossPrefab;
-    public float bossSpawnTime = 180f; // 3 minutos
+    public float bossSpawnTime = 180f;
     public float spawnBoss = 0.5f;
     bool bossSpawned = false;
 
@@ -127,6 +128,10 @@ public class EnemySpawner : MonoBehaviour
     public void ResumeSpawning()
     {
         spawningStopped = false;
+        isPaused = false;   // 🔥 ESTA LÍNEA FALTABA
+
+        StopAllCoroutines();
+        StartCoroutine(SpawnLoop());
     }
 
     void SpawnEnemy()
@@ -164,7 +169,8 @@ public class EnemySpawner : MonoBehaviour
         float bruteWeight = 10f;
         float spitterWeight = 8f;
         float exploderWeight = 6f;
-        float summonerWeight = 2f; // MUY raro
+        float summonerWeight = 2f;
+        float eliteThrallWeight = 0.5f;
 
         // ========= ESCALADO POR TIEMPO =========
 
@@ -180,6 +186,9 @@ public class EnemySpawner : MonoBehaviour
         // Summoner aumenta MUY lento
         summonerWeight += time / 180f;
 
+        // EliteThrall aumenta MUY MUY lento
+        eliteThrallWeight += time / 220f;
+
         // ========= SUMA TOTAL =========
         float totalWeight =
             thrallWeight +
@@ -187,7 +196,8 @@ public class EnemySpawner : MonoBehaviour
             bruteWeight +
             spitterWeight +
             exploderWeight +
-            summonerWeight;
+            summonerWeight +
+            eliteThrallWeight;
 
         float roll = Random.Range(0f, totalWeight);
 
@@ -213,10 +223,17 @@ public class EnemySpawner : MonoBehaviour
 
         if (roll < exploderWeight)
             return exploderPrefab;
+        
+        roll -= spitterWeight;
 
-        return summonerPrefab;
+        if (roll < summonerWeight)
+            return summonerPrefab;
+        
+        if (roll < eliteThrallWeight)
+            return eliteThrall;
+
+        return thrallPrefab;
     }
-
 
     int CountEnemiesNearPlayer()
     {
@@ -261,6 +278,4 @@ public class EnemySpawner : MonoBehaviour
 
         Debug.Log("Astrael has entered the arena.");
     }
-
-
 }

@@ -344,9 +344,9 @@ MonoBehaviour:
   walkLeft: {fileID: 21300000, guid: df2bee81fc3c8b04b98ee76baa36d2aa, type: 3}
   walkRight: {fileID: 21300000, guid: 12528fd1a31ec3847b2315bf7cb6b949, type: 3}
   summonBackLeft: {fileID: 21300000, guid: dc0de1a90b2691148bda7ca48b51c3c7, type: 3}
-  summonBackRight: {fileID: 21300000, guid: 6eb89f1decd6ff84192eb42eccdcf140, type: 3}
+  summonBackRight: {fileID: 21300000, guid: 30c579d8836e84e4fb2fd21dab432fdb, type: 3}
   summonBack: {fileID: 21300000, guid: 2aa78bd158b875649abd6ec8e4c48d8c, type: 3}
-  summonFrontLeft: {fileID: 21300000, guid: cd9813480d4f152468e0c8a858bb32b1, type: 3}
+  summonFrontLeft: {fileID: 21300000, guid: 2a0c82f50cf7de441bbe410ff19443f6, type: 3}
   summonFrontRight: {fileID: 21300000, guid: 2a0c82f50cf7de441bbe410ff19443f6, type: 3}
   summonFront: {fileID: 21300000, guid: b96e679c56a1cca439f58c9789050f18, type: 3}
   summonLeft: {fileID: 21300000, guid: b26244ad90e865a4897f319df56796a8, type: 3}
@@ -441,7 +441,9 @@ MonoBehaviour:
   xpAmount: 10
   goldAmount: 6
   dropForce: 3
+  materialDrops: []
   hitParticlesPrefab: {fileID: 8306175235273709235, guid: 361d01d5c48df364bb9850610fb3342f, type: 3}
+  isBoss: 0
 --- !u!114 &-5862324573170177698
 MonoBehaviour:
   m_ObjectHideFlags: 0

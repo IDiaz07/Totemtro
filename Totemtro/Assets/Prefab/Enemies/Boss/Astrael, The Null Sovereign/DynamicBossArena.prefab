@@ -47,7 +47,7 @@ MonoBehaviour:
   arenaGuardianPrefab: {fileID: 5197425523659630583, guid: 2892d2bd29232714fbebb07b43cbd306, type: 3}
   guardianCount: 60
   radius: 16
-  minRadius: 13
+  minRadius: 14.5
   shrinkSpeed: 0.2
   rotationSpeed: 10
   shapeChangeInterval: 10

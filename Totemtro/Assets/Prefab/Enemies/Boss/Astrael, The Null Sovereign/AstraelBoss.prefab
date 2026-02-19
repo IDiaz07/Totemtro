@@ -32,8 +32,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3451794946247251732}
   m_Father: {fileID: 0}
@@ -113,18 +113,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b169a1293b4c02c48b67e1539191d7ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1500
+  maxHealth: 2500
   contactDamage: 10
-  hitKnockbackForce: 4
-  hitKnockbackDuration: 0.12
-  knockbackResistance: 1
+  hitKnockbackForce: 2
+  hitKnockbackDuration: 0.2
+  knockbackResistance: 0
   flashDuration: 0.02
   xpPrefab: {fileID: 6255059052769338757, guid: 01d5839b84bcf4c4f9d05fa5983bd479, type: 3}
   goldPrefab: {fileID: 2986144199003916069, guid: 531c7b8b765812e438b54e339552727b, type: 3}
   xpAmount: 75
   goldAmount: 60
   dropForce: 10
+  materialDrops:
+  - item: {fileID: 11400000, guid: ed97087bfde3963409c5b97c573999e5, type: 2}
+    minAmount: 1
+    maxAmount: 1
+    dropChance: 1
   hitParticlesPrefab: {fileID: 8306175235273709235, guid: 7a05ce0bc9f898a43af2796fec674f6c, type: 3}
+  isBoss: 1
 --- !u!114 &3178581256467336302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,15 +148,20 @@ MonoBehaviour:
   bossHealthUIPrefab: {fileID: 8330984811753573892, guid: b725846f9f7f527479dcd9ef9769c65a, type: 3}
   shockwavePrefab: {fileID: 8878534162746659087, guid: d50676f1c779f7f4680f2b0a97abff1b, type: 3}
   dynamicArenaPrefab: {fileID: 647838279843151596, guid: a7e83a8c53ddaee4e83f083dfd2414c0, type: 3}
-  legendaryDropPrefab: {fileID: 5197425523659630583, guid: ba5ad2023c7af9a4b9b4766a170c9c18, type: 3}
+  legendaryDropPrefab: {fileID: 0}
+  phase2AuraPrefab: {fileID: 2828492571405181867, guid: 208c4611dfcb79a48877a5a89ed5da2b, type: 3}
+  phase2ParticlesPrefab: {fileID: 963678807713716681, guid: ff0e21845c7b6e04697e51c990d763bf, type: 3}
+  phase2ExplosionPrefab: {fileID: 963678807713716681, guid: ff0e21845c7b6e04697e51c990d763bf, type: 3}
+  bodyRenderer: {fileID: 0}
   portalPrefab: {fileID: 1787885560300799192, guid: 69c29a705cf7060479b1e6e36e418b94, type: 3}
-  screenFade: {fileID: 0}
-  introDelayBeforeAttack: 3
+  screenFade: {fileID: 143043889422459926, guid: 53ebd12d3f8022e4f9a7608ad525991b, type: 3}
+  introDelayBeforeAttack: 0.5
   sphereCooldown: 4
   guardianCooldown: 6
   guardianCount: 4
   bossMusic: {fileID: 8300000, guid: 5a3a37e3efa0dc448b8e843cee5a9249, type: 3}
   normalMusic: {fileID: 8300000, guid: b1db39db8a7718b4a85740faaaab7c67, type: 3}
+  isSpawning: 1
 --- !u!114 &5116887010472909859
 MonoBehaviour:
   m_ObjectHideFlags: 0

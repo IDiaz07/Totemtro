@@ -15,7 +15,7 @@ C:/Users/Nitropc/Documents/GitHub/Totemtro/Totemtro
 -logFile
 Logs/AssetImportWorker18.log
 -srvPort
-54094
+64305
 -job-worker-count
 7
 -background-job-worker-count
@@ -59,12 +59,12 @@ C:/Users/Nitropc/Documents/GitHub/Totemtro/Totemtro
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [24304]  Target information:
+Player connection [20912]  Target information:
 
-Player connection [24304]  * "[IP] 192.168.1.17 [Port] 0 [Flags] 2 [Guid] 1181902406 [EditorId] 1181902406 [Version] 1048832 [Id] WindowsEditor(7,DZka1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [20912]  * "[IP] 192.168.1.17 [Port] 0 [Flags] 2 [Guid] 3093607654 [EditorId] 3093607654 [Version] 1048832 [Id] WindowsEditor(7,DZka1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [24304] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [24304] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [20912] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [20912] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 7
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -76,7 +76,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 2.70 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 2.10 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.41f1 (46e447368a18)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.41f1/Editor/Data/Resources/UnitySubsystems
@@ -92,46 +92,46 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.41f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.41f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.41f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56416
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56640
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.41f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.41f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Registered in 0.003992 seconds.
-- Loaded All Assemblies, in  0.333 seconds
+Registered in 0.002668 seconds.
+- Loaded All Assemblies, in  0.342 seconds
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 200 ms
+Android Extension - Scanning For ADB Devices 173 ms
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.520 seconds
-Domain Reload Profiling: 851ms
-	BeginReloadAssembly (115ms)
+- Finished resetting the current domain, in  0.477 seconds
+Domain Reload Profiling: 816ms
+	BeginReloadAssembly (118ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (29ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (42ms)
-	LoadAllAssembliesAndSetupDomain (135ms)
-		LoadAssemblies (112ms)
+	RebuildCommonClasses (32ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (41ms)
+	LoadAllAssembliesAndSetupDomain (140ms)
+		LoadAssemblies (115ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (132ms)
-			TypeCache.Refresh (131ms)
-				TypeCache.ScanAssembly (119ms)
+		AnalyzeDomain (137ms)
+			TypeCache.Refresh (135ms)
+				TypeCache.ScanAssembly (125ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (520ms)
+	FinalizeReload (477ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (478ms)
+		SetupLoadedEditorAssemblies (440ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (291ms)
+			InitializePlatformSupportModulesInManaged (254ms)
 			SetLoadedEditorAssemblies (3ms)
-			BeforeProcessingInitializeOnLoad (39ms)
-			ProcessInitializeOnLoadAttributes (97ms)
-			ProcessInitializeOnLoadMethodAttributes (48ms)
+			BeforeProcessingInitializeOnLoad (43ms)
+			ProcessInitializeOnLoadAttributes (95ms)
+			ProcessInitializeOnLoadMethodAttributes (45ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -140,98 +140,74 @@ Domain Reload Profiling: 851ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.733 seconds
-Refreshing native plugins compatible for Editor in 1.63 ms, found 4 plugins.
+- Loaded All Assemblies, in  0.728 seconds
+Refreshing native plugins compatible for Editor in 1.71 ms, found 4 plugins.
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.700 seconds
-Domain Reload Profiling: 1429ms
-	BeginReloadAssembly (150ms)
+- Finished resetting the current domain, in  0.666 seconds
+Domain Reload Profiling: 1390ms
+	BeginReloadAssembly (152ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
+		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (28ms)
-	RebuildCommonClasses (35ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (33ms)
-	LoadAllAssembliesAndSetupDomain (498ms)
-		LoadAssemblies (324ms)
+		CreateAndSetChildDomain (26ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (36ms)
+	LoadAllAssembliesAndSetupDomain (489ms)
+		LoadAssemblies (311ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (260ms)
-			TypeCache.Refresh (190ms)
-				TypeCache.ScanAssembly (171ms)
-			BuildScriptInfoCaches (57ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (701ms)
+		AnalyzeDomain (269ms)
+			TypeCache.Refresh (197ms)
+				TypeCache.ScanAssembly (177ms)
+			BuildScriptInfoCaches (58ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (666ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (566ms)
+		SetupLoadedEditorAssemblies (529ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (10ms)
-			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (100ms)
-			ProcessInitializeOnLoadAttributes (331ms)
-			ProcessInitializeOnLoadMethodAttributes (115ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (99ms)
+			ProcessInitializeOnLoadAttributes (324ms)
+			ProcessInitializeOnLoadMethodAttributes (87ms)
 			AfterProcessingInitializeOnLoad (5ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (5ms)
+		AwakeInstancesAfterBackupRestoration (4ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Refreshing native plugins compatible for Editor in 1.46 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.42 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 220 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6779 unused Assets / (4.6 MB). Loaded Objects now: 7497.
-Memory consumption went from 183.2 MB to 178.6 MB.
-Total: 6.669400 ms (FindLiveObjects: 0.539500 ms CreateObjectMapping: 0.494900 ms MarkObjects: 3.780700 ms  DeleteObjects: 1.853500 ms)
+Unloading 6807 unused Assets / (4.4 MB). Loaded Objects now: 7525.
+Memory consumption went from 183.4 MB to 178.9 MB.
+Total: 7.512300 ms (FindLiveObjects: 0.573200 ms CreateObjectMapping: 0.593700 ms MarkObjects: 4.288200 ms  DeleteObjects: 2.056000 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 20395.836070 seconds.
-  path: Assets/Sprites/Enemies/Summoner/Invoke/InvokeBackLeftView.png
-  artifactKey: Guid(dc0de1a90b2691148bda7ca48b51c3c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Enemies/Summoner/Invoke/InvokeBackLeftView.png using Guid(dc0de1a90b2691148bda7ca48b51c3c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bd14e6d38692c29707c1bcb0664cd062') in 0.1440328 seconds
+  Time since last request: 43710.811422 seconds.
+  path: Assets/Sprites/Enemies/Elite Thrall/BackLeftView.png
+  artifactKey: Guid(ff5e91f532535f24eb71409eefdfeb42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemies/Elite Thrall/BackLeftView.png using Guid(ff5e91f532535f24eb71409eefdfeb42) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cdb9851abc8b5cb9e34317e5b0bcd463') in 0.1344703 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Sprites/Enemies/Summoner/Invoke/InvokeFront.png
-  artifactKey: Guid(b96e679c56a1cca439f58c9789050f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Enemies/Summoner/Invoke/InvokeFront.png using Guid(b96e679c56a1cca439f58c9789050f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '04c7f081e798f52f90e9753ae065060d') in 0.0830136 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
-
-========================================================================
-Received Import Request.
-  Time since last request: 65.655557 seconds.
-  path: Assets/Sprites/Enemies/Summoner/Invoke/InvokeBackLeftView.png
-  artifactKey: Guid(dc0de1a90b2691148bda7ca48b51c3c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Enemies/Summoner/Invoke/InvokeBackLeftView.png using Guid(dc0de1a90b2691148bda7ca48b51c3c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '91c17569bfacfa93ef2f4700e2d45505') in 0.0452852 seconds
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprites/Enemies/Elite Thrall/BackView.png
+  artifactKey: Guid(ad9e324ffcfb459428618cf4748b1eac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemies/Elite Thrall/BackView.png using Guid(ad9e324ffcfb459428618cf4748b1eac) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '010d2c4539046a915322f8cbcd7559c2') in 0.0247883 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Sprites/Enemies/Summoner/Invoke/InvokeLeftView.png
-  artifactKey: Guid(b26244ad90e865a4897f319df56796a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Enemies/Summoner/Invoke/InvokeLeftView.png using Guid(b26244ad90e865a4897f319df56796a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dbd12a49f85b66958df0c51825ef29f3') in 0.0482913 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Sprites/Enemies/Summoner/Invoke/InvokeFrontRightView.png
-  artifactKey: Guid(2a0c82f50cf7de441bbe410ff19443f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Enemies/Summoner/Invoke/InvokeFrontRightView.png using Guid(2a0c82f50cf7de441bbe410ff19443f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9d197bd4e1e69a1ae76c41b765a28c86') in 0.0327681 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Sprites/Enemies/Summoner/Invoke/InvokeBackView.png
-  artifactKey: Guid(2aa78bd158b875649abd6ec8e4c48d8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Enemies/Summoner/Invoke/InvokeBackView.png using Guid(2aa78bd158b875649abd6ec8e4c48d8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '67921b5b5eb1f915a5cfcdc6f36e4821') in 0.04109 seconds
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprites/Enemies/Elite Thrall/LeftView.png
+  artifactKey: Guid(6b32c5e0640d51548af4d048bb228933) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemies/Elite Thrall/LeftView.png using Guid(6b32c5e0640d51548af4d048bb228933) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fb0f130c5aafd04e74f5a4e429465b72') in 0.0233519 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout

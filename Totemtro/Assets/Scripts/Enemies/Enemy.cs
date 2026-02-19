@@ -23,8 +23,15 @@ public class Enemy : MonoBehaviour
     public int goldAmount = 2;
     public float dropForce = 3f;
 
+    [Header("Material Drops")]
+    public EnemyDropData[] materialDrops;
+
+
     [Header("FX")]
     public GameObject hitParticlesPrefab;
+
+    [Header("Boss")]
+    public bool isBoss = false;
 
     float currentHealth;
 
@@ -61,8 +68,10 @@ public class Enemy : MonoBehaviour
 
         SpawnHitParticles(isCritical);
 
+        if (!GetComponent<AstraelBoss>())
+            StartCoroutine(DamageSquash());
+
         StartCoroutine(HitFlash());
-        StartCoroutine(DamageSquash());
 
         if (knockbackRoutine != null)
             StopCoroutine(knockbackRoutine);
@@ -73,7 +82,10 @@ public class Enemy : MonoBehaviour
             damageSpawner.SpawnDamage(amount, isCritical);
 
         if (currentHealth <= 0f)
-            Die();
+        {
+            if (!isBoss)
+                Die();
+        }
     }
 
     void SpawnHitParticles(bool isCritical)
@@ -105,32 +117,45 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        SpawnDrops();
+        Vector3 deathPosition = transform.position;
+
+        // 🔒 Congelar física
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.simulated = false;
+        }
+
+        SpawnDrops(deathPosition);
+
         StartCoroutine(DeathAnimation());
     }
 
-    void SpawnDrops()
+    void SpawnDrops(Vector3 position)
     {
         // XP
         for (int i = 0; i < xpAmount; i++)
         {
-            SpawnSingleDrop(xpPrefab);
+            SpawnSingleDrop(position, xpPrefab);
         }
 
         // GOLD
         for (int i = 0; i < goldAmount; i++)
         {
-            SpawnSingleDrop(goldPrefab);
+            SpawnSingleDrop(position, goldPrefab);
         }
+
+        // MATERIAL DROPS
+        SpawnMaterialDrops(position);
     }
 
-    void SpawnSingleDrop(GameObject prefab)
+    void SpawnSingleDrop(Vector3 position, GameObject prefab)
     {
         if (prefab == null) return;
 
         GameObject drop = Instantiate(
             prefab,
-            transform.position,
+            position,
             Quaternion.identity
         );
 
@@ -247,6 +272,60 @@ public class Enemy : MonoBehaviour
     public float GetCurrentHealth()
     {
         return currentHealth;
+    }
+
+    public void KillInstantly()
+    {
+        Destroy(gameObject);
+    }
+
+    void SpawnMaterialDrops(Vector3 position)
+    {
+        if (materialDrops == null || materialDrops.Length == 0)
+        {
+            Debug.Log("No material drops configured");
+            return;
+        }
+
+        foreach (var drop in materialDrops)
+        {
+            if (drop.item == null) continue;
+
+            if (Random.value <= drop.dropChance)
+            {
+                int amount = Random.Range(
+                    drop.minAmount,
+                    drop.maxAmount + 1
+                );
+
+                SpawnMaterialDropObject(position, drop.item, amount);
+            }
+        }
+    }
+
+    void SpawnMaterialDropObject(Vector3 position, ItemData item, int amount)
+    {
+        if (item.worldPrefab == null) return;
+
+        GameObject drop = Instantiate(
+            item.worldPrefab,
+            position,
+            Quaternion.identity
+        );
+
+        MaterialDrop pickup = drop.GetComponent<MaterialDrop>();
+
+        if (pickup != null)
+        {
+            pickup.Initialize(item, amount);
+        }
+
+        Rigidbody2D rb = drop.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            Vector2 randomDir = Random.insideUnitCircle.normalized;
+            rb.AddForce(randomDir * dropForce, ForceMode2D.Impulse);
+        }
     }
 
 }

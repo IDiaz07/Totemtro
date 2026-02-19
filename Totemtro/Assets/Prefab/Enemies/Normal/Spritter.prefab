@@ -345,7 +345,13 @@ MonoBehaviour:
   xpAmount: 6
   goldAmount: 3
   dropForce: 3
+  materialDrops:
+  - item: {fileID: 11400000, guid: 1d3d2d0c4167671409658e894ef56e5a, type: 2}
+    dropChance: 1
+    minAmount: 1
+    maxAmount: 1
   hitParticlesPrefab: {fileID: 8306175235273709235, guid: 361d01d5c48df364bb9850610fb3342f, type: 3}
+  isBoss: 0
 --- !u!114 &4346546824457503556
 MonoBehaviour:
   m_ObjectHideFlags: 0

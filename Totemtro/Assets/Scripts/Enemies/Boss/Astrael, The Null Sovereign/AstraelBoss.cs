@@ -11,6 +11,14 @@ public class AstraelBoss : MonoBehaviour
     public GameObject dynamicArenaPrefab;
     public GameObject legendaryDropPrefab;
 
+    [Header("Phase 2 FX")]
+    public GameObject phase2AuraPrefab;
+    public GameObject phase2ParticlesPrefab;
+    public GameObject phase2ExplosionPrefab;
+    [SerializeField] private SpriteRenderer bodyRenderer;
+
+    bool isTransforming = false;
+
     [Header("Cinematic")]
     public GameObject portalPrefab;
     public CanvasGroup screenFade;       // imagen negra fullscreen
@@ -34,12 +42,13 @@ public class AstraelBoss : MonoBehaviour
     Transform player;
     BossHealthUI bossUI;
     ArenaController arenaController;
+    CameraFollow cameraFollow;
 
     bool phaseTwo = false;
     bool enraged = false;
     bool canSphere = true;
     bool canGuardians = true;
-    bool isDead = false;
+    bool deathStarted = false;
 
     void Start()
     {
@@ -47,109 +56,157 @@ public class AstraelBoss : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
 
         mainCamera = Camera.main;
+
+        if (mainCamera == null)
+        {
+            Debug.LogError("No MainCamera found in scene!");
+            return;
+        }
+
+        cameraFollow = mainCamera.GetComponent<CameraFollow>();
+
+        if (cameraFollow != null)
+            cameraFollow.target = player;
+
         originalCamSize = mainCamera.orthographicSize;
         originalCamPos = mainCamera.transform.position;
 
         ClearAllEnemies();
-
-        StartCoroutine(BossIntroSequence());
+        StartCoroutine(Introduction());
     }
 
     void Update()
     {
+        if (deathStarted) return;
         if (enemy == null) return;
 
         float currentHP = enemy.GetCurrentHealth();
 
-        // Fase 2
-        if (!phaseTwo && currentHP <= enemy.maxHealth * 0.5f)
-        {
-            EnterPhaseTwo();
-        }
-
-        // Enrage
-        if (!enraged && currentHP <= enemy.maxHealth * 0.2f)
-        {
-            EnterEnrage();
-        }
-
-        // Muerte
         if (currentHP <= 0f)
         {
-            OnBossDeath();
+            deathStarted = true;
+            StopAllCoroutines();   // 🔥 MUY IMPORTANTE
+            StartCoroutine(DeathSequence());
+            return;
         }
+
+        if (isTransforming) return;
+
+        if (!phaseTwo && currentHP <= enemy.maxHealth * 0.5f)
+            EnterPhaseTwo();
+
+        if (!enraged && currentHP <= enemy.maxHealth * 0.2f)
+            EnterEnrage();
     }
 
     // ==============================
     // INTRO
     // ==============================
 
-    IEnumerator BossIntroSequence()
+    IEnumerator Introduction()
     {
         Time.timeScale = 0f;
+        if (cameraFollow != null)
+            cameraFollow.enabled = false;
 
-        // Pequeño delay dramático
-        yield return new WaitForSecondsRealtime(0.5f);
+        Camera cam = Camera.main;
+        Vector3 originalPos = cam.transform.position;
+        float originalSize = cam.orthographicSize;
 
-        // Cámara va hacia el boss
-        Camera mainCam = Camera.main;
-        Vector3 originalPos = mainCam.transform.position;
-        float originalSize = mainCam.orthographicSize;
+        // 🔥 Spawn portal
+        GameObject portal = Instantiate(
+            portalPrefab,
+            transform.position,
+            Quaternion.identity
+        );
 
-        float zoomSize = originalSize - 2f;
+        Debug.Log("Playing BOSS music");
+        MusicManager.Instance.PlayMusic(bossMusic, 2f);
+
+        yield return new WaitForSecondsRealtime(1.5f);
+
+        // 🌑 Oscurecer pantalla
+        yield return StartCoroutine(FadeScreen(1f, 0.5f));
+
+        // 🎥 Cámara va al boss
         float t = 0f;
         float duration = 1f;
 
         while (t < duration)
         {
-            mainCam.transform.position = Vector3.Lerp(
+            cam.transform.position = Vector3.Lerp(
                 originalPos,
                 new Vector3(transform.position.x, transform.position.y, originalPos.z),
                 t / duration
             );
 
-            mainCam.orthographicSize = Mathf.Lerp(originalSize, zoomSize, t / duration);
+            cam.orthographicSize = Mathf.Lerp(originalSize, originalSize - 2f, t / duration);
 
             t += Time.unscaledDeltaTime;
             yield return null;
         }
 
-        mainCam.transform.position =
+        cam.transform.position =
             new Vector3(transform.position.x, transform.position.y, originalPos.z);
 
-        mainCam.orthographicSize = zoomSize;
+        // 🔥 Boss emerge desde el portal
+        transform.localScale = Vector3.zero;
+        Destroy(portal);
 
-        // 🔥 AQUÍ SE CREA LA ARENA
-        SpawnDynamicArena();
-
-        // Espera dramática
-        yield return new WaitForSecondsRealtime(3f);
-
-        // Cámara vuelve al jugador
+        float emergeTime = 1f;
         t = 0f;
 
-        while (t < duration)
+        while (t < emergeTime)
         {
-            mainCam.transform.position = Vector3.Lerp(
-                mainCam.transform.position,
-                new Vector3(player.position.x, player.position.y, originalPos.z),
-                t / duration
+            transform.localScale = Vector3.Lerp(
+                Vector3.zero,
+                Vector3.one,
+                t / emergeTime
             );
-
-            mainCam.orthographicSize = Mathf.Lerp(zoomSize, originalSize, t / duration);
 
             t += Time.unscaledDeltaTime;
             yield return null;
         }
 
-        mainCam.orthographicSize = originalSize;
+        transform.localScale = Vector3.one;
+
+        // 💀 Mostrar nombre
+        BossNameCinematic nameUI =
+            FindFirstObjectByType<BossNameCinematic>();
+
+        if (nameUI != null)
+            yield return StartCoroutine(
+                nameUI.ShowName("Astrael, The Null Sovereign")
+            );
+
+        // Crear arena ahora
+        SpawnDynamicArena();
+
+        yield return new WaitForSecondsRealtime(1f);
+
+        // 🌑 Quitar oscuridad
+        yield return StartCoroutine(FadeScreen(0f, 0.5f));
+
+        // 🔥 Reactivar seguimiento normal
+        cam.orthographicSize = originalSize;
+
+        if (cameraFollow != null)
+            cameraFollow.enabled = true;
+
+        cam.orthographicSize = originalSize;
+        if (cameraFollow != null)
+            cameraFollow.enabled = true;
 
         Time.timeScale = 1f;
 
-        // Empiezan ataques
+        CreateBossUI();
+        // ⏳ Espera 3 segundos antes de atacar
+        yield return new WaitForSeconds(1f);
+
         StartCoroutine(SphereLoop());
         StartCoroutine(GuardianLoop());
     }
+
 
     IEnumerator CameraFocusOnBoss()
     {
@@ -205,7 +262,7 @@ public class AstraelBoss : MonoBehaviour
 
     IEnumerator SphereLoop()
     {
-        while (true)
+        while (!deathStarted)
         {
             if (canSphere)
             {
@@ -219,7 +276,7 @@ public class AstraelBoss : MonoBehaviour
 
     IEnumerator GuardianLoop()
     {
-        while (true)
+        while (!deathStarted)
         {
             if (canGuardians)
             {
@@ -276,20 +333,155 @@ public class AstraelBoss : MonoBehaviour
 
     void EnterPhaseTwo()
     {
-        phaseTwo = true;
+        if (isTransforming) return;
 
+        phaseTwo = true;
+        isTransforming = true;
+
+        StartCoroutine(PhaseTwoTransformation());
+    }
+
+    IEnumerator PhaseTwoTransformation()
+    {
+        isTransforming = true;
+
+        // 🧊 Freeze juego
+        Time.timeScale = 0f;
+
+        if (cameraFollow != null)
+            cameraFollow.enabled = false;
+
+        // 🎥 Cámara al boss
+        Vector3 camTarget = new Vector3(
+            transform.position.x,
+            transform.position.y,
+            mainCamera.transform.position.z
+        );
+
+        float zoomSize = originalCamSize * 0.7f;
+
+        float t = 0f;
+        float duration = 0.8f;
+
+        while (t < duration)
+        {
+            t += Time.unscaledDeltaTime;
+
+            mainCamera.transform.position =
+                Vector3.Lerp(originalCamPos, camTarget, t / duration);
+
+            mainCamera.orthographicSize =
+                Mathf.Lerp(originalCamSize, zoomSize, t / duration);
+
+            yield return null;
+        }
+
+        mainCamera.transform.position = camTarget;
+        mainCamera.orthographicSize = zoomSize;
+
+        // 🌑 Aura
+        if (phase2AuraPrefab != null)
+            Instantiate(
+                phase2AuraPrefab,
+                transform.position,
+                Quaternion.identity,
+                transform
+            );
+
+        // 🔥 Partículas
+        if (phase2ParticlesPrefab != null)
+            Instantiate(
+                phase2ParticlesPrefab,
+                transform.position,
+                Quaternion.identity,
+                transform
+            );
+
+        // 📈 Pulsos de escala
+        SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
+
+        if (sr == null)
+        {
+            Debug.LogError("No SpriteRenderer found in AstraelBoss or its children!");
+            yield break;
+        }
+
+        Vector3 baseScale = transform.localScale;
+
+        yield return StartCoroutine(ScalePulse(baseScale, baseScale * 2f, 0.25f));
+        yield return StartCoroutine(ScalePulse(baseScale * 2f, baseScale * 1.6f, 0.25f));
+
+        // 💜 Cambio de color en el segundo pulso
+        sr.color = new Color(0.6f, 0f, 0.8f);
+
+        yield return StartCoroutine(ScalePulse(baseScale * 1.6f, baseScale * 2f, 0.2f));
+        yield return StartCoroutine(ScalePulse(baseScale * 2f, baseScale * 1.8f, 0.2f));
+        yield return StartCoroutine(ScalePulse(baseScale * 1.8f, baseScale * 2f, 0.15f));
+
+        transform.localScale = baseScale * 2f;
+
+        // 💥 Explosión visual
+        if (phase2ExplosionPrefab != null)
+            Instantiate(
+                phase2ExplosionPrefab,
+                transform.position,
+                Quaternion.identity
+            );
+
+        CameraShake.Instance.Shake(1.2f, 0.8f);
+
+        yield return new WaitForSecondsRealtime(0.6f);
+
+        // 🎥 Cámara vuelve al player
+        t = 0f;
+
+        while (t < duration)
+        {
+            t += Time.unscaledDeltaTime;
+
+            mainCamera.transform.position =
+                Vector3.Lerp(camTarget, originalCamPos, t / duration);
+
+            mainCamera.orthographicSize =
+                Mathf.Lerp(zoomSize, originalCamSize, t / duration);
+
+            yield return null;
+        }
+
+        mainCamera.transform.position = originalCamPos;
+        mainCamera.orthographicSize = originalCamSize;
+
+        if (cameraFollow != null)
+            cameraFollow.enabled = true;
+
+        // 🔥 Buffs reales fase 2
         sphereCooldown *= 0.7f;
         guardianCooldown *= 0.7f;
         guardianCount += 2;
 
-        Instantiate(
-            shockwavePrefab,
-            transform.position,
-            Quaternion.identity
-        );
+        // 🎮 Vuelve el control
+        Time.timeScale = 1f;
 
-        CameraShake.Instance.Shake(1f, 0.8f);
+        isTransforming = false;
     }
+
+
+    IEnumerator ScalePulse(Vector3 from, Vector3 to, float duration)
+    {
+        float t = 0f;
+
+        while (t < duration)
+        {
+            transform.localScale = Vector3.Lerp(from, to, t / duration);
+            t += Time.unscaledDeltaTime;
+            yield return null;
+        }
+
+        transform.localScale = to;
+    }
+
+
+
 
     void EnterEnrage()
     {
@@ -368,68 +560,53 @@ public class AstraelBoss : MonoBehaviour
 
     void ClearAllEnemies()
     {
-        GameObject[] enemies =
-            GameObject.FindGameObjectsWithTag("Enemy");
+        Enemy[] enemies =
+            FindObjectsByType<Enemy>(FindObjectsSortMode.None);
 
-        foreach (var e in enemies)
+        foreach (Enemy e in enemies)
         {
-            if (e.gameObject == gameObject) continue;
-
-            Destroy(e);
+            if (e == enemy) continue;
+            Debug.Log("Enemies found: " + enemies.Length);
+            Destroy(e.gameObject);
         }
     }
 
-    void OnBossDeath() 
-    { 
-        if (isDead) return; 
-        isDead = true; 
-        StartCoroutine(DeathSequence()); 
+
+    public bool isSpawning = true;
+
+    public void StopSpawning()
+    {
+        isSpawning = false;
     }
 
+    public void ResumeSpawning()
+    {
+        isSpawning = true;
+    }
 
     IEnumerator DeathSequence()
     {
-        // Detener ataques
-        StopAllCoroutines();
+        Debug.Log("===== DEATH SEQUENCE START =====");
 
-        // Congelar enemigos
+        canSphere = false;
+        canGuardians = false;
+
+
         Time.timeScale = 0.5f;
 
-        // Shake fuerte
-        CameraShake.Instance.Shake(1f, 1f);
+        CameraShake.Instance.Shake(0.2f, 1f);
 
         yield return new WaitForSecondsRealtime(1f);
 
-        // Colapso arena
         if (arenaController != null)
+        {
             arenaController.StartCollapse();
+        }
 
         yield return new WaitForSecondsRealtime(1.5f);
 
-        // Drop legendario
-        SpawnLegendaryDrop();
-
-        yield return new WaitForSecondsRealtime(1f);
-
-        // Transición acto 2
-        EnterActTwo();
-
-        MusicManager.Instance.PlayMusic(normalMusic, 2f);
-
-        // Desactivar UI del boss
-        if (bossUI != null)
+        if (legendaryDropPrefab != null)
         {
-            Destroy(bossUI.gameObject);
-            bossUI = null;
-        }
-
-        Destroy(gameObject);
-
-
-        void SpawnLegendaryDrop()
-        {
-            if (legendaryDropPrefab == null) return;
-
             Instantiate(
                 legendaryDropPrefab,
                 transform.position,
@@ -437,22 +614,183 @@ public class AstraelBoss : MonoBehaviour
             );
         }
 
-        void EnterActTwo()
+        yield return new WaitForSecondsRealtime(1f);
+
+        Time.timeScale = 1f;
+
+        EnemySpawner spawner =
+            FindFirstObjectByType<EnemySpawner>();
+
+        if (spawner != null)
         {
-            EnemySpawner spawner =
-                FindFirstObjectByType<EnemySpawner>();
-
-            if (spawner != null)
-                spawner.ResumeSpawning();
-
-            // Aumentar dificultad base
+            spawner.ResumeSpawning();
             spawner.spawnInterval *= 0.7f;
             spawner.maxEnemiesAlive += 10;
-
-            Time.timeScale = 1f;
-
             Debug.Log("ACT II BEGINS");
         }
 
+        MusicManager.Instance?.PlayMusic(normalMusic, 2f);
+
+        if (bossUI != null)
+            Destroy(bossUI.gameObject);
+
+        if (cameraFollow != null)
+        {
+            cameraFollow.target = player;
+            cameraFollow.enabled = true;
+        }
+
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+            rb.bodyType = RigidbodyType2D.Kinematic;
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        }
+
+        yield return StartCoroutine(UltraCinematicDeath());
+        Destroy(gameObject);
     }
+
+    IEnumerator UltraCinematicDeath()
+    {
+        SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
+        Vector3 originalScale = transform.localScale;
+
+        // 🎥 Cámara zoom brutal
+        Vector3 camStart = mainCamera.transform.position;
+        Vector3 camTarget = new Vector3(
+            transform.position.x,
+            transform.position.y,
+            camStart.z
+        );
+
+        float camZoomStart = mainCamera.orthographicSize;
+        float camZoomTarget = camZoomStart * 0.5f;
+
+        float zoomTime = 0.6f;
+        float t = 0f;
+
+        Time.timeScale = 0.3f; // 🐢 Slow motion extremo
+
+        while (t < zoomTime)
+        {
+            t += Time.unscaledDeltaTime;
+
+            mainCamera.transform.position =
+                Vector3.Lerp(camStart, camTarget, t / zoomTime);
+
+            mainCamera.orthographicSize =
+                Mathf.Lerp(camZoomStart, camZoomTarget, t / zoomTime);
+
+            yield return null;
+        }
+
+        // 🌌 Partículas orbitando hacia el centro
+        if (phase2ParticlesPrefab != null)
+        {
+            GameObject particles = Instantiate(
+                phase2ParticlesPrefab,
+                transform.position,
+                Quaternion.identity
+            );
+
+            Destroy(particles, 2f);
+        }
+
+        // 💜 Simulación de dissolve (fade + contracción)
+        float dissolveTime = 1.2f;
+        t = 0f;
+
+        while (t < dissolveTime)
+        {
+            float progress = t / dissolveTime;
+
+            // reducción progresiva
+            transform.localScale = originalScale * (1f - progress);
+
+            // fade alpha
+            if (sr != null)
+            {
+                Color c = sr.color;
+                c.a = 1f - progress;
+                sr.color = c;
+            }
+
+            t += Time.unscaledDeltaTime;
+            yield return null;
+        }
+
+        // ⚪ FLASH BLANCO
+        if (screenFade != null)
+        {
+            screenFade.alpha = 1f;
+            yield return new WaitForSecondsRealtime(0.15f);
+            screenFade.alpha = 0f;
+        }
+
+        // 💥 Explosión final
+        if (phase2ExplosionPrefab != null)
+            Instantiate(
+                phase2ExplosionPrefab,
+                transform.position,
+                Quaternion.identity
+            );
+
+        CameraShake.Instance.Shake(0.5f, 1.2f);
+
+        yield return new WaitForSecondsRealtime(0.3f);
+
+        // 🎮 Restaurar cámara y tiempo
+        Time.timeScale = 1f;
+
+        mainCamera.transform.position = originalCamPos;
+        mainCamera.orthographicSize = originalCamSize;
+
+        if (cameraFollow != null)
+            cameraFollow.enabled = true;
+    }
+
+
+    IEnumerator FadeScreen(float targetAlpha, float duration)
+    {
+        if (screenFade == null) yield break;
+
+        float start = screenFade.alpha;
+        float t = 0f;
+
+        while (t < duration)
+        {
+            screenFade.alpha = Mathf.Lerp(start, targetAlpha, t / duration);
+            t += Time.unscaledDeltaTime;
+            yield return null;
+        }
+
+        screenFade.alpha = targetAlpha;
+    }
+
+    IEnumerator ScaleToPhaseTwo()
+    {
+        Vector3 startScale = transform.localScale;
+        Vector3 targetScale = Vector3.one * 2f;
+
+        float duration = 0.6f;
+        float t = 0f;
+
+        while (t < duration)
+        {
+            transform.localScale = Vector3.Lerp(
+                startScale,
+                targetScale,
+                t / duration
+            );
+
+            t += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.localScale = targetScale;
+    }
+
 }

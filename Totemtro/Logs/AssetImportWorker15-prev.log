@@ -15,7 +15,7 @@ C:/Users/Nitropc/Documents/GitHub/Totemtro/Totemtro
 -logFile
 Logs/AssetImportWorker15.log
 -srvPort
-54094
+64305
 -job-worker-count
 7
 -background-job-worker-count
@@ -59,12 +59,12 @@ C:/Users/Nitropc/Documents/GitHub/Totemtro/Totemtro
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [27380]  Target information:
+Player connection [34148]  Target information:
 
-Player connection [27380]  * "[IP] 192.168.1.17 [Port] 0 [Flags] 2 [Guid] 4215953626 [EditorId] 4215953626 [Version] 1048832 [Id] WindowsEditor(7,DZka1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [34148]  * "[IP] 192.168.1.17 [Port] 0 [Flags] 2 [Guid] 2423548640 [EditorId] 2423548640 [Version] 1048832 [Id] WindowsEditor(7,DZka1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [27380] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [27380] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [34148] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [34148] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 7
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -76,7 +76,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 2.17 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 2.47 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.41f1 (46e447368a18)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.41f1/Editor/Data/Resources/UnitySubsystems
@@ -92,46 +92,46 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.41f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.41f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.41f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56720
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56464
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.41f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.41f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Registered in 0.003329 seconds.
-- Loaded All Assemblies, in  0.344 seconds
+Registered in 0.002771 seconds.
+- Loaded All Assemblies, in  0.323 seconds
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 171 ms
+Android Extension - Scanning For ADB Devices 162 ms
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.484 seconds
-Domain Reload Profiling: 826ms
-	BeginReloadAssembly (118ms)
+- Finished resetting the current domain, in  0.447 seconds
+Domain Reload Profiling: 768ms
+	BeginReloadAssembly (107ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (36ms)
+	RebuildCommonClasses (31ms)
 	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (48ms)
-	LoadAllAssembliesAndSetupDomain (130ms)
-		LoadAssemblies (115ms)
+	initialDomainReloadingComplete (40ms)
+	LoadAllAssembliesAndSetupDomain (132ms)
+		LoadAssemblies (103ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (127ms)
-			TypeCache.Refresh (125ms)
-				TypeCache.ScanAssembly (114ms)
+		AnalyzeDomain (129ms)
+			TypeCache.Refresh (128ms)
+				TypeCache.ScanAssembly (117ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (484ms)
+	FinalizeReload (447ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (446ms)
+		SetupLoadedEditorAssemblies (407ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (255ms)
+			InitializePlatformSupportModulesInManaged (241ms)
 			SetLoadedEditorAssemblies (3ms)
-			BeforeProcessingInitializeOnLoad (41ms)
-			ProcessInitializeOnLoadAttributes (99ms)
-			ProcessInitializeOnLoadMethodAttributes (48ms)
+			BeforeProcessingInitializeOnLoad (40ms)
+			ProcessInitializeOnLoadAttributes (83ms)
+			ProcessInitializeOnLoadMethodAttributes (41ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -140,93 +140,494 @@ Domain Reload Profiling: 826ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.706 seconds
-Refreshing native plugins compatible for Editor in 1.45 ms, found 4 plugins.
+- Loaded All Assemblies, in  0.627 seconds
+Refreshing native plugins compatible for Editor in 1.74 ms, found 4 plugins.
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.674 seconds
-Domain Reload Profiling: 1376ms
-	BeginReloadAssembly (138ms)
+- Finished resetting the current domain, in  0.599 seconds
+Domain Reload Profiling: 1222ms
+	BeginReloadAssembly (137ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
+		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (21ms)
-	RebuildCommonClasses (36ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (40ms)
-	LoadAllAssembliesAndSetupDomain (476ms)
-		LoadAssemblies (328ms)
+		CreateAndSetChildDomain (24ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (33ms)
+	LoadAllAssembliesAndSetupDomain (409ms)
+		LoadAssemblies (275ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (235ms)
-			TypeCache.Refresh (169ms)
-				TypeCache.ScanAssembly (154ms)
-			BuildScriptInfoCaches (54ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (675ms)
+		AnalyzeDomain (212ms)
+			TypeCache.Refresh (156ms)
+				TypeCache.ScanAssembly (142ms)
+			BuildScriptInfoCaches (45ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (599ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (536ms)
+		SetupLoadedEditorAssemblies (486ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (9ms)
-			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (100ms)
-			ProcessInitializeOnLoadAttributes (323ms)
-			ProcessInitializeOnLoadMethodAttributes (95ms)
-			AfterProcessingInitializeOnLoad (5ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (99ms)
+			ProcessInitializeOnLoadAttributes (289ms)
+			ProcessInitializeOnLoadMethodAttributes (80ms)
+			AfterProcessingInitializeOnLoad (4ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (5ms)
+		AwakeInstancesAfterBackupRestoration (4ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Refreshing native plugins compatible for Editor in 1.44 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.40 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 220 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6779 unused Assets / (4.5 MB). Loaded Objects now: 7497.
-Memory consumption went from 181.4 MB to 176.9 MB.
-Total: 6.437100 ms (FindLiveObjects: 0.530500 ms CreateObjectMapping: 0.487500 ms MarkObjects: 3.606200 ms  DeleteObjects: 1.812200 ms)
+Unloading 6807 unused Assets / (4.1 MB). Loaded Objects now: 7525.
+Memory consumption went from 183.3 MB to 179.3 MB.
+Total: 6.042200 ms (FindLiveObjects: 0.634400 ms CreateObjectMapping: 0.519700 ms MarkObjects: 3.363300 ms  DeleteObjects: 1.524400 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 20169.755771 seconds.
-  path: Assets/Sprites/Enemies/Summoner/Walk/BackLeftView.png
-  artifactKey: Guid(7ed44193717556a469bacd7e39b31e69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Enemies/Summoner/Walk/BackLeftView.png using Guid(7ed44193717556a469bacd7e39b31e69) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '58f58da82b3c6bfad74ca8493324e50f') in 0.1469732 seconds
+  Time since last request: 40953.189388 seconds.
+  path: Assets/Prefab/Enemies/Boss/Astrael, The Null Sovereign/AstraelBoss.prefab
+  artifactKey: Guid(3b281540194403f46a1c0e3de6069786) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Boss/Astrael, The Null Sovereign/AstraelBoss.prefab using Guid(3b281540194403f46a1c0e3de6069786) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '95dd4f8dbd299302b810a812d2dcab39') in 0.5576822 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 184
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.203422 seconds.
+  path: Assets/Prefab/Enemies/Boss/Astrael, The Null Sovereign/AstraelBoss.prefab
+  artifactKey: Guid(3b281540194403f46a1c0e3de6069786) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Boss/Astrael, The Null Sovereign/AstraelBoss.prefab using Guid(3b281540194403f46a1c0e3de6069786) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'afa69b0f05bd971c0ca676b7079235ae') in 0.1945268 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 187
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.908940 seconds.
+  path: Assets/Prefab/Enemies/Normal/Brute.prefab
+  artifactKey: Guid(a094c1c0e2f149a408578cfec8e976c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Brute.prefab using Guid(a094c1c0e2f149a408578cfec8e976c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '63b33b63121d83bef1254edb424f2f64') in 0.0703405 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 85
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.096951 seconds.
+  path: Assets/Prefab/Enemies/Normal/Brute.prefab
+  artifactKey: Guid(a094c1c0e2f149a408578cfec8e976c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Brute.prefab using Guid(a094c1c0e2f149a408578cfec8e976c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6573d0b9b9030594da74ae7785d8f018') in 0.0757235 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 85
+
+========================================================================
+Received Import Request.
+  Time since last request: 72.586096 seconds.
+  path: Assets/Prefab/Enemies/Normal/Brute.prefab
+  artifactKey: Guid(a094c1c0e2f149a408578cfec8e976c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Brute.prefab using Guid(a094c1c0e2f149a408578cfec8e976c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ce62159f150406a613bb2ecfc0512b8f') in 0.0808928 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 85
+
+========================================================================
+Received Import Request.
+  Time since last request: 1888.159374 seconds.
+  path: Assets/Sprites/Enemies/Spitter/Acid Bottle.png
+  artifactKey: Guid(cf3ff63a48c320b44965d149ec2de130) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemies/Spitter/Acid Bottle.png using Guid(cf3ff63a48c320b44965d149ec2de130) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '97099d8260add2330548cd8178814069') in 0.0500515 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Sprites/Enemies/Elite Thrall/FrontLeftView.png
+  artifactKey: Guid(ea84161e384978f4ebddb7a8795a6335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemies/Elite Thrall/FrontLeftView.png using Guid(ea84161e384978f4ebddb7a8795a6335) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b34716a3f8ad6c8d92d5180d3cae31ef') in 0.0182113 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 85.163145 seconds.
-  path: Assets/Sprites/Enemies/Summoner/Walk/BackLeftView.png
-  artifactKey: Guid(7ed44193717556a469bacd7e39b31e69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Enemies/Summoner/Walk/BackLeftView.png using Guid(7ed44193717556a469bacd7e39b31e69) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ca0d97ba5b6e67e99f237abb06d1f40f') in 0.0543046 seconds
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/Enemies/Exploder/FrontRightView.png
+  artifactKey: Guid(3bcd0a37f7806a047b9c187c9c0375c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemies/Exploder/FrontRightView.png using Guid(3bcd0a37f7806a047b9c187c9c0375c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6be56c489437266a36ded22f4dda705b') in 0.028293 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Sprites/Enemies/Exploder/BackLeftView.png
+  artifactKey: Guid(163b268549781c44a901512cfb7736c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemies/Exploder/BackLeftView.png using Guid(163b268549781c44a901512cfb7736c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '49ab1c24a9c787221fb304a748026b20') in 0.0218368 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Sprites/Enemies/Exploder/BackView.png
+  artifactKey: Guid(e1d712ae6ac782b4683e44bb42dabaa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemies/Exploder/BackView.png using Guid(e1d712ae6ac782b4683e44bb42dabaa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7500f0cf29303869de6621a6ea015fda') in 0.0204508 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Sprites/Enemies/Summoner/Walk/FrontView.png
-  artifactKey: Guid(70ff35b41a515b14aa7e5b897863a425) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Enemies/Summoner/Walk/FrontView.png using Guid(70ff35b41a515b14aa7e5b897863a425) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '18e1e49845e387377bebb553a2bfc3a8') in 0.0261191 seconds
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Enemies/Elite Thrall/BackRightView.png
+  artifactKey: Guid(4f9a50fac3f341e4db8f1e21cf6d2a7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemies/Elite Thrall/BackRightView.png using Guid(4f9a50fac3f341e4db8f1e21cf6d2a7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7a36cfc352114cc7c3e10e9dccfe003e') in 0.0205631 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/Sprites/Enemies/Summoner/Walk/FrontLeftView.png
-  artifactKey: Guid(b28078396961a864f85448b3ea3a1472) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Enemies/Summoner/Walk/FrontLeftView.png using Guid(b28078396961a864f85448b3ea3a1472) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ad9f2c46de93b3e38d38b7ac12f106fa') in 0.0285408 seconds
+  Time since last request: 0.000032 seconds.
+  path: Assets/Sprites/Enemies/Elite Thrall/FrontRightView.png
+  artifactKey: Guid(66ef825a7344057419fec40d12319c01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemies/Elite Thrall/FrontRightView.png using Guid(66ef825a7344057419fec40d12319c01) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd0c96ce6f542aa469c89cb7f18105186') in 0.0197676 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Sprites/Enemies/Summoner/Walk/RightView.png
-  artifactKey: Guid(12528fd1a31ec3847b2315bf7cb6b949) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Enemies/Summoner/Walk/RightView.png using Guid(12528fd1a31ec3847b2315bf7cb6b949) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3510e6bc4463fc405184c18760390e16') in 0.0406199 seconds
+  Time since last request: 0.726338 seconds.
+  path: Assets/Sprites/Enemies/Exploder/PolvoraExplosiva.png
+  artifactKey: Guid(777022006273d8d4fada54682a7345c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemies/Exploder/PolvoraExplosiva.png using Guid(777022006273d8d4fada54682a7345c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b3637ccc2e15a1ef04b2e62867a80a89') in 0.0251133 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.277525 seconds.
+  path: Assets/Sprites/Enemies/Exploder/FrontView.png
+  artifactKey: Guid(7c540ed4fc1864441a5325db05abacfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemies/Exploder/FrontView.png using Guid(7c540ed4fc1864441a5325db05abacfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1314a9fde0aca148d184f71f728bd47f') in 0.0444459 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.339779 seconds.
+  path: Assets/Sprites/Enemies/Elite Thrall/FrontView.png
+  artifactKey: Guid(05374ca2a3d8f3d47a4485c231e255ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemies/Elite Thrall/FrontView.png using Guid(05374ca2a3d8f3d47a4485c231e255ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '58b1ca44d8d1236652bfab90eee353cb') in 0.0571066 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.087589 seconds.
+  path: Assets/Sprites/Inventory/Materials/Elite Thrall Helmet.png
+  artifactKey: Guid(b7ee75e830840754da9afd6c54151c45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Inventory/Materials/Elite Thrall Helmet.png using Guid(b7ee75e830840754da9afd6c54151c45) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8dea1f8dabc491403a6882622ddc960c') in 0.0368301 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.595102 seconds.
+  path: Assets/Sprites/Inventory/Materials/NullHeartAstrael.png
+  artifactKey: Guid(c1cb7a6ee4c78354880d2762b7239f52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Inventory/Materials/NullHeartAstrael.png using Guid(c1cb7a6ee4c78354880d2762b7239f52) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'aa0e77ff2f665d91c3789498ba096d08') in 0.0789329 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.705382 seconds.
+  path: Assets/Sprites/Inventory/Materials/NullHeartAstrael.png
+  artifactKey: Guid(c1cb7a6ee4c78354880d2762b7239f52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Inventory/Materials/NullHeartAstrael.png using Guid(c1cb7a6ee4c78354880d2762b7239f52) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4af987131f5018ab99b63d745155cf07') in 0.0287771 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 48.735841 seconds.
+  path: Assets/Prefab/Enemies/Boss/Astrael, The Null Sovereign/AstraelBoss.prefab
+  artifactKey: Guid(3b281540194403f46a1c0e3de6069786) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Boss/Astrael, The Null Sovereign/AstraelBoss.prefab using Guid(3b281540194403f46a1c0e3de6069786) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bc4b447a6c2dad7e10178f9ef58f81f2') in 0.1866247 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 185
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.916987 seconds.
+  path: Assets/Prefab/Enemies/Normal/Spritter.prefab
+  artifactKey: Guid(56df52b54032ed14790a1ac8655583fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Spritter.prefab using Guid(56df52b54032ed14790a1ac8655583fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e911dc68c5d5d97fe7f626ba9ff1575d') in 0.1296588 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 107
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.567866 seconds.
+  path: Assets/Prefab/Enemies/Normal/Spritter.prefab
+  artifactKey: Guid(56df52b54032ed14790a1ac8655583fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Spritter.prefab using Guid(56df52b54032ed14790a1ac8655583fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8f590e5034d8717ea046b5d663bfaafe') in 0.119681 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 107
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.254448 seconds.
+  path: Assets/Prefab/Enemies/Normal/Thrall 1.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Thrall 1.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5ae78240c913daf533857e75fdfcf819') in 0.0972218 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.196993 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '24cbb3e2aef86e16d90cc1fd7372a39b') in 0.0743891 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 67.415555 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '08b49df3e74f9f96e7a0e3ac1dc14c57') in 0.0840379 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.293816 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'eb725702ea4465ce387003017059ab7d') in 0.0683265 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.028056 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6aa8fada71fc4417909dc949385b51b8') in 0.073835 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.245759 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '05e173044d77e0c7eb3282422e626037') in 0.0701724 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.509560 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '30ec60b8d866391530559c9559343e2c') in 0.0820118 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.708467 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dd7a9de24a8e995ab148846d49cad92e') in 0.0658938 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.121544 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f31a56d94fc479f2a03cee4569306892') in 0.0692318 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.661220 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '532a0545f55f183c893570dfecefa633') in 0.0998169 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.474039 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f75f60e3a69cde151a3efac87267517e') in 0.0824812 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.903842 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6a1c0ebe8b3079a820ab2f6d3df2926d') in 0.0746254 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.643782 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a475869a1dd360fc3e7e5be07eb54177') in 0.0758489 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.530974 seconds.
+  path: Assets/Prefab/Inventory/Materials/Acid Bottle.asset
+  artifactKey: Guid(1d3d2d0c4167671409658e894ef56e5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Inventory/Materials/Acid Bottle.asset using Guid(1d3d2d0c4167671409658e894ef56e5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '06119b1e07f02ae8471c38cef8896175') in 0.0016073 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Prefab/Inventory/Materials/Null Heart of Astrael.asset
+  artifactKey: Guid(ed97087bfde3963409c5b97c573999e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Inventory/Materials/Null Heart of Astrael.asset using Guid(ed97087bfde3963409c5b97c573999e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a4bb762ddf55827b86460010a0d6f09f') in 0.00127 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.726594 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b52dd35da4ddfac2f141376f9369ac02') in 0.0664317 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 85
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.714148 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '061354abdd0ee2e4cca34be2096ea98a') in 0.0879542 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 83
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.479257 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b388966f8673735a2da04306e0d16fc5') in 0.0690319 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 85
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.722475 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cc983f94cf727817aeecf114890bec39') in 0.0715625 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 85
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.934447 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '579f4463b9f011d5706e8df76002166a') in 0.0710747 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 83
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.309946 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0e9f7e9942fd6d4a92672d6aa9d0f5a0') in 0.0612613 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 83
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.341561 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ddda16338059b2d5a32c8a3f5e81c96a') in 0.0909056 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 83
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.486254 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '991e6ed74e560f6f3f8035c9732ce250') in 0.0682203 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 83
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.945503 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '332e427025b04f90f6635bcb9858588e') in 0.0937281 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 83
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.215271 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8aa95adedb42dba50693004b0e82fb7e') in 0.0975039 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.611325 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '791966e737144ad487718c59a7d2c967') in 0.0779747 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 83
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.545966 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '080239862757df3102a6bf7d0cc146b0') in 0.0802782 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 83
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.097499 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '36fa5ec60f42dfff45a6211d1851e69b') in 0.0767988 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 83
+
+========================================================================
+Received Import Request.
+  Time since last request: 42.392820 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f8c108e9525b3f316c86ad794fe90f0f') in 0.08558 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 85
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.646419 seconds.
+  path: Assets/Sprites/Enemies/Exploder/FrontRightView.png
+  artifactKey: Guid(3bcd0a37f7806a047b9c187c9c0375c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemies/Exploder/FrontRightView.png using Guid(3bcd0a37f7806a047b9c187c9c0375c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9b0f65f1a9c4faae74ca45502a2d1a64') in 0.0648363 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Sprites/Enemies/Exploder/ExploderExplosion.png
+  artifactKey: Guid(33bf75dddf911824f872719260e3caea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemies/Exploder/ExploderExplosion.png using Guid(33bf75dddf911824f872719260e3caea) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a485d570a10879af8e7294076317b67a') in 0.0427643 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Sprites/Enemies/Exploder/FrontView.png
+  artifactKey: Guid(7c540ed4fc1864441a5325db05abacfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemies/Exploder/FrontView.png using Guid(7c540ed4fc1864441a5325db05abacfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8b0365f67b69bb759b36275d904f1c21') in 0.0268217 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprites/Enemies/Exploder/BackView.png
+  artifactKey: Guid(e1d712ae6ac782b4683e44bb42dabaa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemies/Exploder/BackView.png using Guid(e1d712ae6ac782b4683e44bb42dabaa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5e53d343068565cd6f0da102200f4277') in 0.0452156 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Enemies/Exploder/LeftView.png
+  artifactKey: Guid(ec55df49d5403c1419889ee96d24b9da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemies/Exploder/LeftView.png using Guid(ec55df49d5403c1419889ee96d24b9da) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fc42b58f7225277006a9436e6c5970f3') in 0.0181075 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
 AssetImportWorker is now disconnected from the server
 Process exiting
 Exiting without the bug reporter. Application will terminate with return code 0

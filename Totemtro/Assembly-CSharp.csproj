@@ -55,7 +55,6 @@
     <UnityVersion>6000.0.41f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.41f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.41f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.41f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
@@ -63,25 +62,38 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Totems\TotemInventoryUI.cs" />
     <Compile Include="Assets\Scripts\Enemies\Spitter\SpitterAI.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventoryController.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyProceduralAnimator.cs" />
+    <Compile Include="Assets\Scripts\Inventory\PlayerInventory.cs" />
     <Compile Include="Assets\Scripts\Enemies\Summoner\SummonerDirectionalSprite.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Crafting\Book\CraftingBookUI.cs" />
     <Compile Include="Assets\Scripts\Characters\Attack\Nyra\NyraAttack.cs" />
     <Compile Include="Assets\Scripts\InventoryGoldUI.cs" />
     <Compile Include="Assets\Scripts\GoldManager.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Weapon\NullGrenade\NullGrenadeAbility.cs" />
     <Compile Include="Assets\Scripts\Drops\GoldPickup.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Crafting\CraftingIngredient.cs" />
     <Compile Include="Assets\Scripts\DamageNumberSpawner.cs" />
     <Compile Include="Assets\Scripts\DamageNumber.cs" />
+    <Compile Include="Assets\Scripts\Inventory\ItemData.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Crafting\CraftingSystem.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyOrganicChase.cs" />
     <Compile Include="Assets\Scripts\Characters\Projectile.cs" />
     <Compile Include="Assets\Scripts\Player\LevelTextUI.cs" />
     <Compile Include="Assets\Scripts\Characters\Weapon.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Crafting\Book\CraftingRecipeSlotUI.cs" />
     <Compile Include="Assets\Scripts\Enemies\Summoner\SummonerAI.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Inventory\InventorySlotUI.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerExperience.cs" />
     <Compile Include="Assets\Scripts\Totems\TotemRandomGenerator.cs" />
     <Compile Include="Assets\Scripts\Enemies\CameraShake.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Inventory\InventorySlot.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Crafting\Book\CraftingBookAnimator.cs" />
     <Compile Include="Assets\Scripts\Characters\Attack\Nyra\NyraBloodBall.cs" />
+    <Compile Include="Assets\Scripts\Inventory\ActionBar\ActionBarUIController.cs" />
     <Compile Include="Assets\Scripts\Player\BodyBobbing.cs" />
     <Compile Include="Assets\Scripts\Enemies\Boss\Astrael, The Null Sovereign\NullSphere.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Boss\Astrael, The Null Sovereign\PortalRay.cs" />
     <Compile Include="Assets\Scripts\Enemies\Spitter\ArcProjectilePhysics.cs" />
     <Compile Include="Assets\Scripts\Drops\XPPickup.cs" />
     <Compile Include="Assets\Scripts\Enemies\BodySwayEnemy.cs" />
@@ -95,32 +107,45 @@
     <Compile Include="Assets\Scripts\Enemies\Boss\Astrael, The Null Sovereign\Shockwave.cs" />
     <Compile Include="Assets\Scripts\Enemies\Thrall\ThrallAI.cs" />
     <Compile Include="Assets\Scripts\Totems\TotemCardFlip.cs" />
+    <Compile Include="Assets\Scripts\Inventory\ActiveAbilityBase.cs" />
     <Compile Include="Assets\Scripts\Characters\HeroData.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Player\CooldownBarUI.cs" />
     <Compile Include="Assets\Scripts\Enemies\Boss\Astrael, The Null Sovereign\BossHealthUI.cs" />
     <Compile Include="Assets\Scripts\Player\HeroController.cs" />
+    <Compile Include="Assets\Scripts\Inventory\MaterialInventory.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Crafting\Book\IngredientUI.cs" />
     <Compile Include="Assets\Scripts\Totems\TotemSynergySystem.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Weapon\ExplosiveGrenade\Grenade.cs" />
     <Compile Include="Assets\Scripts\Enemies\Boss\Astrael, The Null Sovereign\AstraelBoss.cs" />
     <Compile Include="Assets\Scripts\Totems\TotemInventorySlotUI.cs" />
     <Compile Include="Assets\Scripts\Enemies\Boss\Astrael, The Null Sovereign\ArenaGuardian.cs" />
+    <Compile Include="Assets\Scripts\Inventory\ActiveItemInventory.cs" />
     <Compile Include="Assets\Scripts\Player\HealthBarUI.cs" />
     <Compile Include="Assets\Scripts\Totems\TotemSellSystem.cs" />
     <Compile Include="Assets\Scripts\Enemies\BodyTiltEnemy.cs" />
     <Compile Include="Assets\Scripts\Player\TotemInventory.cs" />
     <Compile Include="Assets\Scripts\Totems\CardHoverEffect.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Crafting\CraftingUI.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventoryUIController.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Boss\Astrael, The Null Sovereign\BossPortal.cs" />
     <Compile Include="Assets\Scripts\Player\WeaponOrbitDynamic.cs" />
+    <Compile Include="Assets\Scripts\GameStateManager.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Boss\Astrael, The Null Sovereign\BossNameCinematic.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\Totems\TotemCardAnimator.cs" />
     <Compile Include="Assets\Scripts\Totems\TotemTooltipUI.cs" />
     <Compile Include="Assets\Scripts\Totems\TotemSellConfirmUI.cs" />
     <Compile Include="Assets\Scripts\Totems\TotemCardUI.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemyDropData.cs" />
     <Compile Include="Assets\Scripts\Enemies\Boss\Astrael, The Null Sovereign\ArenaController.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyDirectionalSprite.cs" />
+    <Compile Include="Assets\Scripts\Inventory\ActionBar\ActionSlotUI.cs" />
     <Compile Include="Assets\Scripts\Player\XPBarUI.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Enemies\Spitter\SlimePuddle.cs" />
+    <Compile Include="Assets\Scripts\Inventory\ActionBar\ActionBarController.cs" />
     <Compile Include="Assets\Scripts\MusicManager.cs" />
     <Compile Include="Assets\Scripts\Enemies\Brute\BruteAI.cs" />
     <Compile Include="Assets\Scripts\HeroUnlockManager.cs" />
@@ -129,14 +154,21 @@
     <Compile Include="Assets\Scripts\Characters\Attack\Orin\OrinAttack.cs" />
     <Compile Include="Assets\Scripts\Characters\WeaponData.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Crafting\CraftingRecipe.cs" />
+    <Compile Include="Assets\Scripts\Inventory\ActionSlot.cs" />
     <Compile Include="Assets\Scripts\GamePause.cs" />
     <Compile Include="Assets\Scripts\Totems\TotemSelectionUI.cs" />
+    <Compile Include="Assets\Scripts\UI\ScreenFade.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemySpawner.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Materials\MaterialDrop.cs" />
     <Compile Include="Assets\Scripts\Enemies\Stalker\StalkerAI.cs" />
     <Compile Include="Assets\Scripts\Enemies\Spitter\EnemyProjectile.cs" />
     <Compile Include="Assets\Scripts\Enemies\Exploder\ExploderAI.cs" />
     <Compile Include="Assets\Scripts\Totems\TotemData.cs" />
     <Compile Include="Assets\Scripts\UI\LevelUpEffect.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Weapon\NullGrenade\NullGrenade.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Inventory\InventoryPanelUI.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Weapon\ExplosiveGrenade\GrenadeAbility.cs" />
     <Compile Include="Assets\Scripts\Characters\Attack\Kael\KaelAttack.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -643,6 +675,14 @@
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@d6f9955a5d5f\Mono.Cecil.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Types">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.41f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Gradle">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.41f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">

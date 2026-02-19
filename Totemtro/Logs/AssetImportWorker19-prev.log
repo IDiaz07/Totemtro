@@ -15,7 +15,7 @@ C:/Users/Nitropc/Documents/GitHub/Totemtro/Totemtro
 -logFile
 Logs/AssetImportWorker19.log
 -srvPort
-54094
+64305
 -job-worker-count
 7
 -background-job-worker-count
@@ -59,12 +59,12 @@ C:/Users/Nitropc/Documents/GitHub/Totemtro/Totemtro
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [7524]  Target information:
+Player connection [37144]  Target information:
 
-Player connection [7524]  * "[IP] 192.168.1.17 [Port] 0 [Flags] 2 [Guid] 109266026 [EditorId] 109266026 [Version] 1048832 [Id] WindowsEditor(7,DZka1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [37144]  * "[IP] 192.168.1.17 [Port] 0 [Flags] 2 [Guid] 3658502278 [EditorId] 3658502278 [Version] 1048832 [Id] WindowsEditor(7,DZka1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [7524] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [7524] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [37144] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [37144] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 7
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -76,7 +76,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 2.54 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 2.45 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.41f1 (46e447368a18)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.41f1/Editor/Data/Resources/UnitySubsystems
@@ -92,46 +92,46 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.41f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.41f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.41f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56380
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56532
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.41f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.41f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Registered in 0.003889 seconds.
-- Loaded All Assemblies, in  0.334 seconds
+Registered in 0.003211 seconds.
+- Loaded All Assemblies, in  0.359 seconds
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 200 ms
+Android Extension - Scanning For ADB Devices 161 ms
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.520 seconds
-Domain Reload Profiling: 851ms
-	BeginReloadAssembly (115ms)
+- Finished resetting the current domain, in  0.482 seconds
+Domain Reload Profiling: 838ms
+	BeginReloadAssembly (123ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (28ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (42ms)
-	LoadAllAssembliesAndSetupDomain (135ms)
-		LoadAssemblies (113ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (45ms)
+	LoadAllAssembliesAndSetupDomain (144ms)
+		LoadAssemblies (121ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (132ms)
-			TypeCache.Refresh (131ms)
-				TypeCache.ScanAssembly (119ms)
+		AnalyzeDomain (141ms)
+			TypeCache.Refresh (139ms)
+				TypeCache.ScanAssembly (129ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (520ms)
+	FinalizeReload (483ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (477ms)
+		SetupLoadedEditorAssemblies (439ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (290ms)
+			InitializePlatformSupportModulesInManaged (243ms)
 			SetLoadedEditorAssemblies (3ms)
-			BeforeProcessingInitializeOnLoad (40ms)
-			ProcessInitializeOnLoadAttributes (98ms)
-			ProcessInitializeOnLoadMethodAttributes (47ms)
+			BeforeProcessingInitializeOnLoad (45ms)
+			ProcessInitializeOnLoadAttributes (101ms)
+			ProcessInitializeOnLoadMethodAttributes (48ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -140,59 +140,315 @@ Domain Reload Profiling: 851ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.738 seconds
-Refreshing native plugins compatible for Editor in 1.51 ms, found 4 plugins.
+- Loaded All Assemblies, in  0.717 seconds
+Refreshing native plugins compatible for Editor in 1.69 ms, found 4 plugins.
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.693 seconds
-Domain Reload Profiling: 1428ms
-	BeginReloadAssembly (151ms)
+- Finished resetting the current domain, in  0.673 seconds
+Domain Reload Profiling: 1386ms
+	BeginReloadAssembly (139ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
+		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (27ms)
-	RebuildCommonClasses (32ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (34ms)
-	LoadAllAssembliesAndSetupDomain (502ms)
-		LoadAssemblies (329ms)
+		CreateAndSetChildDomain (21ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (37ms)
+	LoadAllAssembliesAndSetupDomain (491ms)
+		LoadAssemblies (316ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (261ms)
-			TypeCache.Refresh (189ms)
-				TypeCache.ScanAssembly (171ms)
-			BuildScriptInfoCaches (57ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (694ms)
+		AnalyzeDomain (262ms)
+			TypeCache.Refresh (182ms)
+				TypeCache.ScanAssembly (168ms)
+			BuildScriptInfoCaches (64ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (673ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (560ms)
+		SetupLoadedEditorAssemblies (535ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (10ms)
-			SetLoadedEditorAssemblies (4ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (5ms)
 			BeforeProcessingInitializeOnLoad (100ms)
-			ProcessInitializeOnLoadAttributes (328ms)
-			ProcessInitializeOnLoadMethodAttributes (112ms)
-			AfterProcessingInitializeOnLoad (5ms)
+			ProcessInitializeOnLoadAttributes (327ms)
+			ProcessInitializeOnLoadMethodAttributes (88ms)
+			AfterProcessingInitializeOnLoad (6ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (5ms)
+		AwakeInstancesAfterBackupRestoration (4ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Refreshing native plugins compatible for Editor in 1.34 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.70 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 220 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6779 unused Assets / (4.3 MB). Loaded Objects now: 7497.
-Memory consumption went from 181.3 MB to 177.0 MB.
-Total: 5.845400 ms (FindLiveObjects: 0.546200 ms CreateObjectMapping: 0.473800 ms MarkObjects: 3.319100 ms  DeleteObjects: 1.505700 ms)
+Unloading 6807 unused Assets / (4.4 MB). Loaded Objects now: 7525.
+Memory consumption went from 181.6 MB to 177.2 MB.
+Total: 7.820800 ms (FindLiveObjects: 0.728200 ms CreateObjectMapping: 0.754500 ms MarkObjects: 4.032500 ms  DeleteObjects: 2.304300 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 20395.835738 seconds.
-  path: Assets/Sprites/Enemies/Summoner/Invoke/Invoke.png
-  artifactKey: Guid(fba538b4683201846b8f218860fc7ebb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Enemies/Summoner/Invoke/Invoke.png using Guid(fba538b4683201846b8f218860fc7ebb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '681d67ff4f35f8f58020622df234898b') in 0.1557358 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
+  Time since last request: 43491.997998 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4fa6f1366f5a8dc902d7507a0405002f') in 0.4903318 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 83
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.150411 seconds.
+  path: Assets/Prefab/Enemies/Normal/Exploder.prefab
+  artifactKey: Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Exploder.prefab using Guid(e43a7f7a55976414cafdf361eb5bd7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd7a356f0a9066d1618388a24433f5877') in 0.1112533 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 83
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.518830 seconds.
+  path: Assets/Prefab/Enemies/Normal/Thrall 1.prefab
+  artifactKey: Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Thrall 1.prefab using Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e76daaebff381e094dd1777f0ed5ff42') in 0.0795145 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.827575 seconds.
+  path: Assets/Prefab/Enemies/Normal/Elite Thrall.prefab
+  artifactKey: Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Elite Thrall.prefab using Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '60dbe126b15302d71b3c8ab8fe089c06') in 0.0945268 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.879345 seconds.
+  path: Assets/Prefab/Enemies/Normal/Elite Thrall.prefab
+  artifactKey: Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Elite Thrall.prefab using Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '923674eeadcb4f6e29ea3e4e2a608c5e') in 0.0894353 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.247115 seconds.
+  path: Assets/Prefab/Enemies/Normal/Elite Thrall.prefab
+  artifactKey: Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Elite Thrall.prefab using Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '125e7cfc28f5cc8565a1cfdea2e44cfb') in 0.072159 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.094256 seconds.
+  path: Assets/Prefab/Enemies/Normal/Elite Thrall.prefab
+  artifactKey: Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Elite Thrall.prefab using Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3061dd913a5d5219a28016ff12e38ef5') in 0.0541868 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.967585 seconds.
+  path: Assets/Prefab/Enemies/Normal/Elite Thrall.prefab
+  artifactKey: Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Elite Thrall.prefab using Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '970923ec30c15c86d19f766c0e1095dc') in 0.0704834 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.100994 seconds.
+  path: Assets/Prefab/Enemies/Normal/Elite Thrall.prefab
+  artifactKey: Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Elite Thrall.prefab using Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '17cf60f62c7aa58dfe3c642cc0429baf') in 0.0723804 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.135925 seconds.
+  path: Assets/Prefab/Enemies/Normal/Elite Thrall.prefab
+  artifactKey: Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Elite Thrall.prefab using Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b7b92b941406dd6bdbc9e68d322aa27a') in 0.0712133 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.094421 seconds.
+  path: Assets/Prefab/Enemies/Normal/Elite Thrall.prefab
+  artifactKey: Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Elite Thrall.prefab using Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b565458f9cf573b4fe1bf41a26c19f35') in 0.050275 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.134862 seconds.
+  path: Assets/Prefab/Enemies/Normal/Elite Thrall.prefab
+  artifactKey: Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Elite Thrall.prefab using Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e2d0a06b1ae3f96fc237176bde38e396') in 0.0599569 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.507231 seconds.
+  path: Assets/Prefab/Enemies/Normal/Elite Thrall.prefab
+  artifactKey: Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Elite Thrall.prefab using Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1d12a122b6df0bbe1c105adb8373bcef') in 0.0546642 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.321118 seconds.
+  path: Assets/Prefab/Enemies/Normal/Elite Thrall.prefab
+  artifactKey: Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Elite Thrall.prefab using Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '15943f29a82fab7d8809da59125d01c0') in 0.0515626 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.550519 seconds.
+  path: Assets/Prefab/Enemies/Normal/Elite Thrall.prefab
+  artifactKey: Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Elite Thrall.prefab using Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '02ffc478e6fa87117e2d2fa5506d22c5') in 0.0713497 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.536207 seconds.
+  path: Assets/Prefab/Enemies/Normal/Elite Thrall.prefab
+  artifactKey: Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Elite Thrall.prefab using Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3e2f5270f62827041750812d7e081156') in 0.0985322 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.270229 seconds.
+  path: Assets/Prefab/Enemies/Normal/Elite Thrall.prefab
+  artifactKey: Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Elite Thrall.prefab using Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd95d8c399a72f9bf2b6bd60c972cf8c2') in 0.0690557 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.510043 seconds.
+  path: Assets/Prefab/Enemies/Normal/Elite Thrall.prefab
+  artifactKey: Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Elite Thrall.prefab using Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4cd954d3b5357b969e34b7b4d0024603') in 0.0700866 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.920634 seconds.
+  path: Assets/Prefab/Enemies/Normal/Elite Thrall.prefab
+  artifactKey: Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Elite Thrall.prefab using Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f25a7c345e952560f4c9e05ee32c99d6') in 0.069013 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.101879 seconds.
+  path: Assets/Prefab/Enemies/Normal/Elite Thrall.prefab
+  artifactKey: Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Elite Thrall.prefab using Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b81ff099271f6f08da89dfd2c428c256') in 0.0498146 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.893282 seconds.
+  path: Assets/Prefab/Enemies/Normal/Elite Thrall.prefab
+  artifactKey: Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Elite Thrall.prefab using Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8ec98372a61e2bb9e74fd9f06108b6d6') in 0.0911845 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.318490 seconds.
+  path: Assets/Prefab/Enemies/Normal/Elite Thrall.prefab
+  artifactKey: Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Elite Thrall.prefab using Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd2779f89509e9764d0f49e3ed4169da4') in 0.0723376 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 82
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.897756 seconds.
+  path: Assets/Prefab/Enemies/Normal/Elite Thrall.prefab
+  artifactKey: Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Elite Thrall.prefab using Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '54c7b6799abf5b82384ff2d9c9086b92') in 0.0548244 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 85
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.328329 seconds.
+  path: Assets/Prefab/Enemies/Normal/Elite Thrall.prefab
+  artifactKey: Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Elite Thrall.prefab using Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6c3aa7f61a7d5c1826a76d244dc8d5f6') in 0.0722391 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 85
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.311453 seconds.
+  path: Assets/Prefab/Enemies/Normal/Elite Thrall.prefab
+  artifactKey: Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Elite Thrall.prefab using Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b15aaee0aa3211cd927d6d4de6d92337') in 0.0758084 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 85
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.700312 seconds.
+  path: Assets/Prefab/Enemies/Normal/Elite Thrall.prefab
+  artifactKey: Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Elite Thrall.prefab using Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ae1865002b8df04bc006c31cb6feaf96') in 0.0594483 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 85
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.731575 seconds.
+  path: Assets/Prefab/Enemies/Normal/Elite Thrall.prefab
+  artifactKey: Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemies/Normal/Elite Thrall.prefab using Guid(3e507cedad81a50448709d922738577f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9be4838153894266ff1252e4c76f85a5') in 0.0753755 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 85
+
+========================================================================
+Received Import Request.
+  Time since last request: 75.642101 seconds.
+  path: Assets/Sprites/Enemies/Elite Thrall
+  artifactKey: Guid(7f43b6eb6310f27458963d35cd0cb927) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemies/Elite Thrall using Guid(7f43b6eb6310f27458963d35cd0cb927) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6e2d02899e801aaa4540b1fead498fc1') in 0.0009306 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.993204 seconds.
+  path: Assets/Sprites/Enemies/Elite Thrall/RightView.png
+  artifactKey: Guid(47a866c4e653d484380ad7221da02833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemies/Elite Thrall/RightView.png using Guid(47a866c4e653d484380ad7221da02833) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cc908d65d6cd5020c08d325e87aae312') in 0.0380837 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprites/Enemies/Elite Thrall/FrontLeftView.png
+  artifactKey: Guid(ea84161e384978f4ebddb7a8795a6335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemies/Elite Thrall/FrontLeftView.png using Guid(ea84161e384978f4ebddb7a8795a6335) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ebfb876ae8a3a2199ff159fb6ac12788') in 0.0324056 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Sprites/Enemies/Elite Thrall/FrontView.png
+  artifactKey: Guid(05374ca2a3d8f3d47a4485c231e255ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemies/Elite Thrall/FrontView.png using Guid(05374ca2a3d8f3d47a4485c231e255ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4bee32592357ec9f21c789f626e8ae15') in 0.0305602 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprites/Enemies/Elite Thrall/BackRightView.png
+  artifactKey: Guid(4f9a50fac3f341e4db8f1e21cf6d2a7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemies/Elite Thrall/BackRightView.png using Guid(4f9a50fac3f341e4db8f1e21cf6d2a7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '335fc6b9a2b6a22f2823a8b70578ad0e') in 0.0251178 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Sprites/Enemies/Elite Thrall/FrontRightView.png
+  artifactKey: Guid(66ef825a7344057419fec40d12319c01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemies/Elite Thrall/FrontRightView.png using Guid(66ef825a7344057419fec40d12319c01) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bdf8f8d11144eddbe2bc57214123573f') in 0.0226725 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server

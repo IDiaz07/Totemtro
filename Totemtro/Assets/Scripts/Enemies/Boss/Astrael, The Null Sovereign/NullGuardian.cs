@@ -20,7 +20,6 @@ public class NullGuardian : MonoBehaviour
 
     float angle;
     float currentHealth;
-    bool hasLaunched = false;
 
     void Awake()
     {
@@ -68,8 +67,6 @@ public class NullGuardian : MonoBehaviour
             Destroy(gameObject);
             yield break;
         }
-
-        hasLaunched = true;
 
         Vector2 dir =
             (player.position - transform.position).normalized;

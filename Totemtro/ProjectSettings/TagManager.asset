@@ -57,6 +57,9 @@ TagManager:
   - name: UI
     uniqueID: 989942487
     locked: 0
+  - name: Above Player
+    uniqueID: 2608671815
+    locked: 0
   m_RenderingLayers:
   - Default
   - PlayerProjectile
