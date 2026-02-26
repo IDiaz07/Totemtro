@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4871580142308197039}
   - component: {fileID: 1123164747469327192}
   - component: {fileID: 1974347452672341238}
+  - component: {fileID: -5074039041060992867}
   m_Layer: 8
   m_Name: Gold
   m_TagString: Untagged
@@ -165,7 +166,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbf12ac386e170742a8fd353ebe9b572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goldValue: 5
+  settleTime: 0.45
+  rotateSpeed: 120
   magnetRange: 3
-  moveSpeed: 0
-  acceleration: 16
-  goldAmount: 5
+  magnetAcceleration: 22
+  maxMagnetSpeed: 11
+--- !u!114 &-5074039041060992867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2986144199003916069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98ef15932cdd1e64885f4397e0b8a75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 35
+  useUnscaledTime: 1
+  fadeBeforeDestroy: 0
+  fadeDuration: 1

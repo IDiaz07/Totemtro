@@ -12,11 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b04d58ac3986ca34280179029c58f5b7, type: 3}
   m_Name: Selene
   m_EditorClassIdentifier: 
-  heroName: "Selene \u2013 The Wandering Arcanist"
+  heroType: 7
+  heroName: Selene
   description: A wandering sorceress marked by arcane pacts. Runes float faintly
     around her as she channels dark energy.
-  portrait: {fileID: 21300000, guid: ce3a3076e0c10704b85a2ffbc0eb6abc, type: 3}
-  bodySprite: {fileID: 21300000, guid: ce3a3076e0c10704b85a2ffbc0eb6abc, type: 3}
+  Icon: {fileID: 0}
+  ChampsHeadIcon: {fileID: 0}
+  directionalSprites:
+    FrontView: {fileID: 0}
+    BackView: {fileID: 0}
+    LeftView: {fileID: 0}
+    RightView: {fileID: 0}
+    FrontLeftView: {fileID: 0}
+    FrontRightView: {fileID: 0}
+    BackLeftView: {fileID: 0}
+    BackRightView: {fileID: 0}
   maxHealth: 80
   damage: 12
   moveSpeed: 5

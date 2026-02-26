@@ -12,11 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b04d58ac3986ca34280179029c58f5b7, type: 3}
   m_Name: Vex
   m_EditorClassIdentifier: 
-  heroName: "Vex \u2013 The Cursed Player"
+  heroType: 0
+  heroName: Vex
   description: An entity linked to chance and ritual chaos. Its presence alters the
     probabilities of the world.
-  portrait: {fileID: 21300000, guid: 8d5b05b1c02208e478ae4594d1511337, type: 3}
-  bodySprite: {fileID: 21300000, guid: 8d5b05b1c02208e478ae4594d1511337, type: 3}
+  Icon: {fileID: 0}
+  ChampsHeadIcon: {fileID: 0}
+  directionalSprites:
+    FrontView: {fileID: 0}
+    BackView: {fileID: 0}
+    LeftView: {fileID: 0}
+    RightView: {fileID: 0}
+    FrontLeftView: {fileID: 0}
+    FrontRightView: {fileID: 0}
+    BackLeftView: {fileID: 0}
+    BackRightView: {fileID: 0}
   maxHealth: 90
   damage: 10
   moveSpeed: 5

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5141518035763255919}
   - component: {fileID: 2624905168001104532}
   - component: {fileID: -2253015511092730574}
+  - component: {fileID: -4058618688180203997}
   m_Layer: 6
   m_Name: Stalker
   m_TagString: Enemy
@@ -124,7 +125,21 @@ MonoBehaviour:
   xpAmount: 4
   goldAmount: 2
   dropForce: 3
+  materialDrops:
+  - item: {fileID: 11400000, guid: a35145adf02f1544bb3919604c868db8, type: 2}
+    dropChance: 0.3
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: c524df777da64504285fcc38074ac75c, type: 2}
+    dropChance: 0.15
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: 65ea00ddceffd0f4aa21ac68087d04e2, type: 2}
+    dropChance: 0.08
+    minAmount: 1
+    maxAmount: 1
   hitParticlesPrefab: {fileID: 8306175235273709235, guid: 361d01d5c48df364bb9850610fb3342f, type: 3}
+  isBoss: 0
 --- !u!114 &2624905168001104532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,6 +168,20 @@ MonoBehaviour:
   speed: 4
   directionChangeInterval: 0.4
   randomnessAmount: 0.6
+--- !u!114 &-4058618688180203997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767922342782008845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e9cdf99e0bac3f44861d8be1f0d5152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  investigateDuration: 4
+  investigateSpeed: 2.5
 --- !u!1 &2227694169254587682
 GameObject:
   m_ObjectHideFlags: 0

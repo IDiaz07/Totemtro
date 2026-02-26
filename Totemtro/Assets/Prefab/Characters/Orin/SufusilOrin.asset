@@ -18,11 +18,12 @@ MonoBehaviour:
   aimAngle: 0
   recoilForce: 0
   weaponSprite: {fileID: 21300000, guid: 78a56077d18959846864731fb020b0b1, type: 3}
-  damage: 9
+  damage: 4
   fireRate: 8
+  isAutomatic: 1
   projectilePrefab: {fileID: 249645042011101493, guid: f6dad642ce1b51a42a8f5dd60f4ca17a, type: 3}
   projectileSpeed: 20
-  range: 6
+  range: 4
   projectileCount: 1
   spreadAngle: 0
   meleeRadius: 0

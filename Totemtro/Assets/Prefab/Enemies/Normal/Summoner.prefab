@@ -162,7 +162,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -9
   m_Sprite: {fileID: 21300000, guid: fba538b4683201846b8f218860fc7ebb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -366,6 +366,7 @@ GameObject:
   - component: {fileID: 9005275882056924340}
   - component: {fileID: 1526276325417940662}
   - component: {fileID: 4056105780891407644}
+  - component: {fileID: -6238995247214661590}
   m_Layer: 6
   m_Name: Summoner
   m_TagString: Enemy
@@ -441,7 +442,15 @@ MonoBehaviour:
   xpAmount: 10
   goldAmount: 6
   dropForce: 3
-  materialDrops: []
+  materialDrops:
+  - item: {fileID: 11400000, guid: f69bddb6e7374aa489dbb897679e57ba, type: 2}
+    dropChance: 0.35
+    minAmount: 1
+    maxAmount: 2
+  - item: {fileID: 11400000, guid: 7c22e2bc9b3fcf44e8a626a41af670ab, type: 2}
+    dropChance: 0.2
+    minAmount: 1
+    maxAmount: 1
   hitParticlesPrefab: {fileID: 8306175235273709235, guid: 361d01d5c48df364bb9850610fb3342f, type: 3}
   isBoss: 0
 --- !u!114 &-5862324573170177698
@@ -620,3 +629,17 @@ MonoBehaviour:
   moveSpeed: 3
   shakeIntensity: 0.05
   shakeSpeed: 50
+--- !u!114 &-6238995247214661590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5667458826574176871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e9cdf99e0bac3f44861d8be1f0d5152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  investigateDuration: 4
+  investigateSpeed: 2.5

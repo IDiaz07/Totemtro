@@ -19,7 +19,8 @@ MonoBehaviour:
   recoilForce: 3
   weaponSprite: {fileID: 21300000, guid: 0a289e41de6aca54097ec5c9b421f9dc, type: 3}
   damage: 16
-  fireRate: 1
+  fireRate: 1.7
+  isAutomatic: 0
   projectilePrefab: {fileID: 7950270626482854751, guid: 5e284e6627db0c94db0feb91af2e3b82, type: 3}
   projectileSpeed: 15
   range: 12

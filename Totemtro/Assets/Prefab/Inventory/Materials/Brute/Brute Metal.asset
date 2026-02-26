@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3b6c4db878f184da06b29f9251efc3, type: 3}
+  m_Name: Brute Metal
+  m_EditorClassIdentifier: 
+  itemName: Brute Metal
+  icon: {fileID: 21300000, guid: 846960e830ade8340be7987dc89ba32f, type: 3}
+  itemType: 0
+  description: "Heavy, unrefined ore favored by brutal warriors and crude weaponsmiths.\r"
+  stackable: 1
+  maxStack: 50
+  usableInActionBar: 0
+  cooldown: 0
+  worldPrefab: {fileID: 1446103798750561405, guid: a7da32f86a3dea04fa64e7276c494727, type: 3}
+  ability: {fileID: 0}

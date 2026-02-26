@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3b6c4db878f184da06b29f9251efc3, type: 3}
+  m_Name: Void Fragment
+  m_EditorClassIdentifier: 
+  itemName: Void Fragment
+  icon: {fileID: 21300000, guid: 5387a5bb162d8b840a2bd87c98425619, type: 3}
+  itemType: 0
+  description: "A pulsating core radiating unstable energy. Handle with caution.\r"
+  stackable: 1
+  maxStack: 5
+  usableInActionBar: 0
+  cooldown: 0
+  worldPrefab: {fileID: 1446103798750561405, guid: a7da32f86a3dea04fa64e7276c494727, type: 3}
+  ability: {fileID: 0}

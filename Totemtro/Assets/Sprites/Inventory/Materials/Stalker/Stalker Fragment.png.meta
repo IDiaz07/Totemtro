@@ -1,0 +1,1235 @@
+fileFormatVersion: 2
+guid: 6de3e87126f77d64db781d02099475d9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8250693287807619653
+    second: Stalker Fragment_0
+  - first:
+      213: -3717356195700816301
+    second: Stalker Fragment_1
+  - first:
+      213: -1743974811825777134
+    second: Stalker Fragment_2
+  - first:
+      213: -4305737708232891717
+    second: Stalker Fragment_3
+  - first:
+      213: 1461422604234432296
+    second: Stalker Fragment_4
+  - first:
+      213: 2517392083511694440
+    second: Stalker Fragment_5
+  - first:
+      213: -3862312596753246672
+    second: Stalker Fragment_6
+  - first:
+      213: -8425475657527373044
+    second: Stalker Fragment_7
+  - first:
+      213: -1607409573925181690
+    second: Stalker Fragment_8
+  - first:
+      213: -6133833650964058340
+    second: Stalker Fragment_9
+  - first:
+      213: 7830207768904570586
+    second: Stalker Fragment_10
+  - first:
+      213: -5789414640503003619
+    second: Stalker Fragment_11
+  - first:
+      213: -5927173230438683848
+    second: Stalker Fragment_12
+  - first:
+      213: 5639017309607385516
+    second: Stalker Fragment_13
+  - first:
+      213: -543053161848070895
+    second: Stalker Fragment_14
+  - first:
+      213: 3444924325404321472
+    second: Stalker Fragment_15
+  - first:
+      213: -4771714909691993336
+    second: Stalker Fragment_16
+  - first:
+      213: -5495166261848758172
+    second: Stalker Fragment_17
+  - first:
+      213: -4416808372504088440
+    second: Stalker Fragment_18
+  - first:
+      213: -6495722139967768993
+    second: Stalker Fragment_19
+  - first:
+      213: 3673697577136456013
+    second: Stalker Fragment_20
+  - first:
+      213: -4098154144040889578
+    second: Stalker Fragment_21
+  - first:
+      213: 2732049185701505820
+    second: Stalker Fragment_22
+  - first:
+      213: 1197094758998051338
+    second: Stalker Fragment_23
+  - first:
+      213: -8247013566859149991
+    second: Stalker Fragment_24
+  - first:
+      213: 3209230110798490
+    second: Stalker Fragment_25
+  - first:
+      213: 1392059349473611788
+    second: Stalker Fragment_26
+  - first:
+      213: -9164436532879562497
+    second: Stalker Fragment_27
+  - first:
+      213: -7787009600187768249
+    second: Stalker Fragment_28
+  - first:
+      213: 2250262260159563087
+    second: Stalker Fragment_29
+  - first:
+      213: 1158429095990761253
+    second: Stalker Fragment_30
+  - first:
+      213: -7644024135837204131
+    second: Stalker Fragment_31
+  - first:
+      213: 8964827850322867954
+    second: Stalker Fragment_32
+  - first:
+      213: -2182791843401757748
+    second: Stalker Fragment_33
+  - first:
+      213: 4952990438457640002
+    second: Stalker Fragment_34
+  - first:
+      213: 1133122882517077029
+    second: Stalker Fragment_35
+  - first:
+      213: -737659833276675467
+    second: Stalker Fragment_36
+  - first:
+      213: -6414901138083031091
+    second: Stalker Fragment_37
+  - first:
+      213: -317679869776753990
+    second: Stalker Fragment_38
+  - first:
+      213: -5334915309521894637
+    second: Stalker Fragment_39
+  - first:
+      213: -4916929304421019833
+    second: Stalker Fragment_40
+  - first:
+      213: -2765256775796939735
+    second: Stalker Fragment_41
+  - first:
+      213: -7251723240553816615
+    second: Stalker Fragment_42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 2048
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Stalker Fragment_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 86
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbde6853b26af7d80800000000000000
+      internalID: -8250693287807619653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_1
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 0
+        width: 1442
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 356c7a34c3c496cc0800000000000000
+      internalID: -3717356195700816301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_2
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 983
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21655eb06282cc7e0800000000000000
+      internalID: -1743974811825777134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_3
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 994
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb226ccfd52fe34c0800000000000000
+      internalID: -4305737708232891717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_4
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 974
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82f9e189d14084410800000000000000
+      internalID: 1461422604234432296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_5
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 971
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 864581223c29fe220800000000000000
+      internalID: 2517392083511694440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_6
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 977
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 036910b182f466ac0800000000000000
+      internalID: -3862312596753246672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_7
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 976
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0351619782b21b80800000000000000
+      internalID: -8425475657527373044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_8
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 968
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 607a0a9428551b9e0800000000000000
+      internalID: -1607409573925181690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_9
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 970
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1f23faface30eaa0800000000000000
+      internalID: -6133833650964058340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_10
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 947
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad69f07ca7c7aac60800000000000000
+      internalID: 7830207768904570586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_11
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 836
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d166f5fde0ed7afa0800000000000000
+      internalID: -5789414640503003619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_12
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 804
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83b6f75b9537ebda0800000000000000
+      internalID: -5927173230438683848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_13
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 728
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca95d65cd50d14e40800000000000000
+      internalID: 5639017309607385516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_14
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 719
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11d94e9c600b678f0800000000000000
+      internalID: -543053161848070895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_15
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 702
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c6a3d50c64decf20800000000000000
+      internalID: 3444924325404321472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_16
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 648
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 803af5e329677cdb0800000000000000
+      internalID: -4771714909691993336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_17
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 614
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4682bc4466f3db3b0800000000000000
+      internalID: -5495166261848758172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_18
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 534
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8803cebbf2854b2c0800000000000000
+      internalID: -4416808372504088440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_19
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 542
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f56b497212f8ad5a0800000000000000
+      internalID: -6495722139967768993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_20
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 526
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d418e697b789bf230800000000000000
+      internalID: 3673697577136456013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_21
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 520
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 613d5a9d48e6027c0800000000000000
+      internalID: -4098154144040889578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_22
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 486
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b22a662403ae520800000000000000
+      internalID: 2732049185701505820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_23
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 468
+        width: 8
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0a8f80475fec9010800000000000000
+      internalID: 1197094758998051338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_24
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 447
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95d78810bd8bc8d80800000000000000
+      internalID: -8247013566859149991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_25
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 454
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a92b1cc17c66b0000800000000000000
+      internalID: 3209230110798490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_26
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 430
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c00d2a75a96915310800000000000000
+      internalID: 1392059349473611788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_27
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 420
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff8e913578161d080800000000000000
+      internalID: -9164436532879562497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_28
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 392
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7426046a60cfee390800000000000000
+      internalID: -7787009600187768249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_29
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 350
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f45474c6a998a3f10800000000000000
+      internalID: 2250262260159563087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_30
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 344
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 527910c0021931010800000000000000
+      internalID: 1158429095990761253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_31
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 332
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5149e85c88fae590800000000000000
+      internalID: -7644024135837204131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_32
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 326
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f6f503ae67796c70800000000000000
+      internalID: 8964827850322867954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_33
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 263
+        width: 10
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccb0b63226a25b1e0800000000000000
+      internalID: -2182791843401757748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_34
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 244
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2448c2ccf8e8cb440800000000000000
+      internalID: 4952990438457640002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_35
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 220
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52c0c431249a9bf00800000000000000
+      internalID: 1133122882517077029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_36
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 188
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57a48783a4e43c5f0800000000000000
+      internalID: -737659833276675467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_37
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 95
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc7df4b0761b9f6a0800000000000000
+      internalID: -6414901138083031091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_38
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 60
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aba0aa177df579bf0800000000000000
+      internalID: -317679869776753990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_39
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 39
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3138725aac296f5b0800000000000000
+      internalID: -5334915309521894637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_40
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 30
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74fc64049de83cbb0800000000000000
+      internalID: -4916929304421019833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_41
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 23
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 924a1e50d95df99d0800000000000000
+      internalID: -2765256775796939735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stalker Fragment_42
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 0
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dd585d4224bc5b90800000000000000
+      internalID: -7251723240553816615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Stalker Fragment_0: -8250693287807619653
+      Stalker Fragment_1: -3717356195700816301
+      Stalker Fragment_10: 7830207768904570586
+      Stalker Fragment_11: -5789414640503003619
+      Stalker Fragment_12: -5927173230438683848
+      Stalker Fragment_13: 5639017309607385516
+      Stalker Fragment_14: -543053161848070895
+      Stalker Fragment_15: 3444924325404321472
+      Stalker Fragment_16: -4771714909691993336
+      Stalker Fragment_17: -5495166261848758172
+      Stalker Fragment_18: -4416808372504088440
+      Stalker Fragment_19: -6495722139967768993
+      Stalker Fragment_2: -1743974811825777134
+      Stalker Fragment_20: 3673697577136456013
+      Stalker Fragment_21: -4098154144040889578
+      Stalker Fragment_22: 2732049185701505820
+      Stalker Fragment_23: 1197094758998051338
+      Stalker Fragment_24: -8247013566859149991
+      Stalker Fragment_25: 3209230110798490
+      Stalker Fragment_26: 1392059349473611788
+      Stalker Fragment_27: -9164436532879562497
+      Stalker Fragment_28: -7787009600187768249
+      Stalker Fragment_29: 2250262260159563087
+      Stalker Fragment_3: -4305737708232891717
+      Stalker Fragment_30: 1158429095990761253
+      Stalker Fragment_31: -7644024135837204131
+      Stalker Fragment_32: 8964827850322867954
+      Stalker Fragment_33: -2182791843401757748
+      Stalker Fragment_34: 4952990438457640002
+      Stalker Fragment_35: 1133122882517077029
+      Stalker Fragment_36: -737659833276675467
+      Stalker Fragment_37: -6414901138083031091
+      Stalker Fragment_38: -317679869776753990
+      Stalker Fragment_39: -5334915309521894637
+      Stalker Fragment_4: 1461422604234432296
+      Stalker Fragment_40: -4916929304421019833
+      Stalker Fragment_41: -2765256775796939735
+      Stalker Fragment_42: -7251723240553816615
+      Stalker Fragment_5: 2517392083511694440
+      Stalker Fragment_6: -3862312596753246672
+      Stalker Fragment_7: -8425475657527373044
+      Stalker Fragment_8: -1607409573925181690
+      Stalker Fragment_9: -6133833650964058340
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

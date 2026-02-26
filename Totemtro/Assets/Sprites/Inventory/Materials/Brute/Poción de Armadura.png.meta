@@ -1,0 +1,2431 @@
+fileFormatVersion: 2
+guid: d264e59ac52c61d4ea90271a41f3c8e4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5575468668080689000
+    second: "Poci\xF3n de Armadura_0"
+  - first:
+      213: 2041661088623367222
+    second: "Poci\xF3n de Armadura_1"
+  - first:
+      213: -6937090355649683960
+    second: "Poci\xF3n de Armadura_2"
+  - first:
+      213: -1196520775958995611
+    second: "Poci\xF3n de Armadura_3"
+  - first:
+      213: -2234606135664082877
+    second: "Poci\xF3n de Armadura_4"
+  - first:
+      213: -2330048502224942910
+    second: "Poci\xF3n de Armadura_5"
+  - first:
+      213: 1465733721740494021
+    second: "Poci\xF3n de Armadura_6"
+  - first:
+      213: 1538524578140580713
+    second: "Poci\xF3n de Armadura_7"
+  - first:
+      213: -3812184465914924956
+    second: "Poci\xF3n de Armadura_8"
+  - first:
+      213: 9180296989080249635
+    second: "Poci\xF3n de Armadura_9"
+  - first:
+      213: 443008828417737659
+    second: "Poci\xF3n de Armadura_10"
+  - first:
+      213: 7735099680967941565
+    second: "Poci\xF3n de Armadura_11"
+  - first:
+      213: -7907371596107875145
+    second: "Poci\xF3n de Armadura_12"
+  - first:
+      213: 6729859934140994646
+    second: "Poci\xF3n de Armadura_13"
+  - first:
+      213: -5981219444844683706
+    second: "Poci\xF3n de Armadura_14"
+  - first:
+      213: 323117864783671098
+    second: "Poci\xF3n de Armadura_15"
+  - first:
+      213: -3822635992466014501
+    second: "Poci\xF3n de Armadura_16"
+  - first:
+      213: -3690733844344559369
+    second: "Poci\xF3n de Armadura_17"
+  - first:
+      213: 1339824729412065639
+    second: "Poci\xF3n de Armadura_18"
+  - first:
+      213: -3480063093207319815
+    second: "Poci\xF3n de Armadura_19"
+  - first:
+      213: 1207715571915716992
+    second: "Poci\xF3n de Armadura_20"
+  - first:
+      213: 8195686055918299818
+    second: "Poci\xF3n de Armadura_21"
+  - first:
+      213: 2015374547792149128
+    second: "Poci\xF3n de Armadura_22"
+  - first:
+      213: 3772452492076459882
+    second: "Poci\xF3n de Armadura_23"
+  - first:
+      213: -461850705060579112
+    second: "Poci\xF3n de Armadura_24"
+  - first:
+      213: 9029335740003295825
+    second: "Poci\xF3n de Armadura_25"
+  - first:
+      213: -2486157637015150610
+    second: "Poci\xF3n de Armadura_26"
+  - first:
+      213: 6097299585037856796
+    second: "Poci\xF3n de Armadura_27"
+  - first:
+      213: -6121056863278950448
+    second: "Poci\xF3n de Armadura_28"
+  - first:
+      213: 5187020147705094411
+    second: "Poci\xF3n de Armadura_29"
+  - first:
+      213: 2743757488310669164
+    second: "Poci\xF3n de Armadura_30"
+  - first:
+      213: -4123445748782002396
+    second: "Poci\xF3n de Armadura_31"
+  - first:
+      213: 4758908688397805891
+    second: "Poci\xF3n de Armadura_32"
+  - first:
+      213: 8997024710707360713
+    second: "Poci\xF3n de Armadura_33"
+  - first:
+      213: -4764959762495012664
+    second: "Poci\xF3n de Armadura_34"
+  - first:
+      213: 1687087217840314425
+    second: "Poci\xF3n de Armadura_35"
+  - first:
+      213: 8292651529439085025
+    second: "Poci\xF3n de Armadura_36"
+  - first:
+      213: -5393500589676071779
+    second: "Poci\xF3n de Armadura_37"
+  - first:
+      213: -7019558029743090263
+    second: "Poci\xF3n de Armadura_38"
+  - first:
+      213: -2179176072212035237
+    second: "Poci\xF3n de Armadura_39"
+  - first:
+      213: 4709751244363985864
+    second: "Poci\xF3n de Armadura_40"
+  - first:
+      213: -6874211847843230241
+    second: "Poci\xF3n de Armadura_41"
+  - first:
+      213: 5770201445464458942
+    second: "Poci\xF3n de Armadura_42"
+  - first:
+      213: 2353997715980979537
+    second: "Poci\xF3n de Armadura_43"
+  - first:
+      213: -7755973358930371927
+    second: "Poci\xF3n de Armadura_44"
+  - first:
+      213: 7440672432878496812
+    second: "Poci\xF3n de Armadura_45"
+  - first:
+      213: -7881974667278450989
+    second: "Poci\xF3n de Armadura_46"
+  - first:
+      213: 2577404594357069071
+    second: "Poci\xF3n de Armadura_47"
+  - first:
+      213: -7974612313679738786
+    second: "Poci\xF3n de Armadura_48"
+  - first:
+      213: -1431348916280836129
+    second: "Poci\xF3n de Armadura_49"
+  - first:
+      213: -2147685332578374179
+    second: "Poci\xF3n de Armadura_50"
+  - first:
+      213: -2102532922294909367
+    second: "Poci\xF3n de Armadura_51"
+  - first:
+      213: -5939579072986147607
+    second: "Poci\xF3n de Armadura_52"
+  - first:
+      213: -8055034231471764190
+    second: "Poci\xF3n de Armadura_53"
+  - first:
+      213: -4260179999773921718
+    second: "Poci\xF3n de Armadura_54"
+  - first:
+      213: -5309865063747607119
+    second: "Poci\xF3n de Armadura_55"
+  - first:
+      213: 2527645164117851919
+    second: "Poci\xF3n de Armadura_56"
+  - first:
+      213: -8768174602052650931
+    second: "Poci\xF3n de Armadura_57"
+  - first:
+      213: -8047885509247076328
+    second: "Poci\xF3n de Armadura_58"
+  - first:
+      213: 5524799581228798445
+    second: "Poci\xF3n de Armadura_59"
+  - first:
+      213: -5405213582780755098
+    second: "Poci\xF3n de Armadura_60"
+  - first:
+      213: 8444956420211982149
+    second: "Poci\xF3n de Armadura_61"
+  - first:
+      213: 1224195575744377791
+    second: "Poci\xF3n de Armadura_62"
+  - first:
+      213: 6613324052786765569
+    second: "Poci\xF3n de Armadura_63"
+  - first:
+      213: 588881687958918766
+    second: "Poci\xF3n de Armadura_64"
+  - first:
+      213: 7393377922552072113
+    second: "Poci\xF3n de Armadura_65"
+  - first:
+      213: 223850262694408201
+    second: "Poci\xF3n de Armadura_66"
+  - first:
+      213: -4676307800034871445
+    second: "Poci\xF3n de Armadura_67"
+  - first:
+      213: 284900138792267557
+    second: "Poci\xF3n de Armadura_68"
+  - first:
+      213: -4761411536643063039
+    second: "Poci\xF3n de Armadura_69"
+  - first:
+      213: 4286736209362722351
+    second: "Poci\xF3n de Armadura_70"
+  - first:
+      213: 932052177604895955
+    second: "Poci\xF3n de Armadura_71"
+  - first:
+      213: -4324398194941981152
+    second: "Poci\xF3n de Armadura_72"
+  - first:
+      213: 6588578094073118087
+    second: "Poci\xF3n de Armadura_73"
+  - first:
+      213: 5405547100148661323
+    second: "Poci\xF3n de Armadura_74"
+  - first:
+      213: 6966540183806003843
+    second: "Poci\xF3n de Armadura_75"
+  - first:
+      213: 4353417174989003737
+    second: "Poci\xF3n de Armadura_76"
+  - first:
+      213: 7399871318515387385
+    second: "Poci\xF3n de Armadura_77"
+  - first:
+      213: -6359085756048858474
+    second: "Poci\xF3n de Armadura_78"
+  - first:
+      213: 263102962524513375
+    second: "Poci\xF3n de Armadura_79"
+  - first:
+      213: 4192891660748819528
+    second: "Poci\xF3n de Armadura_80"
+  - first:
+      213: 165715007624370554
+    second: "Poci\xF3n de Armadura_81"
+  - first:
+      213: 1786588534755052412
+    second: "Poci\xF3n de Armadura_82"
+  - first:
+      213: -8932206489432324328
+    second: "Poci\xF3n de Armadura_83"
+  - first:
+      213: 9026530715347979140
+    second: "Poci\xF3n de Armadura_84"
+  - first:
+      213: -6747233066529592214
+    second: "Poci\xF3n de Armadura_85"
+  - first:
+      213: 8033240131350592202
+    second: "Poci\xF3n de Armadura_86"
+  - first:
+      213: -8044642917619112332
+    second: "Poci\xF3n de Armadura_87"
+  - first:
+      213: 1902546398537724243
+    second: "Poci\xF3n de Armadura_88"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 2048
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_0"
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 230
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86f0549a63b006d40800000000000000
+      internalID: 5575468668080689000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_1"
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 838
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 634122361ff655c10800000000000000
+      internalID: 2041661088623367222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_2"
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 630
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80e56b863118abf90800000000000000
+      internalID: -6937090355649683960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_3"
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 342
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56dd69691ba156fe0800000000000000
+      internalID: -1196520775958995611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_4"
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 332
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34085de1f851df0e0800000000000000
+      internalID: -2234606135664082877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_5"
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 326
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c8837b7b310aafd0800000000000000
+      internalID: -2330048502224942910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_6"
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 279
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c447abdd05575410800000000000000
+      internalID: 1465733721740494021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_7"
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 220
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96be64ec3ffe95510800000000000000
+      internalID: 1538524578140580713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_8"
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 124
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 460f0e21d66681bc0800000000000000
+      internalID: -3812184465914924956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_9"
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 91
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32567b6e877f66f70800000000000000
+      internalID: 9180296989080249635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_10"
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 23
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb3833aae22e52600800000000000000
+      internalID: 443008828417737659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_11"
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 7
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbdd4527d28985b60800000000000000
+      internalID: 7735099680967941565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_12"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 934
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bcf9faad6f534290800000000000000
+      internalID: -7907371596107875145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_13"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 991
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6549b9a24f3456d50800000000000000
+      internalID: 6729859934140994646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_14"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 982
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64e9f52da907efca0800000000000000
+      internalID: -5981219444844683706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_15"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 974
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3f630f6cf1fb7400800000000000000
+      internalID: 323117864783671098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_16"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 955
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdeb07b61d443fac0800000000000000
+      internalID: -3822635992466014501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_17"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 814
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f8a4577f11e7ccc0800000000000000
+      internalID: -3690733844344559369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_18"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 807
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 769d3e12e73089210800000000000000
+      internalID: 1339824729412065639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_19"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 734
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fa3e6d0e0554bfc0800000000000000
+      internalID: -3480063093207319815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_20"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 719
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0897eb5f9eaa2c010800000000000000
+      internalID: 1207715571915716992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_21"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 648
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaae1a59b0decb170800000000000000
+      internalID: 8195686055918299818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_22"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 532
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88ab38a297c08fb10800000000000000
+      internalID: 2015374547792149128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_23"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 526
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a672142ed817a5430800000000000000
+      internalID: 3772452492076459882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_24"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 470
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d8b9911b3d2799f0800000000000000
+      internalID: -461850705060579112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_25"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 452
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 152a2ac1405ae4d70800000000000000
+      internalID: 9029335740003295825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_26"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 447
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eef56162dc46f7dd0800000000000000
+      internalID: -2486157637015150610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_27"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 436
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c10715feaa5fd9450800000000000000
+      internalID: 6097299585037856796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_28"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 427
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d79a4ea633ad0ba0800000000000000
+      internalID: -6121056863278950448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_29"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 411
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b01a1c2a75ffbf740800000000000000
+      internalID: 5187020147705094411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_30"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 390
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6f439806e8c31620800000000000000
+      internalID: 2743757488310669164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_31"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 350
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42f014d30f396c6c0800000000000000
+      internalID: -4123445748782002396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_32"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 302
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 349a8720d3a0b0240800000000000000
+      internalID: 4758908688397805891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_33"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 286
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c3bf1d5e4adbdc70800000000000000
+      internalID: 8997024710707360713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_34"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 271
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c0847387567fddb0800000000000000
+      internalID: -4764959762495012664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_35"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 246
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9385974d2ecb96710800000000000000
+      internalID: 1687087217840314425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_36"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 238
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e1015231aa651370800000000000000
+      internalID: 8292651529439085025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_37"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 227
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d947f782acf6625b0800000000000000
+      internalID: -5393500589676071779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_38"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 198
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a51ce4c925859e90800000000000000
+      internalID: -7019558029743090263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_39"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 174
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5945c878e202c1e0800000000000000
+      internalID: -2179176072212035237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_40"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 166
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c3f4ccadc56c5140800000000000000
+      internalID: 4709751244363985864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_41"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 142
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fddc58adeb4e990a0800000000000000
+      internalID: -6874211847843230241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_42"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 116
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb6ca5f84afd31050800000000000000
+      internalID: 5770201445464458942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_43"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 51
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15d802f53741ba020800000000000000
+      internalID: 2353997715980979537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_44"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 36
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aadf8da25f3d5490800000000000000
+      internalID: -7755973358930371927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_45"
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 0
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2ca3c3c724924760800000000000000
+      internalID: 7440672432878496812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_46"
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 862
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3de7d34fcc99d9290800000000000000
+      internalID: -7881974667278450989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_47"
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 846
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f05ec19a2d7c4c320800000000000000
+      internalID: 2577404594357069071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_48"
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 819
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e58c9ad1a5c745190800000000000000
+      internalID: -7974612313679738786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_49"
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 710
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdfb0778eb3d22ce0800000000000000
+      internalID: -1431348916280836129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_50"
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 622
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddd6956a193e132e0800000000000000
+      internalID: -2147685332578374179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_51"
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 606
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9464c06627d42d2e0800000000000000
+      internalID: -2102532922294909367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_52"
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 462
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e411576d40629da0800000000000000
+      internalID: -5939579072986147607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_53"
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 422
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22d838b3b05c63090800000000000000
+      internalID: -8055034231471764190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_54"
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 406
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4e60429cdcc0e4c0800000000000000
+      internalID: -4260179999773921718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_55"
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 396
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b5211e7bd19f46b0800000000000000
+      internalID: -5309865063747607119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_56"
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 310
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0f7a7d72eff31320800000000000000
+      internalID: 2527645164117851919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_57"
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 296
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d48bc0cb7af215680800000000000000
+      internalID: -8768174602052650931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_58"
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 191
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8187054d4ca205090800000000000000
+      internalID: -8047885509247076328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_59"
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 111
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de19e5e82f70cac40800000000000000
+      internalID: 5524799581228798445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_60"
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 100
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6639c3f62e2dcf4b0800000000000000
+      internalID: -5405213582780755098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_61"
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 86
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54fb362fe13823570800000000000000
+      internalID: 8444956420211982149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_62"
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 70
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb339dbd3673df010800000000000000
+      internalID: 1224195575744377791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_63"
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 62
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10fd6e6ef2f37cb50800000000000000
+      internalID: 6613324052786765569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_64"
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 44
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e66168176c02c2800800000000000000
+      internalID: 588881687958918766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_65"
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 30
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b78eeb7c0e8a9660800000000000000
+      internalID: 7393377922552072113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_66"
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1006
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90037ceb0a64b1300800000000000000
+      internalID: 223850262694408201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_67"
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 998
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b67788ef4da6a1fb0800000000000000
+      internalID: -4676307800034871445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_68"
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 951
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52f2c21ba2b24f300800000000000000
+      internalID: 284900138792267557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_69"
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 870
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10381f83f611cedb0800000000000000
+      internalID: -4761411536643063039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_70"
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 739
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2e9edccedb8d7b30800000000000000
+      internalID: 4286736209362722351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_71"
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 614
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d4e44e64805fec00800000000000000
+      internalID: 932052177604895955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_72"
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 542
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02e842bd0c6acf3c0800000000000000
+      internalID: -4324398194941981152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_73"
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 486
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78df5286ed45f6b50800000000000000
+      internalID: 6588578094073118087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_74"
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 479
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4cf001a27c540b40800000000000000
+      internalID: 5405547100148661323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_75"
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 206
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38acd39036f1ea060800000000000000
+      internalID: 6966540183806003843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_76"
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 182
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dbdd42fad17a6c30800000000000000
+      internalID: 4353417174989003737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_77"
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 152
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fb06bb02cf91b660800000000000000
+      internalID: 7399871318515387385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_78"
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 0
+        width: 1289
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 692267e523dffb7a0800000000000000
+      internalID: -6359085756048858474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_79"
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 977
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5460ac10cab6a300800000000000000
+      internalID: 263102962524513375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_80"
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 952
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84c81a420c4203a30800000000000000
+      internalID: 4192891660748819528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_81"
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 35
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a79d663ebecbc4200800000000000000
+      internalID: 165715007624370554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_82"
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 24
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7b4cdd7ecc3bc810800000000000000
+      internalID: 1786588534755052412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_83"
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 8
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81782f0d58d6a0480800000000000000
+      internalID: -8932206489432324328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_84"
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 963
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48b087a6cdda44d70800000000000000
+      internalID: 9026530715347979140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_85"
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 984
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6cebbc36430d52a0800000000000000
+      internalID: -6747233066529592214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_86"
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 960
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aca7098665dcb7f60800000000000000
+      internalID: 8033240131350592202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_87"
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 40
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 476637683efab5090800000000000000
+      internalID: -8044642917619112332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Poci\xF3n de Armadura_88"
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 994
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3513a8d8ed3376a10800000000000000
+      internalID: 1902546398537724243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "Poci\xF3n de Armadura_0": 5575468668080689000
+      "Poci\xF3n de Armadura_1": 2041661088623367222
+      "Poci\xF3n de Armadura_10": 443008828417737659
+      "Poci\xF3n de Armadura_11": 7735099680967941565
+      "Poci\xF3n de Armadura_12": -7907371596107875145
+      "Poci\xF3n de Armadura_13": 6729859934140994646
+      "Poci\xF3n de Armadura_14": -5981219444844683706
+      "Poci\xF3n de Armadura_15": 323117864783671098
+      "Poci\xF3n de Armadura_16": -3822635992466014501
+      "Poci\xF3n de Armadura_17": -3690733844344559369
+      "Poci\xF3n de Armadura_18": 1339824729412065639
+      "Poci\xF3n de Armadura_19": -3480063093207319815
+      "Poci\xF3n de Armadura_2": -6937090355649683960
+      "Poci\xF3n de Armadura_20": 1207715571915716992
+      "Poci\xF3n de Armadura_21": 8195686055918299818
+      "Poci\xF3n de Armadura_22": 2015374547792149128
+      "Poci\xF3n de Armadura_23": 3772452492076459882
+      "Poci\xF3n de Armadura_24": -461850705060579112
+      "Poci\xF3n de Armadura_25": 9029335740003295825
+      "Poci\xF3n de Armadura_26": -2486157637015150610
+      "Poci\xF3n de Armadura_27": 6097299585037856796
+      "Poci\xF3n de Armadura_28": -6121056863278950448
+      "Poci\xF3n de Armadura_29": 5187020147705094411
+      "Poci\xF3n de Armadura_3": -1196520775958995611
+      "Poci\xF3n de Armadura_30": 2743757488310669164
+      "Poci\xF3n de Armadura_31": -4123445748782002396
+      "Poci\xF3n de Armadura_32": 4758908688397805891
+      "Poci\xF3n de Armadura_33": 8997024710707360713
+      "Poci\xF3n de Armadura_34": -4764959762495012664
+      "Poci\xF3n de Armadura_35": 1687087217840314425
+      "Poci\xF3n de Armadura_36": 8292651529439085025
+      "Poci\xF3n de Armadura_37": -5393500589676071779
+      "Poci\xF3n de Armadura_38": -7019558029743090263
+      "Poci\xF3n de Armadura_39": -2179176072212035237
+      "Poci\xF3n de Armadura_4": -2234606135664082877
+      "Poci\xF3n de Armadura_40": 4709751244363985864
+      "Poci\xF3n de Armadura_41": -6874211847843230241
+      "Poci\xF3n de Armadura_42": 5770201445464458942
+      "Poci\xF3n de Armadura_43": 2353997715980979537
+      "Poci\xF3n de Armadura_44": -7755973358930371927
+      "Poci\xF3n de Armadura_45": 7440672432878496812
+      "Poci\xF3n de Armadura_46": -7881974667278450989
+      "Poci\xF3n de Armadura_47": 2577404594357069071
+      "Poci\xF3n de Armadura_48": -7974612313679738786
+      "Poci\xF3n de Armadura_49": -1431348916280836129
+      "Poci\xF3n de Armadura_5": -2330048502224942910
+      "Poci\xF3n de Armadura_50": -2147685332578374179
+      "Poci\xF3n de Armadura_51": -2102532922294909367
+      "Poci\xF3n de Armadura_52": -5939579072986147607
+      "Poci\xF3n de Armadura_53": -8055034231471764190
+      "Poci\xF3n de Armadura_54": -4260179999773921718
+      "Poci\xF3n de Armadura_55": -5309865063747607119
+      "Poci\xF3n de Armadura_56": 2527645164117851919
+      "Poci\xF3n de Armadura_57": -8768174602052650931
+      "Poci\xF3n de Armadura_58": -8047885509247076328
+      "Poci\xF3n de Armadura_59": 5524799581228798445
+      "Poci\xF3n de Armadura_6": 1465733721740494021
+      "Poci\xF3n de Armadura_60": -5405213582780755098
+      "Poci\xF3n de Armadura_61": 8444956420211982149
+      "Poci\xF3n de Armadura_62": 1224195575744377791
+      "Poci\xF3n de Armadura_63": 6613324052786765569
+      "Poci\xF3n de Armadura_64": 588881687958918766
+      "Poci\xF3n de Armadura_65": 7393377922552072113
+      "Poci\xF3n de Armadura_66": 223850262694408201
+      "Poci\xF3n de Armadura_67": -4676307800034871445
+      "Poci\xF3n de Armadura_68": 284900138792267557
+      "Poci\xF3n de Armadura_69": -4761411536643063039
+      "Poci\xF3n de Armadura_7": 1538524578140580713
+      "Poci\xF3n de Armadura_70": 4286736209362722351
+      "Poci\xF3n de Armadura_71": 932052177604895955
+      "Poci\xF3n de Armadura_72": -4324398194941981152
+      "Poci\xF3n de Armadura_73": 6588578094073118087
+      "Poci\xF3n de Armadura_74": 5405547100148661323
+      "Poci\xF3n de Armadura_75": 6966540183806003843
+      "Poci\xF3n de Armadura_76": 4353417174989003737
+      "Poci\xF3n de Armadura_77": 7399871318515387385
+      "Poci\xF3n de Armadura_78": -6359085756048858474
+      "Poci\xF3n de Armadura_79": 263102962524513375
+      "Poci\xF3n de Armadura_8": -3812184465914924956
+      "Poci\xF3n de Armadura_80": 4192891660748819528
+      "Poci\xF3n de Armadura_81": 165715007624370554
+      "Poci\xF3n de Armadura_82": 1786588534755052412
+      "Poci\xF3n de Armadura_83": -8932206489432324328
+      "Poci\xF3n de Armadura_84": 9026530715347979140
+      "Poci\xF3n de Armadura_85": -6747233066529592214
+      "Poci\xF3n de Armadura_86": 8033240131350592202
+      "Poci\xF3n de Armadura_87": -8044642917619112332
+      "Poci\xF3n de Armadura_88": 1902546398537724243
+      "Poci\xF3n de Armadura_9": 9180296989080249635
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

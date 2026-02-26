@@ -5478,8 +5478,8 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: -0.18593751
-    y: 0.06481481
+    x: -0.17395835
+    y: 0.109259255
     width: 0.5
     height: 0.5
   near clip plane: 0.3
@@ -5719,6 +5719,8 @@ GameObject:
   - component: {fileID: 3130592891261861672}
   - component: {fileID: 614563752351807099}
   - component: {fileID: 8863390327275656009}
+  - component: {fileID: 5261283344738766508}
+  - component: {fileID: 2052146097045745700}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -6173,8 +6175,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70660941696dfcb47982200674ca7573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totemInventory: {fileID: 6875843749457587900}
-  activeItemInventory: {fileID: 6582220203974921806}
+  maxSlots: 15
+  slots: []
 --- !u!114 &614563752351807099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6199,8 +6201,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d19866efd22695e49b359fb86f067fe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialInventory: {fileID: 614563752351807099}
-  activeInventory: {fileID: 6582220203974921806}
+  playerInventory: {fileID: 0}
+--- !u!114 &5261283344738766508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7661392630905846818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c16513ee7966949a4043d33259e7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healFinishSound: {fileID: 0}
+--- !u!114 &2052146097045745700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7661392630905846818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5988851acb023e346a3db1ce72a345f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 0}
+  redOverlay: {fileID: 0}
+  marco: {fileID: 0}
+  threshold: 0.2
+  maxOverlayAlpha: 0.45
+  basePulseSpeed: 2
+  maxPulseSpeed: 4
+  maxScale: 1.08
+  baseShakeIntensity: 0.03
+  maxShakeIntensity: 0.08
 --- !u!1 &8268746410227231913
 GameObject:
   m_ObjectHideFlags: 0

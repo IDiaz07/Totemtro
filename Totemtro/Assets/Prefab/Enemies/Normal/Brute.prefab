@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 3038022953106729308}
   - component: {fileID: -5862324573170177698}
   - component: {fileID: 8978485475275723005}
+  - component: {fileID: 3331152288426783350}
   m_Layer: 6
   m_Name: Brute
   m_TagString: Enemy
@@ -284,9 +285,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 80
   contactDamage: 20
-  hitKnockbackForce: 4
-  hitKnockbackDuration: 0.12
-  knockbackResistance: 0
+  hitKnockbackForce: 0
+  hitKnockbackDuration: 0
+  knockbackResistance: 1
   flashDuration: 0.08
   xpPrefab: {fileID: 6255059052769338757, guid: 01d5839b84bcf4c4f9d05fa5983bd479, type: 3}
   goldPrefab: {fileID: 2986144199003916069, guid: 531c7b8b765812e438b54e339552727b, type: 3}
@@ -295,9 +296,17 @@ MonoBehaviour:
   dropForce: 3
   materialDrops:
   - item: {fileID: 11400000, guid: df9680b2637e813439756709b8d332dd, type: 2}
-    dropChance: 1
+    dropChance: 0.4
     minAmount: 1
     maxAmount: 2
+  - item: {fileID: 11400000, guid: b509db28a7a11fd4ab1027f3bce5eaae, type: 2}
+    dropChance: 0.2
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: 6b1edf775e5b0bc419563844ecd6b487, type: 2}
+    dropChance: 0.15
+    minAmount: 1
+    maxAmount: 1
   hitParticlesPrefab: {fileID: 8306175235273709235, guid: 361d01d5c48df364bb9850610fb3342f, type: 3}
   isBoss: 0
 --- !u!114 &-5862324573170177698
@@ -327,6 +336,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   pushForce: 8
+--- !u!114 &3331152288426783350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5667458826574176871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e9cdf99e0bac3f44861d8be1f0d5152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  investigateDuration: 4
+  investigateSpeed: 2.5
 --- !u!1 &6876553637054443114
 GameObject:
   m_ObjectHideFlags: 0

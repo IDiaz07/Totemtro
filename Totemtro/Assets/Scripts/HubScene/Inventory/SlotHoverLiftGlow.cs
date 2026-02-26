@@ -1,0 +1,163 @@
+﻿using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+
+public class SlotHoverLiftGlow : MonoBehaviour,
+    IPointerEnterHandler,
+    IPointerExitHandler
+{
+    [Header("References")]
+    public RectTransform slotRoot;
+    public RectTransform icon;
+    public RectTransform glowIcon;   // OPCIONAL
+    public Image iconShadow;         // OPCIONAL
+
+    [Header("Lift Settings")]
+    public float liftAmount = 6f;
+    public float duration = 0.14f;
+
+    [Header("Scale Settings")]
+    public float iconScale = 1.1f;
+    public float glowScale = 1.2f;
+
+    [Header("Glow Settings")]
+    public float glowAlpha = 0.7f;
+
+    Vector2 originalPos;
+    Vector3 originalIconScale;
+    Vector3 originalGlowScale;
+    Color originalShadowColor;
+
+    float targetValue = 0f;
+    float currentValue = 0f;
+
+    Image glowImage;
+
+    void Awake()
+    {
+        if (slotRoot == null)
+            slotRoot = GetComponent<RectTransform>();
+
+        originalPos = slotRoot.anchoredPosition;
+
+        if (icon != null)
+            originalIconScale = icon.localScale;
+
+        if (glowIcon != null)
+        {
+            originalGlowScale = glowIcon.localScale;
+            glowImage = glowIcon.GetComponent<Image>();
+        }
+
+        if (iconShadow != null)
+            originalShadowColor = iconShadow.color;
+
+        SetGlow(0f);
+    }
+
+    void Update()
+    {
+        if (Mathf.Approximately(currentValue, targetValue))
+            return;
+
+        currentValue = Mathf.MoveTowards(
+            currentValue,
+            targetValue,
+            Time.deltaTime / duration
+        );
+
+        float eased = EaseOutCubic(currentValue);
+        ApplyVisuals(eased);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        targetValue = 1f;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        targetValue = 0f;
+    }
+
+    void ApplyVisuals(float t)
+    {
+        // LIFT
+        slotRoot.anchoredPosition =
+            originalPos + Vector2.up * (liftAmount * t);
+
+        // ICON SCALE
+        if (icon != null)
+        {
+            icon.localScale =
+                Vector3.Lerp(
+                    originalIconScale,
+                    originalIconScale * iconScale,
+                    t
+                );
+        }
+
+        // GLOW SCALE
+        if (glowIcon != null)
+        {
+            glowIcon.localScale =
+                Vector3.Lerp(
+                    originalGlowScale,
+                    originalGlowScale * glowScale,
+                    t
+                );
+        }
+
+        // GLOW ALPHA
+        if (glowImage != null)
+        {
+            Color c = glowImage.color;
+            c.a = glowAlpha * t;
+            glowImage.color = c;
+        }
+
+        // SHADOW BOOST
+        if (iconShadow != null)
+        {
+            Color shadowColor = originalShadowColor;
+            shadowColor.a = Mathf.Lerp(
+                originalShadowColor.a,
+                originalShadowColor.a * 1.4f,
+                t
+            );
+
+            iconShadow.color = shadowColor;
+        }
+    }
+
+    float EaseOutCubic(float t)
+    {
+        return 1f - Mathf.Pow(1f - t, 3f);
+    }
+
+    public void SyncVisuals(Sprite newSprite, bool hasItem)
+    {
+        if (iconShadow != null)
+        {
+            iconShadow.enabled = hasItem;
+            if (hasItem)
+                iconShadow.sprite = newSprite;
+        }
+
+        if (glowImage != null)
+        {
+            glowImage.enabled = hasItem;
+            if (hasItem)
+                glowImage.sprite = newSprite;
+        }
+    }
+
+    void SetGlow(float alpha)
+    {
+        if (glowImage == null) return;
+
+        Color c = glowImage.color;
+        c.a = alpha;
+        glowImage.color = c;
+    }
+}

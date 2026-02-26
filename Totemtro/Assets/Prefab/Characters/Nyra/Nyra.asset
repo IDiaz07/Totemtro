@@ -12,11 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b04d58ac3986ca34280179029c58f5b7, type: 3}
   m_Name: Nyra
   m_EditorClassIdentifier: 
-  heroName: "Nyra \u2013 The Crimson Priestess"
+  heroType: 5
+  heroName: Nyra
   description: Priestess marked by blood rituals. She trades vitality for power without
     hesitation.
-  portrait: {fileID: 21300000, guid: 8bdfdad88e73cf04bb229d0726c07021, type: 3}
-  bodySprite: {fileID: 21300000, guid: 8bdfdad88e73cf04bb229d0726c07021, type: 3}
+  Icon: {fileID: 21300000, guid: 5c20348f84390c24498e614d5c9b990e, type: 3}
+  ChampsHeadIcon: {fileID: 21300000, guid: 9c484ff258e49024cb0660c57e369ee7, type: 3}
+  directionalSprites:
+    FrontView: {fileID: 21300000, guid: c3c29cf78a8b1d448a750785b274c59b, type: 3}
+    BackView: {fileID: 21300000, guid: c5528e9e4ff9151419c0d7ab27af4b91, type: 3}
+    LeftView: {fileID: 21300000, guid: bbd949bdc6ee74c4ba0d23038879f975, type: 3}
+    RightView: {fileID: 21300000, guid: 53a2d3902eed00f489a195f1cb2727f5, type: 3}
+    FrontLeftView: {fileID: 21300000, guid: 0d53f6500beb46447b0557c2abe866cf, type: 3}
+    FrontRightView: {fileID: 21300000, guid: 5976e3fd513d91544836acdfe250235d, type: 3}
+    BackLeftView: {fileID: 21300000, guid: 5dceb56fd49a4e44cb70ee12ece5add9, type: 3}
+    BackRightView: {fileID: 21300000, guid: 44be28ddca7f43743b181239e3ca3c14, type: 3}
   maxHealth: 95
   damage: 11
   moveSpeed: 5

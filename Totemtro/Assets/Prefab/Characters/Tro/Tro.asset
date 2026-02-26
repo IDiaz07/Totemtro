@@ -12,12 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b04d58ac3986ca34280179029c58f5b7, type: 3}
   m_Name: Tro
   m_EditorClassIdentifier: 
-  heroName: "Tro \u2013 The Cult Survivor"
+  heroType: 6
+  heroName: Tro
   description: A hooded figure marked by failed rituals. Its face remains hidden
     in shadow, with two crimson eyes glowing beneath the hood. It carries a simple
     yet lethal cursed weapon.
-  portrait: {fileID: 21300000, guid: 1f8b2c8a42574f6419e4881001dcf986, type: 3}
-  bodySprite: {fileID: 21300000, guid: 1f8b2c8a42574f6419e4881001dcf986, type: 3}
+  Icon: {fileID: 0}
+  ChampsHeadIcon: {fileID: 0}
+  directionalSprites:
+    FrontView: {fileID: 0}
+    BackView: {fileID: 0}
+    LeftView: {fileID: 0}
+    RightView: {fileID: 0}
+    FrontLeftView: {fileID: 0}
+    FrontRightView: {fileID: 0}
+    BackLeftView: {fileID: 0}
+    BackRightView: {fileID: 0}
   maxHealth: 100
   damage: 10
   moveSpeed: 5

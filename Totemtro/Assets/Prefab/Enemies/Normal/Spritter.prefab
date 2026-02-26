@@ -271,6 +271,7 @@ GameObject:
   - component: {fileID: -5862324573170177698}
   - component: {fileID: 124854817453852145}
   - component: {fileID: 9005275882056924340}
+  - component: {fileID: 4454357038058071894}
   m_Layer: 6
   m_Name: Spritter
   m_TagString: Enemy
@@ -347,7 +348,15 @@ MonoBehaviour:
   dropForce: 3
   materialDrops:
   - item: {fileID: 11400000, guid: 1d3d2d0c4167671409658e894ef56e5a, type: 2}
-    dropChance: 1
+    dropChance: 0.35
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: 97982d2921885cf4389c799da4fc5094, type: 2}
+    dropChance: 0.2
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: bfed6ad257d2c6f4fb4a93344fc1a981, type: 2}
+    dropChance: 0.15
     minAmount: 1
     maxAmount: 1
   hitParticlesPrefab: {fileID: 8306175235273709235, guid: 361d01d5c48df364bb9850610fb3342f, type: 3}
@@ -518,3 +527,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4454357038058071894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5667458826574176871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e9cdf99e0bac3f44861d8be1f0d5152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  investigateDuration: 4
+  investigateSpeed: 2.5

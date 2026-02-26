@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8605185109171624641}
   - component: {fileID: 5247685468457508068}
   - component: {fileID: -2174680057054328058}
+  - component: {fileID: 2560878138626012450}
   m_Layer: 8
   m_Name: XP
   m_TagString: Untagged
@@ -166,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xpValue: 25
+  settleTime: 0.35
   floatSpeed: 1.5
   floatHeight: 0.12
   breatheSpeed: 2
@@ -173,3 +175,19 @@ MonoBehaviour:
   magnetRange: 3.5
   magnetAcceleration: 30
   maxMagnetSpeed: 14
+--- !u!114 &2560878138626012450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6255059052769338757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98ef15932cdd1e64885f4397e0b8a75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 35
+  useUnscaledTime: 1
+  fadeBeforeDestroy: 0
+  fadeDuration: 1

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3b6c4db878f184da06b29f9251efc3, type: 3}
+  m_Name: Elite Thrall Helmet
+  m_EditorClassIdentifier: 
+  itemName: Elite Thrall Helmet
+  icon: {fileID: 21300000, guid: b7ee75e830840754da9afd6c54151c45, type: 3}
+  itemType: 0
+  description: Forged for the elite enforcers of the Thrall Legion, this reinforced
+    helmet offers superior protection while bearing the insignia of absolute obedience.
+  stackable: 1
+  maxStack: 16
+  usableInActionBar: 0
+  cooldown: 0
+  worldPrefab: {fileID: 1446103798750561405, guid: a7da32f86a3dea04fa64e7276c494727, type: 3}
+  ability: {fileID: 0}

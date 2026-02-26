@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 3038022953106729308}
   - component: {fileID: -5862324573170177698}
   - component: {fileID: 7645534652376039108}
+  - component: {fileID: 2555473213123058253}
   m_Layer: 6
   m_Name: Exploder
   m_TagString: Enemy
@@ -295,7 +296,15 @@ MonoBehaviour:
   dropForce: 3
   materialDrops:
   - item: {fileID: 11400000, guid: 8a06c484467ee634fb5de2622d7e22d9, type: 2}
-    dropChance: 1
+    dropChance: 0.45
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: db9a34a9db390164bbce944ec62b3032, type: 2}
+    dropChance: 0.2
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: 0456ca0d716c2db4ca40380b32fe42ee, type: 2}
+    dropChance: 0.3
     minAmount: 1
     maxAmount: 1
   hitParticlesPrefab: {fileID: 8306175235273709235, guid: 361d01d5c48df364bb9850610fb3342f, type: 3}
@@ -328,6 +337,20 @@ MonoBehaviour:
   speed: 3.5
   explosionRadius: 2
   explosionDamage: 30
+--- !u!114 &2555473213123058253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5667458826574176871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e9cdf99e0bac3f44861d8be1f0d5152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  investigateDuration: 4
+  investigateSpeed: 2.5
 --- !u!1 &8658690734358420469
 GameObject:
   m_ObjectHideFlags: 0

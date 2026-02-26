@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 3038022953106729308}
   - component: {fileID: -5862324573170177698}
   - component: {fileID: 3511314382476823899}
+  - component: {fileID: 8060674459143080313}
   m_Layer: 6
   m_Name: Elite Thrall
   m_TagString: Enemy
@@ -282,7 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b169a1293b4c02c48b67e1539191d7ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 45
+  maxHealth: 140
   contactDamage: 20
   hitKnockbackForce: 4
   hitKnockbackDuration: 0.12
@@ -295,7 +296,19 @@ MonoBehaviour:
   dropForce: 6
   materialDrops:
   - item: {fileID: 11400000, guid: 443520074ed9dda429863a2801d36146, type: 2}
-    dropChance: 1
+    dropChance: 0.25
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: 692c128cd28df094ab7509bd2bf58bd6, type: 2}
+    dropChance: 0.5
+    minAmount: 1
+    maxAmount: 2
+  - item: {fileID: 11400000, guid: 1e5f40d0d7799a341a66ceb71fe66d5b, type: 2}
+    dropChance: 0.3
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: 59c1134ffbf737d4683cdc2370315a81, type: 2}
+    dropChance: 0.1
     minAmount: 1
     maxAmount: 1
   hitParticlesPrefab: {fileID: 8306175235273709235, guid: 361d01d5c48df364bb9850610fb3342f, type: 3}
@@ -328,6 +341,20 @@ MonoBehaviour:
   speed: 5
   directionChangeInterval: 0.7
   randomnessAmount: 0.6
+--- !u!114 &8060674459143080313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5667458826574176871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e9cdf99e0bac3f44861d8be1f0d5152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  investigateDuration: 4
+  investigateSpeed: 2.5
 --- !u!1 &8658690734358420469
 GameObject:
   m_ObjectHideFlags: 0

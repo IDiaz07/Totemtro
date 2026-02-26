@@ -12,13 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b04d58ac3986ca34280179029c58f5b7, type: 3}
   m_Name: Murray
   m_EditorClassIdentifier: 
-  heroName: "Murray \u2013 Warrior of the Makoa Clan"
+  heroType: 1
+  heroName: Murray
   description: A humanoid turtle from the ancient Makoa Clan. Its shell is engraved
     with tribal symbols, and its resilience is legendary. It carries a heavy anchor
     in its hand, used as a devastating melee weapon capable of crushing nearby enemies
     with brute force.
-  portrait: {fileID: 21300000, guid: 5cb4147f1292e6e42a228a1a5aa5a0d8, type: 3}
-  bodySprite: {fileID: 21300000, guid: 5cb4147f1292e6e42a228a1a5aa5a0d8, type: 3}
+  Icon: {fileID: 0}
+  ChampsHeadIcon: {fileID: 0}
+  directionalSprites:
+    FrontView: {fileID: 0}
+    BackView: {fileID: 0}
+    LeftView: {fileID: 0}
+    RightView: {fileID: 0}
+    FrontLeftView: {fileID: 0}
+    FrontRightView: {fileID: 0}
+    BackLeftView: {fileID: 0}
+    BackRightView: {fileID: 0}
   maxHealth: 140
   damage: 18
   moveSpeed: 4

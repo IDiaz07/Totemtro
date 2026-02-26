@@ -92,11 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 7090867209580529365}
   amountText: {fileID: 8040427090942986338}
-  slotBackground: {fileID: 765930372692475211}
-  hoverScale: 1.12
-  hoverSpeed: 12
-  emptyAlpha: 0
-  filledAlpha: 1
+  slotIndex: 0
 --- !u!1 &2147860444034925171
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -184,7 +180,7 @@ GameObject:
   - component: {fileID: 7868315535994579971}
   - component: {fileID: 164756493913464867}
   m_Layer: 5
-  m_Name: Image
+  m_Name: AmountBackgroud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -307,7 +303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

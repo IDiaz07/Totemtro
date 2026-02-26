@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8514137002692543536}
   - component: {fileID: 2084745919251099579}
   - component: {fileID: 1128126428852499138}
+  - component: {fileID: 8513058497441072460}
   m_Layer: 8
   m_Name: Gem
   m_TagString: Untagged
@@ -152,3 +153,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8513058497441072460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223301347813048084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98ef15932cdd1e64885f4397e0b8a75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 35
+  useUnscaledTime: 1
+  fadeBeforeDestroy: 0
+  fadeDuration: 1

@@ -12,11 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b04d58ac3986ca34280179029c58f5b7, type: 3}
   m_Name: Orin
   m_EditorClassIdentifier: 
-  heroName: "Orin \u2013 The Silent Shooter"
+  heroType: 4
+  heroName: Orin
   description: A taciturn hunter who has mastered the precise shot. He prefers distance,
     patience, and critical hits.
-  portrait: {fileID: 21300000, guid: 6e356f97207a7344b8bc8380844ebbee, type: 3}
-  bodySprite: {fileID: 21300000, guid: 6e356f97207a7344b8bc8380844ebbee, type: 3}
+  Icon: {fileID: 21300000, guid: 87eaeab0d624418409c685dc657942ae, type: 3}
+  ChampsHeadIcon: {fileID: 21300000, guid: f78948135edf5574bae09894c5f3d13b, type: 3}
+  directionalSprites:
+    FrontView: {fileID: 21300000, guid: 0006d7085fdad9d42877565adf38c563, type: 3}
+    BackView: {fileID: 21300000, guid: 2a676595a81003c48aecd6b0e14c7114, type: 3}
+    LeftView: {fileID: 21300000, guid: 1d0ddabe73143c64ba4f25fa04a34b91, type: 3}
+    RightView: {fileID: 21300000, guid: 7b5b7a4f9e11e834eba13768d51ec8a5, type: 3}
+    FrontLeftView: {fileID: 21300000, guid: 5103933f56f3be0458fa366dbf96c867, type: 3}
+    FrontRightView: {fileID: 21300000, guid: 878fd93fdcbaf2248a4a6578d857daba, type: 3}
+    BackLeftView: {fileID: 21300000, guid: 06533c86d881af34d894ecda39878136, type: 3}
+    BackRightView: {fileID: 21300000, guid: 55ab14970d9d7f947a6f70ebacfb9826, type: 3}
   maxHealth: 85
   damage: 14
   moveSpeed: 4.5

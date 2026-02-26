@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 3038022953106729308}
   - component: {fileID: -5862324573170177698}
   - component: {fileID: 3511314382476823899}
+  - component: {fileID: 4961010550879993007}
   m_Layer: 6
   m_Name: Thrall
   m_TagString: Enemy
@@ -293,7 +294,21 @@ MonoBehaviour:
   xpAmount: 3
   goldAmount: 1
   dropForce: 3
+  materialDrops:
+  - item: {fileID: 11400000, guid: 692c128cd28df094ab7509bd2bf58bd6, type: 2}
+    dropChance: 0.5
+    minAmount: 1
+    maxAmount: 2
+  - item: {fileID: 11400000, guid: 1e5f40d0d7799a341a66ceb71fe66d5b, type: 2}
+    dropChance: 0.35
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: ff12f1fdffac2894f93736ff219bbbe3, type: 2}
+    dropChance: 0.2
+    minAmount: 1
+    maxAmount: 1
   hitParticlesPrefab: {fileID: 8306175235273709235, guid: 361d01d5c48df364bb9850610fb3342f, type: 3}
+  isBoss: 0
 --- !u!114 &-5862324573170177698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,6 +337,20 @@ MonoBehaviour:
   speed: 2.5
   directionChangeInterval: 0.4
   randomnessAmount: 0.6
+--- !u!114 &4961010550879993007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5667458826574176871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e9cdf99e0bac3f44861d8be1f0d5152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  investigateDuration: 4
+  investigateSpeed: 2.5
 --- !u!1 &8658690734358420469
 GameObject:
   m_ObjectHideFlags: 0

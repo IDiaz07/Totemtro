@@ -126,9 +126,13 @@ MonoBehaviour:
   dropForce: 10
   materialDrops:
   - item: {fileID: 11400000, guid: ed97087bfde3963409c5b97c573999e5, type: 2}
+    dropChance: 1
     minAmount: 1
     maxAmount: 1
-    dropChance: 1
+  - item: {fileID: 11400000, guid: 98003f869e78c414c971189951bcf019, type: 2}
+    dropChance: 0.4
+    minAmount: 1
+    maxAmount: 1
   hitParticlesPrefab: {fileID: 8306175235273709235, guid: 7a05ce0bc9f898a43af2796fec674f6c, type: 3}
   isBoss: 1
 --- !u!114 &3178581256467336302
