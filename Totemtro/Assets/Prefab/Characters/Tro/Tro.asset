@@ -17,17 +17,17 @@ MonoBehaviour:
   description: A hooded figure marked by failed rituals. Its face remains hidden
     in shadow, with two crimson eyes glowing beneath the hood. It carries a simple
     yet lethal cursed weapon.
-  Icon: {fileID: 0}
-  ChampsHeadIcon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 1567a4f726b982a438c91da9c19bdc59, type: 3}
+  ChampsHeadIcon: {fileID: 21300000, guid: f4cedea6b4ddd014e98ca4726107e740, type: 3}
   directionalSprites:
-    FrontView: {fileID: 0}
-    BackView: {fileID: 0}
-    LeftView: {fileID: 0}
-    RightView: {fileID: 0}
-    FrontLeftView: {fileID: 0}
-    FrontRightView: {fileID: 0}
-    BackLeftView: {fileID: 0}
-    BackRightView: {fileID: 0}
+    FrontView: {fileID: 21300000, guid: 60479dc8e6cf52d4cbd2a06e12371cc8, type: 3}
+    BackView: {fileID: 21300000, guid: e6114c43d32b6d045bb0c349cd0a7a2e, type: 3}
+    LeftView: {fileID: 21300000, guid: d95477cc9718aa848877423775d78817, type: 3}
+    RightView: {fileID: 21300000, guid: b81cf104bd4424c4ca943c5f0432e174, type: 3}
+    FrontLeftView: {fileID: 21300000, guid: 8c910e9b546e4874d9849b0b806faa50, type: 3}
+    FrontRightView: {fileID: 21300000, guid: 96402c4cac960924f99e362a2d7292ec, type: 3}
+    BackLeftView: {fileID: 21300000, guid: 516ad1edeafe0554bad1c8817447fa49, type: 3}
+    BackRightView: {fileID: 21300000, guid: d004992489ce615429750ba8a8ac4610, type: 3}
   maxHealth: 100
   damage: 10
   moveSpeed: 5
@@ -36,3 +36,99 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4106ceeae1655ca4697c5e63f3f25923, type: 2}
   unlockedByDefault: 1
   gemCost: 0
+  healthScaling:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0.0625
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 9
+      value: 1.5
+      inSlope: 0.0625
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  damageScaling:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0.0625
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 9
+      value: 1.5
+      inSlope: 0.0625
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speedScaling:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0.025000006
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 9
+      value: 1.2
+      inSlope: 0.025000006
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  fireRateScaling:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0.037499994
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 9
+      value: 1.3
+      inSlope: 0.037499994
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

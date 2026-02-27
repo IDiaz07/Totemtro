@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
+using System.Collections;
 
 public class ChampDetailPanelUI : MonoBehaviour
 {
@@ -34,6 +35,18 @@ public class ChampDetailPanelUI : MonoBehaviour
     public TMP_Text damageValueText;
     public TMP_Text speedValueText;
     public TMP_Text fireRateValueText;
+
+    [Header("Increase Texts")]
+    public TMP_Text healthIncreaseText;
+    public TMP_Text damageIncreaseText;
+    public TMP_Text speedIncreaseText;
+    public TMP_Text fireRateIncreaseText;
+
+    [Header("Visual Max Values")]
+    public float maxHealthVisual = 300f;
+    public float maxDamageVisual = 100f;
+    public float maxSpeedVisual = 15f;
+    public float maxFireRateVisual = 5f;
 
     [Header("Unlock / Upgrade UI")]
     public HeroUnlockAndUpgradeUI unlockUpgradeUI;
@@ -74,11 +87,9 @@ public class ChampDetailPanelUI : MonoBehaviour
         nameText.text = hero.heroName;
 
         // 🔹 Imagen principal
-        if (hero.directionalSprites != null &&
-            hero.directionalSprites.FrontView != null)
+        if (hero.Icon != null)
         {
-            characterImage.sprite =
-                hero.directionalSprites.FrontView;
+            characterImage.sprite = hero.Icon;
         }
 
         // 🔹 Nivel
@@ -112,10 +123,10 @@ public class ChampDetailPanelUI : MonoBehaviour
         float scaledFireRate =
             HeroProgressSystem.Instance.GetScaledFireRate(hero);
 
-        SetBar(healthBarFill, scaledHealth);
-        SetBar(damageBarFill, scaledDamage);
-        SetBar(speedBarFill, scaledSpeed);
-        SetBar(fireRateBarFill, scaledFireRate);
+        SetBar(healthBarFill, scaledHealth, maxHealthVisual);
+        SetBar(damageBarFill, scaledDamage, maxDamageVisual);
+        SetBar(speedBarFill, scaledSpeed, maxSpeedVisual);
+        SetBar(fireRateBarFill, scaledFireRate, maxFireRateVisual);
 
         healthValueText.text = scaledHealth.ToString("0");
         damageValueText.text = scaledDamage.ToString("0");
@@ -125,6 +136,8 @@ public class ChampDetailPanelUI : MonoBehaviour
         // 🔹 Botones dinámicos
         if (unlockUpgradeUI != null)
             unlockUpgradeUI.Setup(hero);
+
+        UpdateIncreaseTexts(hero);
     }
 
     // =========================================
@@ -134,20 +147,23 @@ public class ChampDetailPanelUI : MonoBehaviour
     void Refresh(HeroData hero)
     {
         if (currentHero == hero)
+        {
+            StartCoroutine(LevelUpAnimation());
             Open(hero);
+        }
     }
 
     // =========================================
     // UTIL
     // =========================================
 
-    void SetBar(Image fill, float value)
+    void SetBar(Image fill, float value, float maxVisual)
     {
         if (fill == null)
             return;
 
-        float normalized = Mathf.Clamp01(value / maxStatVisual);
-        fill.fillAmount = normalized;
+        float target = Mathf.Clamp01(value / maxVisual);
+        StartCoroutine(AnimateBar(fill, target));
     }
 
     // =========================================
@@ -170,5 +186,97 @@ public class ChampDetailPanelUI : MonoBehaviour
 
         HeroSelectionManager.Instance.SelectHero(currentHero);
         Close();
+    }
+
+    void UpdateIncreaseTexts(HeroData hero)
+    {
+        if (HeroProgressSystem.Instance.IsMaxLevel(hero.heroType))
+        {
+            ClearIncreaseTexts();
+            return;
+        }
+
+        int level = HeroProgressSystem.Instance.GetLevel(hero.heroType);
+        int nextLevel = level + 1;
+
+        float currentHealth =
+            HeroProgressSystem.Instance.GetScaledHealth(hero);
+
+        float nextHealth =
+            hero.maxHealth * hero.healthScaling.Evaluate(nextLevel);
+
+        float currentDamage =
+            HeroProgressSystem.Instance.GetScaledDamage(hero);
+
+        float nextDamage =
+            hero.damage * hero.damageScaling.Evaluate(nextLevel);
+
+        float currentSpeed =
+            HeroProgressSystem.Instance.GetScaledSpeed(hero);
+
+        float nextSpeed =
+            hero.moveSpeed * hero.speedScaling.Evaluate(nextLevel);
+
+        float currentFire =
+            HeroProgressSystem.Instance.GetScaledFireRate(hero);
+
+        float nextFire =
+            hero.fireRate * hero.fireRateScaling.Evaluate(nextLevel);
+
+        SetIncreaseText(healthIncreaseText, nextHealth - currentHealth);
+        SetIncreaseText(damageIncreaseText, nextDamage - currentDamage);
+        SetIncreaseText(speedIncreaseText, nextSpeed - currentSpeed, "0.0");
+        SetIncreaseText(fireRateIncreaseText, nextFire - currentFire, "0.00");
+    }
+
+    void SetIncreaseText(TMP_Text text, float value, string format = "0")
+    {
+        if (value <= 0)
+        {
+            text.text = "";
+            return;
+        }
+
+        text.text = "(+" + value.ToString(format) + ")";
+        text.color = Color.green;
+    }
+
+    void ClearIncreaseTexts()
+    {
+        healthIncreaseText.text = "";
+        damageIncreaseText.text = "";
+        speedIncreaseText.text = "";
+        fireRateIncreaseText.text = "";
+    }
+
+    IEnumerator LevelUpAnimation()
+    {
+        Vector3 originalScale = levelText.transform.localScale;
+
+        levelText.color = Color.green;
+        levelText.transform.localScale = originalScale * 1.4f;
+
+        yield return new WaitForSeconds(0.25f);
+
+        levelText.transform.localScale = originalScale;
+        levelText.color = Color.white;
+    }
+
+    IEnumerator AnimateBar(Image fill, float target)
+    {
+        float start = fill.fillAmount;
+        float timer = 0f;
+        float duration = 0.3f;
+
+        while (timer < duration)
+        {
+            fill.fillAmount =
+                Mathf.Lerp(start, target, timer / duration);
+
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        fill.fillAmount = target;
     }
 }

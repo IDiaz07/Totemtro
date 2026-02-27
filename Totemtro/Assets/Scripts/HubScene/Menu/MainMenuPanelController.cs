@@ -10,7 +10,8 @@ public enum MainMenuPanelType
     News,
     Friends,
     Quests,
-    Profile
+    Profile,
+    ChampsDetail
 }
 
 public class MainMenuPanelController : MonoBehaviour

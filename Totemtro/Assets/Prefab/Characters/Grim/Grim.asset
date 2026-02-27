@@ -16,17 +16,17 @@ MonoBehaviour:
   heroName: Grim
   description: A robust being covered in glowing runes. Its power grows slowly over
     time, like an eternal forge.
-  Icon: {fileID: 0}
-  ChampsHeadIcon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 036221166a340b34ea7c6552cd1f824b, type: 3}
+  ChampsHeadIcon: {fileID: 21300000, guid: 4712bf04857b43544b7e9efba6c4eaa7, type: 3}
   directionalSprites:
-    FrontView: {fileID: 0}
-    BackView: {fileID: 0}
-    LeftView: {fileID: 0}
-    RightView: {fileID: 0}
-    FrontLeftView: {fileID: 0}
-    FrontRightView: {fileID: 0}
-    BackLeftView: {fileID: 0}
-    BackRightView: {fileID: 0}
+    FrontView: {fileID: 21300000, guid: 5e9441de35b21a54599f8a37fc3fafe2, type: 3}
+    BackView: {fileID: 21300000, guid: 920c9e49639ea7c4486ce112583621e7, type: 3}
+    LeftView: {fileID: 21300000, guid: 3290731226f6ae847a7cb6b04b3e3b2a, type: 3}
+    RightView: {fileID: 21300000, guid: 76fdd1aca2443d447bd5ac9993076763, type: 3}
+    FrontLeftView: {fileID: 21300000, guid: a9d800285fd6875468f06a9e86ae830f, type: 3}
+    FrontRightView: {fileID: 21300000, guid: 6657e6df3a09e6a45ac8c53fd38a1d36, type: 3}
+    BackLeftView: {fileID: 21300000, guid: f1e25e4fd792b9a42a6692d052eb59a1, type: 3}
+    BackRightView: {fileID: 21300000, guid: 23410019a8cef5a46a7d06809a1a1bef, type: 3}
   maxHealth: 110
   damage: 9
   moveSpeed: 4.8
@@ -35,3 +35,99 @@ MonoBehaviour:
   - {fileID: 11400000, guid: adba93e6a1db9974ab1edb237fa0bbd1, type: 2}
   unlockedByDefault: 0
   gemCost: 850
+  healthScaling:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0.0625
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 9
+      value: 1.5
+      inSlope: 0.0625
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  damageScaling:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0.0625
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 9
+      value: 1.5
+      inSlope: 0.0625
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speedScaling:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0.025000006
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 9
+      value: 1.2
+      inSlope: 0.025000006
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  fireRateScaling:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0.037499994
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 9
+      value: 1.3
+      inSlope: 0.037499994
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

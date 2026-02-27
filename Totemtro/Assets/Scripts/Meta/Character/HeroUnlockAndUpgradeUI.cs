@@ -15,6 +15,9 @@ public class HeroUnlockAndUpgradeUI : MonoBehaviour
 
     HeroData currentHero;
 
+    [Header("Unlock Cost")]
+    public TMP_Text gemCostText;
+
     public void Setup(HeroData hero)
     {
         currentHero = hero;
@@ -22,8 +25,25 @@ public class HeroUnlockAndUpgradeUI : MonoBehaviour
         bool unlocked =
             HeroProgressSystem.Instance.IsUnlocked(hero.heroType);
 
+        // 🔥 Mostrar coste en gemas
+        if (!unlocked)
+        {
+            gemCostText.text = hero.gemCost.ToString();
+            gemCostText.gameObject.SetActive(true);
+        }
+        else
+        {
+            gemCostText.gameObject.SetActive(false);
+        }
+
+        // 🔥 Botón Unlock
         unlockButton.gameObject.SetActive(!unlocked);
+
+        // 🔥 Botón Select
         selectButton.gameObject.SetActive(unlocked);
+
+        // 🔥 Upgrade solo si desbloqueado
+        upgradeButton.gameObject.SetActive(unlocked);
 
         RefreshUpgrade();
     }
