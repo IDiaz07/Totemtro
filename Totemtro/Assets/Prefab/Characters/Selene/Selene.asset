@@ -16,17 +16,19 @@ MonoBehaviour:
   heroName: Selene
   description: A wandering sorceress marked by arcane pacts. Runes float faintly
     around her as she channels dark energy.
-  Icon: {fileID: 0}
-  ChampsHeadIcon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: f8af73f8f18a24147a7b7fae1b90b50d, type: 3}
+  ChampsHeadIcon: {fileID: 21300000, guid: 1e068adb74bb68441baae7113131a98f, type: 3}
+  role: 2
+  rarity: 1
   directionalSprites:
-    FrontView: {fileID: 0}
-    BackView: {fileID: 0}
-    LeftView: {fileID: 0}
-    RightView: {fileID: 0}
-    FrontLeftView: {fileID: 0}
-    FrontRightView: {fileID: 0}
-    BackLeftView: {fileID: 0}
-    BackRightView: {fileID: 0}
+    FrontView: {fileID: 21300000, guid: 59d0485998f61b84d9114d09e5a4b953, type: 3}
+    BackView: {fileID: 21300000, guid: af0d8a378527348409dbba16c0a40840, type: 3}
+    LeftView: {fileID: 21300000, guid: d6503e6d6fca474428d59a179388ec7c, type: 3}
+    RightView: {fileID: 21300000, guid: 74cd6feb4ebc46945bd34c212e2072da, type: 3}
+    FrontLeftView: {fileID: 21300000, guid: eeac62ac0a195844297cda828a854cea, type: 3}
+    FrontRightView: {fileID: 21300000, guid: 5df802a446dfb85488bcf427b0b49307, type: 3}
+    BackLeftView: {fileID: 21300000, guid: 58e29c6bd778892469adcea872077e33, type: 3}
+    BackRightView: {fileID: 21300000, guid: 3e039afa39864ea489f14eaf6defb624, type: 3}
   maxHealth: 80
   damage: 12
   moveSpeed: 5
@@ -34,4 +36,103 @@ MonoBehaviour:
   weapons:
   - {fileID: 11400000, guid: 0ebcad235286b0c46be0c44a88e9f462, type: 2}
   unlockedByDefault: 0
-  gemCost: 600
+  gemCost: 850
+  healthScaling:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0.0625
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 9
+      value: 1.5
+      inSlope: 0.0625
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  damageScaling:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0.0625
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 9
+      value: 1.5
+      inSlope: 0.0625
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speedScaling:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0.025000006
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 9
+      value: 1.2
+      inSlope: 0.025000006
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  fireRateScaling:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0.037499994
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 9
+      value: 1.3
+      inSlope: 0.037499994
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  hasLimitedOffer: 0
+  limitedDiscountPercent: 0
+  limitedDurationHours: 0

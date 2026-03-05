@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f087d84b9dd40074aaaefc611c4f7d52, type: 3}
+  m_Name: MURRAY
+  m_EditorClassIdentifier: 
+  itemId: murray_frag_10
+  category: 2
+  displayName: MURRAY FRAGS x10
+  description: 
+  icon: {fileID: 21300000, guid: 5cb4147f1292e6e42a228a1a5aa5a0d8, type: 3}
+  rarity: 1
+  isHot: 0
+  isLimited: 0
+  durationHours: 0
+  itemType: 2
+  priceCurrency: 0
+  priceAmount: 800
+  goldAmount: 0
+  gemAmount: 0
+  heroReward: {fileID: 0}
+  fragmentHero: {fileID: 11400000, guid: 88fd6bf05b4466848b65399d65bf38b0, type: 2}
+  fragmentSize: 1
+  fragmentAmount: 10
+  bundleRewards: []
+  hasDiscount: 0
+  discountPercent: 0
+  isFirstTimeOffer: 0
+  progressionGroupId: 
+  progressionStep: 0

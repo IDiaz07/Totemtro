@@ -57,32 +57,9 @@ public class AimIndicator : MonoBehaviour
         var type = weapon.currentWeapon.weaponType;
 
         // =========================
-        // VEX
-        // =========================
-        if (type == WeaponType.ConeProjectile)
-        {
-            int step = weapon.GetVexStep();
-
-            switch (step)
-            {
-                case 0:
-                    ShowLine(weapon.currentWeapon.range * 0.16f);
-                    break;
-
-                case 1:
-                    ShowCone(20f, weapon.currentWeapon.range * 0.16f);
-                    break;
-
-                case 2:
-                    ShowCone(40f, weapon.currentWeapon.range * 0.16f);
-                    break;
-            }
-        }
-
-        // =========================
         // GRIM
         // =========================
-        else if (type == WeaponType.GrimRuneBurst)
+        if (type == WeaponType.GrimRuneBurst)
         {
             ShowCone(
                 weapon.currentWeapon.meleeAngle,
@@ -133,6 +110,14 @@ public class AimIndicator : MonoBehaviour
         // NYRA
         // =========================
         else if (type == WeaponType.NyraBloodOrb)
+        {
+            ShowLine(weapon.currentWeapon.range * 0.14f);
+        }
+
+        // =========================
+        // VEX
+        // =========================
+        else if (type == WeaponType.VexProyectile)
         {
             ShowLine(weapon.currentWeapon.range * 0.14f);
         }

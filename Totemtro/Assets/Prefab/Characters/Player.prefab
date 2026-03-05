@@ -4966,6 +4966,7 @@ GameObject:
   - component: {fileID: 6211295958724381129}
   - component: {fileID: 6755939957477477334}
   - component: {fileID: 5014777722606263263}
+  - component: {fileID: 9110419963457686667}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -5067,6 +5068,8 @@ MonoBehaviour:
   hasDualFire: 0
   hasTripleShot: 0
   isAttacking: 0
+  weaponBehindOrder: -1
+  weaponFrontOrder: 2
 --- !u!120 &3633374950326013032
 LineRenderer:
   serializedVersion: 2
@@ -5219,6 +5222,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 261a5a5287cb5a748bb920c3c8425a34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9110419963457686667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4193810688838008051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f1949dd4acf5764e94cb870760ae051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPoints: 5
+  defaultProjectilePrefab: {fileID: 3657121074460016133, guid: 1b8e0cef49f917249aefeb1c09ab657d, type: 3}
+  skullProjectilePrefab: {fileID: 3657121074460016133, guid: 8c8b2b848793ce145ac21f7526c70bcb, type: 3}
+  starProjectilePrefab: {fileID: 3657121074460016133, guid: 0460dc159f9adf046aa657a4df8d0d4c, type: 3}
+  fireProjectilePrefab: {fileID: 3657121074460016133, guid: 117ce0da58382974e8206e1e80258a24, type: 3}
+  fangProjectilePrefab: {fileID: 3657121074460016133, guid: 8f6890cca0f8a5f4a902f2f196fff0e4, type: 3}
+  spadeProjectilePrefab: {fileID: 3657121074460016133, guid: 89bd0a3ea51214a4d82dc834f8caafcb, type: 3}
+  hasCard: 0
+  currentCard: 0
 --- !u!1 &4257568570062890412
 GameObject:
   m_ObjectHideFlags: 0
@@ -5478,8 +5502,8 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: -0.17395835
-    y: 0.109259255
+    x: -0.165625
+    y: 0.087037034
     width: 0.5
     height: 0.5
   near clip plane: 0.3
@@ -6231,9 +6255,12 @@ MonoBehaviour:
   redOverlay: {fileID: 0}
   marco: {fileID: 0}
   threshold: 0.2
-  maxOverlayAlpha: 0.45
   basePulseSpeed: 2
   maxPulseSpeed: 4
+  minOverlayAlpha: 0.01
+  maxOverlayAlpha: 0.45
+  minMarcoAlpha: 0.3
+  maxMarcoAlpha: 0.6
   maxScale: 1.08
   baseShakeIntensity: 0.03
   maxShakeIntensity: 0.08

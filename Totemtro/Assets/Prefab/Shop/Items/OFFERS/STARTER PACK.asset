@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f087d84b9dd40074aaaefc611c4f7d52, type: 3}
+  m_Name: STARTER PACK
+  m_EditorClassIdentifier: 
+  itemId: starter_pack_01
+  category: 0
+  displayName: STARTER PACK
+  description: Mega offer for new players.
+  icon: {fileID: 21300000, guid: 125da12b418cd6345a06ba965d46f197, type: 3}
+  rarity: 3
+  isHot: 1
+  isLimited: 1
+  durationHours: 48
+  itemType: 3
+  priceCurrency: 2
+  priceAmount: 8
+  goldAmount: 2000
+  gemAmount: 300
+  heroReward: {fileID: 0}
+  fragmentHero: {fileID: 0}
+  fragmentAmount: 0
+  bundleRewards:
+  - rewardType: 2
+    currencyType: 0
+    amount: 50
+    hero: {fileID: 11400000, guid: b8a6b44a67d5ea1498304d0cdf05e0ee, type: 2}
+  - rewardType: 2
+    currencyType: 0
+    amount: 50
+    hero: {fileID: 11400000, guid: e26e29385e1e32d4087072d23d1339eb, type: 2}
+  hasDiscount: 1
+  discountPercent: 35
+  isFirstTimeOffer: 1
+  progressionGroupId: '""'
+  progressionStep: 0

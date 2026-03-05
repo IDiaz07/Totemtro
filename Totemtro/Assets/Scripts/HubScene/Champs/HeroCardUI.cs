@@ -23,6 +23,23 @@ public class HeroCardUI : MonoBehaviour
 
     HeroData heroData;
 
+    void Update()
+    {
+        if (heroData == null || HeroProgressSystem.Instance == null)
+            return;
+
+        bool unlocked = HeroProgressSystem.Instance.IsUnlocked(heroData.heroType);
+
+        if (lockOverlay != null)
+            lockOverlay.SetActive(!unlocked);
+
+        if (unlockButton != null)
+            unlockButton.gameObject.SetActive(!unlocked);
+
+        if (gemCostText != null)
+            gemCostText.gameObject.SetActive(!unlocked);
+    }
+
     public void Setup(HeroData data, bool isSelected)
     {
         heroData = data;
@@ -138,5 +155,27 @@ public class HeroCardUI : MonoBehaviour
     public void OpenDetails()
     {
         ChampDetailPanelUI.Instance.Open(heroData);
+    }
+
+    public void PlayFragmentImpact()
+    {
+        StartCoroutine(Punch());
+    }
+
+    IEnumerator Punch()
+    {
+        Vector3 original = transform.localScale;
+        float t = 0;
+        float duration = 0.15f;
+
+        while (t < duration)
+        {
+            float scale = Mathf.Lerp(1f, 1.1f, t / duration);
+            transform.localScale = original * scale;
+            t += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.localScale = original;
     }
 }

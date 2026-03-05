@@ -13,10 +13,10 @@ public class HeroUnlockAndUpgradeUI : MonoBehaviour
     public TMP_Text fragmentCostText;
     public TMP_Text goldCostText;
 
-    HeroData currentHero;
-
     [Header("Unlock Cost")]
     public TMP_Text gemCostText;
+
+    HeroData currentHero;
 
     public void Setup(HeroData hero)
     {
@@ -25,10 +25,15 @@ public class HeroUnlockAndUpgradeUI : MonoBehaviour
         bool unlocked =
             HeroProgressSystem.Instance.IsUnlocked(hero.heroType);
 
-        // 🔥 Mostrar coste en gemas
+        // =========================
+        // SOLO PRECIO REAL (SIN DESCUENTO)
+        // =========================
         if (!unlocked)
         {
-            gemCostText.text = hero.gemCost.ToString();
+            int realPrice =
+                HeroProgressSystem.Instance.GetGemUnlockPrice(hero.heroType);
+
+            gemCostText.text = realPrice.ToString("N0");
             gemCostText.gameObject.SetActive(true);
         }
         else
@@ -36,13 +41,8 @@ public class HeroUnlockAndUpgradeUI : MonoBehaviour
             gemCostText.gameObject.SetActive(false);
         }
 
-        // 🔥 Botón Unlock
         unlockButton.gameObject.SetActive(!unlocked);
-
-        // 🔥 Botón Select
         selectButton.gameObject.SetActive(unlocked);
-
-        // 🔥 Upgrade solo si desbloqueado
         upgradeButton.gameObject.SetActive(unlocked);
 
         RefreshUpgrade();
@@ -65,7 +65,6 @@ public class HeroUnlockAndUpgradeUI : MonoBehaviour
         fragmentCostText.text = fragCost.ToString();
         goldCostText.text = goldCost.ToString();
 
-        // 🔥 NUEVA LÓGICA PROFESIONAL
         if (!unlocked)
         {
             upgradeButton.interactable = false;

@@ -1,0 +1,754 @@
+fileFormatVersion: 2
+guid: 332e5b492ace3c049bd986d550e123d8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3976560125128157731
+    second: calabera_0
+  - first:
+      213: -3102166661712451688
+    second: calabera_1
+  - first:
+      213: 7210294857600634645
+    second: calabera_2
+  - first:
+      213: 1836693176174086787
+    second: calabera_3
+  - first:
+      213: -2793678453104599787
+    second: calabera_4
+  - first:
+      213: -5342740774979667204
+    second: calabera_5
+  - first:
+      213: 317317029546329969
+    second: calabera_6
+  - first:
+      213: -15448863864188396
+    second: calabera_7
+  - first:
+      213: -1621558469707744254
+    second: calabera_8
+  - first:
+      213: -3966901396173773728
+    second: calabera_9
+  - first:
+      213: -8531247341094763675
+    second: calabera_10
+  - first:
+      213: 2943314629093221521
+    second: calabera_11
+  - first:
+      213: -1724936475611487865
+    second: calabera_12
+  - first:
+      213: -4447245814476572234
+    second: calabera_13
+  - first:
+      213: 3623983148520280060
+    second: calabera_14
+  - first:
+      213: -943508224798082021
+    second: calabera_15
+  - first:
+      213: 566066721648033037
+    second: calabera_16
+  - first:
+      213: 8919355572588484251
+    second: calabera_17
+  - first:
+      213: 2616640886221641625
+    second: calabera_18
+  - first:
+      213: -2824638238128220411
+    second: calabera_19
+  - first:
+      213: 6143285900044027382
+    second: calabera_20
+  - first:
+      213: -5698966731367371526
+    second: calabera_21
+  - first:
+      213: 4709939525646249310
+    second: calabera_22
+  - first:
+      213: 3862797920680171594
+    second: calabera_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1024
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: calabera_0
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 768
+        width: 247
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd5d0c982ab60d8c0800000000000000
+      internalID: -3976560125128157731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calabera_1
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 768
+        width: 247
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 897e19e6bd3e2f4d0800000000000000
+      internalID: -3102166661712451688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calabera_2
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 768
+        width: 247
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51f8c11a8fc101460800000000000000
+      internalID: 7210294857600634645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calabera_3
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 768
+        width: 247
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38a8d3766be3d7910800000000000000
+      internalID: 1836693176174086787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calabera_4
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 768
+        width: 247
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51d990a9f3cda39d0800000000000000
+      internalID: -2793678453104599787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calabera_5
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 768
+        width: 247
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfa775c7295cad5b0800000000000000
+      internalID: -5342740774979667204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calabera_6
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 512
+        width: 247
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1778a4b3826576400800000000000000
+      internalID: 317317029546329969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calabera_7
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 512
+        width: 247
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4121135175d19cff0800000000000000
+      internalID: -15448863864188396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calabera_8
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 512
+        width: 247
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20c3b86c9211f79e0800000000000000
+      internalID: -1621558469707744254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calabera_9
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 512
+        width: 247
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 064af0e923cb2f8c0800000000000000
+      internalID: -3966901396173773728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calabera_10
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 512
+        width: 247
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5630d076ebbea9980800000000000000
+      internalID: -8531247341094763675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calabera_11
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 512
+        width: 247
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 194ef419f01c8d820800000000000000
+      internalID: 2943314629093221521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calabera_12
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 256
+        width: 247
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 781201f1a6bcf08e0800000000000000
+      internalID: -1724936475611487865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calabera_13
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 256
+        width: 247
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b9f7478e753842c0800000000000000
+      internalID: -4447245814476572234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calabera_14
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 256
+        width: 247
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cff8d8f0979fa4230800000000000000
+      internalID: 3623983148520280060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calabera_15
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 256
+        width: 247
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1c304ab44cf7e2f0800000000000000
+      internalID: -943508224798082021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calabera_16
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 256
+        width: 247
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0d30072fa21bd700800000000000000
+      internalID: 566066721648033037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calabera_17
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 256
+        width: 247
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b969981f2aae7cb70800000000000000
+      internalID: 8919355572588484251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calabera_18
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 247
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9971100c50d205420800000000000000
+      internalID: 2616640886221641625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calabera_19
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 0
+        width: 247
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 507d16dec7edcc8d0800000000000000
+      internalID: -2824638238128220411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calabera_20
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 0
+        width: 247
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f54ac14af5514550800000000000000
+      internalID: 6143285900044027382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calabera_21
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 0
+        width: 247
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afc2416c3f339e0b0800000000000000
+      internalID: -5698966731367371526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calabera_22
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 0
+        width: 247
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5d67b35b011d5140800000000000000
+      internalID: 4709939525646249310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calabera_23
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 0
+        width: 247
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a48524d2e3a6b9530800000000000000
+      internalID: 3862797920680171594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 92d0d340ba2e2f04a95e35f1110a86f5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      calabera_0: -3976560125128157731
+      calabera_1: -3102166661712451688
+      calabera_10: -8531247341094763675
+      calabera_11: 2943314629093221521
+      calabera_12: -1724936475611487865
+      calabera_13: -4447245814476572234
+      calabera_14: 3623983148520280060
+      calabera_15: -943508224798082021
+      calabera_16: 566066721648033037
+      calabera_17: 8919355572588484251
+      calabera_18: 2616640886221641625
+      calabera_19: -2824638238128220411
+      calabera_2: 7210294857600634645
+      calabera_20: 6143285900044027382
+      calabera_21: -5698966731367371526
+      calabera_22: 4709939525646249310
+      calabera_23: 3862797920680171594
+      calabera_3: 1836693176174086787
+      calabera_4: -2793678453104599787
+      calabera_5: -5342740774979667204
+      calabera_6: 317317029546329969
+      calabera_7: -15448863864188396
+      calabera_8: -1621558469707744254
+      calabera_9: -3966901396173773728
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

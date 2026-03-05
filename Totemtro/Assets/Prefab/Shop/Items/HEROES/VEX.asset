@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f087d84b9dd40074aaaefc611c4f7d52, type: 3}
+  m_Name: VEX
+  m_EditorClassIdentifier: 
+  itemId: hero_vex_unlock
+  category: 1
+  displayName: VEX
+  description: An entity linked to chance and ritual chaos. Its presence alters the
+    probabilities of the world.
+  icon: {fileID: 21300000, guid: 8d5b05b1c02208e478ae4594d1511337, type: 3}
+  rarity: 3
+  isHot: 0
+  isLimited: 0
+  durationHours: 0
+  itemType: 1
+  priceCurrency: 1
+  priceAmount: 1000
+  goldAmount: 0
+  gemAmount: 0
+  heroReward: {fileID: 11400000, guid: 93a2860363c1ee746a87b20c54887a3e, type: 2}
+  fragmentHero: {fileID: 0}
+  fragmentAmount: 0
+  bundleRewards: []
+  hasDiscount: 0
+  discountPercent: 0
+  isFirstTimeOffer: 0
+  progressionGroupId: 
+  progressionStep: 0

@@ -6,7 +6,7 @@ public enum WeaponType
     MeleeArc,
     MurrayAnchor,     // Ancla especial de Murray
     GrimRuneBurst,    // Runas de Grim
-    ConeProjectile,   // Disparo en cono (Vex)
+    VexProyectile,   // Disparo en cono (Vex)
     AreaZone,         // Zona en suelo (Selene)
     NyraBloodOrb,
     KaelBlade,

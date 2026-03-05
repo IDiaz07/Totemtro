@@ -19,6 +19,8 @@ MonoBehaviour:
     yet lethal cursed weapon.
   Icon: {fileID: 21300000, guid: 1567a4f726b982a438c91da9c19bdc59, type: 3}
   ChampsHeadIcon: {fileID: 21300000, guid: f4cedea6b4ddd014e98ca4726107e740, type: 3}
+  role: 4
+  rarity: 0
   directionalSprites:
     FrontView: {fileID: 21300000, guid: 60479dc8e6cf52d4cbd2a06e12371cc8, type: 3}
     BackView: {fileID: 21300000, guid: e6114c43d32b6d045bb0c349cd0a7a2e, type: 3}
@@ -132,3 +134,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  hasLimitedOffer: 0
+  limitedDiscountPercent: 0
+  limitedDurationHours: 0

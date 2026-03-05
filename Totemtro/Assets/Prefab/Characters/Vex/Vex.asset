@@ -16,17 +16,19 @@ MonoBehaviour:
   heroName: Vex
   description: An entity linked to chance and ritual chaos. Its presence alters the
     probabilities of the world.
-  Icon: {fileID: 0}
-  ChampsHeadIcon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: e1a46067532fc9044b8327ab72820078, type: 3}
+  ChampsHeadIcon: {fileID: 21300000, guid: adcf7514c95603e49850ac479b7d09d0, type: 3}
+  role: 4
+  rarity: 2
   directionalSprites:
-    FrontView: {fileID: 0}
-    BackView: {fileID: 0}
-    LeftView: {fileID: 0}
-    RightView: {fileID: 0}
-    FrontLeftView: {fileID: 0}
-    FrontRightView: {fileID: 0}
-    BackLeftView: {fileID: 0}
-    BackRightView: {fileID: 0}
+    FrontView: {fileID: 21300000, guid: 88cfc0dff21d7114684c1d5b09517e52, type: 3}
+    BackView: {fileID: 21300000, guid: 41764c2050df39f4ea9b78b7c6bb3ed7, type: 3}
+    LeftView: {fileID: 21300000, guid: 49ad84a6912f3ec41852e3950429766e, type: 3}
+    RightView: {fileID: 21300000, guid: 3e605036806a81e40a29855c0a4fb721, type: 3}
+    FrontLeftView: {fileID: 21300000, guid: 93157ce48e9b2544cadb30d6d8a86f85, type: 3}
+    FrontRightView: {fileID: 21300000, guid: b7ab4159aab0972449bec0634ec40c01, type: 3}
+    BackLeftView: {fileID: 21300000, guid: 99965385f0d16a840a33c9a33edb0c28, type: 3}
+    BackRightView: {fileID: 21300000, guid: 6e08ff7dd64b39b43a9d20c0dede2b85, type: 3}
   maxHealth: 90
   damage: 10
   moveSpeed: 5
@@ -35,3 +37,102 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 508c14f3dce616b4d911f5fde1fc8550, type: 2}
   unlockedByDefault: 0
   gemCost: 1000
+  healthScaling:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0.0625
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 9
+      value: 1.5
+      inSlope: 0.0625
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  damageScaling:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0.0625
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 9
+      value: 1.5
+      inSlope: 0.0625
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speedScaling:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0.025000006
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 9
+      value: 1.2
+      inSlope: 0.025000006
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  fireRateScaling:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0.037499994
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 9
+      value: 1.3
+      inSlope: 0.037499994
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  hasLimitedOffer: 0
+  limitedDiscountPercent: 0
+  limitedDurationHours: 0

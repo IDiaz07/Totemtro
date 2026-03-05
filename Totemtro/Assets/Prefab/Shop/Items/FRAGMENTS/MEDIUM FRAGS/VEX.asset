@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f087d84b9dd40074aaaefc611c4f7d52, type: 3}
+  m_Name: VEX
+  m_EditorClassIdentifier: 
+  itemId: vex_frag_25
+  category: 2
+  displayName: VEX FRAGS x25
+  description: 
+  icon: {fileID: 21300000, guid: 8d5b05b1c02208e478ae4594d1511337, type: 3}
+  rarity: 2
+  isHot: 0
+  isLimited: 0
+  durationHours: 0
+  itemType: 2
+  priceCurrency: 0
+  priceAmount: 1800
+  goldAmount: 0
+  gemAmount: 0
+  heroReward: {fileID: 0}
+  fragmentHero: {fileID: 11400000, guid: 93a2860363c1ee746a87b20c54887a3e, type: 2}
+  fragmentSize: 2
+  fragmentAmount: 25
+  bundleRewards: []
+  hasDiscount: 0
+  discountPercent: 0
+  isFirstTimeOffer: 0
+  progressionGroupId: 
+  progressionStep: 0

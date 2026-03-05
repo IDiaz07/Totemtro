@@ -41,11 +41,6 @@ public class Weapon : MonoBehaviour
     HashSet<Enemy> damagedEnemies = new HashSet<Enemy>();
     public bool isAttacking = false;
 
-    int vexComboStep = 0;
-    float lastVexAttackTime = 0f;
-    float comboResetTime = 3f;
-    Vector2 lastVexDirection = Vector2.right;
-
     [Header("Layering")]
     public int weaponBehindOrder = -1;
     public int weaponFrontOrder = 2;
@@ -183,8 +178,8 @@ public class Weapon : MonoBehaviour
                 StartCoroutine(GrimRuneWaveAttack());
                 break;
 
-            case WeaponType.ConeProjectile:
-                VexComboAttack();
+            case WeaponType.VexProyectile:
+                GetComponentInParent<VexAttack>()?.ShootVex();
                 break;
 
             case WeaponType.NyraBloodOrb:
@@ -349,17 +344,6 @@ public class Weapon : MonoBehaviour
         player.rotation = originalPlayerRotation;
         isRecoiling = false;
     }
-
-    public int GetVexStep()
-    {
-        return vexComboStep;
-    }
-
-
-
-
-
-
 
     // =====================================================
     // ⚓ MURRAY ANCHOR
@@ -738,60 +722,6 @@ public class Weapon : MonoBehaviour
     // VEX ATTACK
     // =====================================================
 
-    void VexComboAttack()
-    {
-        // Reset combo si pasa demasiado tiempo
-        if (Time.time > lastVexAttackTime + comboResetTime)
-            vexComboStep = 0;
-
-        lastVexAttackTime = Time.time;
-
-        Vector2 rawDirection =
-            (Camera.main.ScreenToWorldPoint(Input.mousePosition)
-            - transform.parent.position);
-
-        if (rawDirection.sqrMagnitude > 0.01f)
-            lastVexDirection = rawDirection.normalized;
-
-        Vector2 direction = lastVexDirection;
-
-        vexComboStep++;
-
-        if (vexComboStep > 3)
-            vexComboStep = 1;
-
-        PlayerMovement movement = GetComponentInParent<PlayerMovement>();
-
-        switch (vexComboStep)
-        {
-            case 1:
-                ShootSingle(direction, 1f);
-                movement.ApplyRecoil(direction, 2f);
-                break;
-
-            case 2:
-                ShootCone(direction, 2, 18f, 1f);
-                movement.ApplyRecoil(direction, 3f);
-                break;
-
-            case 3:
-                ShootCone(direction, 3, 35f, 1.4f);
-                movement.ApplyRecoil(direction, 4.5f);
-                StartCoroutine(VexFinalFlash());
-                break;
-        }
-    }
-
-    void ShootSingle(Vector2 direction, float damageMultiplier)
-    {
-        SpawnProjectile(direction, damageMultiplier);
-
-        if (currentWeapon.weaponType == WeaponType.Projectile && currentWeapon.aimLength <= 3f)
-        {
-            StartCoroutine(PistolKickVisual());
-        }
-    }
-
     IEnumerator PistolKickVisual()
     {
         Vector3 originalPos = spriteRenderer.transform.localPosition;
@@ -803,22 +733,6 @@ public class Weapon : MonoBehaviour
         spriteRenderer.transform.localPosition = originalPos;
     }
 
-
-
-    void ShootCone(Vector2 direction, int count, float spreadAngle, float damageMultiplier)
-    {
-        float halfSpread = spreadAngle / 2f;
-
-        for (int i = 0; i < count; i++)
-        {
-            float t = count == 1 ? 0.5f : (float)i / (count - 1);
-            float angleOffset = Mathf.Lerp(-halfSpread, halfSpread, t);
-
-            Vector2 rotatedDir = RotateVector(direction, angleOffset);
-
-            SpawnProjectile(rotatedDir, damageMultiplier);
-        }
-    }
 
     void SpawnProjectile(Vector2 direction, float damageMultiplier)
     {
@@ -849,33 +763,6 @@ public class Weapon : MonoBehaviour
                 playerStats.Ricochet
             );
         }
-    }
-
-    IEnumerator VexFinalFlash()
-    {
-        // Hitstop corto
-        float originalTime = Time.timeScale;
-        Time.timeScale = 0f;
-        yield return new WaitForSecondsRealtime(0.04f);
-        Time.timeScale = originalTime;
-
-        // Micro shake
-        Camera cam = Camera.main;
-        Vector3 originalPos = cam.transform.position;
-
-        float shakeTime = 0.1f;
-        float timer = 0f;
-
-        while (timer < shakeTime)
-        {
-            cam.transform.position =
-                originalPos + (Vector3)Random.insideUnitCircle * 0.08f;
-
-            timer += Time.deltaTime;
-            yield return null;
-        }
-
-        cam.transform.position = originalPos;
     }
 
     Vector2 RotateVector(Vector2 v, float degrees)

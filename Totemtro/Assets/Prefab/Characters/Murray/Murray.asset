@@ -18,17 +18,19 @@ MonoBehaviour:
     with tribal symbols, and its resilience is legendary. It carries a heavy anchor
     in its hand, used as a devastating melee weapon capable of crushing nearby enemies
     with brute force.
-  Icon: {fileID: 0}
-  ChampsHeadIcon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: af364e081abd4c742a43c2f4e118aee5, type: 3}
+  ChampsHeadIcon: {fileID: 21300000, guid: 4729a092a0c93224aa916696c5a89c82, type: 3}
+  role: 3
+  rarity: 0
   directionalSprites:
-    FrontView: {fileID: 0}
-    BackView: {fileID: 0}
-    LeftView: {fileID: 0}
-    RightView: {fileID: 0}
-    FrontLeftView: {fileID: 0}
-    FrontRightView: {fileID: 0}
-    BackLeftView: {fileID: 0}
-    BackRightView: {fileID: 0}
+    FrontView: {fileID: 21300000, guid: 1c405dbef28ec91488275b5d9b2ebafd, type: 3}
+    BackView: {fileID: 21300000, guid: bd1279a092dd130488779edebc1ffbea, type: 3}
+    LeftView: {fileID: 21300000, guid: 487bbbbefad3eac41b727e47219aca25, type: 3}
+    RightView: {fileID: 21300000, guid: bbe42854f8831604dbca2435b7813bb1, type: 3}
+    FrontLeftView: {fileID: 21300000, guid: 75ec3802271355f47a519ba1ad48f65e, type: 3}
+    FrontRightView: {fileID: 21300000, guid: d104f3c6dee4ab14eb3e3b834cd9b44c, type: 3}
+    BackLeftView: {fileID: 21300000, guid: 3e89e2cf6f7875847ae683787e90cb94, type: 3}
+    BackRightView: {fileID: 21300000, guid: cbb60fab690aa4f4e80c059fbeb664bd, type: 3}
   maxHealth: 140
   damage: 18
   moveSpeed: 4
@@ -36,4 +38,103 @@ MonoBehaviour:
   weapons:
   - {fileID: 11400000, guid: 02a22847d41f73742bcb985077a28306, type: 2}
   unlockedByDefault: 0
-  gemCost: 800
+  gemCost: 600
+  healthScaling:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0.0625
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 9
+      value: 1.5
+      inSlope: 0.0625
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  damageScaling:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0.0625
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 9
+      value: 1.5
+      inSlope: 0.0625
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speedScaling:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0.025000006
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 9
+      value: 1.2
+      inSlope: 0.025000006
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  fireRateScaling:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0.037499994
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 9
+      value: 1.3
+      inSlope: 0.037499994
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  hasLimitedOffer: 0
+  limitedDiscountPercent: 0
+  limitedDurationHours: 0

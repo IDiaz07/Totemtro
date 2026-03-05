@@ -13,6 +13,23 @@ public enum HeroType
     Selene
 }
 
+public enum HeroRarity
+{
+    Rare,
+    Epic,
+    Legendary
+}
+
+public enum HeroRole
+{
+    Melee,
+    Ranged,
+    Support,
+    Tank,
+    Assassin,
+    Mage
+}
+
 [System.Serializable]
 public class HeroDirectionalSprites
 {
@@ -43,6 +60,12 @@ public class HeroData : ScriptableObject
     public Sprite Icon;
     public Sprite ChampsHeadIcon;
 
+    [Header("Role")]
+    public HeroRole role;
+
+    [Header("Rarity")]
+    public HeroRarity rarity;
+
     [Header("Directional Sprites")]
     public HeroDirectionalSprites directionalSprites;
 
@@ -64,4 +87,9 @@ public class HeroData : ScriptableObject
     public AnimationCurve damageScaling = AnimationCurve.Linear(1, 1, 9, 1.5f);
     public AnimationCurve speedScaling = AnimationCurve.Linear(1, 1, 9, 1.2f);
     public AnimationCurve fireRateScaling = AnimationCurve.Linear(1, 1, 9, 1.3f);
+
+    [Header("Limited Offer")]
+    public bool hasLimitedOffer;
+    public int limitedDiscountPercent;
+    public int limitedDurationHours;
 }

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f087d84b9dd40074aaaefc611c4f7d52, type: 3}
+  m_Name: GOLD PACK LARGE
+  m_EditorClassIdentifier: 
+  itemId: gold_5000
+  category: 3
+  displayName: 
+  description: 
+  icon: {fileID: 21300000, guid: 7b61ca00f9feba54c94db88e74ccd0b3, type: 3}
+  rarity: 0
+  isHot: 0
+  isLimited: 0
+  durationHours: 0
+  itemType: 0
+  priceCurrency: 1
+  priceAmount: 500
+  goldAmount: 5000
+  gemAmount: 0
+  heroReward: {fileID: 0}
+  fragmentHero: {fileID: 0}
+  fragmentAmount: 0
+  bundleRewards: []
+  hasDiscount: 1
+  discountPercent: 30
+  isFirstTimeOffer: 0
+  progressionGroupId: 
+  progressionStep: 0
