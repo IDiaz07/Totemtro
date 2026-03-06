@@ -1,38 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\",
+  "WorkspaceRootPath": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\HubScene\\Champs\\HeroCardUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\HubScene\\Champs\\HeroCardUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\Weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\CombatScene\\Characters\\Weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\Character\\ChampDetailPanelUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Meta\\Character\\ChampDetailPanelUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\WeaponData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\CombatScene\\Characters\\WeaponData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\Character\\HeroProgressSystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Meta\\Character\\HeroProgressSystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\Attack\\Vex\\VexProjectileModifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\CombatScene\\Characters\\Attack\\Vex\\VexProjectileModifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\HeroData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\CombatScene\\Characters\\HeroData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\Character\\HeroUnlockAndUpgradeUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Meta\\Character\\HeroUnlockAndUpgradeUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\Character\\HeroGlobalUIUpdater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Meta\\Character\\HeroGlobalUIUpdater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\Character\\HeroOpenDetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Meta\\Character\\HeroOpenDetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\Character\\HeroSelectionManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Meta\\Character\\HeroSelectionManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\Attack\\Vex\\VexAttack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\CombatScene\\Characters\\Attack\\Vex\\VexAttack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,105 +31,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "HeroCardUI.cs",
-              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\HubScene\\Champs\\HeroCardUI.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\HubScene\\Champs\\HeroCardUI.cs",
-              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\HubScene\\Champs\\HeroCardUI.cs",
-              "RelativeToolTip": "Assets\\Scripts\\HubScene\\Champs\\HeroCardUI.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAAAIwAAAAFAAAAAAAAAA==",
+              "Title": "Weapon.cs",
+              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\Weapon.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CombatScene\\Characters\\Weapon.cs",
+              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\Weapon.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CombatScene\\Characters\\Weapon.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAMwB8AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T18:00:07.694Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "HeroOpenDetail.cs",
-              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\Character\\HeroOpenDetail.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Meta\\Character\\HeroOpenDetail.cs",
-              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\Character\\HeroOpenDetail.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Meta\\Character\\HeroOpenDetail.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T17:28:36.953Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HeroData.cs",
-              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\HeroData.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CombatScene\\Characters\\HeroData.cs",
-              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\HeroData.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CombatScene\\Characters\\HeroData.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEEAAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T17:09:09.541Z",
+              "WhenOpened": "2026-03-05T15:10:01.207Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ChampDetailPanelUI.cs",
-              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\Character\\ChampDetailPanelUI.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Meta\\Character\\ChampDetailPanelUI.cs",
-              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\Character\\ChampDetailPanelUI.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Meta\\Character\\ChampDetailPanelUI.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAgwHoAAABBAAAAAAAAAA==",
+              "Title": "WeaponData.cs",
+              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\WeaponData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CombatScene\\Characters\\WeaponData.cs",
+              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\WeaponData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CombatScene\\Characters\\WeaponData.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAcwEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T17:03:34.592Z",
+              "WhenOpened": "2026-03-05T15:09:52.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VexAttack.cs",
+              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\Attack\\Vex\\VexAttack.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CombatScene\\Characters\\Attack\\Vex\\VexAttack.cs",
+              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\Attack\\Vex\\VexAttack.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CombatScene\\Characters\\Attack\\Vex\\VexAttack.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAcwH8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T14:56:55.644Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "HeroProgressSystem.cs",
-              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\Character\\HeroProgressSystem.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Meta\\Character\\HeroProgressSystem.cs",
-              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\Character\\HeroProgressSystem.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Meta\\Character\\HeroProgressSystem.cs",
-              "ViewState": "AgIAAKwAAAAAAAAAAAAgwMUAAAAFAAAAAAAAAA==",
+              "Title": "VexProjectileModifier.cs",
+              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\Attack\\Vex\\VexProjectileModifier.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CombatScene\\Characters\\Attack\\Vex\\VexProjectileModifier.cs",
+              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\Attack\\Vex\\VexProjectileModifier.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CombatScene\\Characters\\Attack\\Vex\\VexProjectileModifier.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAcwHEAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T16:54:12.862Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "HeroSelectionManager.cs",
-              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\Character\\HeroSelectionManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Meta\\Character\\HeroSelectionManager.cs",
-              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\Character\\HeroSelectionManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Meta\\Character\\HeroSelectionManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T16:54:01.058Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HeroUnlockAndUpgradeUI.cs",
-              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\Character\\HeroUnlockAndUpgradeUI.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Meta\\Character\\HeroUnlockAndUpgradeUI.cs",
-              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\Character\\HeroUnlockAndUpgradeUI.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Meta\\Character\\HeroUnlockAndUpgradeUI.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAuwD4AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T16:53:47.1Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "HeroGlobalUIUpdater.cs",
-              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\Character\\HeroGlobalUIUpdater.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Meta\\Character\\HeroGlobalUIUpdater.cs",
-              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\Character\\HeroGlobalUIUpdater.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Meta\\Character\\HeroGlobalUIUpdater.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T16:53:38.748Z",
+              "WhenOpened": "2026-03-05T14:56:55.186Z",
               "EditorCaption": ""
             }
           ]

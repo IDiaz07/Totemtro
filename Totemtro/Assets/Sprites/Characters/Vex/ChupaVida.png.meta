@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ChupaVida_0: -1906618977645230075
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -372,7 +372,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MarcoTextogems_0: -396725386260760337
+      MarcoTextogems_1: -1594561660752295322
+      MarcoTextogems_2: 6361198503269635521
+      MarcoTextogems_3: -7312628027265954828
+      MarcoTextogems_4: -3730680992178539449
+      MarcoTextogems_5: 8226546059995150254
+      MarcoTextogems_6: -5598032549789657231
+      MarcoTextogems_7: 6174320633947251861
+      MarcoTextogems_8: 5099866696082714090
+      MarcoTextogems_9: 5907737986051325938
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -5184,7 +5184,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4193810688838008051}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0154fa3a541af5b49b74d0397b182341, type: 3}
   m_Name: 
@@ -5242,7 +5242,7 @@ MonoBehaviour:
   fangProjectilePrefab: {fileID: 3657121074460016133, guid: 8f6890cca0f8a5f4a902f2f196fff0e4, type: 3}
   spadeProjectilePrefab: {fileID: 3657121074460016133, guid: 89bd0a3ea51214a4d82dc834f8caafcb, type: 3}
   hasCard: 0
-  currentCard: 0
+  currentCard: 2
 --- !u!1 &4257568570062890412
 GameObject:
   m_ObjectHideFlags: 0
@@ -5503,7 +5503,7 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: -0.165625
-    y: 0.087037034
+    y: 0.11666667
     width: 0.5
     height: 0.5
   near clip plane: 0.3

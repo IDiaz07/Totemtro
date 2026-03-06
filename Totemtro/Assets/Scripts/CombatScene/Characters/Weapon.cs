@@ -29,6 +29,8 @@ public class Weapon : MonoBehaviour
 
     public static System.Action OnPlayerShot;
 
+    VexAttack vexAttack;
+
     // =================================
     // TOTEM MODIFIERS
     // =================================
@@ -61,7 +63,7 @@ public class Weapon : MonoBehaviour
     void Start()
     {
         playerStats = GetComponentInParent<PlayerStats>();
-        Debug.Log("PlayerStats: " + playerStats);
+        vexAttack = GetComponent<VexAttack>();
     }
 
 
@@ -179,7 +181,7 @@ public class Weapon : MonoBehaviour
                 break;
 
             case WeaponType.VexProyectile:
-                GetComponentInParent<VexAttack>()?.ShootVex();
+                GetComponent<VexAttack>()?.ShootVex();
                 break;
 
             case WeaponType.NyraBloodOrb:

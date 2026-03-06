@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MarcoTextocoins_0: 6048696914556794487
+      MarcoTextocoins_1: 798150099774209553
+      MarcoTextocoins_2: -3645607012388627776
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
