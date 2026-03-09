@@ -4,179 +4,210 @@ using System.Collections.Generic;
 
 public class KaelAttack : MonoBehaviour
 {
-    PlayerStats playerStats;
+    PlayerStats stats;
+    Rigidbody2D rb;
+    PlayerMovement movement;
+    Transform player;
+    PlayerHealth playerHealth;
 
-    [Header("Damage")]
-    public float normalDamage = 11f;
-    public float dashDamage = 10f;
+    [Header("Prefabs")]
+    public GameObject fireXPrefab;
+    public GameObject afterImagePrefab;
 
-    [Header("Cooldowns")]
-    public float normalCooldown = 0.4f;
-    public float dashCooldown = 3f;
+    [Header("Attack")]
+    public float attackCooldown = 0.35f;
+    public float spiralAngleStep = 18f;
+    public float attackDuration = 1.25f;
 
-    [Header("Dash Settings")]
-    public float dashForce = 18f;
-    public float dashDuration = 0.15f;
+    [Header("Attack Control")]
+    public float enemyPushRadius = 1.4f;
+    public float enemyPushForce = 6f;
 
-    [Header("Invulnerability")]
-    public float dashInvulnerabilityDuration = 7f;
+    [Header("Dash")]
+    public float dashForce = 500f;
+    public float dashDuration = 0.18f;
+    public float dashCooldown = 2f;
 
-    [Header("Slash Animation")]
-    public float slashAngle = 100f;
-    public float slashSpeed = 900f;
+    [Header("Spiral Settings")]
+    public float spiralRadius = 2.5f;
+    public float spawnDelay = 0.015f;
 
-    float lastNormalTime;
+    [Header("Attack Animation")]
+    public SpriteRenderer attackRenderer;
+    public Sprite[] attackSprites;
+    public float spriteAnimSpeed = 0.05f;
+
+    [Header("Attack Rotation")]
+    public float attackRotationSpeed = 900f;
+
+    float lastAttackTime;
     float lastDashTime;
 
-    Rigidbody2D rb;
-    PlayerHealth playerHealth;
-    PlayerMovement movement;
-    TrailRenderer dashTrail;
-
     bool isDashing = false;
-    int originalLayer;
+    bool isAttacking = false;
 
-    HashSet<Enemy> hitEnemies = new HashSet<Enemy>();
+    SpriteRenderer playerSprite;
+
+    Coroutine spiralRoutine;
+    Coroutine animRoutine;
 
     void Awake()
     {
+        player = transform.parent;
+
+        stats = GetComponentInParent<PlayerStats>();
         rb = GetComponentInParent<Rigidbody2D>();
-        playerHealth = GetComponentInParent<PlayerHealth>();
         movement = GetComponentInParent<PlayerMovement>();
-        dashTrail = GetComponentInParent<TrailRenderer>();
-        playerStats = GetComponentInParent<PlayerStats>(); // 👈 AÑADIR
+        playerHealth = GetComponentInParent<PlayerHealth>();
+
+        playerSprite = player.GetComponentInChildren<SpriteRenderer>();
     }
 
-    // =========================================
-    // 🗡 ATAQUE NORMAL (2 golpes)
-    // =========================================
+    void Update()
+    {
+        if (isAttacking && attackRenderer != null)
+        {
+            attackRenderer.transform.Rotate(
+                0,
+                0,
+                -attackRotationSpeed * Time.deltaTime
+            );
+        }
+    }
+
+    // ================================
+    // NORMAL ATTACK
+    // ================================
 
     public void NormalAttack()
     {
-        if (Time.time < lastNormalTime + normalCooldown) return;
+        if (Time.time < lastAttackTime + attackCooldown) return;
         if (isDashing) return;
+        if (isAttacking) return;
 
-        lastNormalTime = Time.time;
-        StartCoroutine(DoubleSlash());
+        lastAttackTime = Time.time;
+
+        StartCoroutine(AttackRoutine());
     }
 
-    IEnumerator DoubleSlash()
+    IEnumerator AttackRoutine()
     {
-        yield return StartCoroutine(SlashAnimation(false));
-        yield return new WaitForSeconds(0.05f);
-        yield return StartCoroutine(SlashAnimation(true));
+        rb.linearVelocity = Vector2.zero;
+
+        if (movement != null)
+            movement.enabled = false;
+
+        PushEnemies();
+
+        isAttacking = true;
+
+        spiralRoutine = StartCoroutine(SpiralAttack());
+        animRoutine = StartCoroutine(AttackAnimation());
+
+        yield return new WaitForSeconds(attackDuration);
+
+        isAttacking = false;
+
+        if (spiralRoutine != null)
+            StopCoroutine(spiralRoutine);
+
+        if (animRoutine != null)
+            StopCoroutine(animRoutine);
+
+        if (movement != null)
+            movement.enabled = true;
+
+        rb.linearVelocity = Vector2.zero;
+
+        if (attackRenderer != null)
+            attackRenderer.transform.rotation = Quaternion.identity;
     }
 
-    IEnumerator SlashAnimation(bool applyHitStop)
+    IEnumerator AttackAnimation()
     {
-        Vector2 dir = GetMouseDirection();
+        int frame = 0;
+
+        while (isAttacking)
+        {
+            if (attackSprites.Length > 0)
+            {
+                attackRenderer.sprite = attackSprites[frame];
+
+                frame++;
+
+                if (frame >= attackSprites.Length)
+                    frame = 0;
+            }
+
+            yield return new WaitForSeconds(spriteAnimSpeed);
+        }
+    }
+
+    IEnumerator SpiralAttack()
+    {
+        Vector2 mouseDir = GetMouseDirection();
 
         float baseAngle =
-            Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            Mathf.Atan2(mouseDir.y, mouseDir.x) * Mathf.Rad2Deg;
 
-        float startAngle = baseAngle + slashAngle * 0.5f;
-        float endAngle = baseAngle - slashAngle * 0.5f;
+        int i = 0;
 
-        float currentAngle = startAngle;
-        float timer = 0f;
-
-        while (Mathf.Abs(currentAngle - endAngle) > 1f)
+        while (isAttacking)
         {
-            currentAngle = Mathf.MoveTowards(
-                currentAngle,
-                endAngle,
-                slashSpeed * Time.deltaTime
+            float angle = baseAngle + spiralAngleStep * i;
+
+            Vector2 dir = new Vector2(
+                Mathf.Cos(angle * Mathf.Deg2Rad),
+                Mathf.Sin(angle * Mathf.Deg2Rad)
             );
 
-            transform.rotation =
-                Quaternion.Euler(0f, 0f, currentAngle);
+            float radius = spiralRadius * Mathf.Sqrt(i * 0.1f);
 
-            timer += Time.deltaTime;
-            yield return null;
-        }
+            SpawnSlash(dir, radius);
 
-        // Aplicamos daño justo al final del corte
-        PerformSlash(applyHitStop);
+            if (i % 3 == 0)
+                SpawnAfterImage();
 
-        // Reset rotación
-        transform.rotation =
-            Quaternion.Euler(0f, 0f, baseAngle);
-    }
+            i++;
 
-
-    void PerformSlash(bool applyHitStop)
-    {
-        Vector2 dir = GetMouseDirection();
-
-        Collider2D[] hits =
-            Physics2D.OverlapCircleAll(
-                transform.parent.position + (Vector3)(dir * 0.8f),
-                0.8f
-            );
-
-        foreach (var hit in hits)
-        {
-            if (!hit.CompareTag("Enemy")) continue;
-
-            Enemy enemy = hit.GetComponent<Enemy>();
-            if (enemy == null) continue;
-
-            float finalDamage = playerStats != null
-                ? playerStats.Damage
-                : normalDamage;
-
-            enemy.TakeDamage(finalDamage, dir, false);
-
-
-            if (applyHitStop)
-                StartCoroutine(HitStop(0.06f));
+            yield return new WaitForSeconds(spawnDelay);
         }
     }
 
-    IEnumerator HitStop(float duration)
-    {
-        float original = Time.timeScale;
-        Time.timeScale = 0f;
-
-        yield return new WaitForSecondsRealtime(duration);
-
-        Time.timeScale = original;
-    }
-
-    // =========================================
-    // ⚡ DASH
-    // =========================================
+    // ================================
+    // DASH ATTACK
+    // ================================
 
     public void DashAttack()
     {
         if (Time.time < lastDashTime + dashCooldown) return;
         if (isDashing) return;
+        if (isAttacking) return;
 
         lastDashTime = Time.time;
+
         StartCoroutine(DashRoutine());
     }
 
     IEnumerator DashRoutine()
     {
         isDashing = true;
-        hitEnemies.Clear();
 
         Vector2 dir = GetMouseDirection();
-        Transform player = transform.parent;
-
-        // Cambiar layer para atravesar enemigos
-        originalLayer = player.gameObject.layer;
-        player.gameObject.layer = LayerMask.NameToLayer("PlayerDash");
-
-        StartCoroutine(DashInvulnerability());
 
         if (movement != null)
             movement.enabled = false;
 
-        if (dashTrail != null)
-            dashTrail.enabled = true;
+        if (playerHealth != null)
+            playerHealth.SetInvulnerable(true);
 
         float timer = 0f;
+
+        float dashSpiralDelay = 0.005f;
+        float spiralTimer = 0f;
+        int i = 0;
+
+        HashSet<Enemy> hitEnemies = new HashSet<Enemy>();
 
         while (timer < dashDuration)
         {
@@ -184,11 +215,27 @@ public class KaelAttack : MonoBehaviour
                 rb.position + dir * dashForce * Time.deltaTime
             );
 
-            Collider2D[] hits =
-                Physics2D.OverlapCircleAll(
-                    player.position,
-                    0.8f
+            spiralTimer += Time.deltaTime;
+
+            if (spiralTimer >= dashSpiralDelay)
+            {
+                float angle = spiralAngleStep * i;
+
+                Vector2 spiralDir = new Vector2(
+                    Mathf.Cos(angle * Mathf.Deg2Rad),
+                    Mathf.Sin(angle * Mathf.Deg2Rad)
                 );
+
+                float radius = spiralRadius * Mathf.Sqrt(i * 0.1f);
+
+                SpawnSlash(spiralDir, radius);
+
+                spiralTimer = 0f;
+                i++;
+            }
+
+            Collider2D[] hits =
+                Physics2D.OverlapCircleAll(player.position, 1.2f);
 
             foreach (var hit in hits)
             {
@@ -199,16 +246,17 @@ public class KaelAttack : MonoBehaviour
 
                 if (hitEnemies.Contains(enemy)) continue;
 
-                // Empuje perpendicular
-                Vector2 perpendicular = new Vector2(-dir.y, dir.x);
-                float side = Random.value > 0.5f ? 1f : -1f;
-                Vector2 launchDir = perpendicular * side;
+                enemy.TakeDamage(stats.Damage * 1.4f, dir, false);
 
-                float finalDashDamage = playerStats != null
-                    ? playerStats.Damage * 1.2f
-                    : dashDamage;
+                Rigidbody2D enemyRB = enemy.GetComponent<Rigidbody2D>();
 
-                enemy.TakeDamage(finalDashDamage, launchDir, false);
+                if (enemyRB != null)
+                {
+                    enemyRB.AddForce(
+                        dir * enemyPushForce * 3f,
+                        ForceMode2D.Impulse
+                    );
+                }
 
                 hitEnemies.Add(enemy);
             }
@@ -217,37 +265,75 @@ public class KaelAttack : MonoBehaviour
             yield return null;
         }
 
-        // Restaurar estado
-        player.gameObject.layer = originalLayer;
-
         if (movement != null)
             movement.enabled = true;
 
-        if (dashTrail != null)
-            dashTrail.enabled = false;
+        if (playerHealth != null)
+            playerHealth.SetInvulnerable(false);
+
+        rb.linearVelocity = Vector2.zero;
 
         isDashing = false;
     }
 
-    IEnumerator DashInvulnerability()
+    // ================================
+    // HELPERS
+    // ================================
+
+    void SpawnSlash(Vector2 dir, float radius)
     {
-        if (playerHealth == null) yield break;
+        if (fireXPrefab == null) return;
 
-        playerHealth.SetInvulnerable(true);
+        GameObject slash =
+            Instantiate(fireXPrefab, player.position, Quaternion.identity);
 
-        yield return new WaitForSeconds(dashInvulnerabilityDuration);
+        FireX fx = slash.GetComponent<FireX>();
 
-        playerHealth.SetInvulnerable(false);
+        if (fx != null)
+            fx.Initialize(stats.Damage, dir, player, radius);
     }
 
+    void SpawnAfterImage()
+    {
+        if (afterImagePrefab == null || playerSprite == null) return;
 
-    // =========================================
+        GameObject img =
+            Instantiate(afterImagePrefab, player.position, player.rotation);
+
+        AfterImage ai = img.GetComponent<AfterImage>();
+
+        if (ai != null)
+            ai.Initialize(playerSprite);
+    }
+
+    void PushEnemies()
+    {
+        Collider2D[] hits =
+            Physics2D.OverlapCircleAll(player.position, enemyPushRadius);
+
+        foreach (var hit in hits)
+        {
+            if (!hit.CompareTag("Enemy")) continue;
+
+            Rigidbody2D enemyRB = hit.GetComponent<Rigidbody2D>();
+
+            if (enemyRB == null) continue;
+
+            Vector2 pushDir =
+                (hit.transform.position - player.position).normalized;
+
+            enemyRB.AddForce(
+                pushDir * enemyPushForce,
+                ForceMode2D.Impulse
+            );
+        }
+    }
 
     Vector2 GetMouseDirection()
     {
         return (
             Camera.main.ScreenToWorldPoint(Input.mousePosition)
-            - transform.parent.position
+            - player.position
         ).normalized;
     }
 }

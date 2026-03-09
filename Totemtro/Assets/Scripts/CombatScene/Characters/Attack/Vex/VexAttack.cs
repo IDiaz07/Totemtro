@@ -37,10 +37,6 @@ public class VexAttack : MonoBehaviour
         playerStats = GetComponentInParent<PlayerStats>();
     }
 
-    // =====================================================
-    // 🔫 DISPARO
-    // =====================================================
-
     public void ShootVex()
     {
         if (weapon.firePoint == null) return;
@@ -50,7 +46,8 @@ public class VexAttack : MonoBehaviour
             - weapon.firePoint.position).normalized;
 
         Rigidbody2D rb = GetComponentInParent<Rigidbody2D>();
-        Vector2 inheritedVelocity = rb != null ? rb.linearVelocity : Vector2.zero;
+        Vector2 inheritedVelocity =
+            rb != null ? rb.linearVelocity : Vector2.zero;
 
         float damage = playerStats.Damage;
         GameObject projectilePrefab = defaultProjectilePrefab;
@@ -109,18 +106,11 @@ public class VexAttack : MonoBehaviour
         }
 
         if (modifier != null)
-        {
             modifier.cardType = cardTypeToAssign;
-        }
 
-        // consumir carta
         hasCard = false;
         currentCard = VexCardType.None;
     }
-
-    // =====================================================
-    // 📈 BARRA
-    // =====================================================
 
     public void RegisterHit()
     {
@@ -135,7 +125,6 @@ public class VexAttack : MonoBehaviour
 
     void GenerateRandomCard()
     {
-        // 🔥 CORRECCIÓN IMPORTANTE
         currentCard = (VexCardType)Random.Range(
             (int)VexCardType.Skull,
             (int)VexCardType.Spade + 1

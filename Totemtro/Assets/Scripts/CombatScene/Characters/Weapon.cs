@@ -30,6 +30,7 @@ public class Weapon : MonoBehaviour
     public static System.Action OnPlayerShot;
 
     VexAttack vexAttack;
+    MurrayAttack murrayAttack;
 
     // =================================
     // TOTEM MODIFIERS
@@ -63,6 +64,7 @@ public class Weapon : MonoBehaviour
     void Start()
     {
         playerStats = GetComponentInParent<PlayerStats>();
+        murrayAttack = GetComponent<MurrayAttack>();
         vexAttack = GetComponent<VexAttack>();
     }
 
@@ -139,6 +141,28 @@ public class Weapon : MonoBehaviour
             if (CooldownRemaining < 0f)
                 CooldownRemaining = 0f;
         }
+
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            if (currentWeapon.weaponType == WeaponType.KaelBlade)
+            {
+                GetComponent<KaelAttack>()?.DashAttack();
+            }
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            if (currentWeapon.weaponType == WeaponType.KaelBlade)
+            {
+                GetComponent<KaelAttack>()?.DashAttack();
+            }
+
+            if (currentWeapon.weaponType == WeaponType.MurrayAnchor)
+            {
+                murrayAttack?.CannonShot();
+            }
+        }
     }
 
     void UpdateWeaponLayer()
@@ -173,7 +197,7 @@ public class Weapon : MonoBehaviour
                 break;
 
             case WeaponType.MurrayAnchor:
-                StartCoroutine(MurrayAnchorAttack());
+                murrayAttack?.AnchorAttack();
                 break;
 
             case WeaponType.GrimRuneBurst:
@@ -181,7 +205,7 @@ public class Weapon : MonoBehaviour
                 break;
 
             case WeaponType.VexProyectile:
-                GetComponent<VexAttack>()?.ShootVex();
+                vexAttack?.ShootVex();
                 break;
 
             case WeaponType.NyraBloodOrb:

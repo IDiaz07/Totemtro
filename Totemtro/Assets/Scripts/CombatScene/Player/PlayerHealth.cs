@@ -8,9 +8,13 @@ public class PlayerHealth : MonoBehaviour
     public float knockbackForce = 5f;
     public float knockbackDuration = 0.1f;
 
+    [Header("Invulnerability Flash")]
+    public float invulFlashSpeed = 0.08f;
+    public float invulAlpha = 0.45f;
+
     [Header("Defensive Stats")]
-    public float damageReductionPercent = 0f; // 0.2 = 20%
-    public float dodgeChance = 0f;            // 0.15 = 15%
+    public float damageReductionPercent = 0f;
+    public float dodgeChance = 0f;
 
     SpriteRenderer sprite;
     Color originalColor;
@@ -47,7 +51,6 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -66,9 +69,7 @@ public class PlayerHealth : MonoBehaviour
 
         float damage = amount;
 
-        // =========================
-        // 🛡 SHIELD
-        // =========================
+        // SHIELD
         if (shieldAmount > 0f)
         {
             float absorbed = Mathf.Min(shieldAmount, damage);
@@ -79,18 +80,14 @@ public class PlayerHealth : MonoBehaviour
                 return;
         }
 
-        // =========================
-        // 🎲 EVASION
-        // =========================
+        // DODGE
         if (Random.value < dodgeChance)
         {
             Debug.Log("Dodged!");
             return;
         }
 
-        // =========================
-        // 🛡 DAMAGE REDUCTION
-        // =========================
+        // DAMAGE REDUCTION
         damage *= (1f - damageReductionPercent);
 
         heroController.ApplyDamage(damage);
@@ -102,9 +99,7 @@ public class PlayerHealth : MonoBehaviour
         StartCoroutine(Knockback(hitDirection));
         StartCoroutine(Invulnerability(0.3f));
 
-        // =========================
-        // 🔥 RETALIATION
-        // =========================
+        // RETALIATION
         TotemInventory inventory = FindFirstObjectByType<TotemInventory>();
 
         if (inventory != null && inventory.HasTotem(TotemType.Retaliation))
@@ -123,9 +118,6 @@ public class PlayerHealth : MonoBehaviour
             }
         }
 
-        // =========================
-        // 💀 CHECK DEATH + SECOND WIND
-        // =========================
         if (heroController.CurrentHealth <= 0f)
         {
             if (hasSecondWind && !secondWindUsed)
@@ -141,21 +133,17 @@ public class PlayerHealth : MonoBehaviour
 
             heroController.Die();
         }
+
         OnPlayerDamaged?.Invoke();
     }
 
     public void SetInvulnerable(bool state)
     {
         isInvulnerable = state;
+
+        if (state)
+            StartCoroutine(InvulnerabilityFlash(0.5f));
     }
-
-    public float GetCurrentHealthPercent()
-    {
-        if (heroController == null) return 1f;
-
-        return heroController.CurrentHealth / heroController.MaxHealth;
-    }
-
 
     IEnumerator Knockback(Vector2 dir)
     {
@@ -181,8 +169,32 @@ public class PlayerHealth : MonoBehaviour
     IEnumerator Invulnerability(float duration)
     {
         isInvulnerable = true;
+
+        StartCoroutine(InvulnerabilityFlash(duration));
+
         yield return new WaitForSeconds(duration);
+
         isInvulnerable = false;
+    }
+
+    IEnumerator InvulnerabilityFlash(float duration)
+    {
+        if (sprite == null) yield break;
+
+        float timer = 0f;
+
+        while (timer < duration)
+        {
+            sprite.color = new Color(1f, 1f, 1f, invulAlpha);
+            yield return new WaitForSeconds(invulFlashSpeed);
+
+            sprite.color = originalColor;
+            yield return new WaitForSeconds(invulFlashSpeed);
+
+            timer += invulFlashSpeed * 2f;
+        }
+
+        sprite.color = originalColor;
     }
 
     public void Heal(float amount)
@@ -195,8 +207,12 @@ public class PlayerHealth : MonoBehaviour
         newHealth = Mathf.Min(newHealth, heroController.MaxHealth);
 
         heroController.SetCurrentHealth(newHealth);
+    }
 
-        // Opcional: efecto visual de curación
-        // Debug.Log("Healed: " + amount);
+    public float GetCurrentHealthPercent()
+    {
+        if (heroController == null) return 1f;
+
+        return heroController.CurrentHealth / heroController.MaxHealth;
     }
 }

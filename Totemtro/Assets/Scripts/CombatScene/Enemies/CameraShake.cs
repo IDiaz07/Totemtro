@@ -32,6 +32,9 @@ public class CameraShake : MonoBehaviour
 
     void InternalShake(float intensity, float duration)
     {
+        if (currentShake != null && intensity < 0.2f)
+            return;
+
         if (currentShake != null)
             StopCoroutine(currentShake);
 

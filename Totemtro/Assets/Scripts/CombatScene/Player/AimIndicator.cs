@@ -4,8 +4,10 @@ public class AimIndicator : MonoBehaviour
 {
     public Weapon weapon;
 
+    [Header("Sprites")]
     public SpriteRenderer lineSprite;
     public SpriteRenderer coneSprite;
+    public SpriteRenderer circleSprite;
 
     public float startOffset = 0.1f;
 
@@ -17,9 +19,13 @@ public class AimIndicator : MonoBehaviour
 
     void Update()
     {
+        bool dashAiming =
+            weapon.currentWeapon.weaponType == WeaponType.KaelBlade &&
+            Input.GetMouseButton(1);
+
         if (weapon == null ||
             weapon.currentWeapon == null ||
-            !weapon.isAiming ||
+            (!weapon.isAiming && !dashAiming) ||
             weapon.isAttacking)
         {
             DisableAll();
@@ -32,8 +38,9 @@ public class AimIndicator : MonoBehaviour
 
     void DisableAll()
     {
-        lineSprite.enabled = false;
-        coneSprite.enabled = false;
+        if (lineSprite != null) lineSprite.enabled = false;
+        if (coneSprite != null) coneSprite.enabled = false;
+        if (circleSprite != null) circleSprite.enabled = false;
     }
 
     void UpdateDirection()
@@ -48,17 +55,16 @@ public class AimIndicator : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(0, 0, angle);
 
-        // Offset inicial del aim (radio 0.1)
-        transform.localPosition = dir.normalized * startOffset;
+        if (weapon.currentWeapon.weaponType == WeaponType.KaelBlade)
+            transform.localPosition = Vector3.zero;
+        else
+            transform.localPosition = dir.normalized * startOffset;
     }
 
     void UpdateByWeapon()
     {
         var type = weapon.currentWeapon.weaponType;
 
-        // =========================
-        // GRIM
-        // =========================
         if (type == WeaponType.GrimRuneBurst)
         {
             ShowCone(
@@ -67,9 +73,6 @@ public class AimIndicator : MonoBehaviour
             );
         }
 
-        // =========================
-        // MURRAY
-        // =========================
         else if (type == WeaponType.MurrayAnchor)
         {
             ShowCone(
@@ -78,73 +81,61 @@ public class AimIndicator : MonoBehaviour
             );
         }
 
-        // =========================
-        // ORIN (rifle + smg)
-        // =========================
         else if (type == WeaponType.OrinBurst ||
-                 type == WeaponType.Projectile)
+                 type == WeaponType.Projectile ||
+                 type == WeaponType.NyraBloodOrb)
         {
-            ShowLine(weapon.currentWeapon.range * 0.14f);
+            ShowLine(weapon.currentWeapon.range * 0.14f, 0.12f);
         }
 
-        // =========================
+        // VEX
+        else if (type == WeaponType.VexProyectile)
+        {
+            ShowLine(weapon.currentWeapon.range * 0.14f, 0.24f);
+        }
+
         // KAEL
-        // =========================
         else if (type == WeaponType.KaelBlade)
         {
-            KaelAttack kael = weapon.GetComponentInParent<KaelAttack>();
-
             if (Input.GetMouseButton(1))
             {
-                // Dash → línea
-                ShowLine(0.1f);
+                // Dash aim
+                ShowLine(1.2f, 1f);
             }
             else
             {
-                // Ataque normal → cono
-                ShowCone(100f, 0.1f);
+                // Circular attack
+                ShowCircle(1.6f);
             }
         }
-
-        // =========================
-        // NYRA
-        // =========================
-        else if (type == WeaponType.NyraBloodOrb)
-        {
-            ShowLine(weapon.currentWeapon.range * 0.14f);
-        }
-
-        // =========================
-        // VEX
-        // =========================
-        else if (type == WeaponType.VexProyectile)
-        {
-            ShowLine(weapon.currentWeapon.range * 0.14f);
-        }
-
 
         else
         {
             DisableAll();
         }
-
     }
 
-    void ShowLine(float length)
+    void ShowLine(float length, float width)
     {
+        if (lineSprite == null) return;
+
         lineSprite.enabled = true;
-        coneSprite.enabled = false;
+        if (coneSprite != null) coneSprite.enabled = false;
+        if (circleSprite != null) circleSprite.enabled = false;
 
         lineSprite.color = new Color(1f, 1f, 0.2f, 0.18f);
 
         lineSprite.transform.localScale =
-            new Vector3(length, 0.12f, 1f);
+            new Vector3(length, width, 1f);
     }
 
     void ShowCone(float angle, float length)
     {
-        lineSprite.enabled = false;
+        if (coneSprite == null) return;
+
+        if (lineSprite != null) lineSprite.enabled = false;
         coneSprite.enabled = true;
+        if (circleSprite != null) circleSprite.enabled = false;
 
         float width =
             Mathf.Tan(angle * Mathf.Deg2Rad / 2f) * length * 2f;
@@ -153,5 +144,20 @@ public class AimIndicator : MonoBehaviour
 
         coneSprite.transform.localScale =
             new Vector3(length, width, 1f);
+    }
+
+    void ShowCircle(float radius)
+    {
+        if (circleSprite == null) return;
+
+        if (lineSprite != null) lineSprite.enabled = false;
+        if (coneSprite != null) coneSprite.enabled = false;
+
+        circleSprite.enabled = true;
+
+        circleSprite.color = new Color(1f, 0.9f, 0.2f, 0.15f);
+
+        circleSprite.transform.localScale =
+            new Vector3(radius, radius, 1f);
     }
 }

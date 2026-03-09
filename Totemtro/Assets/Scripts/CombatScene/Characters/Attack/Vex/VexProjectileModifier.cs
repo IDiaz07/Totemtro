@@ -9,14 +9,16 @@ public class VexProjectileModifier : MonoBehaviour
     VexAttack vex;
     Projectile projectile;
 
+    bool effectTriggered = false;
+
     [Header("Fire Effect")]
     public GameObject burnEffectPrefab;
 
     void Awake()
     {
+        projectile = GetComponent<Projectile>();
         stats = FindObjectOfType<PlayerStats>();
         vex = FindObjectOfType<VexAttack>();
-        projectile = GetComponent<Projectile>();
     }
 
     void OnEnable()
@@ -33,12 +35,17 @@ public class VexProjectileModifier : MonoBehaviour
 
     void ApplyEffect(Enemy enemy, Vector2 hitPos)
     {
-        vex?.RegisterHit();
+        if (effectTriggered) return;
+        effectTriggered = true;
+
+        // ✔ SOLO los disparos normales cargan la barra
+        if (cardType == VexCardType.None)
+            vex?.RegisterHit();
 
         switch (cardType)
         {
             case VexCardType.Star:
-                SpawnStar(hitPos);
+                SpawnStar(hitPos, enemy);
                 break;
 
             case VexCardType.Fire:
@@ -56,7 +63,7 @@ public class VexProjectileModifier : MonoBehaviour
     }
 
     // ⭐ STAR
-    void SpawnStar(Vector2 origin)
+    void SpawnStar(Vector2 origin, Enemy originalEnemy)
     {
         int count = 5;
         float step = 360f / count;
@@ -71,34 +78,53 @@ public class VexProjectileModifier : MonoBehaviour
             ).normalized;
 
             GameObject proj = Instantiate(
-                vex.starProjectilePrefab,   // IMPORTANTE: usar el prefab de star
+                vex.starProjectilePrefab,
                 origin,
                 Quaternion.identity
             );
 
             Projectile p = proj.GetComponent<Projectile>();
+            VexProjectileModifier mod = proj.GetComponent<VexProjectileModifier>();
 
             if (p != null)
             {
                 p.Initialize(
                     8f,
-                    stats.ProjectileSpeed,
-                    6f,
+                    12f,      // velocidad fija estrella
+                    6f,       // 🔥 radio real
                     dir,
                     Vector2.zero,
                     false
                 );
             }
+
+            if (mod != null)
+                mod.cardType = VexCardType.None;
+
+            // ignorar enemigo inicial
+            Collider2D starCol = proj.GetComponent<Collider2D>();
+            Collider2D enemyCol = originalEnemy.GetComponent<Collider2D>();
+
+            if (starCol && enemyCol)
+                Physics2D.IgnoreCollision(starCol, enemyCol);
         }
+    }
+
+    IEnumerator TempIgnore(Collider2D a, Collider2D b)
+    {
+        Physics2D.IgnoreCollision(a, b, true);
+
+        yield return new WaitForSeconds(0.12f);
+
+        Physics2D.IgnoreCollision(a, b, false);
     }
 
     // 🔥 FIRE
     void ApplyBurn(Enemy enemy)
     {
-        // evitar stack de burn
         BurnEffect burn = enemy.GetComponent<BurnEffect>();
-        if (burn != null)
-            return;
+
+        if (burn != null) return;
 
         burn = enemy.gameObject.AddComponent<BurnEffect>();
         burn.Initialize(enemy, burnEffectPrefab);

@@ -19,7 +19,7 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: 036221166a340b34ea7c6552cd1f824b, type: 3}
   ChampsHeadIcon: {fileID: 21300000, guid: 4712bf04857b43544b7e9efba6c4eaa7, type: 3}
   role: 3
-  rarity: 1
+  rarity: 0
   directionalSprites:
     FrontView: {fileID: 21300000, guid: 5e9441de35b21a54599f8a37fc3fafe2, type: 3}
     BackView: {fileID: 21300000, guid: 920c9e49639ea7c4486ce112583621e7, type: 3}

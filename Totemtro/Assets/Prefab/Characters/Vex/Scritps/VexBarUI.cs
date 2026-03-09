@@ -6,6 +6,8 @@ public class VexBarUI : MonoBehaviour
     public Image fillImage;
     public Transform cardHolder;
 
+    public GameObject glow;
+
     public GameObject defaultPrefab;
     public GameObject skullPrefab;
     public GameObject starPrefab;
@@ -29,17 +31,26 @@ public class VexBarUI : MonoBehaviour
         }
 
         Spawn(defaultPrefab);
+
+        if (glow != null)
+            glow.SetActive(false);
     }
 
     void Update()
     {
         if (vex == null) return;
 
+        float targetFill = vex.hasCard ? 1f : vex.GetBarPercent();
+
         fillImage.fillAmount = Mathf.Lerp(
             fillImage.fillAmount,
-            vex.GetBarPercent(),
+            targetFill,
             Time.deltaTime * 8f
         );
+
+        // 🔥 ACTIVAR GLOW CUANDO HAY CARTA
+        if (glow != null)
+            glow.SetActive(vex.hasCard);
 
         UpdateCardVisual();
     }

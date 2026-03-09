@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 public class Projectile : MonoBehaviour
 {
@@ -18,6 +19,11 @@ public class Projectile : MonoBehaviour
 
     public System.Action<Enemy, Vector2> OnEnemyHit;
 
+    HashSet<Enemy> hitEnemies = new HashSet<Enemy>();
+
+    // enemigo a ignorar (para STAR)
+    Enemy ignoredEnemy;
+
     // =====================================================
     // INITIALIZE
     // =====================================================
@@ -35,7 +41,6 @@ public class Projectile : MonoBehaviour
         speed = spd;
         range = rng;
 
-        // 🔥 evitar dirección cero
         if (dir.sqrMagnitude < 0.0001f)
             dir = Vector2.right;
 
@@ -68,6 +73,15 @@ public class Projectile : MonoBehaviour
     }
 
     // =====================================================
+    // IGNORE ENEMY (STAR FIX)
+    // =====================================================
+
+    public void IgnoreEnemy(Enemy enemy)
+    {
+        ignoredEnemy = enemy;
+    }
+
+    // =====================================================
     // MOVEMENT
     // =====================================================
 
@@ -91,6 +105,16 @@ public class Projectile : MonoBehaviour
 
         if (enemy != null)
         {
+            // ignorar enemigo original (STAR)
+            if (enemy == ignoredEnemy)
+                return;
+
+            // evitar hits múltiples
+            if (hitEnemies.Contains(enemy))
+                return;
+
+            hitEnemies.Add(enemy);
+
             enemy.TakeDamage(Damage, direction, isCritical);
 
             OnEnemyHit?.Invoke(enemy, transform.position);
@@ -103,7 +127,6 @@ public class Projectile : MonoBehaviour
             return;
         }
 
-        // NullGuardian
         NullGuardian guardian = other.GetComponent<NullGuardian>();
 
         if (guardian != null)

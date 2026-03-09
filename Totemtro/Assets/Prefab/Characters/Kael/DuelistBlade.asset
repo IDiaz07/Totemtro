@@ -14,25 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Duelist Blade
   weaponType: 7
-  aimLength: 2
+  aimLength: 0
   aimAngle: 0
-  weaponSprite: {fileID: 21300000, guid: 2e576522dc9dc974499f98e8906c4dc2, type: 3}
-  damage: 14
-  fireRate: 3
+  recoilForce: 3
+  weaponSprite: {fileID: 0}
+  damage: 8
+  fireRate: 0.5
+  isAutomatic: 0
   projectilePrefab: {fileID: 0}
   projectileSpeed: 0
   range: 0
   projectileCount: 0
   spreadAngle: 0
-  meleeRadius: 270
-  meleeAngle: 80
+  meleeRadius: 1
+  meleeAngle: 360
   areaDuration: 0
-  runeScale: 5
-  runeRadius: 0.8
-  murrayRadius: 0.5
-  murrayOpenTime: 0.25
-  murraySwingTime: 0.5
-  murrayReturnTime: 0.25
-  murrayConeAngle: 45
-  murrayAnchorDamageRadius: 0.25
-  murrayChainWidth: 0.15
+  runeScale: 0
+  runeRadius: 0
+  murrayRadius: 0
+  murrayOpenTime: 0
+  murraySwingTime: 0
+  murrayReturnTime: 0
+  murrayConeAngle: 0
+  murrayAnchorDamageRadius: 0
+  murrayChainWidth: 0
