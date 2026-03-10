@@ -178,15 +178,16 @@ public class KaelAttack : MonoBehaviour
     // DASH ATTACK
     // ================================
 
-    public void DashAttack()
+    public bool DashAttack()
     {
-        if (Time.time < lastDashTime + dashCooldown) return;
-        if (isDashing) return;
-        if (isAttacking) return;
+        if (Time.time < lastDashTime + dashCooldown) return false;
+        if (isDashing) return false;
+        if (isAttacking) return false;
 
         lastDashTime = Time.time;
 
         StartCoroutine(DashRoutine());
+        return true;
     }
 
     IEnumerator DashRoutine()

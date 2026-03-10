@@ -29,7 +29,7 @@ MonoBehaviour:
     FrontRightView: {fileID: 21300000, guid: 6657e6df3a09e6a45ac8c53fd38a1d36, type: 3}
     BackLeftView: {fileID: 21300000, guid: f1e25e4fd792b9a42a6692d052eb59a1, type: 3}
     BackRightView: {fileID: 21300000, guid: 23410019a8cef5a46a7d06809a1a1bef, type: 3}
-  maxHealth: 110
+  maxHealth: 170
   damage: 9
   moveSpeed: 4.8
   fireRate: 1

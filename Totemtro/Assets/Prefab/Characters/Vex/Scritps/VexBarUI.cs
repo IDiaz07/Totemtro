@@ -5,6 +5,7 @@ public class VexBarUI : MonoBehaviour
 {
     public Image fillImage;
     public Transform cardHolder;
+    public Weapon weapon;
 
     public GameObject glow;
 
@@ -16,28 +17,27 @@ public class VexBarUI : MonoBehaviour
     public GameObject spadePrefab;
 
     VexAttack vex;
+
     GameObject currentInstance;
     VexCardType lastCard;
     bool lastHasCard;
 
-    void Start()
-    {
-        vex = FindObjectOfType<VexAttack>();
-
-        if (vex == null)
-        {
-            gameObject.SetActive(false);
-            return;
-        }
-
-        Spawn(defaultPrefab);
-
-        if (glow != null)
-            glow.SetActive(false);
-    }
-
     void Update()
     {
+        if (weapon == null || weapon.currentWeapon == null)
+            return;
+
+        bool isVex =
+            weapon.currentWeapon.weaponType == WeaponType.VexProyectile;
+
+        // activar / desactivar UI
+        gameObject.SetActive(isVex);
+
+        if (!isVex) return;
+
+        if (vex == null)
+            vex = weapon.GetComponent<VexAttack>();
+
         if (vex == null) return;
 
         float targetFill = vex.hasCard ? 1f : vex.GetBarPercent();
@@ -48,7 +48,6 @@ public class VexBarUI : MonoBehaviour
             Time.deltaTime * 8f
         );
 
-        // 🔥 ACTIVAR GLOW CUANDO HAY CARTA
         if (glow != null)
             glow.SetActive(vex.hasCard);
 

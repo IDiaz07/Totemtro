@@ -23,9 +23,13 @@ public class AimIndicator : MonoBehaviour
             weapon.currentWeapon.weaponType == WeaponType.KaelBlade &&
             Input.GetMouseButton(1);
 
+        bool shotgunAiming =
+            weapon.currentWeapon.weaponType == WeaponType.MurrayAnchor &&
+            Input.GetMouseButton(1);
+
         if (weapon == null ||
             weapon.currentWeapon == null ||
-            (!weapon.isAiming && !dashAiming) ||
+            (!weapon.isAiming && !dashAiming && !shotgunAiming) ||
             weapon.isAttacking)
         {
             DisableAll();
@@ -75,10 +79,19 @@ public class AimIndicator : MonoBehaviour
 
         else if (type == WeaponType.MurrayAnchor)
         {
-            ShowCone(
-                weapon.currentWeapon.murrayConeAngle,
-                weapon.currentWeapon.murrayRadius * 1.4f
-            );
+            if (Input.GetMouseButton(1))
+            {
+                // escopeta
+                ShowCone(80f, 0.5f);
+            }
+            else
+            {
+                // ancla
+                ShowCone(
+                    weapon.currentWeapon.murrayConeAngle,
+                    weapon.currentWeapon.murrayRadius * 1.4f
+                );
+            }
         }
 
         else if (type == WeaponType.OrinBurst ||

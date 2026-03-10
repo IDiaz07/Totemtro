@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using System.Collections.Generic;
 
 public class MurrayAnchor : MonoBehaviour
@@ -8,24 +8,32 @@ public class MurrayAnchor : MonoBehaviour
     float damage;
     float range;
 
-    Vector2 direction;
+    float baseAngle;
 
-    Vector3 startPos;
+    float startAngle = -15f;
+    float endAngle = 15f;
 
-    bool returning = false;
-    bool isEnding = false;
+    float timer;
+
+    enum Phase
+    {
+        Out,
+        Sweep,
+        Return
+    }
+
+    Phase phase;
 
     HashSet<Enemy> hookedEnemies = new HashSet<Enemy>();
 
-    LineRenderer chain;
+    public float outTime = 0.25f;
+    public float sweepTime = 0.35f;
+    public float returnTime = 0.25f;
 
-    public float speed = 14f;
-    public float pullForce = 40f;
-
+    public float pullForce = 12f;
     public float chainWidth = 0.4f;
 
-    public float explosionRadius = 2f;
-    public float explosionDamageMultiplier = 1.5f;
+    LineRenderer chain;
 
     public void Initialize(
         Transform playerTransform,
@@ -37,57 +45,113 @@ public class MurrayAnchor : MonoBehaviour
     )
     {
         player = playerTransform;
-        direction = dir;
         damage = dmg;
         range = rng;
+
         chainWidth = chainWidthValue;
 
-        startPos = transform.position;
+        baseAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+
+        phase = Phase.Out;
 
         chain = GetComponent<LineRenderer>();
-
-        // seguridad para que nunca se quede vivo
-        Destroy(gameObject, 5f);
     }
 
     void Update()
     {
-        if (isEnding) return;
+        if (player == null)
+        {
+            Destroy(gameObject);
+            return;
+        }
 
-        Move();
+        timer += Time.deltaTime;
 
-        if (isEnding) return;
+        switch (phase)
+        {
+            case Phase.Out:
+                PhaseOut();
+                break;
+
+            case Phase.Sweep:
+                PhaseSweep();
+                break;
+
+            case Phase.Return:
+                PhaseReturn();
+                break;
+        }
+
+        Vector2 dir =
+            ((Vector2)transform.position - (Vector2)player.position).normalized;
+
+        RotateAnchor(dir);
 
         UpdateChain();
         HookChainEnemies();
         PullEnemies();
     }
 
-    void Move()
+    void RotateAnchor(Vector2 dir)
     {
-        if (!returning)
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, angle);
+    }
+
+    void PhaseOut()
+    {
+        float t = timer / outTime;
+
+        float angle = baseAngle + startAngle;
+
+        Vector2 pos = AngleToDir(angle) * range * t;
+
+        transform.position = player.position + (Vector3)pos;
+
+        if (t >= 1f)
         {
-            transform.position += (Vector3)(direction * speed * Time.deltaTime);
-
-            if (Vector2.Distance(startPos, transform.position) >= range)
-                returning = true;
+            phase = Phase.Sweep;
+            timer = 0f;
         }
-        else
+    }
+
+    void PhaseSweep()
+    {
+        float t = timer / sweepTime;
+
+        float angle = Mathf.Lerp(startAngle, endAngle, t);
+
+        Vector2 pos = AngleToDir(baseAngle + angle) * range;
+
+        transform.position = player.position + (Vector3)pos;
+
+        if (t >= 1f)
         {
-            Vector2 dirToPlayer =
-                ((Vector2)player.position - (Vector2)transform.position).normalized;
-
-            transform.position += (Vector3)(dirToPlayer * speed * Time.deltaTime);
-
-            float dist = Vector2.Distance(transform.position, player.position);
-
-            if (dist <= 0.45f)
-            {
-                isEnding = true;
-                Explode();
-                Destroy(gameObject);
-            }
+            phase = Phase.Return;
+            timer = 0f;
         }
+    }
+
+    void PhaseReturn()
+    {
+        float t = timer / returnTime;
+
+        Vector2 startPos = AngleToDir(baseAngle + endAngle) * range;
+
+        Vector2 pos = Vector2.Lerp(startPos, Vector2.zero, t);
+
+        transform.position = player.position + (Vector3)pos;
+
+        if (t >= 1f)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    Vector2 AngleToDir(float angle)
+    {
+        float rad = angle * Mathf.Deg2Rad;
+        return new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
     }
 
     void UpdateChain()
@@ -98,14 +162,8 @@ public class MurrayAnchor : MonoBehaviour
         chain.SetPosition(1, transform.position);
     }
 
-    // --------------------------------
-    // ANCHOR HIT
-    // --------------------------------
-
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (isEnding) return;
-
         Enemy enemy = col.GetComponent<Enemy>();
 
         if (enemy == null) return;
@@ -113,45 +171,8 @@ public class MurrayAnchor : MonoBehaviour
 
         hookedEnemies.Add(enemy);
 
-        Vector2 dir =
-            ((Vector2)enemy.transform.position - (Vector2)transform.position).normalized;
-
-        enemy.TakeDamage(damage, dir, false);
-
-        HitStop.Instance?.Stop(0.03f);
+        enemy.TakeDamage(damage, Vector2.zero, false);
     }
-
-    // --------------------------------
-    // CHAIN HOOK
-    // --------------------------------
-
-    void HookChainEnemies()
-    {
-        Vector2 start = player.position;
-        Vector2 end = transform.position;
-
-        RaycastHit2D[] hits =
-            Physics2D.CircleCastAll(start, chainWidth, end - start, Vector2.Distance(start, end));
-
-        foreach (var hit in hits)
-        {
-            Enemy enemy = hit.collider.GetComponent<Enemy>();
-
-            if (enemy == null) continue;
-            if (hookedEnemies.Contains(enemy)) continue;
-
-            hookedEnemies.Add(enemy);
-
-            Vector2 dir =
-                ((Vector2)enemy.transform.position - (Vector2)transform.position).normalized;
-
-            enemy.TakeDamage(damage * 0.7f, dir, false);
-        }
-    }
-
-    // --------------------------------
-    // PULL
-    // --------------------------------
 
     void PullEnemies()
     {
@@ -162,35 +183,46 @@ public class MurrayAnchor : MonoBehaviour
             Rigidbody2D rb = enemy.GetComponent<Rigidbody2D>();
             if (rb == null) continue;
 
-            Vector2 dir =
-                ((Vector2)player.position - rb.position).normalized;
+            Vector2 target = player.position;
 
-            // mover enemigo sin física
-            rb.MovePosition(rb.position + dir * pullForce * Time.deltaTime);
+            Vector2 newPos = Vector2.MoveTowards(
+                rb.position,
+                target,
+                pullForce * Time.deltaTime
+            );
+
+            rb.MovePosition(newPos);
         }
     }
 
-    // --------------------------------
-    // EXPLOSION
-    // --------------------------------
-
-    void Explode()
+    void HookChainEnemies()
     {
-        Collider2D[] hits =
-            Physics2D.OverlapCircleAll(player.position, explosionRadius);
+        Vector2 start = player.position;
+        Vector2 end = transform.position;
+
+        Vector2 segment = end - start;
+        float length = segment.magnitude;
+
+        if (length < 0.01f) return;
+
+        Vector2 dir = segment.normalized;
+
+        RaycastHit2D[] hits =
+            Physics2D.CircleCastAll(start, chainWidth, dir, length);
 
         foreach (var hit in hits)
         {
-            Enemy enemy = hit.GetComponent<Enemy>();
+            Enemy enemy = hit.collider.GetComponent<Enemy>();
 
             if (enemy == null) continue;
+            if (hookedEnemies.Contains(enemy)) continue;
 
-            Vector2 dir =
-                ((Vector2)enemy.transform.position - (Vector2)player.position).normalized;
+            hookedEnemies.Add(enemy);
 
-            enemy.TakeDamage(damage * explosionDamageMultiplier, dir, false);
+            Vector2 hitDir =
+                ((Vector2)enemy.transform.position - (Vector2)transform.position).normalized;
+
+            enemy.TakeDamage(damage * 0.7f, hitDir, false);
         }
-
-        HitStop.Instance?.Stop(0.05f);
     }
 }

@@ -217,6 +217,7 @@
     <Compile Include="Assets\Scripts\Meta\LoadoutUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\ControlScene\Run\RunHistoryData.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Game\Extraction\ExtractionArrowUI.cs" />
+    <Compile Include="Assets\Scripts\CombatScene\Player\SecondaryCooldownUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\GoldSystem.cs" />
     <Compile Include="Assets\Scripts\HubScene\Champs\ChampsPanelUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\GameStateManager.cs" />

@@ -27,10 +27,14 @@ public class Weapon : MonoBehaviour
     public float CooldownRemaining { get; private set; }
     public float CurrentCooldownDuration { get; private set; }
 
+    public float SecondaryCooldownRemaining { get; private set; }
+    public float SecondaryCooldownDuration { get; private set; }
+
     public static System.Action OnPlayerShot;
 
     VexAttack vexAttack;
     MurrayAttack murrayAttack;
+    KaelAttack kaelAttack;
 
     // =================================
     // TOTEM MODIFIERS
@@ -65,6 +69,7 @@ public class Weapon : MonoBehaviour
     {
         playerStats = GetComponentInParent<PlayerStats>();
         murrayAttack = GetComponent<MurrayAttack>();
+        kaelAttack = GetComponent<KaelAttack>();
         vexAttack = GetComponent<VexAttack>();
     }
 
@@ -142,25 +147,34 @@ public class Weapon : MonoBehaviour
                 CooldownRemaining = 0f;
         }
 
-
-        if (Input.GetMouseButtonDown(1))
+        if (SecondaryCooldownRemaining > 0f)
         {
-            if (currentWeapon.weaponType == WeaponType.KaelBlade)
-            {
-                GetComponent<KaelAttack>()?.DashAttack();
-            }
+            SecondaryCooldownRemaining -= Time.deltaTime;
+
+            if (SecondaryCooldownRemaining < 0f)
+                SecondaryCooldownRemaining = 0f;
         }
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonUp(1))
         {
             if (currentWeapon.weaponType == WeaponType.KaelBlade)
             {
-                GetComponent<KaelAttack>()?.DashAttack();
+                if (kaelAttack != null && kaelAttack.DashAttack())
+                {
+                    SecondaryCooldownDuration = kaelAttack.dashCooldown;
+                    SecondaryCooldownRemaining = kaelAttack.dashCooldown;
+                }
             }
 
             if (currentWeapon.weaponType == WeaponType.MurrayAnchor)
             {
-                murrayAttack?.CannonShot();
+                if (murrayAttack != null)
+                {
+                    murrayAttack.CannonShot();
+
+                    SecondaryCooldownDuration = murrayAttack.shotgunCooldown;
+                    SecondaryCooldownRemaining = murrayAttack.shotgunCooldown;
+                }
             }
         }
     }
@@ -729,20 +743,6 @@ public class Weapon : MonoBehaviour
 
         Time.timeScale = originalTimeScale;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     // =====================================================
     // VEX ATTACK
