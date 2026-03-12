@@ -7,10 +7,10 @@ public enum WeaponType
     MurrayAnchor,     // Ancla especial de Murray
     GrimRuneBurst,    // Runas de Grim
     VexProyectile,   // Disparo en cono (Vex)
-    AreaZone,         // Zona en suelo (Selene)
     NyraBloodOrb,
     KaelBlade,
     OrinBurst,
+    SeleneProjectile,
 }
 
 [CreateAssetMenu(fileName = "NewWeapon", menuName = "Game/Weapon")]

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BloodOrb
   m_EditorClassIdentifier: 
   weaponName: BloodOrb
-  weaponType: 6
+  weaponType: 5
   aimLength: 2
   aimAngle: 0
   recoilForce: 3

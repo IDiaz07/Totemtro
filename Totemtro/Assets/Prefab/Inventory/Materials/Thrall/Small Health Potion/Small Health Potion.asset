@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a3b6c4db878f184da06b29f9251efc3, type: 3}
   m_Name: Small Health Potion
   m_EditorClassIdentifier: 
+  itemID: 
   itemName: Small Health Potion
   icon: {fileID: 21300000, guid: 4437cf6d01db26f47aea8a7a306c2863, type: 3}
   itemType: 1
@@ -22,4 +23,6 @@ MonoBehaviour:
   usableInActionBar: 1
   cooldown: 10
   worldPrefab: {fileID: 1446103798750561405, guid: a7da32f86a3dea04fa64e7276c494727, type: 3}
-  ability: {fileID: 0}
+  ability: {fileID: 11400000, guid: 031eebc708de89349bb00cf471583270, type: 2}
+  isConsumableInLoadout: 1
+  equipmentSlotType: 0

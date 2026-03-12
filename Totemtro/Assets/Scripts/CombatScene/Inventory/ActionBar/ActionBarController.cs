@@ -78,14 +78,14 @@ public class ActionBarController : MonoBehaviour
         if (invSlot.IsEmpty())
             return;
 
-        // 🔥 SOLO CONSUMIBLES
         if (invSlot.item.itemType != ItemType.Consumable)
             return;
 
         slots[actionIndex].item = invSlot.item;
         slots[actionIndex].amount = invSlot.amount;
 
-        inventory.slots[inventoryIndex].Clear();
+        invSlot.Clear();
+
         inventory.NotifyInventoryChanged();
     }
 
@@ -109,14 +109,6 @@ public class ActionBarController : MonoBehaviour
 
         if (!activated)
             return;
-
-        slot.amount--;
-
-        if (slot.amount <= 0)
-        {
-            slot.Clear();
-            return;
-        }
 
         slot.cooldownRemaining = slot.item.cooldown;
     }
@@ -158,6 +150,48 @@ public class ActionBarController : MonoBehaviour
         }
 
         return remaining; // lo que NO se pudo meter
+    }
+
+    public void ConsumeBandage()
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            var slot = slots[i];
+
+            if (slot.IsEmpty())
+                continue;
+
+            if (slot.item.ability is ThrallsBandageAbility)
+            {
+                slot.amount--;
+
+                if (slot.amount <= 0)
+                    slot.Clear();
+
+                return;
+            }
+        }
+    }
+
+    public void ConsumePotion()
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            var slot = slots[i];
+
+            if (slot.IsEmpty())
+                continue;
+
+            if (slot.item.ability is SmallHealthPotionAbility)
+            {
+                slot.amount--;
+
+                if (slot.amount <= 0)
+                    slot.Clear();
+
+                return;
+            }
+        }
     }
 
     public int AddConsumable(ItemData item, int amount)

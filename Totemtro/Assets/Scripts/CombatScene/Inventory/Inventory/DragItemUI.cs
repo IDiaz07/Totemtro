@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class DragItemUI : MonoBehaviour
 {
@@ -11,10 +12,17 @@ public class DragItemUI : MonoBehaviour
     public bool IsDragging { get; private set; }
     public ItemData draggedItem;
     public int draggedAmount;
+    public AudioClip errorSound;
+    AudioSource audioSource;
+
 
     void Awake()
     {
         Instance = this;
+        audioSource = GetComponent<AudioSource>();
+
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
         Hide();
     }
 
@@ -45,5 +53,43 @@ public class DragItemUI : MonoBehaviour
         draggedAmount = 0;
 
         gameObject.SetActive(false);
+    }
+
+    public void Shake()
+    {
+        StartCoroutine(ShakeRoutine());
+    }
+
+    IEnumerator ShakeRoutine()
+    {
+        Vector3 original = transform.position;
+
+        float duration = 0.2f;
+        float strength = 15f;
+
+        float timer = 0;
+
+        while (timer < duration)
+        {
+            timer += Time.unscaledDeltaTime;
+
+            float x =
+                Mathf.Sin(timer * 40f) * strength;
+
+            transform.position =
+                original + new Vector3(x, 0, 0);
+
+            yield return null;
+        }
+
+        transform.position = original;
+    }
+
+    public void PlayInvalidFeedback()
+    {
+        Shake();
+
+        if (errorSound != null)
+            audioSource.PlayOneShot(errorSound);
     }
 }

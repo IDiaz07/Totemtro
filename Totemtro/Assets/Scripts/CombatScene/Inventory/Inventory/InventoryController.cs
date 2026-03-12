@@ -88,7 +88,13 @@ public class InventoryController : MonoBehaviour
             playerMovement.enabled = false;
 
         if (playerWeapon != null)
+        {
+            // cancelar ataques en curso
+            playerWeapon.isAiming = false;
+            playerWeapon.isAttacking = false;
+
             playerWeapon.enabled = false;
+        }
 
         Time.timeScale = 0f;
     }

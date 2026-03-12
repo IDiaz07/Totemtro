@@ -10,6 +10,8 @@ public class StatusEffectController : MonoBehaviour
     PlayerStats stats;
     PlayerHealth health;
 
+    public GameObject healNumberPrefab;
+
     public AudioClip healFinishSound;
     AudioSource audioSource;
 
@@ -106,14 +108,24 @@ public class StatusEffectController : MonoBehaviour
 
     void StartEffect(string key, IEnumerator routine)
     {
-        if (activeEffects.ContainsKey(key))
+        if (routine == null)
         {
-            StopCoroutine(activeEffects[key]);
+            Debug.LogWarning("StatusEffect routine is NULL: " + key);
+            return;
+        }
+
+        if (activeEffects.TryGetValue(key, out Coroutine existing))
+        {
+            if (existing != null)
+                StopCoroutine(existing);
+
             activeEffects.Remove(key);
         }
 
         Coroutine c = StartCoroutine(routine);
-        activeEffects.Add(key, c);
+
+        if (c != null)
+            activeEffects[key] = c;
     }
 
     // =========================
@@ -159,13 +171,6 @@ public class StatusEffectController : MonoBehaviour
             if (cancelled)
                 break;
 
-            // Cancelar si se mueve
-            if (movement != null && movement.IsMoving())
-            {
-                cancelled = true;
-                break;
-            }
-
             timer += Time.deltaTime;
             yield return null;
         }
@@ -184,11 +189,13 @@ public class StatusEffectController : MonoBehaviour
 
         if (!cancelled && timer >= castTime)
         {
-            // ✅ Curación exitosa
             health.Heal(amount);
 
             ActionBarController actionBar =
                 FindFirstObjectByType<ActionBarController>();
+
+            if (actionBar != null)
+                actionBar.ConsumeBandage();   // 👈 consumir aquí
 
             StartCoroutine(HitStop(0.05f));
 
@@ -199,6 +206,96 @@ public class StatusEffectController : MonoBehaviour
         {
             // ❌ Cancelado → no consumir venda
             BuffUI.Instance?.CancelBuff("Bandage");
+        }
+    }
+
+    public void ApplyPotionHeal(float castTime)
+    {
+        StartEffect("Potion", PotionRoutine(castTime));
+    }
+
+    IEnumerator PotionRoutine(float castTime)
+    {
+        bool cancelled = false;
+
+        void Cancel()
+        {
+            cancelled = true;
+        }
+
+        PlayerHealth.OnPlayerDamaged += Cancel;
+        Weapon.OnPlayerShot += Cancel;
+
+        BuffUI.Instance?.AddBuff("Potion", castTime);
+
+        float tickInterval = castTime / 5f;
+        float timer = 0f;
+        float tickTimer = 0f;
+
+        int ticksDone = 0;
+
+        while (timer < castTime)
+        {
+            if (cancelled)
+                break;
+
+            timer += Time.deltaTime;
+            tickTimer += Time.deltaTime;
+
+            if (tickTimer >= tickInterval && ticksDone < 5)
+            {
+                tickTimer = 0f;
+                ticksDone++;
+
+                HealTick(2);
+            }
+
+            yield return null;
+        }
+
+        PlayerHealth.OnPlayerDamaged -= Cancel;
+        Weapon.OnPlayerShot -= Cancel;
+
+        // terminó correctamente
+        if (!cancelled && timer >= castTime)
+        {
+            HealTick(15);
+        }
+        else
+        {
+            // cancelar buff visual
+            BuffUI.Instance?.CancelBuff("Potion");
+        }
+
+        // consumir poción siempre
+        ActionBarController actionBar =
+            FindFirstObjectByType<ActionBarController>();
+
+        if (actionBar != null)
+            actionBar.ConsumePotion();
+    }
+
+    void HealTick(int amount)
+    {
+        if (health == null)
+            return;
+
+        health.Heal(amount);
+
+        if (healNumberPrefab != null)
+        {
+            Vector3 pos =
+                transform.position +
+                Vector3.up * 0.7f +
+                new Vector3(Random.Range(-0.2f, 0.2f), 0f, 0f);
+
+            GameObject obj =
+                Instantiate(healNumberPrefab, pos, Quaternion.identity);
+
+            HealNumber heal = obj.GetComponent<HealNumber>();
+
+            if (heal != null)
+                heal.SetHeal(amount);
         }
     }
 

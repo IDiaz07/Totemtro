@@ -139,27 +139,63 @@ public class InventorySlotUI : MonoBehaviour,
         icon.color = new Color(1, 1, 1, 0);
         amountText.text = "";
 
-        DragItemUI.Instance.Show(currentItem, currentAmount);
+        DragItemManager.Instance.StartDrag(
+            currentItem,
+            currentAmount,
+            DragSourceType.Inventory,
+            slotIndex
+        );
     }
 
     public void OnDrag(PointerEventData eventData) { }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        DragItemUI.Instance.Hide();
-        inventory.NotifyInventoryChanged();
-        draggingFromIndex = -1;
+        if (DragItemManager.Instance.IsDragging)
+        {
+            DragItemManager.Instance.ClearDrag();
+            inventory.NotifyInventoryChanged();
+        }
     }
 
     public void OnDrop(PointerEventData eventData)
     {
-        if (draggingFromIndex == -1)
+        var drag = DragItemManager.Instance;
+
+        if (!drag.IsDragging)
             return;
 
-        if (draggingFromIndex == slotIndex)
-            return;
+        // INVENTORY → INVENTORY
+        if (drag.sourceType == DragSourceType.Inventory)
+        {
+            if (drag.sourceIndex == slotIndex)
+                return;
 
-        inventory.MoveItem(draggingFromIndex, slotIndex);
-        draggingFromIndex = -1;
+            inventory.MoveItem(drag.sourceIndex, slotIndex);
+        }
+
+        // ACTIONBAR → INVENTORY
+        if (drag.sourceType == DragSourceType.ActionBar)
+        {
+            ActionBarController actionBar =
+                FindFirstObjectByType<ActionBarController>();
+
+            var actionSlot = actionBar.slots[drag.sourceIndex];
+
+            if (actionSlot.IsEmpty())
+                return;
+
+            bool added = inventory.AddItem(
+                actionSlot.item,
+                actionSlot.amount
+            );
+
+            if (added)
+            {
+                actionBar.ClearSlot(drag.sourceIndex);
+            }
+        }
+
+        drag.ClearDrag();
     }
 }

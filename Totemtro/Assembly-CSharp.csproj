@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\HubScene\Menu\GroundFogMotion.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Enemies\Boss\Astrael, The Null Sovereign\NullGuardian.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Characters\WeaponData.cs" />
+    <Compile Include="Assets\Scripts\CombatScene\Characters\Attack\Selene\SeleneChargeOrb.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\RunInventory.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\Consumables\ExplosiveGrenade\Grenade.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Enemies\BodyTiltEnemy.cs" />
@@ -85,6 +86,7 @@
     <Compile Include="Assets\Scripts\CombatScene\Inventory\Materials\MaterialDrop.cs" />
     <Compile Include="Assets\Scripts\HubScene\FadePanel.cs" />
     <Compile Include="Assets\Scripts\HubScene\ConfirmRunButton.cs" />
+    <Compile Include="Assets\Scripts\CombatScene\Characters\Attack\Selene\SelenePool.cs" />
     <Compile Include="Assets\Scripts\Meta\CurrencyDebugCheats.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Totems\TotemSellConfirmUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Player\PlayerStats.cs" />
@@ -96,6 +98,7 @@
     <Compile Include="Assets\Scripts\CombatScene\Enemies\Summoner\SummonerDirectionalSprite.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\Consumables\ExplosiveGrenade\ExplosionShockwave.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Characters\Attack\Orin\OrinAttack.cs" />
+    <Compile Include="Assets\Scripts\CombatScene\Characters\Attack\Selene\SeleneAttack.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\Inventory\DragItemUI.cs" />
     <Compile Include="Assets\Scripts\Meta\Character\HeroOpenDetail.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Player\WeaponOrbitDynamic.cs" />
@@ -103,6 +106,7 @@
     <Compile Include="Assets\Scripts\CombatScene\Drops\GoldDrop.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\Inventory\InventoryPanelUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\SaveManager.cs" />
+    <Compile Include="Assets\Scripts\CombatScene\Inventory\Inventory\DragItemManager.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\ItemData.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Characters\HeroData.cs" />
     <Compile Include="Assets\Scripts\HubScene\Shop\ConfirmationPanelUI.cs" />
@@ -129,11 +133,13 @@
     <Compile Include="Assets\Scripts\CombatScene\Enemies\Spitter\SlimePuddle.cs" />
     <Compile Include="Assets\Prefab\Characters\Vex\Scritps\UIGlowShake.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Enemies\EnemyDirectionalSprite.cs" />
+    <Compile Include="Assets\Scripts\CombatScene\Inventory\Consumables\SmallHealthPotion\SmallHealthPotionAbility.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\Crafting\CraftingRecipe.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Enemies\EnemyProceduralWalk.cs" />
     <Compile Include="Assets\Scripts\CombatScene\UI\LevelUpEffect.cs" />
     <Compile Include="Assets\Scripts\HubScene\Shop\ShopEnum.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\Inventory\ItemDatabase.cs" />
+    <Compile Include="Assets\Scripts\CombatScene\Characters\Attack\Selene\SeleneProjectile.cs" />
     <Compile Include="Assets\Scripts\CombatScene\DamageNumberSpawner.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\Crafting\CraftingSystem.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Enemies\Enemy.cs" />
@@ -194,6 +200,7 @@
     <Compile Include="Assets\Scripts\CombatScene\Inventory\ActionBar\ActionBarSaveData.cs" />
     <Compile Include="Assets\Scripts\CombatScene\ControlScene\Gold\MetaCurrencySystem.cs" />
     <Compile Include="Assets\Scripts\HubScene\Shop\OfferCountdownUI.cs" />
+    <Compile Include="Assets\Scripts\CombatScene\Characters\Attack\Selene\SeleneFallingOrb.cs" />
     <Compile Include="Assets\Scripts\CombatScene\TimeManager.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Enemies\Thrall\ThrallAI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\UI\Death\DeathFadeEffect.cs" />
@@ -250,6 +257,7 @@
     <Compile Include="Assets\Scripts\CombatScene\Inventory\Crafting\Book\IngredientUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\ControlScene\Summary\RunSummaryManager.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\Materials\MaterialInventory.cs" />
+    <Compile Include="Assets\Scripts\CombatScene\Player\HealNumber.cs" />
     <Compile Include="Assets\Scripts\Meta\Character\HeroProgressSystem.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Enemies\Boss\Astrael, The Null Sovereign\PortalRay.cs" />
     <Compile Include="Assets\Scripts\HubScene\Shop\OfferRotationSystem.cs" />

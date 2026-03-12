@@ -4968,6 +4968,7 @@ GameObject:
   - component: {fileID: 5014777722606263263}
   - component: {fileID: 9110419963457686667}
   - component: {fileID: 7131133713479274482}
+  - component: {fileID: 3039059652141381499}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -5185,7 +5186,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4193810688838008051}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0154fa3a541af5b49b74d0397b182341, type: 3}
   m_Name: 
@@ -5258,14 +5259,39 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4193810688838008051}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cbaf68fc2e3b777419cc0a6f839b0cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   anchorPrefab: {fileID: 3327174642616712094, guid: 84e9aa6b466c00c448ac18d186f16cd2, type: 3}
   cannonBallPrefab: {fileID: 3327174642616712094, guid: 29139abd9f3bb5741a44f9892d47198e, type: 3}
+  anchorDamageMultiplier: 1.2
+  chainDamageMultiplier: 0.8
+  shotgunDamageMultiplier: 0.25
+  anchorRange: 6
+  shotgunRange: 7
   firePoint: {fileID: 6803542685391882307}
+  shotgunCooldown: 1.2
+  pelletCount: 8
+  spreadAngle: 22
+  muzzleOffset: 0.15
+  recoilDistance: 0.08
+  muzzleParticles: {fileID: 0}
+--- !u!114 &3039059652141381499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4193810688838008051}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad4f50095ab38d44bf9406f65c5e9eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallingOrbPrefab: {fileID: 7824818068674422437, guid: 44b37d2b6e0cc924882eabf5a3c3e174, type: 3}
+  chargeOrbPrefab: {fileID: 4821514238407523993, guid: e6f0894e30154884985ef33debea465b, type: 3}
 --- !u!1 &4257568570062890412
 GameObject:
   m_ObjectHideFlags: 0
@@ -5527,10 +5553,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: -0.16510418
+    y: 0.087037034
+    width: 0.5
+    height: 0.5
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -5849,7 +5875,6 @@ GameObject:
   - component: {fileID: 7373028117992849564}
   - component: {fileID: 4839996420090072763}
   - component: {fileID: 5477826474062182371}
-  - component: {fileID: 1085354351862120272}
   - component: {fileID: 7996978475214798724}
   - component: {fileID: 6582220203974921806}
   - component: {fileID: 3130592891261861672}
@@ -6257,21 +6282,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentGold: 0
---- !u!114 &1085354351862120272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7661392630905846818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b38bcd430bfce8442a7f7d4f7c1108eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasBloodPrice: 0
-  bloodPriceMaxBonus: 0.6
-  dualFireChance: 0
 --- !u!114 &7996978475214798724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6352,6 +6362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7c16513ee7966949a4043d33259e7ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healNumberPrefab: {fileID: 0}
   healFinishSound: {fileID: 0}
 --- !u!114 &2052146097045745700
 MonoBehaviour:

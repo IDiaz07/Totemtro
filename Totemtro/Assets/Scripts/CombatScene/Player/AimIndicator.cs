@@ -122,6 +122,12 @@ public class AimIndicator : MonoBehaviour
             }
         }
 
+        // SELENEs
+        else if (type == WeaponType.SeleneProjectile)
+        {
+            ShowLine(weapon.currentWeapon.range * 0.14f, 0.48f);
+        }
+
         else
         {
             DisableAll();

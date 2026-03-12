@@ -218,7 +218,8 @@ public class MaterialDrop : MonoBehaviour
         RunInventory inventory =
             player.GetComponent<RunInventory>();
 
-        ActionBarController actionBar = FindFirstObjectByType<ActionBarController>();
+        ActionBarController actionBar =
+            FindFirstObjectByType<ActionBarController>();
 
         if (inventory == null)
             return;
@@ -228,46 +229,38 @@ public class MaterialDrop : MonoBehaviour
         bool isConsumable =
             item.itemType == ItemType.Consumable;
 
-        // 🔥 PRIORIDAD ABSOLUTA AL ACTION BAR
-        if (actionBar != null && isConsumable)
+        // 🔥 1️⃣ INVENTARIO PRIMERO
+        bool added = inventory.AddItem(item, remaining);
+
+        if (!added)
+        {
+            // inventario lleno
+            remaining = amount;
+        }
+        else
+        {
+            StartCoroutine(CollectAnimation());
+            return;
+        }
+
+        // 🔥 2️⃣ SI NO CABE → ACTION BAR
+        if (isConsumable && actionBar != null)
         {
             remaining = actionBar.AddConsumable(item, remaining);
 
-            // 🔥 Si el item YA existe en ActionBar,
-            // NO permitir que inventario lo mezcle.
-            if (actionBar.HasItem(item))
+            if (remaining <= 0)
             {
-                if (remaining <= 0)
-                {
-                    StartCoroutine(CollectAnimation());
-                    return;
-                }
-
-                // Si queda restante y el bar ya tiene el item,
-                // NO lo mandamos al inventario.
-                // Solo recogeremos si el bar puede absorber todo.
+                StartCoroutine(CollectAnimation());
                 return;
             }
         }
 
-        // 🔥 Solo si NO existe en ActionBar
-        if (remaining > 0)
-        {
-            bool addedToInventory =
-                inventory.AddItem(item, remaining);
-
-            if (!addedToInventory)
-            {
-                isAttracting = false;
-                currentAttractSpeed = attractSpeed;
-                rb.simulated = true;
-                rb.linearVelocity = Vector2.zero;
-                basePosition = transform.position;
-                return;
-            }
-        }
-
-        StartCoroutine(CollectAnimation());
+        // 🔥 si no cabe en ningún sitio
+        isAttracting = false;
+        currentAttractSpeed = attractSpeed;
+        rb.simulated = true;
+        rb.linearVelocity = Vector2.zero;
+        basePosition = transform.position;
     }
 
     IEnumerator CollectAnimation()
@@ -340,41 +333,27 @@ public class MaterialDrop : MonoBehaviour
 
         int remaining = amount;
 
-        // 🔥 1️⃣ Simular ActionBar primero
+        // 🔥 1️⃣ INVENTARIO PRIMERO
+        if (inventory.CanAddItem(item, remaining))
+            return true;
+
+        // 🔥 2️⃣ ACTION BAR SI ES CONSUMIBLE
         if (actionBar != null &&
             item.itemType == ItemType.Consumable)
         {
-            // Stack existentes
-            for (int i = 0; i < actionBar.slots.Length; i++)
-            {
-                var slot = actionBar.slots[i];
-
-                if (!slot.IsEmpty() && slot.item == item)
-                {
-                    int space = item.maxStack - slot.amount;
-                    remaining -= space;
-
-                    if (remaining <= 0)
-                        return true;
-                }
-            }
-
-            // Slots vacíos del ActionBar
             for (int i = 0; i < actionBar.slots.Length; i++)
             {
                 var slot = actionBar.slots[i];
 
                 if (slot.IsEmpty())
-                {
-                    remaining -= item.maxStack;
+                    return true;
 
-                    if (remaining <= 0)
-                        return true;
-                }
+                if (slot.item == item &&
+                    slot.amount < item.maxStack)
+                    return true;
             }
         }
 
-        // 🔥 2️⃣ Lo que quede → inventario
-        return inventory.CanAddItem(item, remaining);
+        return false;
     }
 }

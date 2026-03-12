@@ -226,10 +226,14 @@ public class HeroController : MonoBehaviour
     {
         if (currentHero == null) return;
         if (currentHero.weapons == null) return;
-        if (index < 0 || index >= currentHero.weapons.Count) return;
+        if (currentHero.weapons.Count == 0) return;
+
+        index = Mathf.Clamp(index, 0, currentHero.weapons.Count - 1);
+
         if (weapon == null) return;
 
         currentWeaponIndex = index;
+
         weapon.SetWeapon(currentHero.weapons[index]);
     }
 

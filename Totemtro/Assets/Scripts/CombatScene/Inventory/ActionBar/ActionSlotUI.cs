@@ -2,8 +2,13 @@
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
+using System.Collections;
 
-public class ActionSlotUI : MonoBehaviour, IDropHandler
+public class ActionSlotUI : MonoBehaviour,
+    IBeginDragHandler,
+    IDragHandler,
+    IEndDragHandler,
+    IDropHandler
 {
     public Image icon;
     public Image cooldownOverlay;
@@ -49,14 +54,92 @@ public class ActionSlotUI : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
-        if (InventorySlotUI.draggingFromIndex == -1)
+        var drag = DragItemManager.Instance;
+
+        if (!drag.IsDragging)
             return;
 
-        actionBar.AssignToSlot(
-            InventorySlotUI.draggingFromIndex,
+        // 🔥 Si viene del inventario
+        if (drag.sourceType == DragSourceType.Inventory)
+        {
+            RunInventory inventory =
+                FindFirstObjectByType<RunInventory>();
+
+            var slot = inventory.slots[drag.sourceIndex];
+
+            // ❌ SOLO CONSUMIBLES
+            if (slot.item.itemType != ItemType.Consumable)
+            {
+                StartCoroutine(Shake());
+                return;
+            }
+
+            actionBar.AssignToSlot(drag.sourceIndex, slotIndex);
+        }
+
+        // 🔥 Si viene del ActionBar
+        if (drag.sourceType == DragSourceType.ActionBar)
+        {
+            var other = actionBar.slots[drag.sourceIndex];
+            var current = actionBar.slots[slotIndex];
+
+            actionBar.slots[slotIndex] = other;
+            actionBar.slots[drag.sourceIndex] = current;
+        }
+
+        drag.ClearDrag();
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        var slot = actionBar.slots[slotIndex];
+
+        if (slot.IsEmpty())
+            return;
+
+        DragItemManager.Instance.StartDrag(
+            slot.item,
+            slot.amount,
+            DragSourceType.ActionBar,
             slotIndex
         );
 
-        InventorySlotUI.draggingFromIndex = -1;
+        icon.color = new Color(1, 1, 1, 0);
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        icon.color = Color.white;
+
+        if (DragItemManager.Instance.IsDragging)
+            DragItemManager.Instance.ClearDrag();
+    }
+
+    IEnumerator Shake()
+    {
+        Vector3 original = icon.rectTransform.localPosition;
+
+        float duration = 0.2f;
+        float strength = 8f;
+
+        float timer = 0f;
+
+        while (timer < duration)
+        {
+            timer += Time.unscaledDeltaTime;
+
+            float x = Mathf.Sin(timer * 40f) * strength;
+
+            icon.rectTransform.localPosition =
+                original + new Vector3(x, 0, 0);
+
+            yield return null;
+        }
+
+        icon.rectTransform.localPosition = original;
     }
 }

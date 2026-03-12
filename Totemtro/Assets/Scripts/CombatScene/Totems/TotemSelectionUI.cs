@@ -39,6 +39,9 @@ public class TotemSelectionUI : MonoBehaviour
 
     public void Open()
     {
+        if (isOpen)
+            return;
+
         if (panel == null || cards == null || allTotems == null)
             return;
 
@@ -126,13 +129,10 @@ public class TotemSelectionUI : MonoBehaviour
 
     public void Close()
     {
-        if (!isOpen)
-            return;
-
         panel?.SetActive(false);
         isOpen = false;
 
-        GamePause.Resume();
+        GamePause.Reset();
     }
 
     // =====================================================

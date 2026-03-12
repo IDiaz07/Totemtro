@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 9303e921e75db2b47a15563b0199be1b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 798877850461505231
+    second: SeleneRune_0
+  - first:
+      213: 8293130521920422484
+    second: SeleneRune_1
+  - first:
+      213: -8990197611938663723
+    second: SeleneRune_2
+  - first:
+      213: -4327282960775782950
+    second: SeleneRune_3
+  - first:
+      213: 2700775258951410634
+    second: SeleneRune_4
+  - first:
+      213: -9085826431884366458
+    second: SeleneRune_5
+  - first:
+      213: -8976510262025378775
+    second: SeleneRune_6
+  - first:
+      213: 4374552351318224712
+    second: SeleneRune_7
+  - first:
+      213: 7849825691281277512
+    second: SeleneRune_8
+  - first:
+      213: -2193312785582920384
+    second: SeleneRune_9
+  - first:
+      213: -1924792091916735054
+    second: SeleneRune_10
+  - first:
+      213: -7942620146722777972
+    second: SeleneRune_11
+  - first:
+      213: -1056275944185469753
+    second: SeleneRune_12
+  - first:
+      213: -3868911995071714394
+    second: SeleneRune_13
+  - first:
+      213: -5506670891237749636
+    second: SeleneRune_14
+  - first:
+      213: 3137851157379395577
+    second: SeleneRune_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1024
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SeleneRune_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8
+        width: 1024
+        height: 1523
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc68faf1c2f261b00800000000000000
+      internalID: 798877850461505231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeleneRune_1
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 1215
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4524403554e171370800000000000000
+      internalID: 8293130521920422484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeleneRune_2
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 1220
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d2b4df67e66c3380800000000000000
+      internalID: -8990197611938663723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeleneRune_3
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 1207
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adddb58f21762f3c0800000000000000
+      internalID: -4327282960775782950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeleneRune_4
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 1200
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac366f7e9c41b7520800000000000000
+      internalID: 2700775258951410634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeleneRune_5
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1193
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68d6dacbff8a8e180800000000000000
+      internalID: -9085826431884366458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeleneRune_6
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1160
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 924245de9770d6380800000000000000
+      internalID: -8976510262025378775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeleneRune_7
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 1151
+        width: 21
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84f2ca7af2885bc30800000000000000
+      internalID: 4374552351318224712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeleneRune_8
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 1156
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8424e8540ee20fc60800000000000000
+      internalID: 7849825691281277512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeleneRune_9
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 1161
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04de10664a9cf81e0800000000000000
+      internalID: -2193312785582920384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeleneRune_10
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 1160
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bd62d65ac3c945e0800000000000000
+      internalID: -1924792091916735054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeleneRune_11
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 1141
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c845ab0fe0526c190800000000000000
+      internalID: -7942620146722777972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeleneRune_12
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 1149
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c4e80a00aa5751f0800000000000000
+      internalID: -1056275944185469753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeleneRune_13
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 887
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6aba082f90dde4ac0800000000000000
+      internalID: -3868911995071714394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeleneRune_14
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 415
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7c4ac000006493b0800000000000000
+      internalID: -5506670891237749636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeleneRune_15
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 415
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ffa5a9a003eb8b20800000000000000
+      internalID: 3137851157379395577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SeleneRune_0: 798877850461505231
+      SeleneRune_1: 8293130521920422484
+      SeleneRune_10: -1924792091916735054
+      SeleneRune_11: -7942620146722777972
+      SeleneRune_12: -1056275944185469753
+      SeleneRune_13: -3868911995071714394
+      SeleneRune_14: -5506670891237749636
+      SeleneRune_15: 3137851157379395577
+      SeleneRune_2: -8990197611938663723
+      SeleneRune_3: -4327282960775782950
+      SeleneRune_4: 2700775258951410634
+      SeleneRune_5: -9085826431884366458
+      SeleneRune_6: -8976510262025378775
+      SeleneRune_7: 4374552351318224712
+      SeleneRune_8: 7849825691281277512
+      SeleneRune_9: -2193312785582920384
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

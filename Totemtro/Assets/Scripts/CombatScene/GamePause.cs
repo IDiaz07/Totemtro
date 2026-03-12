@@ -4,20 +4,28 @@ public static class GamePause
 {
     static int pauseCounter = 0;
 
+    public static bool IsPaused => pauseCounter > 0;
+
     public static void Pause()
     {
         pauseCounter++;
-        Time.timeScale = 0f;
+
+        if (pauseCounter == 1)
+            Time.timeScale = 0f;
     }
 
     public static void Resume()
     {
-        pauseCounter--;
         if (pauseCounter <= 0)
         {
-            pauseCounter = 0;
-            Time.timeScale = 1f;
+            Reset();
+            return;
         }
+
+        pauseCounter--;
+
+        if (pauseCounter == 0)
+            Time.timeScale = 1f;
     }
 
     public static void Reset()
@@ -26,4 +34,3 @@ public static class GamePause
         Time.timeScale = 1f;
     }
 }
-

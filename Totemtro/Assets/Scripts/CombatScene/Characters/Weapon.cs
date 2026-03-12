@@ -35,6 +35,7 @@ public class Weapon : MonoBehaviour
     VexAttack vexAttack;
     MurrayAttack murrayAttack;
     KaelAttack kaelAttack;
+    SeleneAttack seleneAttack;
 
     // =================================
     // TOTEM MODIFIERS
@@ -60,7 +61,6 @@ public class Weapon : MonoBehaviour
         if (chainRenderer != null)
             chainRenderer.enabled = false;
 
-        // Cuando cambias arma, recalculamos stats base
         playerStats?.Initialize();
     }
 
@@ -68,9 +68,11 @@ public class Weapon : MonoBehaviour
     void Start()
     {
         playerStats = GetComponentInParent<PlayerStats>();
-        murrayAttack = GetComponent<MurrayAttack>();
-        kaelAttack = GetComponent<KaelAttack>();
-        vexAttack = GetComponent<VexAttack>();
+
+        murrayAttack = GetComponentInParent<MurrayAttack>();
+        kaelAttack = GetComponentInParent<KaelAttack>();
+        vexAttack = GetComponentInParent<VexAttack>();
+        seleneAttack = GetComponentInParent<SeleneAttack>();
     }
 
 
@@ -80,9 +82,6 @@ public class Weapon : MonoBehaviour
             return;
 
         UpdateWeaponLayer();
-
-        if (isAttacking)
-            return;
 
         float cooldown = 1f / playerStats.FireRate;
 
@@ -155,26 +154,58 @@ public class Weapon : MonoBehaviour
                 SecondaryCooldownRemaining = 0f;
         }
 
-        if (Input.GetMouseButtonUp(1))
+        HandleSecondaryAbility();
+    }
+
+    void HandleSecondaryAbility()
+    {
+        if (currentWeapon == null) return;
+
+        // 🔴 ORIN gestiona su propio click derecho
+        if (currentWeapon.weaponType == WeaponType.OrinBurst)
+            return;
+
+        if (!Input.GetMouseButtonUp(1))
+            return;
+
+        if (currentWeapon.weaponType == WeaponType.KaelBlade)
         {
-            if (currentWeapon.weaponType == WeaponType.KaelBlade)
+            if (kaelAttack != null && kaelAttack.DashAttack())
             {
-                if (kaelAttack != null && kaelAttack.DashAttack())
-                {
-                    SecondaryCooldownDuration = kaelAttack.dashCooldown;
-                    SecondaryCooldownRemaining = kaelAttack.dashCooldown;
-                }
+                OnPlayerShot?.Invoke();
+
+                SecondaryCooldownDuration = kaelAttack.dashCooldown;
+                SecondaryCooldownRemaining = kaelAttack.dashCooldown;
             }
+        }
 
-            if (currentWeapon.weaponType == WeaponType.MurrayAnchor)
+        if (currentWeapon.weaponType == WeaponType.MurrayAnchor)
+        {
+            if (murrayAttack != null)
             {
-                if (murrayAttack != null)
-                {
-                    murrayAttack.CannonShot();
+                OnPlayerShot?.Invoke();
 
-                    SecondaryCooldownDuration = murrayAttack.shotgunCooldown;
-                    SecondaryCooldownRemaining = murrayAttack.shotgunCooldown;
-                }
+                murrayAttack.CannonShot();
+
+                SecondaryCooldownDuration = murrayAttack.shotgunCooldown;
+                SecondaryCooldownRemaining = murrayAttack.shotgunCooldown;
+            }
+        }
+
+        if (currentWeapon.weaponType == WeaponType.SeleneProjectile)
+        {
+            float seleneCooldown = 1f / playerStats.FireRate;
+
+            if (Time.time >= lastAttackTime + seleneCooldown)
+            {
+                OnPlayerShot?.Invoke();
+
+                seleneAttack.SecondaryAttack();
+
+                lastAttackTime = Time.time;
+
+                CurrentCooldownDuration = seleneCooldown;
+                CooldownRemaining = seleneCooldown;
             }
         }
     }
@@ -202,7 +233,10 @@ public class Weapon : MonoBehaviour
 
     void Attack()
     {
+        if (currentWeapon == null) return;
+
         OnPlayerShot?.Invoke();
+
         switch (currentWeapon.weaponType)
         {
             case WeaponType.Projectile:
@@ -211,7 +245,8 @@ public class Weapon : MonoBehaviour
                 break;
 
             case WeaponType.MurrayAnchor:
-                murrayAttack?.AnchorAttack();
+                if (murrayAttack != null)
+                    murrayAttack.AnchorAttack();
                 break;
 
             case WeaponType.GrimRuneBurst:
@@ -219,7 +254,8 @@ public class Weapon : MonoBehaviour
                 break;
 
             case WeaponType.VexProyectile:
-                vexAttack?.ShootVex();
+                if (vexAttack != null)
+                    vexAttack.ShootVex();
                 break;
 
             case WeaponType.NyraBloodOrb:
@@ -227,7 +263,19 @@ public class Weapon : MonoBehaviour
                 break;
 
             case WeaponType.KaelBlade:
-                GetComponent<KaelAttack>()?.NormalAttack();
+                if (kaelAttack != null)
+                    kaelAttack.NormalAttack();
+                else
+                    Debug.LogWarning("KaelAttack component missing");
+                break;
+
+            case WeaponType.SeleneProjectile:
+                if (seleneAttack != null)
+                    seleneAttack.NormalAttack();
+                break;
+
+            default:
+                Debug.LogWarning("WeaponType not handled: " + currentWeapon.weaponType);
                 break;
         }
     }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DuelistBlade
   m_EditorClassIdentifier: 
   weaponName: Duelist Blade
-  weaponType: 7
+  weaponType: 6
   aimLength: 0
   aimAngle: 0
   recoilForce: 3

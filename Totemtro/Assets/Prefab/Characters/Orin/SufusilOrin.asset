@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SufusilOrin
   m_EditorClassIdentifier: 
   weaponName: SufusilOrin
-  weaponType: 8
+  weaponType: 7
   aimLength: 2
   aimAngle: 0
   recoilForce: 0
