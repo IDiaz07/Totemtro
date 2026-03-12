@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6281555509575695414}
   - component: {fileID: 7373282703529565975}
-  - component: {fileID: 539833680156465802}
   - component: {fileID: 8842482706887338345}
   - component: {fileID: -490688931232475359}
+  - component: {fileID: 7937896671725697164}
   m_Layer: 0
   m_Name: SelenePuddle
   m_TagString: Untagged
@@ -91,78 +91,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!68 &539833680156465802
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1050253408721601218}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.4678838, y: 0.023514193}
-  - {x: -0.45642975, y: 0.095227376}
-  - {x: -0.37331003, y: 0.16630977}
-  - {x: -0.27603254, y: 0.21007717}
-  - {x: -0.15964387, y: 0.2387425}
-  - {x: -0.03894137, y: 0.26447463}
-  - {x: 0.07342554, y: 0.2669132}
-  - {x: 0.19407454, y: 0.24160257}
-  - {x: 0.3059345, y: 0.18888813}
-  - {x: 0.4140842, y: 0.1707328}
-  - {x: 0.45118776, y: 0.10829465}
-  - {x: 0.47203434, y: 0.055353753}
-  - {x: 0.48211324, y: -0.00060379505}
-  - {x: 0.50060964, y: -0.060473148}
-  - {x: 0.48706475, y: -0.11069294}
-  - {x: 0.4459029, y: -0.15465805}
-  - {x: 0.37493372, y: -0.18399312}
-  - {x: 0.2821924, y: -0.21317194}
-  - {x: 0.1416075, y: -0.25890264}
-  - {x: 0.033701867, y: -0.25258383}
-  - {x: -0.024369834, y: -0.2523036}
-  - {x: -0.112536706, y: -0.25636405}
-  - {x: -0.19984911, y: -0.24887088}
-  - {x: -0.23780854, y: -0.24886066}
-  - {x: -0.31162623, y: -0.22751313}
-  - {x: -0.33594593, y: -0.20816398}
-  - {x: -0.38838974, y: -0.17886563}
-  - {x: -0.43307787, y: -0.15278375}
-  - {x: -0.45284677, y: -0.122997016}
-  - {x: -0.48682308, y: -0.048665248}
-  - {x: -0.4676838, y: 0.023931596}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!114 &8842482706887338345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +137,43 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!70 &7937896671725697164
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050253408721601218}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.0000000027802458, y: -0.023322394}
+  m_Size: {x: 0.9941409, y: 0.45031533}
+  m_Direction: 1
 --- !u!1 &1544075517331284415
 GameObject:
   m_ObjectHideFlags: 0

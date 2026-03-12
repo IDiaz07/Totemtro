@@ -31022,6 +31022,7 @@ GameObject:
   - component: {fileID: 1643225790}
   - component: {fileID: 1643225791}
   - component: {fileID: 1643225792}
+  - component: {fileID: 1643225793}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -31092,6 +31093,19 @@ MonoBehaviour:
   runSummaryUI: {fileID: 1260642095}
   hubSceneName: HubScene
   combatSceneName: CombatScene
+--- !u!114 &1643225793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643225789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acf745e39705d7f4080a5423afede6eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedHero: {fileID: 0}
 --- !u!1 &1643956804
 GameObject:
   m_ObjectHideFlags: 0

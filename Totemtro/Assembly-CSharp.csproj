@@ -55,6 +55,7 @@
     <UnityVersion>6000.0.69f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.69f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.69f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.69f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
@@ -70,7 +71,9 @@
     <Compile Include="Assets\Scripts\CombatScene\Enemies\Boss\Astrael, The Null Sovereign\BossPortal.cs" />
     <Compile Include="Assets\Scripts\HubScene\Shop\LimitedOfferSystem.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\Crafting\Book\CraftingRecipeSlotUI.cs" />
+    <Compile Include="Assets\Scripts\Meta\Game\LoadoutUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Enemies\EnemyOrganicChase.cs" />
+    <Compile Include="Assets\Scripts\Meta\Game\CurrencyDebugCheats.cs" />
     <Compile Include="Assets\Scripts\HubScene\Inventory\EquipmentSlotUI.cs" />
     <Compile Include="Assets\Scripts\HubScene\Shop\ShopBundleReward.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\ActionBar\ActiveAbilityBase.cs" />
@@ -80,6 +83,7 @@
     <Compile Include="Assets\Scripts\CombatScene\Characters\Attack\Selene\SeleneChargeOrb.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\RunInventory.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\Consumables\ExplosiveGrenade\Grenade.cs" />
+    <Compile Include="Assets\Scripts\Meta\Game\MetaFragmentUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Enemies\BodyTiltEnemy.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Characters\Projectile.cs" />
     <Compile Include="Assets\Scripts\HubScene\Shop\SlotMachineSystem.cs" />
@@ -87,13 +91,11 @@
     <Compile Include="Assets\Scripts\HubScene\FadePanel.cs" />
     <Compile Include="Assets\Scripts\HubScene\ConfirmRunButton.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Characters\Attack\Selene\SelenePool.cs" />
-    <Compile Include="Assets\Scripts\Meta\CurrencyDebugCheats.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Totems\TotemSellConfirmUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Player\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Enemies\Boss\Astrael, The Null Sovereign\AstraelBoss.cs" />
     <Compile Include="Assets\Scripts\HubScene\ButtonHoverAnim.cs" />
     <Compile Include="Assets\Prefab\Characters\Vex\Scritps\CardSpin.cs" />
-    <Compile Include="Assets\Scripts\Meta\MetaFragmentUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Player\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Enemies\Summoner\SummonerDirectionalSprite.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\Consumables\ExplosiveGrenade\ExplosionShockwave.cs" />
@@ -125,9 +127,7 @@
     <Compile Include="Assets\Prefab\Characters\Vex\Scritps\BurnEffect.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Characters\PlayerRecoil.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Totems\TotemTooltipUI.cs" />
-    <Compile Include="Assets\Scripts\Meta\HeroUnlockPresentationSystem.cs" />
     <Compile Include="Assets\Scripts\HubScene\Inventory\InventoryPanelSwitcher.cs" />
-    <Compile Include="Assets\Scripts\Meta\MetaDragUI.cs" />
     <Compile Include="Assets\Scripts\HubScene\Shop\UIAnimationUtility.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Game\Extraction\INoiseListener.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Enemies\Spitter\SlimePuddle.cs" />
@@ -155,6 +155,7 @@
     <Compile Include="Assets\Scripts\CombatScene\GameManager.cs" />
     <Compile Include="Assets\Scripts\CombatScene\UI\LowHealthEffect.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Characters\Attack\Murray\MurrayAnchor.cs" />
+    <Compile Include="Assets\Scripts\Meta\Game\HubInventoryTabsUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\ControlScene\Gold\RunEconomySystem.cs" />
     <Compile Include="Assets\Scripts\CombatScene\GamePause.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Player\PlayerExperience.cs" />
@@ -162,6 +163,7 @@
     <Compile Include="Assets\Scripts\HubScene\HubMetaSlotUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\Consumables\Thrall’s Bandage\Thrall’s Bandage.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\Inventory\InventorySlotUI.cs" />
+    <Compile Include="Assets\Scripts\Meta\GameSessionManager.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Characters\Attack\Murray\HitStop.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Characters\Weapon.cs" />
     <Compile Include="Assets\Scripts\HubScene\Inventory\MetaInventoryDebug.cs" />
@@ -180,6 +182,7 @@
     <Compile Include="Assets\Scripts\CombatScene\Totems\TotemInventorySlotUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Characters\Attack\Nyra\NyraAttack.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\Consumables\ExplosiveGrenade\ExplosionAutoDestroy.cs" />
+    <Compile Include="Assets\Scripts\Meta\Game\MetaDragUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Player\BandageAnimation.cs" />
     <Compile Include="Assets\Scripts\HubScene\Shop\ShopFragmentCardUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Player\BodySway.cs" />
@@ -191,10 +194,11 @@
     <Compile Include="Assets\Scripts\CombatScene\Inventory\Crafting\Book\CraftingBookAnimator.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Enemies\Spitter\ArcProjectilePhysics.cs" />
     <Compile Include="Assets\Scripts\HubScene\HubUIManager.cs" />
-    <Compile Include="Assets\Scripts\Meta\ScrollWheelOnly.cs" />
+    <Compile Include="Assets\Scripts\Meta\Game\CurrencyHeaderUI.cs" />
     <Compile Include="Assets\Prefab\Characters\Vex\Scritps\FangInfinityMotion.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Totems\TotemCardAnimator.cs" />
     <Compile Include="Assets\Scripts\HubScene\Champs\HeroSelectionSystem.cs" />
+    <Compile Include="Assets\Scripts\Meta\Game\InventoryTransferSystem.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Totems\TotemSellSystem.cs" />
     <Compile Include="Assets\Scripts\HubScene\Shop\GachaRevealPanel.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\ActionBar\ActionBarSaveData.cs" />
@@ -207,7 +211,9 @@
     <Compile Include="Assets\Scripts\HubScene\Shop\ShopItemCardUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Enemies\Boss\Astrael, The Null Sovereign\ArenaController.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Totems\TotemRandomGenerator.cs" />
+    <Compile Include="Assets\Scripts\Meta\Game\MetaInventoryUI.cs" />
     <Compile Include="Assets\Scripts\Core\DragSource.cs" />
+    <Compile Include="Assets\Scripts\Meta\PlayButtonHandler.cs" />
     <Compile Include="Assets\Scripts\HubScene\Shop\ShopDatabase.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Totems\TotemCardFlip.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\ActionBar\ActionSlot.cs" />
@@ -217,11 +223,11 @@
     <Compile Include="Assets\Scripts\CombatScene\Drops\GoldPickup.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\ActionBar\ActiveItemInventory.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\Inventory\InventoryController.cs" />
+    <Compile Include="Assets\Scripts\Meta\Game\HeroUnlockPresentationSystem.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Enemies\CameraShake.cs" />
     <Compile Include="Assets\Scripts\Meta\Character\HeroGlobalUIUpdater.cs" />
     <Compile Include="Assets\Scripts\HubScene\Shop\ShopRarityColor.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Player\BuffUI.cs" />
-    <Compile Include="Assets\Scripts\Meta\LoadoutUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\ControlScene\Run\RunHistoryData.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Game\Extraction\ExtractionArrowUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Player\SecondaryCooldownUI.cs" />
@@ -231,14 +237,12 @@
     <Compile Include="Assets\Scripts\CombatScene\Game\Extraction\ExtractionZone.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\ActionBar\ActionSlotUI.cs" />
     <Compile Include="Assets\Scripts\HubScene\Shop\ShopSystem.cs" />
-    <Compile Include="Assets\Scripts\Meta\MetaInventoryUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Game\Extraction\EnemyNoiseResponder.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Game\Extraction\NoiseSystem.cs" />
     <Compile Include="Assets\Scripts\Meta\Character\HeroLevelDisplayUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\Consumables\NullGrenade\NullGrenade.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Enemies\Boss\Astrael, The Null Sovereign\NullSphere.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\ActionBar\ActionBarController.cs" />
-    <Compile Include="Assets\Scripts\Meta\CurrencyHeaderUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Inventory\Consumables\ExplosiveGrenade\ScreenFlash.cs" />
     <Compile Include="Assets\Scripts\HubScene\Shop\ShopSnapController.cs" />
     <Compile Include="Assets\Scripts\CombatScene\DamageNumber.cs" />
@@ -267,7 +271,6 @@
     <Compile Include="Assets\Scripts\HubScene\StartRunButton.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Enemies\BodySwayEnemy.cs" />
     <Compile Include="Assets\Scripts\HubScene\Shop\HeroRevealPanel.cs" />
-    <Compile Include="Assets\Scripts\Meta\HubInventoryTabsUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Characters\Attack\Vex\VexAttack.cs" />
     <Compile Include="Assets\Scripts\CombatScene\ControlScene\Summary\RunSummaryData.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Characters\Attack\Kael\KaelAttack.cs" />
@@ -298,10 +301,10 @@
     <Compile Include="Assets\Scripts\CombatScene\Enemies\Spitter\SpitterAI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\UI\UIShake.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Characters\Attack\Kael\FireMark.cs" />
+    <Compile Include="Assets\Scripts\Meta\Game\ScrollWheelOnly.cs" />
     <Compile Include="Assets\Prefab\Characters\Vex\Scritps\VexBarUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Game\Extraction\ExtractionUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Enemies\Brute\BruteAI.cs" />
-    <Compile Include="Assets\Scripts\Meta\InventoryTransferSystem.cs" />
     <Compile Include="Assets\Scripts\CombatScene\ControlScene\Summary\EnemyStatsTracker.cs" />
   </ItemGroup>
   <ItemGroup>

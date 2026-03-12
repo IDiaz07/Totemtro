@@ -4872,6 +4872,7 @@ GameObject:
   - component: {fileID: 289040485}
   - component: {fileID: 289040488}
   - component: {fileID: 289040489}
+  - component: {fileID: 289040490}
   m_Layer: 0
   m_Name: StartRunButton
   m_TagString: Untagged
@@ -4943,7 +4944,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 289040486}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 289040490}
+        m_TargetAssemblyTypeName: PlayButtonHandler, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &289040486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5009,6 +5022,19 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.8509804}
   m_EffectDistance: {x: 5, y: -5}
   m_UseGraphicAlpha: 1
+--- !u!114 &289040490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289040483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1905bbc08053b94b8ea2d276a055a1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  combatSceneName: CombatScene
 --- !u!1 &293014445
 GameObject:
   m_ObjectHideFlags: 0
@@ -30933,6 +30959,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3c92e2c8c38e05428fdff327ede935d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allHeroes:
+  - {fileID: 11400000, guid: 4e13bee274f20cc44887746a82c5158c, type: 2}
+  - {fileID: 11400000, guid: b8a6b44a67d5ea1498304d0cdf05e0ee, type: 2}
+  - {fileID: 11400000, guid: 21cfca6d1bf8ff943b67c2ed6f2ed016, type: 2}
+  - {fileID: 11400000, guid: 88fd6bf05b4466848b65399d65bf38b0, type: 2}
+  - {fileID: 11400000, guid: e26e29385e1e32d4087072d23d1339eb, type: 2}
+  - {fileID: 11400000, guid: 358a8c58e0a794840ba96ba293020e38, type: 2}
+  - {fileID: 11400000, guid: 5137199b3036216478fda2ebfd041e23, type: 2}
+  - {fileID: 11400000, guid: 93a2860363c1ee746a87b20c54887a3e, type: 2}
+  defaultHero: {fileID: 11400000, guid: 4e13bee274f20cc44887746a82c5158c, type: 2}
 --- !u!1 &1085365916
 GameObject:
   m_ObjectHideFlags: 0

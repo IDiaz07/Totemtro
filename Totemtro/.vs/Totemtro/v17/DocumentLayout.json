@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\",
+  "WorkspaceRootPath": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\Weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\CombatScene\\Characters\\Weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\Character\\HeroSelectionManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Meta\\Character\\HeroSelectionManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\WeaponData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\CombatScene\\Characters\\WeaponData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\CombatScene\\Player\\HeroController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\CombatScene\\Player\\HeroController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\Attack\\Vex\\VexProjectileModifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\CombatScene\\Characters\\Attack\\Vex\\VexProjectileModifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\PlayButtonHandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Meta\\PlayButtonHandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\Attack\\Vex\\VexAttack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\CombatScene\\Characters\\Attack\\Vex\\VexAttack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\GameSessionManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Meta\\GameSessionManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,53 +31,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Weapon.cs",
-              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\Weapon.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CombatScene\\Characters\\Weapon.cs",
-              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\Weapon.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CombatScene\\Characters\\Weapon.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAMwB8AAAAYAAAAAAAAAA==",
+              "Title": "HeroSelectionManager.cs",
+              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\Character\\HeroSelectionManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Meta\\Character\\HeroSelectionManager.cs",
+              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\Character\\HeroSelectionManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Meta\\Character\\HeroSelectionManager.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAcwEgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T15:10:01.207Z",
+              "WhenOpened": "2026-03-12T15:07:32.529Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "WeaponData.cs",
-              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\WeaponData.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CombatScene\\Characters\\WeaponData.cs",
-              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\WeaponData.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CombatScene\\Characters\\WeaponData.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAcwEMAAAAAAAAAAAAAAA==",
+              "Title": "HeroController.cs",
+              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\CombatScene\\Player\\HeroController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CombatScene\\Player\\HeroController.cs",
+              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\CombatScene\\Player\\HeroController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CombatScene\\Player\\HeroController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAMwCwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T15:09:52.16Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "VexAttack.cs",
-              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\Attack\\Vex\\VexAttack.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CombatScene\\Characters\\Attack\\Vex\\VexAttack.cs",
-              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\Attack\\Vex\\VexAttack.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CombatScene\\Characters\\Attack\\Vex\\VexAttack.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAcwH8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T14:56:55.644Z",
+              "WhenOpened": "2026-03-12T14:51:11.664Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "VexProjectileModifier.cs",
-              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\Attack\\Vex\\VexProjectileModifier.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CombatScene\\Characters\\Attack\\Vex\\VexProjectileModifier.cs",
-              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Assets\\Scripts\\CombatScene\\Characters\\Attack\\Vex\\VexProjectileModifier.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CombatScene\\Characters\\Attack\\Vex\\VexProjectileModifier.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAcwHEAAAAPAAAAAAAAAA==",
+              "Title": "PlayButtonHandler.cs",
+              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\PlayButtonHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Meta\\PlayButtonHandler.cs",
+              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\PlayButtonHandler.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Meta\\PlayButtonHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T14:56:55.186Z",
+              "WhenOpened": "2026-03-12T14:47:56.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameSessionManager.cs",
+              "DocumentMoniker": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\GameSessionManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Meta\\GameSessionManager.cs",
+              "ToolTip": "C:\\Users\\diaz.inigo\\OneDrive - Universidad de Deusto\\Documentos\\GitHub\\Totemtro\\Totemtro\\Assets\\Scripts\\Meta\\GameSessionManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Meta\\GameSessionManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T14:30:08.581Z",
               "EditorCaption": ""
             }
           ]

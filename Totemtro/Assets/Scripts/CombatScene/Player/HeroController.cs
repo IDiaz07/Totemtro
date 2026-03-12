@@ -33,10 +33,10 @@ public class HeroController : MonoBehaviour
         GamePause.Reset();
 
         // 🔥 Hero seleccionado desde el Hub
-        if (HeroSelectionSystem.Instance != null &&
-            HeroSelectionSystem.Instance.selectedHero != null)
+        if (GameSessionManager.Instance != null &&
+            GameSessionManager.Instance.selectedHero != null)
         {
-            currentHero = HeroSelectionSystem.Instance.selectedHero;
+            currentHero = GameSessionManager.Instance.selectedHero;
         }
 
         if (currentHero != null)
