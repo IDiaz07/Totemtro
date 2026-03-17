@@ -71,26 +71,33 @@ public class Grenade : MonoBehaviour
 
         foreach (var hit in hits)
         {
-            Enemy enemy = hit.GetComponent<Enemy>();
+            float distance = Vector2.Distance(pos, hit.transform.position);
 
+            float falloff = 1f - (distance / radius);
+            falloff = Mathf.Clamp01(falloff);
+
+            Vector2 dir = (hit.transform.position - pos).normalized;
+
+            // 🔴 ENEMIGOS
+            Enemy enemy = hit.GetComponent<Enemy>();
             if (enemy != null)
             {
-                float distance =
-                    Vector2.Distance(pos, enemy.transform.position);
-
-                float falloff = 1f - (distance / radius);
-                falloff = Mathf.Clamp01(falloff);
-
                 float finalDamage = damage * falloff;
-
-                Vector2 dir =
-                    (enemy.transform.position - pos).normalized;
 
                 enemy.TakeDamage(
                     finalDamage,
                     dir * knockbackForce * falloff,
                     false
                 );
+            }
+
+            // 🌲 OBSTÁCULOS
+            DestructibleObstacle obstacle = hit.GetComponent<DestructibleObstacle>();
+            if (obstacle != null)
+            {
+                float finalDamage = damage * falloff;
+
+                obstacle.TakeDamage(finalDamage);
             }
         }
 

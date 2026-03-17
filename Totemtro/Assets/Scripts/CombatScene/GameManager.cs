@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [Header("Scene Names")]
     [SerializeField] private string hubSceneName = "HubScene";
     [SerializeField] private string combatSceneName = "CombatScene";
+    [SerializeField] private string loadingSceneName = "LoadingScene";
 
     void Awake()
     {
@@ -21,23 +22,43 @@ public class GameManager : MonoBehaviour
         }
 
         Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
+
+    void LoadSceneWithLoading(string sceneName)
+    {
+        Debug.Log("Loading via LoadingScene → " + sceneName);
+
+        LoadingManager.TargetScene = sceneName;
+        SceneManager.LoadScene(loadingSceneName);
+    }
+
 
     public void StartRun()
     {
-        SceneManager.LoadScene(combatSceneName);
+        Debug.Log("Hero before run: " + GameSessionManager.Instance.selectedHero);
+
+        LoadingManager.loadingType = LoadingType.Fake;
+        LoadingManager.TargetScene = combatSceneName;
+
+        SceneManager.LoadScene("LoadingScene");
+    }
+
+
+    public void StartOnlineMatch()
+    {
+        LoadingManager.loadingType = LoadingType.SceneAsync;
+        LoadingManager.TargetScene = "OnlineCombatScene";
+
+        SceneManager.LoadScene("LoadingScene");
     }
 
     public void HandlePlayerDeath()
     {
-        Debug.Log("GAME MANAGER HANDLE DEATH CALLED");
-
         if (runManager != null)
             runManager.EndRunByDeath();
-        else
-            Debug.LogError("RunManager not found in scene!");
 
-        ShowSummary(false); // murió
+        ShowSummary(false);
     }
 
     public void ExtractRun()
@@ -45,30 +66,30 @@ public class GameManager : MonoBehaviour
         if (runManager != null)
             runManager.EndRunByExtraction();
 
-        ShowSummary(true); // extrajo
+        ShowSummary(true);
     }
 
     void ShowSummary(bool extracted)
     {
-        Debug.Log("SHOW SUMMARY CALLED");
-
         Time.timeScale = 0f;
 
         if (runSummaryUI != null)
             runSummaryUI.Show(extracted);
-        else
-            Debug.LogError("RunSummaryUI not found in scene!");
     }
 
     public void RestartRun()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        LoadSceneWithLoading(SceneManager.GetActiveScene().name);
     }
 
     public void ReturnToHub()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(hubSceneName);
+
+        if (MetaInventory.Instance != null)
+            MetaInventory.Instance.SaveMetaInventory();
+
+        LoadSceneWithLoading(hubSceneName);
     }
 }

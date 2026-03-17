@@ -12,13 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a3b6c4db878f184da06b29f9251efc3, type: 3}
   m_Name: ExplosiveGrenade
   m_EditorClassIdentifier: 
+  itemID: explosivegrenade
   itemName: Explosive Grenade
   icon: {fileID: -8173792377899690084, guid: 0da4740fc22c4014a80295ebd58b10fa, type: 3}
-  itemType: 0
+  itemType: 1
   description: 
+  showDamage: 0
+  damage: 0
+  showDPS: 0
+  damagePerSecond: 0
+  showFinalDamage: 1
+  finalDamage: 30
+  showHealing: 0
+  healingAmount: 0
   stackable: 1
   maxStack: 32
   usableInActionBar: 1
   cooldown: 6
   worldPrefab: {fileID: 5197425523659630583, guid: 8ad53e7762af1c845abbea1b53198d8e, type: 3}
   ability: {fileID: 11400000, guid: 8ba0ac5780dcbdc4fbe15712957c4781, type: 2}
+  isConsumableInLoadout: 1
+  equipmentSlotType: 0

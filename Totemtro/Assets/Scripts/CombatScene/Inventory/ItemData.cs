@@ -28,6 +28,20 @@ public class ItemData : ScriptableObject
     [TextArea]
     public string description;
 
+    [Header("Tooltip Stats")]
+
+    public bool showDamage;
+    public int damage;
+
+    public bool showDPS;
+    public int damagePerSecond;
+
+    public bool showFinalDamage;
+    public int finalDamage;
+
+    public bool showHealing;
+    public int healingAmount;
+
     public bool stackable = true;
     public int maxStack = 99;
 
@@ -53,4 +67,14 @@ public class ItemData : ScriptableObject
 
         ability.TryActivate(user);
     }
+
+#if UNITY_EDITOR
+void OnValidate()
+{
+    if (string.IsNullOrEmpty(itemID))
+    {
+        itemID = name.Replace(" ", "_").ToLower();
+    }
+}
+#endif
 }

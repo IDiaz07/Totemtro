@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 548393048405340487}
   - component: {fileID: 1416886675506641915}
   - component: {fileID: 4734320188992461336}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SlimeParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4844,7 +4844,7 @@ GameObject:
   - component: {fileID: 1310374107188065541}
   - component: {fileID: 2156003948149831913}
   - component: {fileID: 2205437036795363271}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ImpactVFXPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9679,7 +9679,7 @@ GameObject:
   - component: {fileID: 5593188335380076663}
   - component: {fileID: 7481017138375746802}
   - component: {fileID: 4695742742441428458}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SeleneProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

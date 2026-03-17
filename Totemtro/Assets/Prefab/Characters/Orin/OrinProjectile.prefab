@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 405961488373601822}
   - component: {fileID: 1333186470879614261}
   - component: {fileID: 3965910064255877481}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: OrinProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.09}
+    oldSize: {x: 0.5, y: 0.140625}
     newSize: {x: 0.32, y: 0.09}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

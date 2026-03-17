@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5946300681223251110}
   - component: {fileID: 4297831204894288050}
   - component: {fileID: 4516128006242753945}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TroProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

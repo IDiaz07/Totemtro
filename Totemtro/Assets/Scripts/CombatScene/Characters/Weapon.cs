@@ -78,6 +78,9 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
+        if (GameIntroState.IsIntroPlaying)
+            return;
+
         if (currentWeapon == null || playerStats == null)
             return;
 
@@ -233,6 +236,9 @@ public class Weapon : MonoBehaviour
 
     void Attack()
     {
+        if (GameIntroState.IsIntroPlaying)
+            return;
+
         if (currentWeapon == null) return;
 
         OnPlayerShot?.Invoke();

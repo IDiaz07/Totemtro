@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System;
 
 public class HeroSelectionManager : MonoBehaviour
@@ -14,7 +14,7 @@ public class HeroSelectionManager : MonoBehaviour
     [Header("All Heroes")]
     public HeroData[] allHeroes;
 
-    [Header("Default Hero (Tro)")]
+    [Header("Default Hero")]
     public HeroData defaultHero;
 
     void Awake()
@@ -26,27 +26,36 @@ public class HeroSelectionManager : MonoBehaviour
         }
 
         Instance = this;
-
-        LoadHero();
+        DontDestroyOnLoad(gameObject);
     }
 
-    // =================================
-    // SELECT HERO
-    // =================================
+    void Start()
+    {
+        LoadHero();
+        OnHeroChanged?.Invoke(SelectedHero);
+    }
 
     public void SelectHero(HeroData hero)
     {
+        if (hero == null)
+            return;
+
+        if (HeroProgressSystem.Instance != null &&
+            !HeroProgressSystem.Instance.IsUnlocked(hero.heroType))
+        {
+            Debug.Log("Hero locked: " + hero.heroName);
+            return;
+        }
+
         SelectedHero = hero;
 
         PlayerPrefs.SetInt(HERO_PREF_KEY, (int)hero.heroType);
         PlayerPrefs.Save();
 
+        Debug.Log("Hero selected: " + hero.heroName);
+
         OnHeroChanged?.Invoke(hero);
     }
-
-    // =================================
-    // LOAD HERO
-    // =================================
 
     void LoadHero()
     {
@@ -63,8 +72,12 @@ public class HeroSelectionManager : MonoBehaviour
         {
             if (hero.heroType == savedType)
             {
-                SelectedHero = hero;
-                return;
+                if (HeroProgressSystem.Instance == null ||
+                    HeroProgressSystem.Instance.IsUnlocked(hero.heroType))
+                {
+                    SelectedHero = hero;
+                    return;
+                }
             }
         }
 

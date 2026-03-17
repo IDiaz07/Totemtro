@@ -2,5 +2,11 @@ public enum DragSource
 {
     None,
     Meta,
-    Loadout
+    Loadout,
+    Bag,
+    Armor,
+
+    // Combat Scene
+    Inventory,
+    ActionBar
 }

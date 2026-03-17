@@ -41,15 +41,22 @@ public class CannonBall : MonoBehaviour
     {
         Enemy enemy = col.GetComponent<Enemy>();
 
-        if (enemy == null) return;
+        if (enemy != null)
+        {
+            enemy.TakeDamage(damage, direction, false);
 
-        enemy.TakeDamage(damage, direction, false);
+            Rigidbody2D rb = enemy.GetComponent<Rigidbody2D>();
 
-        Rigidbody2D rb = enemy.GetComponent<Rigidbody2D>();
+            if (rb != null)
+                rb.AddForce(direction * knockback, ForceMode2D.Impulse);
 
-        if (rb != null)
-            rb.AddForce(direction * knockback, ForceMode2D.Impulse);
+            Destroy(gameObject);
+            return;
+        }
 
-        Destroy(gameObject);
+        if (col.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

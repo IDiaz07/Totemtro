@@ -8,8 +8,9 @@ public class UIShake : MonoBehaviour
 
     Vector3 originalPos;
 
-    void OnEnable()
+    public void Play()
     {
+        StopAllCoroutines();
         originalPos = transform.localPosition;
         StartCoroutine(Shake());
     }

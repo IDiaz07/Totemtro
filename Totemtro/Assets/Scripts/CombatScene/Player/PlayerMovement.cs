@@ -48,6 +48,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (GameIntroState.IsIntroPlaying)
+            return;
+
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 

@@ -15,9 +15,17 @@ public class NyraBloodBall : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.CompareTag("Enemy")) return;
+        if (other.CompareTag("Enemy"))
+        {
+            SpawnMiniProjectiles(other);
+            Destroy(gameObject);
+            return;
+        }
 
-        SpawnMiniProjectiles(other);
+        if (other.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     void SpawnMiniProjectiles(Collider2D originalEnemy)

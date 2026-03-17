@@ -17,7 +17,7 @@ MonoBehaviour:
   description: Agile and fearless warrior, marked by ritual duels. He moves with
     lethal precision and constant aggression.
   Icon: {fileID: 21300000, guid: edc00ebb8ac161a4b9bd0e836cb70de0, type: 3}
-  ChampsHeadIcon: {fileID: -6940944650096720487, guid: bdb6f4d8acb59814b91ef0e079eab135, type: 3}
+  ChampsHeadIcon: {fileID: 21300000, guid: bdb6f4d8acb59814b91ef0e079eab135, type: 3}
   role: 0
   rarity: 1
   directionalSprites:

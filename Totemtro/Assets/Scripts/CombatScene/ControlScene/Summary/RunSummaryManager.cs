@@ -24,7 +24,7 @@ public class RunSummaryManager : MonoBehaviour
         int timeBonus,
         int penalty,
         int total,
-        RunInventory inventory)
+        MetaInventory inventory)
     {
         Debug.Log("SUMMARY CREATED");
 

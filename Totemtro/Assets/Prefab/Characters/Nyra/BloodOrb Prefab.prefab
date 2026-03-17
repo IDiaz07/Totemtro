@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3640036324447225485}
   - component: {fileID: -3567969025649101237}
   - component: {fileID: 8849774254848421291}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BloodOrb Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

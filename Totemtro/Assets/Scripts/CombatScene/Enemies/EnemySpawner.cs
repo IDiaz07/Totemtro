@@ -1,6 +1,6 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -15,7 +15,6 @@ public class EnemySpawner : MonoBehaviour
     public GameObject summonerPrefab;
     public GameObject exploderPrefab;
     public GameObject eliteThrall;
-
 
     [Header("Spawn Settings")]
     public float spawnInterval = 2f;
@@ -35,41 +34,39 @@ public class EnemySpawner : MonoBehaviour
     [Header("Boss")]
     public GameObject astraelBossPrefab;
     public float bossSpawnTime = 180f;
-    public float spawnBoss = 0.5f;
-    bool bossSpawned = false;
-
-
+    public float spawnBossOffset = 6f;
 
     private List<GameObject> aliveEnemies = new List<GameObject>();
-    private float difficultyTimer;
-    bool spawningStopped = false;
 
+    float difficultyTimer;
+    bool bossSpawned = false;
+    bool spawningStopped = false;
     bool isPaused = false;
 
-    public void PauseSpawning()
-    {
-        isPaused = true;
-    }
+    Coroutine spawnRoutine;
 
     void Start()
     {
+        Debug.Log($"EnemySpawner START - gameObject.activeInHierarchy={gameObject.activeInHierarchy}, enabled={enabled}");
+        // Buscar player si no está asignado
         if (player == null)
         {
-            player = GameObject.FindGameObjectWithTag("Player")?.transform;
+            GameObject p = GameObject.FindGameObjectWithTag("Player");
+
+            if (p != null)
+                player = p.transform;
         }
 
-        if (player == null)
-        {
-            Debug.LogError("EnemySpawner: Player no encontrado.");
-            enabled = false;
-            return;
-        }
+        Debug.Log(player != null ? $"EnemySpawner: player encontrado ({player.name})" : "EnemySpawner: player NO encontrado en Start");
 
-        StartCoroutine(SpawnLoop());
+        // No hacemos return aquí. Arrancamos el loop que esperará al player si es necesario.
+        spawnRoutine = StartCoroutine(SpawnLoop());
     }
 
     void Update()
     {
+        if (player == null) return;
+
         difficultyTimer += Time.deltaTime;
 
         if (difficultyTimer >= difficultyRampTime)
@@ -79,45 +76,93 @@ public class EnemySpawner : MonoBehaviour
             spawnInterval = Mathf.Max(0.6f, spawnInterval - spawnIntervalReduction);
             maxEnemiesAlive += extraEnemiesPerRamp;
 
-            Debug.Log("Dificultad aumentada");
+            Debug.Log("EnemySpawner: dificultad aumentada");
         }
 
-        // Limpia enemigos destruidos
+        // limpiar enemigos muertos
         aliveEnemies.RemoveAll(e => e == null);
 
-        // =====================
-        // BOSS SPAWN
-        // =====================
+        // spawn boss
         if (!bossSpawned && Time.time >= bossSpawnTime)
         {
             SpawnBoss();
         }
-
     }
 
     IEnumerator SpawnLoop()
     {
+
+        Debug.Log("EnemySpawner: esperando intro...");
+
+        yield return new WaitUntil(() => !GameIntroState.IsIntroPlaying);
+
+        Debug.Log("EnemySpawner: intro terminada, empezando spawn");
+
         while (true)
         {
+            // Esperar antes de cada intento (usa tiempo escalado)
+            yield return new WaitForSeconds(spawnInterval);
+
+            // Diagnóstico: log de estado para entender por qué se salta spawn
+            if (player == null)
+            {
+                Debug.Log("EnemySpawner: player aun null, intentando encontrarlo de nuevo...");
+                GameObject p = GameObject.FindGameObjectWithTag("Player");
+                if (p != null)
+                {
+                    player = p.transform;
+                    Debug.Log($"EnemySpawner: player encontrado dinámicamente ({player.name})");
+                }
+                else
+                {
+                    Debug.Log("EnemySpawner: player no encontrado en esta iteración - saltando spawn");
+                    continue;
+                }
+            }
+
             if (spawningStopped)
             {
-                yield return null;
+                Debug.Log("EnemySpawner: spawningStopped == true, saltando spawn");
                 continue;
             }
 
-            yield return new WaitForSeconds(spawnInterval);
+            if (isPaused)
+            {
+                Debug.Log("EnemySpawner: isPaused == true, saltando spawn");
+                continue;
+            }
 
             if (aliveEnemies.Count >= maxEnemiesAlive)
+            {
+                Debug.Log($"EnemySpawner: aliveEnemies ({aliveEnemies.Count}) >= maxEnemiesAlive ({maxEnemiesAlive}) - saltando spawn");
                 continue;
+            }
 
-            if (CountEnemiesNearPlayer() >= maxEnemiesNearPlayer)
+            int near = CountEnemiesNearPlayer();
+            if (near >= maxEnemiesNearPlayer)
+            {
+                Debug.Log($"EnemySpawner: enemies near player ({near}) >= maxEnemiesNearPlayer ({maxEnemiesNearPlayer}) - saltando spawn");
                 continue;
-
-            if (isPaused)
-                continue;
+            }
 
             SpawnEnemy();
         }
+    }
+
+    public void PauseSpawning()
+    {
+        isPaused = true;
+    }
+
+    public void ResumeSpawning()
+    {
+        isPaused = false;
+        spawningStopped = false;
+
+        if (spawnRoutine != null)
+            StopCoroutine(spawnRoutine);
+
+        spawnRoutine = StartCoroutine(SpawnLoop());
     }
 
     public void StopSpawning()
@@ -125,25 +170,28 @@ public class EnemySpawner : MonoBehaviour
         spawningStopped = true;
     }
 
-    public void ResumeSpawning()
-    {
-        spawningStopped = false;
-        isPaused = false;   // 🔥 ESTA LÍNEA FALTABA
-
-        StopAllCoroutines();
-        StartCoroutine(SpawnLoop());
-    }
-
     void SpawnEnemy()
     {
+        if (player == null)
+        {
+            Debug.LogWarning("EnemySpawner: SpawnEnemy abortado porque player == null");
+            return;
+        }
+
         Vector2 spawnPos = GetSpawnPosition();
 
         GameObject prefab = ChooseEnemy();
 
-        if (prefab == null) return;
+        if (prefab == null)
+        {
+            Debug.LogWarning("EnemySpawner: prefab null");
+            return;
+        }
 
         GameObject enemy = Instantiate(prefab, spawnPos, Quaternion.identity);
         aliveEnemies.Add(enemy);
+
+        Debug.Log($"EnemySpawner: enemigo spawneado ({prefab.name}) en {spawnPos}, totalAlive={aliveEnemies.Count}");
     }
 
     Vector2 GetSpawnPosition()
@@ -151,10 +199,7 @@ public class EnemySpawner : MonoBehaviour
         float angle = Random.Range(0f, Mathf.PI * 2f);
         float distance = Random.Range(minSpawnDistance, maxSpawnDistance);
 
-        Vector2 offset = new Vector2(
-            Mathf.Cos(angle),
-            Mathf.Sin(angle)
-        ) * distance;
+        Vector2 offset = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * distance;
 
         return (Vector2)player.position + offset;
     }
@@ -163,7 +208,6 @@ public class EnemySpawner : MonoBehaviour
     {
         float time = Time.time;
 
-        // ========= PESOS BASE =========
         float thrallWeight = 40f;
         float stalkerWeight = 20f;
         float bruteWeight = 10f;
@@ -172,24 +216,12 @@ public class EnemySpawner : MonoBehaviour
         float summonerWeight = 2f;
         float eliteThrallWeight = 0.5f;
 
-        // ========= ESCALADO POR TIEMPO =========
-
-        // Brutes aumentan bastante
         bruteWeight += time / 30f;
-
-        // Spitters aumentan moderado
         spitterWeight += time / 45f;
-
-        // Exploders aumentan leve
         exploderWeight += time / 60f;
-
-        // Summoner aumenta MUY lento
         summonerWeight += time / 180f;
-
-        // EliteThrall aumenta MUY MUY lento
         eliteThrallWeight += time / 220f;
 
-        // ========= SUMA TOTAL =========
         float totalWeight =
             thrallWeight +
             stalkerWeight +
@@ -201,38 +233,45 @@ public class EnemySpawner : MonoBehaviour
 
         float roll = Random.Range(0f, totalWeight);
 
-        if (roll < thrallWeight)
-            return thrallPrefab;
+        float r = roll;
+        GameObject chosen = null;
 
-        roll -= thrallWeight;
+        if (r < thrallWeight) chosen = thrallPrefab;
+        else
+        {
+            r -= thrallWeight;
+            if (r < stalkerWeight) chosen = stalkerPrefab;
+            else
+            {
+                r -= stalkerWeight;
+                if (r < bruteWeight) chosen = brutePrefab;
+                else
+                {
+                    r -= bruteWeight;
+                    if (r < spitterWeight) chosen = spitterPrefab;
+                    else
+                    {
+                        r -= spitterWeight;
+                        if (r < exploderWeight) chosen = exploderPrefab;
+                        else
+                        {
+                            r -= exploderWeight;
+                            if (r < summonerWeight) chosen = summonerPrefab;
+                            else
+                            {
+                                r -= summonerWeight;
+                                if (r < eliteThrallWeight) chosen = eliteThrall;
+                                else chosen = thrallPrefab;
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
-        if (roll < stalkerWeight)
-            return stalkerPrefab;
+        Debug.Log($"ChooseEnemy: roll={roll:F2}, total={totalWeight:F2}, chosen={(chosen != null ? chosen.name : "NULL")}, eliteWeight={eliteThrallWeight:F2}");
 
-        roll -= stalkerWeight;
-
-        if (roll < bruteWeight)
-            return brutePrefab;
-
-        roll -= bruteWeight;
-
-        if (roll < spitterWeight)
-            return spitterPrefab;
-
-        roll -= spitterWeight;
-
-        if (roll < exploderWeight)
-            return exploderPrefab;
-        
-        roll -= spitterWeight;
-
-        if (roll < summonerWeight)
-            return summonerPrefab;
-        
-        if (roll < eliteThrallWeight)
-            return eliteThrall;
-
-        return thrallPrefab;
+        return chosen;
     }
 
     int CountEnemiesNearPlayer()
@@ -254,10 +293,8 @@ public class EnemySpawner : MonoBehaviour
     {
         bossSpawned = true;
 
-        // Detener spawn normal
         StopSpawning();
 
-        // Limpiar enemigos vivos
         foreach (var e in aliveEnemies)
         {
             if (e != null)
@@ -266,16 +303,17 @@ public class EnemySpawner : MonoBehaviour
 
         aliveEnemies.Clear();
 
-        // Spawnear boss en centro o cerca del jugador
         Vector2 bossPosition =
-            player.position + Vector3.up * spawnBoss;
+            player.position + Vector3.up * spawnBossOffset;
 
-        Instantiate(
-            astraelBossPrefab,
-            bossPosition,
-            Quaternion.identity
-        );
-
-        Debug.Log("Astrael has entered the arena.");
+        if (astraelBossPrefab != null)
+        {
+            Instantiate(astraelBossPrefab, bossPosition, Quaternion.identity);
+            Debug.Log("EnemySpawner: boss spawneado");
+        }
+        else
+        {
+            Debug.LogError("EnemySpawner: astraelBossPrefab no asignado");
+        }
     }
 }

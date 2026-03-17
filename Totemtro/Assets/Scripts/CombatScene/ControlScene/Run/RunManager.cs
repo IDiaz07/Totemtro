@@ -4,7 +4,7 @@ public class RunManager : MonoBehaviour
 {
     public static RunManager Instance;
 
-    [SerializeField] private RunInventory runInventory;
+    [SerializeField] private MetaInventory inventory;
 
     void Awake()
     {
@@ -30,7 +30,7 @@ public class RunManager : MonoBehaviour
     {
         EnemyStatsTracker.Reset();
 
-        if (runInventory == null)
+        if (inventory == null)
             return;
 
         if (RunLoadoutSystem.Instance == null)
@@ -76,7 +76,7 @@ public class RunManager : MonoBehaviour
                 timeBonus,
                 penalty,
                 total,
-                runInventory);
+                inventory);
         }
         else
         {
@@ -96,7 +96,7 @@ public class RunManager : MonoBehaviour
             Debug.LogWarning("RunHistoryManager is NULL");
         }
 
-        if (runInventory != null)
+        if (inventory != null)
             ClearRunInventory();
     }
 
@@ -135,7 +135,7 @@ public class RunManager : MonoBehaviour
                 timeBonus,
                 penalty,
                 total,
-                runInventory);
+                inventory);
         }
 
         if (RunHistoryManager.Instance != null)
@@ -149,7 +149,7 @@ public class RunManager : MonoBehaviour
 
         TransferToMeta();
 
-        if (runInventory != null)
+        if (inventory != null)
             ClearRunInventory();
     }
 
@@ -159,7 +159,7 @@ public class RunManager : MonoBehaviour
 
     void TransferToMeta()
     {
-        if (runInventory == null)
+        if (inventory == null)
         {
             Debug.LogError("RunInventory is NULL");
             return;
@@ -171,7 +171,7 @@ public class RunManager : MonoBehaviour
             return;
         }
 
-        foreach (var slot in runInventory.slots)
+        foreach (var slot in inventory.slots)
         {
             if (!slot.IsEmpty())
             {
@@ -184,32 +184,32 @@ public class RunManager : MonoBehaviour
 
     void ClearRunInventory()
     {
-        foreach (var slot in runInventory.slots)
+        foreach (var slot in inventory.slots)
         {
             slot.Clear();
         }
 
-        runInventory.NotifyInventoryChanged();
+        inventory.NotifyInventoryChanged();
     }
 
     void CopyLoadoutToRunInventory()
     {
         var loadout = RunLoadoutSystem.Instance.loadoutSlots;
 
-        for (int i = 0; i < runInventory.slots.Length; i++)
+        for (int i = 0; i < inventory.slots.Length; i++)
         {
-            runInventory.slots[i].Clear();
+            inventory.slots[i].Clear();
 
             if (i >= loadout.Length)
                 continue;
 
             if (!loadout[i].IsEmpty())
             {
-                runInventory.slots[i].item = loadout[i].item;
-                runInventory.slots[i].amount = loadout[i].amount;
+                inventory.slots[i].item = loadout[i].item;
+                inventory.slots[i].amount = loadout[i].amount;
             }
         }
 
-        runInventory.NotifyInventoryChanged();
+        inventory.NotifyInventoryChanged();
     }
 }

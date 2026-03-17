@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1265745699907150024}
   - component: {fileID: 765930372692475211}
   - component: {fileID: 8234757347696327037}
+  - component: {fileID: 1440121671782773076}
   m_Layer: 5
   m_Name: ActionSlot
   m_TagString: Untagged
@@ -96,6 +97,19 @@ MonoBehaviour:
   cooldownOverlay: {fileID: 5931764762944485796}
   amountText: {fileID: 8040427090942986338}
   keyText: {fileID: 8539427063241015778}
+--- !u!114 &1440121671782773076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416371262407938383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767adca5fc1465d4ea92689a9caa3d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
 --- !u!1 &2147860444034925171
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,6 +288,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -561,6 +576,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0

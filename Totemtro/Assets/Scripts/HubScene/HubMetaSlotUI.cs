@@ -11,10 +11,24 @@ public class HubMetaSlotUI : MonoBehaviour,
 {
     public Image icon;
     public TMP_Text amountText;
+
+    [HideInInspector]
     public int slotIndex;
 
     ItemData currentItem;
     int currentAmount;
+
+    void Awake()
+    {
+        if (MetaInventory.Instance != null)
+            MetaInventory.Instance.onInventoryChanged += Refresh;
+    }
+
+    void OnDestroy()
+    {
+        if (MetaInventory.Instance != null)
+            MetaInventory.Instance.onInventoryChanged -= Refresh;
+    }
 
     void Start()
     {
@@ -23,9 +37,25 @@ public class HubMetaSlotUI : MonoBehaviour,
 
     public void Refresh()
     {
+        // Diagnóstico rápido: comprobar referencias del prefab
+        if (icon == null)
+        {
+            Debug.LogError($"HubMetaSlotUI: 'icon' no asignado en prefab (slotIndex={slotIndex})");
+            return;
+        }
+
+        if (amountText == null)
+        {
+            Debug.LogError($"HubMetaSlotUI: 'amountText' no asignado en prefab (slotIndex={slotIndex})");
+            return;
+        }
+
         var inventory = MetaInventory.Instance;
 
-        if (inventory == null || inventory.slots == null)
+        if (inventory == null)
+            return;
+
+        if (inventory.slots == null)
             return;
 
         if (slotIndex < 0 || slotIndex >= inventory.slots.Length)
@@ -43,10 +73,24 @@ public class HubMetaSlotUI : MonoBehaviour,
             return;
         }
 
+        // Comprobar que el ItemData tiene sprite
+        if (currentItem.icon == null)
+        {
+            Debug.LogWarning($"HubMetaSlotUI: item '{currentItem.itemName}' (id={currentItem.itemID}) tiene icon NULL (slot {slotIndex})");
+        }
+
         icon.enabled = true;
         icon.sprite = currentItem.icon;
-        amountText.text = currentAmount > 1 ? currentAmount.ToString() : "";
+
+        amountText.text =
+            currentAmount > 1 ?
+            currentAmount.ToString() :
+            "";
     }
+
+    // ==========================
+    // DRAG
+    // ==========================
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -70,19 +114,23 @@ public class HubMetaSlotUI : MonoBehaviour,
     {
         var drag = MetaDragUI.Instance;
 
-        if (drag == null || !drag.IsDragging || drag.draggedItem == null)
+        if (drag == null || !drag.IsDragging)
             return;
 
         InventoryTransferSystem.MoveAmount(
             drag.source,
             drag.sourceIndex,
-            true,
+            DragSource.Meta,
             slotIndex,
             drag.draggedAmount
         );
 
         drag.Hide();
     }
+
+    // ==========================
+    // QUICK TRANSFER
+    // ==========================
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -91,7 +139,11 @@ public class HubMetaSlotUI : MonoBehaviour,
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            InventoryTransferSystem.MoveFullStack(true, slotIndex);
+            InventoryTransferSystem.MoveFullStack(
+                DragSource.Meta,
+                slotIndex,
+                DragSource.Loadout
+            );
         }
         else if (Input.GetKey(KeyCode.LeftControl))
         {
@@ -103,7 +155,7 @@ public class HubMetaSlotUI : MonoBehaviour,
                 InventoryTransferSystem.MoveAmount(
                     DragSource.Meta,
                     slotIndex,
-                    false,
+                    DragSource.Loadout,
                     target,
                     half
                 );
@@ -115,28 +167,20 @@ public class HubMetaSlotUI : MonoBehaviour,
     {
         var loadout = RunLoadoutSystem.Instance;
 
-        if (loadout == null || loadout.loadoutSlots == null)
+        if (loadout == null)
+            return -1;
+
+        if (loadout.loadoutSlots == null)
             return -1;
 
         for (int i = 0; i < loadout.loadoutSlots.Length; i++)
         {
-            if (loadout.loadoutSlots[i].item == null ||
-                loadout.loadoutSlots[i].item == currentItem)
+            var slot = loadout.loadoutSlots[i];
+
+            if (slot.item == null || slot.item == currentItem)
                 return i;
         }
 
         return -1;
-    }
-
-    void OnEnable()
-    {
-        if (MetaInventory.Instance != null)
-            MetaInventory.Instance.onInventoryChanged += Refresh;
-    }
-
-    void OnDisable()
-    {
-        if (MetaInventory.Instance != null)
-            MetaInventory.Instance.onInventoryChanged -= Refresh;
     }
 }

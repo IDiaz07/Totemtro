@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a3b6c4db878f184da06b29f9251efc3, type: 3}
   m_Name: Brute Metal
   m_EditorClassIdentifier: 
+  itemID: brute_metal
   itemName: Brute Metal
   icon: {fileID: 21300000, guid: 846960e830ade8340be7987dc89ba32f, type: 3}
   itemType: 0
@@ -22,3 +23,5 @@ MonoBehaviour:
   cooldown: 0
   worldPrefab: {fileID: 1446103798750561405, guid: a7da32f86a3dea04fa64e7276c494727, type: 3}
   ability: {fileID: 0}
+  isConsumableInLoadout: 0
+  equipmentSlotType: 0

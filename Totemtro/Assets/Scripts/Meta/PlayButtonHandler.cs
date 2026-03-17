@@ -7,19 +7,8 @@ public class PlayButtonHandler : MonoBehaviour
 
     public void StartGame()
     {
-        if (HeroSelectionManager.Instance == null)
-        {
-            Debug.LogError("HeroSelectionManager not found");
-            return;
-        }
-
-        HeroData hero = HeroSelectionManager.Instance.SelectedHero;
-
-        if (hero == null)
-        {
-            Debug.LogWarning("No hero selected");
-            return;
-        }
+        HeroData hero =
+            HeroSelectionManager.Instance.SelectedHero;
 
         GameSessionManager.Instance.SetSelectedHero(hero);
 

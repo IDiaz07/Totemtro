@@ -2,143 +2,243 @@
 
 public static class InventoryTransferSystem
 {
-    public static void MoveAmount(
-        DragSource source,
-        int fromIndex,
-        bool toMeta,
-        int toIndex,
-        int amount
-    )
+    static InventorySlot[] GetSlotsFor(DragSource src)
     {
-        var meta = MetaInventory.Instance;
-        var loadout = RunLoadoutSystem.Instance;
-
-        // 🔒 Seguridad básica
-        if (meta == null || loadout == null)
-            return;
-
-        if (meta.slots == null || loadout.loadoutSlots == null)
-            return;
-
-        InventorySlot[] fromArray =
-            source == DragSource.Meta ? meta.slots : loadout.loadoutSlots;
-
-        InventorySlot[] toArray =
-            toMeta ? meta.slots : loadout.loadoutSlots;
-
-        if (fromArray == null || toArray == null)
-            return;
-
-        if (fromIndex < 0 || fromIndex >= fromArray.Length)
-            return;
-
-        if (toIndex < 0 || toIndex >= toArray.Length)
-            return;
-
-        var fromSlot = fromArray[fromIndex];
-        var toSlot = toArray[toIndex];
-
-        if (fromSlot == null || fromSlot.item == null)
-            return;
-
-        if (amount <= 0)
-            return;
-
-        int moveAmount = Mathf.Min(amount, fromSlot.amount);
-
-        // 🔥 MERGE
-        if (toSlot.item == fromSlot.item &&
-            toSlot.amount < fromSlot.item.maxStack)
+        switch (src)
         {
-            int space = fromSlot.item.maxStack - toSlot.amount;
-            int add = Mathf.Min(space, moveAmount);
+            case DragSource.Meta:
+                return MetaInventory.Instance?.slots;
 
-            toSlot.amount += add;
-            fromSlot.amount -= add;
-        }
-        // 🔥 EMPTY SLOT
-        else if (toSlot.item == null)
-        {
-            toSlot.item = fromSlot.item;
-            toSlot.amount = moveAmount;
-            fromSlot.amount -= moveAmount;
-        }
-        // 🔥 SWAP (solo si mueves todo)
-        else if (moveAmount == fromSlot.amount)
-        {
-            var tempItem = toSlot.item;
-            var tempAmount = toSlot.amount;
+            case DragSource.Bag:
+                return MetaInventory.Instance?.bagSlots;
 
-            toSlot.item = fromSlot.item;
-            toSlot.amount = fromSlot.amount;
-
-            fromSlot.item = tempItem;
-            fromSlot.amount = tempAmount;
-
-            meta.NotifyInventoryChanged();
-            loadout.NotifyLoadoutChanged();
-            return;
+            case DragSource.Armor:
+                return MetaInventory.Instance?.armorSlots;
         }
 
-        if (fromSlot.amount <= 0)
-            fromSlot.Clear();
-
-        meta.NotifyInventoryChanged();
-        loadout.NotifyLoadoutChanged();
+        return null;
     }
 
-    public static void MoveFullStack(bool fromMeta, int index)
+    // ===================================
+    // TRANSFER STACK (GENERIC)
+    // ===================================
+
+    public static bool TransferStack(
+        InventorySlot[] source,
+        int fromIndex,
+        InventorySlot[] target)
     {
         var meta = MetaInventory.Instance;
-        var loadout = RunLoadoutSystem.Instance;
 
-        if (meta == null || loadout == null)
-            return;
+        if (source == null || target == null)
+            return false;
 
-        if (meta.slots == null || loadout.loadoutSlots == null)
-            return;
+        if (fromIndex < 0 || fromIndex >= source.Length)
+            return false;
 
-        if (fromMeta)
+        var src = source[fromIndex];
+
+        if (src.IsEmpty())
+            return false;
+
+        ItemData item = src.item;
+        int remaining = src.amount;
+
+        // STACK FIRST
+        foreach (var slot in target)
         {
-            if (index < 0 || index >= meta.slots.Length)
-                return;
+            if (slot.item != item)
+                continue;
 
-            var slot = meta.slots[index];
-            if (slot == null || slot.item == null)
-                return;
+            int space = item.maxStack - slot.amount;
+            int add = Mathf.Min(space, remaining);
 
-            for (int i = 0; i < loadout.loadoutSlots.Length; i++)
+            slot.amount += add;
+            remaining -= add;
+
+            if (remaining <= 0)
+                break;
+        }
+
+        // EMPTY SLOT
+        foreach (var slot in target)
+        {
+            if (remaining <= 0)
+                break;
+
+            if (slot.IsEmpty())
             {
-                var target = loadout.loadoutSlots[i];
-
-                if (target.item == null ||
-                    target.item == slot.item)
-                {
-                    MoveAmount(DragSource.Meta, index, false, i, slot.amount);
-                    return;
-                }
+                slot.item = item;
+                slot.amount = remaining;
+                remaining = 0;
             }
+        }
+
+        src.amount = remaining;
+
+        if (src.amount <= 0)
+            src.Clear();
+
+        meta.NotifyInventoryChanged();
+        meta.SaveMetaInventory();
+
+        return true;
+    }
+
+    // ===================================
+    // MOVE AMOUNT (DRAG)
+    // ===================================
+
+    public static bool MoveAmount(
+        DragSource source,
+        int fromIndex,
+        DragSource target,
+        int toIndex,
+        int amount)
+    {
+        var meta = MetaInventory.Instance;
+
+        if (meta == null)
+            return false;
+
+        var srcSlots = GetSlotsFor(source);
+        var dstSlots = GetSlotsFor(target);
+
+        if (srcSlots == null || dstSlots == null)
+            return false;
+
+        if (fromIndex < 0 || fromIndex >= srcSlots.Length)
+            return false;
+
+        if (toIndex < 0 || toIndex >= dstSlots.Length)
+            return false;
+
+        var src = srcSlots[fromIndex];
+        var dst = dstSlots[toIndex];
+
+        if (src.IsEmpty())
+            return false;
+
+        int moveAmount = Mathf.Min(amount, src.amount);
+
+        if (dst.item != null && dst.item == src.item)
+        {
+            int space = dst.item.maxStack - dst.amount;
+            int toAdd = Mathf.Min(space, moveAmount);
+
+            dst.amount += toAdd;
+            src.amount -= toAdd;
+
+            if (src.amount <= 0)
+                src.Clear();
+        }
+        else if (dst.IsEmpty())
+        {
+            dst.item = src.item;
+            dst.amount = moveAmount;
+
+            src.amount -= moveAmount;
+
+            if (src.amount <= 0)
+                src.Clear();
         }
         else
         {
-            if (index < 0 || index >= loadout.loadoutSlots.Length)
-                return;
+            var tempItem = dst.item;
+            var tempAmount = dst.amount;
 
-            var slot = loadout.loadoutSlots[index];
-            if (slot == null || slot.item == null)
-                return;
+            dst.item = src.item;
+            dst.amount = src.amount;
 
-            for (int i = 0; i < meta.slots.Length; i++)
-            {
-                var target = meta.slots[i];
-
-                if (target.item == null ||
-                    target.item == slot.item)
-                {
-                    MoveAmount(DragSource.Loadout, index, true, i, slot.amount);
-                    return;
-                }
-            }
+            src.item = tempItem;
+            src.amount = tempAmount;
         }
+
+        srcSlots[fromIndex] = src;
+        dstSlots[toIndex] = dst;
+
+        meta.NotifyInventoryChanged();
+        meta.SaveMetaInventory();
+
+        return true;
+    }
+
+    // ===================================
+    // MOVE FULL STACK (SHIFT CLICK)
+    // ===================================
+
+    public static bool MoveFullStack(
+        DragSource source,
+        int fromIndex,
+        DragSource target)
+    {
+        var meta = MetaInventory.Instance;
+        var actionBar = ActionBarController.Instance;
+
+        if (meta == null)
+            return false;
+
+        // =========================
+        // BAG → ACTIONBAR
+        // =========================
+
+        if (source == DragSource.Bag && target == DragSource.ActionBar)
+        {
+            var bagSlot = meta.bagSlots[fromIndex];
+
+            if (bagSlot.IsEmpty())
+                return false;
+
+            if (bagSlot.item.itemType != ItemType.Consumable)
+                return false;
+
+            bool added = actionBar.TryAddItem(
+                bagSlot.item,
+                bagSlot.amount
+            );
+
+            if (!added)
+            {
+                var shake = Object.FindFirstObjectByType<UIShake>();
+
+                if (shake != null)
+                    shake.Play();
+
+                return false;
+            }
+
+            bagSlot.Clear();
+
+            meta.NotifyInventoryChanged();
+            return true;
+        }
+
+        // =========================
+        // INVENTORY → BAG
+        // =========================
+
+        if (source == DragSource.Meta && target == DragSource.Bag)
+        {
+            return TransferStack(
+                meta.slots,
+                fromIndex,
+                meta.bagSlots
+            );
+        }
+
+        // =========================
+        // BAG → INVENTORY
+        // =========================
+
+        if (source == DragSource.Bag && target == DragSource.Meta)
+        {
+            return TransferStack(
+                meta.bagSlots,
+                fromIndex,
+                meta.slots
+            );
+        }
+
+        return false;
     }
 }

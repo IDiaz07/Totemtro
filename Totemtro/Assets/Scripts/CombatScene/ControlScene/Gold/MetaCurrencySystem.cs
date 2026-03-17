@@ -24,6 +24,8 @@ public class MetaCurrencySystem : MonoBehaviour
             transform.SetParent(null);
 
         DontDestroyOnLoad(gameObject);
+
+        Load(); // 🔥 FALTABA ESTO
     }
 
     void Load()

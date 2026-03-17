@@ -37,6 +37,11 @@ public class AstraelBoss : MonoBehaviour
     public AudioClip bossMusic;
     public AudioClip normalMusic;
 
+    [Header("Portal Spawn")]
+    public float spawnHeightOffset = 2.5f;
+    public float emergeDuration = 1.2f;
+    public float finalYOffset = -0.8f;
+    public float bossFinalScale = 1.4f;
 
     Enemy enemy;
     Transform player;
@@ -72,6 +77,11 @@ public class AstraelBoss : MonoBehaviour
         originalCamPos = mainCamera.transform.position;
 
         ClearAllEnemies();
+
+        // 🔥 ocultar boss al inicio
+        if (bodyRenderer != null)
+            bodyRenderer.enabled = false;
+
         StartCoroutine(Introduction());
     }
 
@@ -99,19 +109,33 @@ public class AstraelBoss : MonoBehaviour
             EnterEnrage();
     }
 
+    void EnsureCamera()
+    {
+        if (mainCamera == null)
+            mainCamera = Camera.main;
+
+        if (mainCamera != null && cameraFollow == null)
+            cameraFollow = mainCamera.GetComponent<CameraFollow>();
+    }
+
+
     // ==============================
     // INTRO
     // ==============================
 
     IEnumerator Introduction()
     {
+        EnsureCamera();
+
         Time.timeScale = 0f;
+
         if (cameraFollow != null)
             cameraFollow.enabled = false;
 
-        Camera cam = Camera.main;
-        Vector3 originalPos = cam.transform.position;
-        float originalSize = cam.orthographicSize;
+        Camera cam = mainCamera;
+
+        Vector3 originalPos = originalCamPos;
+        float originalSize = originalCamSize;
 
         // 🔥 Spawn portal
         GameObject portal = Instantiate(
@@ -128,7 +152,7 @@ public class AstraelBoss : MonoBehaviour
         // 🌑 Oscurecer pantalla
         yield return StartCoroutine(FadeScreen(1f, 0.5f));
 
-        // 🎥 Cámara va al boss
+        // 🎥 Cámara al boss
         float t = 0f;
         float duration = 1f;
 
@@ -140,7 +164,8 @@ public class AstraelBoss : MonoBehaviour
                 t / duration
             );
 
-            cam.orthographicSize = Mathf.Lerp(originalSize, originalSize - 2f, t / duration);
+            cam.orthographicSize =
+                Mathf.Lerp(originalSize, originalSize - 2f, t / duration);
 
             t += Time.unscaledDeltaTime;
             yield return null;
@@ -149,28 +174,61 @@ public class AstraelBoss : MonoBehaviour
         cam.transform.position =
             new Vector3(transform.position.x, transform.position.y, originalPos.z);
 
-        // 🔥 Boss emerge desde el portal
-        transform.localScale = Vector3.zero;
-        Destroy(portal);
+        // =============================
+        // EMERGER DEL PORTAL
+        // =============================
 
-        float emergeTime = 1f;
+        Vector3 portalPos = transform.position;
+
+        Vector3 startPos = portalPos + Vector3.up * spawnHeightOffset;
+        Vector3 endPos = portalPos + Vector3.up * finalYOffset;
+
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.bodyType = RigidbodyType2D.Kinematic;
+        }
+
+        transform.position = startPos;
+        transform.localScale = Vector3.zero;
+
+        if (bodyRenderer != null)
+            bodyRenderer.enabled = true;
+
+        float emergeTime = emergeDuration;
         t = 0f;
 
         while (t < emergeTime)
         {
-            transform.localScale = Vector3.Lerp(
-                Vector3.zero,
-                Vector3.one,
-                t / emergeTime
-            );
+            float progress = t / emergeTime;
+
+            transform.position =
+                Vector3.Lerp(startPos, endPos, progress);
+
+            transform.localScale =
+                Vector3.Lerp(Vector3.zero, Vector3.one * bossFinalScale, progress);
 
             t += Time.unscaledDeltaTime;
             yield return null;
         }
 
-        transform.localScale = Vector3.one;
+        transform.position = endPos;
+        transform.localScale = Vector3.one * bossFinalScale;
 
-        // 💀 Mostrar nombre
+
+        // esperar 1 segundo con el boss ya fuera
+        yield return new WaitForSecondsRealtime(1f);
+
+        // ahora destruir portal
+        Destroy(portal);
+
+
+        // =============================
+        // NOMBRE DEL BOSS
+        // =============================
+
         BossNameCinematic nameUI =
             FindFirstObjectByType<BossNameCinematic>();
 
@@ -179,7 +237,6 @@ public class AstraelBoss : MonoBehaviour
                 nameUI.ShowName("Astrael, The Null Sovereign")
             );
 
-        // Crear arena ahora
         SpawnDynamicArena();
 
         yield return new WaitForSecondsRealtime(1f);
@@ -187,20 +244,15 @@ public class AstraelBoss : MonoBehaviour
         // 🌑 Quitar oscuridad
         yield return StartCoroutine(FadeScreen(0f, 0.5f));
 
-        // 🔥 Reactivar seguimiento normal
         cam.orthographicSize = originalSize;
 
-        if (cameraFollow != null)
-            cameraFollow.enabled = true;
-
-        cam.orthographicSize = originalSize;
         if (cameraFollow != null)
             cameraFollow.enabled = true;
 
         Time.timeScale = 1f;
 
         CreateBossUI();
-        // ⏳ Espera 3 segundos antes de atacar
+
         yield return new WaitForSeconds(1f);
 
         StartCoroutine(SphereLoop());
@@ -208,9 +260,13 @@ public class AstraelBoss : MonoBehaviour
     }
 
 
+
     IEnumerator CameraFocusOnBoss()
     {
+        EnsureCamera();
+
         float duration = 1.2f;
+
         float t = 0f;
 
         Vector3 bossCamPos =
@@ -225,7 +281,8 @@ public class AstraelBoss : MonoBehaviour
             t += Time.unscaledDeltaTime;
 
             mainCamera.transform.position =
-                Vector3.Lerp(originalCamPos, bossCamPos, t / duration);
+                Vector3.Lerp(mainCamera.transform.position, bossCamPos, t / duration);
+
 
             mainCamera.orthographicSize =
                 Mathf.Lerp(originalCamSize, zoomSize, t / duration);
@@ -655,7 +712,10 @@ public class AstraelBoss : MonoBehaviour
 
     IEnumerator UltraCinematicDeath()
     {
+        EnsureCamera();
+
         SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
+
         Vector3 originalScale = transform.localScale;
 
         // 🎥 Cámara zoom brutal

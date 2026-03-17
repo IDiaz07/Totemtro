@@ -79,38 +79,6 @@ public class CraftingRecipeSlotUI : MonoBehaviour
         }
     }
 
-    /*void Update()
-    {
-        if (!initialized) return;
-        if (recipe == null) return;
-        if (craftingSystem == null) return;
-        if (craftingSystem.playerInventory == null) return;
-        if (ingredientsContainer == null) return;
-
-        int ingredientIndex = 0;
-
-        for (int i = 0; i < ingredientsContainer.childCount; i++)
-        {
-            Transform child = ingredientsContainer.GetChild(i);
-
-            IngredientUI ui = child.GetComponent<IngredientUI>();
-            if (ui == null)
-                continue;
-
-            if (ingredientIndex >= recipe.ingredients.Length)
-                break;
-
-            var ing = recipe.ingredients[ingredientIndex];
-
-            int current = craftingSystem.playerInventory.GetAmount(ing.item);
-
-            ui.amountText.text = current + " / " + ing.amount;
-            ui.amountText.color = current < ing.amount ? Color.red : Color.white;
-
-            ingredientIndex++;
-        }
-    }*/
-
 
     void TryCraft()
     {

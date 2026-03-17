@@ -8,18 +8,21 @@ public class GameSessionManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance != null)
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+            Debug.Log("GameSessionManager initialized");
+        }
+        else
         {
             Destroy(gameObject);
-            return;
         }
-
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
     }
 
     public void SetSelectedHero(HeroData hero)
     {
         selectedHero = hero;
+        Debug.Log("Hero selected: " + hero.heroName);
     }
 }

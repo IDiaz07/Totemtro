@@ -33,15 +33,23 @@ public class HeroController : MonoBehaviour
         GamePause.Reset();
 
         // 🔥 Hero seleccionado desde el Hub
-        if (GameSessionManager.Instance != null &&
-            GameSessionManager.Instance.selectedHero != null)
+        if (HeroSelectionManager.Instance != null &&
+            HeroSelectionManager.Instance.SelectedHero != null)
         {
-            currentHero = GameSessionManager.Instance.selectedHero;
+            currentHero = HeroSelectionManager.Instance.SelectedHero;
         }
 
         if (currentHero != null)
             ApplyHero();
     }
+
+    void Awake()
+    {
+        var cam = GetComponentInChildren<Camera>();
+        if (cam != null)
+            cam.enabled = false;
+    }
+
 
     // =========================================
     // APPLY HERO DATA

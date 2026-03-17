@@ -13,17 +13,21 @@ public class InventoryController : MonoBehaviour
 
     bool isOpen = false;
 
-    void Update()
+    void Start()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            ToggleInventory();
-        }
+        // Empieza activado para que Awake/Start de los hijos corran,
+        // luego lo cerramos por código
+        CloseAll();
     }
 
-    // ===============================
-    // TOGGLE GENERAL
-    // ===============================
+    void Update()
+    {
+        if (GameInputLock.IsLocked)
+            return;
+
+        if (Input.GetKeyDown(KeyCode.E))
+            ToggleInventory();
+    }
 
     public void ToggleInventory()
     {
@@ -36,26 +40,18 @@ public class InventoryController : MonoBehaviour
     void OpenInventory()
     {
         isOpen = true;
-
         PauseGame();
-
         ShowInventory();
     }
 
     public void CloseAll()
     {
         isOpen = false;
-
         inventoryPanel.SetActive(false);
         totemPanel.SetActive(false);
         craftingPanel.SetActive(false);
-
         ResumeGame();
     }
-
-    // ===============================
-    // PANEL SWITCHING
-    // ===============================
 
     public void ShowInventory()
     {
@@ -78,10 +74,6 @@ public class InventoryController : MonoBehaviour
         craftingPanel.SetActive(true);
     }
 
-    // ===============================
-    // PAUSE CONTROL
-    // ===============================
-
     void PauseGame()
     {
         if (playerMovement != null)
@@ -89,10 +81,8 @@ public class InventoryController : MonoBehaviour
 
         if (playerWeapon != null)
         {
-            // cancelar ataques en curso
             playerWeapon.isAiming = false;
             playerWeapon.isAttacking = false;
-
             playerWeapon.enabled = false;
         }
 

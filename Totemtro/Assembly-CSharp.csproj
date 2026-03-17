@@ -55,7 +55,6 @@
     <UnityVersion>6000.0.69f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.69f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.69f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.69f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
@@ -73,6 +72,7 @@
     <Compile Include="Assets\Scripts\CombatScene\Inventory\Crafting\Book\CraftingRecipeSlotUI.cs" />
     <Compile Include="Assets\Scripts\Meta\Game\LoadoutUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Enemies\EnemyOrganicChase.cs" />
+    <Compile Include="Assets\Scripts\Meta\MetaBootstrap.cs" />
     <Compile Include="Assets\Scripts\Meta\Game\CurrencyDebugCheats.cs" />
     <Compile Include="Assets\Scripts\HubScene\Inventory\EquipmentSlotUI.cs" />
     <Compile Include="Assets\Scripts\HubScene\Shop\ShopBundleReward.cs" />
@@ -175,9 +175,11 @@
     <Compile Include="Assets\Scripts\CombatScene\Inventory\Crafting\Book\CraftingBookUI.cs" />
     <Compile Include="Assets\Scripts\HubScene\Menu\MainMenuPanelController.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Characters\Attack\Nyra\NyraBloodBall.cs" />
+    <Compile Include="Assets\Scripts\Multiplayer\Inventario\SaveSystem.cs" />
     <Compile Include="Assets\Scripts\HubScene\HubPanelAnimator.cs" />
     <Compile Include="Assets\Scripts\HubScene\SlideTransition.cs" />
     <Compile Include="Assets\Scripts\HubScene\HubLoadoutSlotUI.cs" />
+    <Compile Include="Assets\Scripts\Meta\Character\CombatHeroUIUpdater.cs" />
     <Compile Include="Assets\Scripts\HubScene\Shop\Prefab\CarouselEffect.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Totems\TotemInventorySlotUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Characters\Attack\Nyra\NyraAttack.cs" />
@@ -186,6 +188,7 @@
     <Compile Include="Assets\Scripts\CombatScene\Player\BandageAnimation.cs" />
     <Compile Include="Assets\Scripts\HubScene\Shop\ShopFragmentCardUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Player\BodySway.cs" />
+    <Compile Include="Assets\Scripts\Multiplayer\Inventario\ISaveSystem.cs" />
     <Compile Include="Assets\Scripts\CombatScene\HeroUnlockManager.cs" />
     <Compile Include="Assets\Scripts\Meta\Character\HeroSelectionManager.cs" />
     <Compile Include="Assets\Scripts\CombatScene\MusicManager.cs" />
@@ -211,6 +214,7 @@
     <Compile Include="Assets\Scripts\HubScene\Shop\ShopItemCardUI.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Enemies\Boss\Astrael, The Null Sovereign\ArenaController.cs" />
     <Compile Include="Assets\Scripts\CombatScene\Totems\TotemRandomGenerator.cs" />
+    <Compile Include="Assets\Scripts\Multiplayer\Inventario\LocalSaveSystem.cs" />
     <Compile Include="Assets\Scripts\Meta\Game\MetaInventoryUI.cs" />
     <Compile Include="Assets\Scripts\Core\DragSource.cs" />
     <Compile Include="Assets\Scripts\Meta\PlayButtonHandler.cs" />

@@ -2,13 +2,15 @@
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
-using System.Collections;
 
 public class ActionSlotUI : MonoBehaviour,
     IBeginDragHandler,
     IDragHandler,
     IEndDragHandler,
-    IDropHandler
+    IDropHandler,
+    IPointerClickHandler,
+    IPointerEnterHandler,
+    IPointerExitHandler
 {
     public Image icon;
     public Image cooldownOverlay;
@@ -18,6 +20,11 @@ public class ActionSlotUI : MonoBehaviour,
     int slotIndex;
     ActionBarController actionBar;
 
+    bool isPointerOver;
+
+    float lastClickTime;
+    const float doubleClickThreshold = 0.35f;
+
     void Awake()
     {
         actionBar = FindFirstObjectByType<ActionBarController>();
@@ -26,14 +33,19 @@ public class ActionSlotUI : MonoBehaviour,
     public void Setup(int index)
     {
         slotIndex = index;
-        keyText.text = (index + 1).ToString();
+
+        if (keyText != null)
+            keyText.text = (index + 1).ToString();
     }
 
     void Update()
     {
+        if (actionBar == null)
+            return;
+
         var slot = actionBar.slots[slotIndex];
 
-        if (slot.IsEmpty())
+        if (slot == null || slot.IsEmpty())
         {
             icon.enabled = false;
             amountText.text = "";
@@ -43,103 +55,264 @@ public class ActionSlotUI : MonoBehaviour,
 
         icon.enabled = true;
         icon.sprite = slot.item.icon;
-        amountText.text = slot.amount > 1 ? slot.amount.ToString() : "";
 
-        if (slot.item.cooldown > 0f)
+        amountText.text =
+            slot.amount > 1 ? slot.amount.ToString() : "";
+
+        if (slot.item.cooldown > 0)
             cooldownOverlay.fillAmount =
                 slot.cooldownRemaining / slot.item.cooldown;
         else
             cooldownOverlay.fillAmount = 0f;
+
+        if (isPointerOver &&
+            Input.GetKey(KeyCode.LeftControl) &&
+            Input.GetKeyDown(KeyCode.Q))
+        {
+            DropStack();
+        }
     }
 
-    public void OnDrop(PointerEventData eventData)
+    void DropStack()
     {
-        var drag = DragItemManager.Instance;
+        var slot = actionBar.slots[slotIndex];
 
-        if (!drag.IsDragging)
+        if (slot == null || slot.IsEmpty())
             return;
 
-        // 🔥 Si viene del inventario
-        if (drag.sourceType == DragSourceType.Inventory)
-        {
-            RunInventory inventory =
-                FindFirstObjectByType<RunInventory>();
+        slot.Clear();
 
-            var slot = inventory.slots[drag.sourceIndex];
-
-            // ❌ SOLO CONSUMIBLES
-            if (slot.item.itemType != ItemType.Consumable)
-            {
-                StartCoroutine(Shake());
-                return;
-            }
-
-            actionBar.AssignToSlot(drag.sourceIndex, slotIndex);
-        }
-
-        // 🔥 Si viene del ActionBar
-        if (drag.sourceType == DragSourceType.ActionBar)
-        {
-            var other = actionBar.slots[drag.sourceIndex];
-            var current = actionBar.slots[slotIndex];
-
-            actionBar.slots[slotIndex] = other;
-            actionBar.slots[drag.sourceIndex] = current;
-        }
-
-        drag.ClearDrag();
+        MetaInventory.Instance.NotifyInventoryChanged();
     }
+
+    // =====================
+    // DRAG
+    // =====================
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         var slot = actionBar.slots[slotIndex];
 
-        if (slot.IsEmpty())
+        if (slot == null || slot.IsEmpty())
             return;
 
-        DragItemManager.Instance.StartDrag(
+        MetaDragUI.Instance.Show(
             slot.item,
             slot.amount,
-            DragSourceType.ActionBar,
+            DragSource.ActionBar,
             slotIndex
         );
-
-        icon.color = new Color(1, 1, 1, 0);
     }
 
-    public void OnDrag(PointerEventData eventData)
-    {
-    }
+    public void OnDrag(PointerEventData eventData) { }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        icon.color = Color.white;
+        var drag = MetaDragUI.Instance;
 
-        if (DragItemManager.Instance.IsDragging)
-            DragItemManager.Instance.ClearDrag();
+        if (drag == null || !drag.IsDragging)
+            return;
+
+        drag.Hide();
     }
 
-    IEnumerator Shake()
+    // =====================
+    // DROP
+    // =====================
+
+    public void OnDrop(PointerEventData eventData)
     {
-        Vector3 original = icon.rectTransform.localPosition;
+        var drag = MetaDragUI.Instance;
 
-        float duration = 0.2f;
-        float strength = 8f;
+        if (drag == null || !drag.IsDragging)
+            return;
 
-        float timer = 0f;
-
-        while (timer < duration)
+        // ACTIONBAR → ACTIONBAR
+        if (drag.source == DragSource.ActionBar)
         {
-            timer += Time.unscaledDeltaTime;
+            int from = drag.sourceIndex;
+            int to = slotIndex;
 
-            float x = Mathf.Sin(timer * 40f) * strength;
+            var a = actionBar.slots[from];
+            var b = actionBar.slots[to];
 
-            icon.rectTransform.localPosition =
-                original + new Vector3(x, 0, 0);
+            actionBar.slots[from] = b;
+            actionBar.slots[to] = a;
 
-            yield return null;
+            drag.Hide();
+            return;
         }
 
-        icon.rectTransform.localPosition = original;
+        // BAG → ACTIONBAR
+        if (drag.source == DragSource.Bag)
+        {
+            var meta = MetaInventory.Instance;
+
+            var bagSlot = meta.bagSlots[drag.sourceIndex];
+
+            if (bagSlot.IsEmpty())
+                return;
+
+            var actionSlot = actionBar.slots[slotIndex];
+
+            actionSlot.item = bagSlot.item;
+            actionSlot.amount = bagSlot.amount;
+
+            bagSlot.Clear();
+
+            meta.NotifyInventoryChanged();
+
+            drag.Hide();
+            return;
+        }
+    }
+
+    // =====================
+    // CLICK
+    // =====================
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (eventData.button == PointerEventData.InputButton.Left && (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
+        {
+            QuickMoveToInventory();
+            return;
+        }
+
+
+        var slot = actionBar.slots[slotIndex];
+
+        if (slot == null || slot.IsEmpty())
+            return;
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            QuickMoveToInventory();
+            return;
+        }
+
+        if (eventData.button ==
+            PointerEventData.InputButton.Right)
+        {
+            UseItem();
+            return;
+        }
+
+        if (eventData.button ==
+            PointerEventData.InputButton.Left)
+        {
+            if (Time.unscaledTime - lastClickTime <
+                doubleClickThreshold)
+                StackAllItems();
+
+            lastClickTime = Time.unscaledTime;
+        }
+    }
+
+    void QuickMoveToInventory()
+    {
+        var slot = actionBar.slots[slotIndex];
+
+        if (slot == null || slot.IsEmpty())
+            return;
+
+        MetaInventory meta = MetaInventory.Instance;
+
+        if (meta.AddItem(slot.item, slot.amount))
+            slot.Clear();
+
+        meta.NotifyInventoryChanged();
+    }
+
+    void UseItem()
+    {
+        var slot = actionBar.slots[slotIndex];
+
+        if (slot == null || slot.IsEmpty())
+            return;
+
+        var hero = FindFirstObjectByType<HeroController>();
+
+        if (hero == null)
+            return;
+
+        if (slot.item.ability == null)
+            return;
+
+        bool activated =
+            slot.item.ability.TryActivate(hero.gameObject);
+
+        if (!activated)
+            return;
+
+        slot.amount--;
+
+        if (slot.amount <= 0)
+            slot.Clear();
+
+        MetaInventory.Instance.NotifyInventoryChanged();
+    }
+
+    void StackAllItems()
+    {
+        var slot = actionBar.slots[slotIndex];
+
+        if (slot == null || slot.IsEmpty())
+            return;
+
+        MetaInventory meta = MetaInventory.Instance;
+
+        foreach (var s in meta.slots)
+        {
+            if (s.IsEmpty())
+                continue;
+
+            if (s.item != slot.item)
+                continue;
+
+            int space =
+                slot.item.maxStack - slot.amount;
+
+            if (space <= 0)
+                break;
+
+            int move =
+                Mathf.Min(space, s.amount);
+
+            slot.amount += move;
+            s.amount -= move;
+
+            if (s.amount <= 0)
+                s.Clear();
+        }
+
+        meta.NotifyInventoryChanged();
+    }
+
+    // =====================
+    // POINTER
+    // =====================
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        isPointerOver = true;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        isPointerOver = false;
+    }
+
+    public ItemData GetCurrentItem()
+    {
+        if (actionBar == null)
+            return null;
+
+        var slot = actionBar.slots[slotIndex];
+
+        if (slot == null)
+            return null;
+
+        return slot.item;
     }
 }

@@ -2,15 +2,12 @@
 
 public class ActionBarController : MonoBehaviour
 {
-    public RunInventory inventory;
+    public MetaInventory inventory;
     public ActionSlot[] slots = new ActionSlot[8];
 
-    HeroController hero;
+    public static ActionBarController Instance;
 
-    void Start()
-    {
-        hero = FindFirstObjectByType<HeroController>();
-    }
+    HeroController hero;
 
     KeyCode[] keys =
     {
@@ -26,6 +23,11 @@ public class ActionBarController : MonoBehaviour
 
     void Awake()
     {
+        Instance = this;
+
+        if (inventory == null)
+            inventory = MetaInventory.Instance;
+
         if (slots == null || slots.Length != 8)
             slots = new ActionSlot[8];
 
@@ -34,6 +36,11 @@ public class ActionBarController : MonoBehaviour
             if (slots[i] == null)
                 slots[i] = new ActionSlot();
         }
+    }
+
+    void Start()
+    {
+        hero = FindFirstObjectByType<HeroController>();
     }
 
     void Update()
@@ -65,44 +72,21 @@ public class ActionBarController : MonoBehaviour
         }
     }
 
-    public void AssignToSlot(int inventoryIndex, int actionIndex)
-    {
-        if (inventoryIndex < 0 || inventoryIndex >= inventory.slots.Length)
-            return;
-
-        if (actionIndex < 0 || actionIndex >= slots.Length)
-            return;
-
-        var invSlot = inventory.slots[inventoryIndex];
-
-        if (invSlot.IsEmpty())
-            return;
-
-        if (invSlot.item.itemType != ItemType.Consumable)
-            return;
-
-        slots[actionIndex].item = invSlot.item;
-        slots[actionIndex].amount = invSlot.amount;
-
-        invSlot.Clear();
-
-        inventory.NotifyInventoryChanged();
-    }
+    // ============================
+    // USE ITEM
+    // ============================
 
     void TryUseSlot(int index)
     {
-        if (index < 0 || index >= slots.Length)
-            return;
-
         var slot = slots[index];
 
         if (slot.IsEmpty())
             return;
 
-        if (slot.cooldownRemaining > 0f)
+        if (slot.item.ability == null)
             return;
 
-        if (slot.item.ability == null)
+        if (slot.cooldownRemaining > 0f)
             return;
 
         bool activated = slot.item.ability.TryActivate(hero.gameObject);
@@ -111,7 +95,18 @@ public class ActionBarController : MonoBehaviour
             return;
 
         slot.cooldownRemaining = slot.item.cooldown;
+
+        slot.amount--;
+
+        if (slot.amount <= 0)
+            slot.Clear();
+
+        inventory.NotifyInventoryChanged();
     }
+
+    // ============================
+    // CLEAR SLOT
+    // ============================
 
     public void ClearSlot(int index)
     {
@@ -121,10 +116,45 @@ public class ActionBarController : MonoBehaviour
         slots[index].Clear();
     }
 
-    public int AddToExistingStacks(ItemData item, int amount)
-    {
-        int remaining = amount;
+    // ============================
+    // ADD ITEM FROM BAG
+    // ============================
 
+    public void AssignToSlot(int bagIndex, int actionIndex)
+    {
+        if (inventory == null)
+            return;
+
+        if (bagIndex < 0 || bagIndex >= inventory.bagSlots.Length)
+            return;
+
+        if (actionIndex < 0 || actionIndex >= slots.Length)
+            return;
+
+        var bagSlot = inventory.bagSlots[bagIndex];
+
+        if (bagSlot.IsEmpty())
+            return;
+
+        if (bagSlot.item.itemType != ItemType.Consumable)
+            return;
+
+        var actionSlot = slots[actionIndex];
+
+        actionSlot.item = bagSlot.item;
+        actionSlot.amount = bagSlot.amount;
+
+        bagSlot.Clear();
+
+        inventory.NotifyInventoryChanged();
+    }
+
+    public bool TryAddItem(ItemData item, int amount)
+    {
+        if (item.itemType != ItemType.Consumable)
+            return false;
+
+        // 1️⃣ STACK EN SLOT EXISTENTE
         for (int i = 0; i < slots.Length; i++)
         {
             var slot = slots[i];
@@ -140,17 +170,58 @@ public class ActionBarController : MonoBehaviour
             if (space <= 0)
                 continue;
 
-            int toAdd = Mathf.Min(space, remaining);
+            int toAdd = Mathf.Min(space, amount);
 
             slot.amount += toAdd;
-            remaining -= toAdd;
+            amount -= toAdd;
 
-            if (remaining <= 0)
-                break;
+            if (amount <= 0)
+                return true;
         }
 
-        return remaining; // lo que NO se pudo meter
+        // 2️⃣ SLOT VACÍO
+        for (int i = 0; i < slots.Length; i++)
+        {
+            var slot = slots[i];
+
+            if (!slot.IsEmpty())
+                continue;
+
+            int toAdd = Mathf.Min(item.maxStack, amount);
+
+            slot.item = item;
+            slot.amount = toAdd;
+
+            amount -= toAdd;
+
+            if (amount <= 0)
+                return true;
+        }
+
+        // 3️⃣ NO HAY ESPACIO
+        return false;
     }
+    // ============================
+    // CHECK ITEM
+    // ============================
+
+    public bool HasItem(ItemData item)
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            var slot = slots[i];
+
+            if (!slot.IsEmpty() &&
+                slot.item == item)
+                return true;
+        }
+
+        return false;
+    }
+
+    // ============================
+    // CONSUME ITEMS
+    // ============================
 
     public void ConsumeBandage()
     {
@@ -168,6 +239,7 @@ public class ActionBarController : MonoBehaviour
                 if (slot.amount <= 0)
                     slot.Clear();
 
+                inventory.NotifyInventoryChanged();
                 return;
             }
         }
@@ -189,74 +261,9 @@ public class ActionBarController : MonoBehaviour
                 if (slot.amount <= 0)
                     slot.Clear();
 
+                inventory.NotifyInventoryChanged();
                 return;
             }
         }
-    }
-
-    public int AddConsumable(ItemData item, int amount)
-    {
-        if (item.itemType != ItemType.Consumable)
-            return amount;
-
-        int remaining = amount;
-
-        // 1️⃣ Stackear en slots existentes
-        for (int i = 0; i < slots.Length; i++)
-        {
-            var slot = slots[i];
-
-            if (slot.IsEmpty())
-                continue;
-
-            if (slot.item != item)
-                continue;
-
-            int space = item.maxStack - slot.amount;
-
-            if (space <= 0)
-                continue;
-
-            int toAdd = Mathf.Min(space, remaining);
-
-            slot.amount += toAdd;
-            remaining -= toAdd;
-
-            if (remaining <= 0)
-                return 0;
-        }
-
-        // 2️⃣ Crear nuevo stack en slot vacío
-        for (int i = 0; i < slots.Length; i++)
-        {
-            var slot = slots[i];
-
-            if (!slot.IsEmpty())
-                continue;
-
-            int toAdd = Mathf.Min(item.maxStack, remaining);
-
-            slot.item = item;
-            slot.amount = toAdd;
-
-            remaining -= toAdd;
-
-            if (remaining <= 0)
-                return 0;
-        }
-
-        return remaining;
-    }
-
-    public bool HasItem(ItemData item)
-    {
-        for (int i = 0; i < slots.Length; i++)
-        {
-            if (!slots[i].IsEmpty() &&
-                slots[i].item == item)
-                return true;
-        }
-
-        return false;
     }
 }

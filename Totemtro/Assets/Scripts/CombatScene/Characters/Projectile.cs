@@ -105,11 +105,9 @@ public class Projectile : MonoBehaviour
 
         if (enemy != null)
         {
-            // ignorar enemigo original (STAR)
             if (enemy == ignoredEnemy)
                 return;
 
-            // evitar hits múltiples
             if (hitEnemies.Contains(enemy))
                 return;
 
@@ -137,6 +135,14 @@ public class Projectile : MonoBehaviour
 
             if (enemiesHit > pierce)
                 Destroy(gameObject);
+
+            return;
+        }
+
+        // 🔥 OBSTÁCULO
+        if (other.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
+        {
+            Destroy(gameObject);
         }
     }
 }

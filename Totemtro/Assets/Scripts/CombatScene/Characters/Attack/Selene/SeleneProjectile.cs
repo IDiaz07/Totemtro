@@ -81,6 +81,11 @@ public class SeleneProjectile : MonoBehaviour
             SpawnHealNumber(player.transform.position, damage);
             Impact();
         }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
+        {
+            Impact();
+        }
     }
 
     void Impact()

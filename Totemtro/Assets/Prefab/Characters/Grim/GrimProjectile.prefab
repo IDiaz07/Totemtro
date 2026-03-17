@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5323278959373974079}
   - component: {fileID: -1340324562086236415}
   - component: {fileID: 1179428460066999613}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GrimProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

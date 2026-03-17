@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using System.Collections;
 
 public class SlotHoverLiftGlow : MonoBehaviour,
     IPointerEnterHandler,
@@ -9,8 +10,8 @@ public class SlotHoverLiftGlow : MonoBehaviour,
     [Header("References")]
     public RectTransform slotRoot;
     public RectTransform icon;
-    public RectTransform glowIcon;   // OPCIONAL
-    public Image iconShadow;         // OPCIONAL
+    public RectTransform glowIcon;
+    public Image iconShadow;
 
     [Header("Lift Settings")]
     public float liftAmount = 6f;
@@ -23,13 +24,16 @@ public class SlotHoverLiftGlow : MonoBehaviour,
     [Header("Glow Settings")]
     public float glowAlpha = 0.7f;
 
-    Vector2 originalPos;
-    Vector3 originalIconScale;
+    readonly Vector3 baseScale = Vector3.one;
+
+    Vector2 originalIconPos;
     Vector3 originalGlowScale;
     Color originalShadowColor;
 
     float targetValue = 0f;
     float currentValue = 0f;
+
+    bool ready = false;
 
     Image glowImage;
 
@@ -37,11 +41,6 @@ public class SlotHoverLiftGlow : MonoBehaviour,
     {
         if (slotRoot == null)
             slotRoot = GetComponent<RectTransform>();
-
-        originalPos = slotRoot.anchoredPosition;
-
-        if (icon != null)
-            originalIconScale = icon.localScale;
 
         if (glowIcon != null)
         {
@@ -52,7 +51,17 @@ public class SlotHoverLiftGlow : MonoBehaviour,
         if (iconShadow != null)
             originalShadowColor = iconShadow.color;
 
-        SetGlow(0f);
+        SetGlow(1f);
+    }
+
+    void Initialize()
+    {
+        if (ready) return;
+
+        if (icon != null)
+            originalIconPos = icon.anchoredPosition;
+
+        ready = true;
     }
 
     void Update()
@@ -72,6 +81,8 @@ public class SlotHoverLiftGlow : MonoBehaviour,
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        Initialize();
+        Debug.Log($"[Scale] Enter - icon: {(icon != null ? icon.name : "NULL")} | targetValue -> 1");
         targetValue = 1f;
     }
 
@@ -82,37 +93,40 @@ public class SlotHoverLiftGlow : MonoBehaviour,
 
     void ApplyVisuals(float t)
     {
-        // LIFT
-        slotRoot.anchoredPosition =
-            originalPos + Vector2.up * (liftAmount * t);
+        Debug.Log($"[Scale] ApplyVisuals t={t} | icon={(icon != null ? icon.name : "NULL")}");
+
+        // LIFT — mueve el icono, no el slotRoot
+        if (icon != null)
+        {
+            icon.anchoredPosition =
+                originalIconPos + Vector2.up * (liftAmount * t);
+        }
 
         // ICON SCALE
         if (icon != null)
         {
-            icon.localScale =
-                Vector3.Lerp(
-                    originalIconScale,
-                    originalIconScale * iconScale,
-                    t
-                );
+            icon.localScale = Vector3.Lerp(
+                baseScale,
+                baseScale * iconScale,
+                t
+            );
         }
 
         // GLOW SCALE
         if (glowIcon != null)
         {
-            glowIcon.localScale =
-                Vector3.Lerp(
-                    originalGlowScale,
-                    originalGlowScale * glowScale,
-                    t
-                );
+            glowIcon.localScale = Vector3.Lerp(
+                originalGlowScale,
+                originalGlowScale * glowScale,
+                t
+            );
         }
 
-        // GLOW ALPHA
+        // GLOW ALPHA — siempre 1
         if (glowImage != null)
         {
             Color c = glowImage.color;
-            c.a = glowAlpha * t;
+            c.a = 1f;
             glowImage.color = c;
         }
 
@@ -125,7 +139,6 @@ public class SlotHoverLiftGlow : MonoBehaviour,
                 originalShadowColor.a * 1.4f,
                 t
             );
-
             iconShadow.color = shadowColor;
         }
     }
@@ -155,7 +168,6 @@ public class SlotHoverLiftGlow : MonoBehaviour,
     void SetGlow(float alpha)
     {
         if (glowImage == null) return;
-
         Color c = glowImage.color;
         c.a = alpha;
         glowImage.color = c;

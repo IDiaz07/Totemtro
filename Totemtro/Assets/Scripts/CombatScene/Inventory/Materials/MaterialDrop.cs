@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(Rigidbody2D))]
@@ -36,7 +36,6 @@ public class MaterialDrop : MonoBehaviour
 
     Vector3 basePosition;
 
-    // Outline
     Transform outlineTransform;
     float glowPulse;
 
@@ -67,17 +66,13 @@ public class MaterialDrop : MonoBehaviour
         rb.AddForce(randomDir * bounceForce, ForceMode2D.Impulse);
 
         currentAttractSpeed = attractSpeed;
+
         if (applyPickupDelay)
-        {
             StartCoroutine(PickupDelayRoutine());
-        }
         else
-        {
             canBePickedUp = true;
-        }
 
         StartCoroutine(ThrowStretch());
-
         CreateGoldenOutline();
     }
 
@@ -94,7 +89,8 @@ public class MaterialDrop : MonoBehaviour
 
     void Update()
     {
-        if (isCollected) return;
+        if (isCollected)
+            return;
 
         if (player == null)
         {
@@ -106,9 +102,7 @@ public class MaterialDrop : MonoBehaviour
             Vector2.Distance(transform.position, player.position);
 
         if (canBePickedUp && distance <= attractRadius && CanPlayerPickUp())
-        {
             isAttracting = true;
-        }
 
         if (isAttracting)
         {
@@ -136,77 +130,6 @@ public class MaterialDrop : MonoBehaviour
     }
 
     // ==========================================
-    // OUTLINE
-    // ==========================================
-
-    void CreateGoldenOutline()
-    {
-        GameObject outlineObj = new GameObject("Outline");
-        outlineObj.transform.SetParent(transform);
-        outlineObj.transform.localPosition = Vector3.zero;
-        outlineObj.transform.localRotation = Quaternion.identity;
-        outlineObj.transform.localScale = Vector3.one * 1.15f;
-
-        SpriteRenderer outlineSR =
-            outlineObj.AddComponent<SpriteRenderer>();
-
-        outlineSR.sprite = sr.sprite;
-        outlineSR.sortingOrder = sr.sortingOrder - 1;
-        outlineSR.color = new Color(1f, 0.84f, 0.2f, 0.9f);
-
-        outlineTransform = outlineObj.transform;
-    }
-
-    void AnimateOutline()
-    {
-        if (outlineTransform == null)
-            return;
-
-        glowPulse =
-            Mathf.Sin(Time.time * 4f) * 0.05f;
-
-        outlineTransform.localScale =
-            Vector3.one * (1.15f + glowPulse);
-    }
-
-    // ==========================================
-    // SPAWN FX
-    // ==========================================
-
-    IEnumerator SpawnAnimation()
-    {
-        float t = 0f;
-
-        while (t < spawnScaleDuration)
-        {
-            t += Time.deltaTime;
-
-            float ease =
-                1f - Mathf.Pow(1f - t / spawnScaleDuration, 3f);
-
-            transform.localScale =
-                Vector3.Lerp(Vector3.zero, Vector3.one, ease);
-
-            yield return null;
-        }
-
-        transform.localScale = Vector3.one;
-    }
-
-    void Hover()
-    {
-        float yOffset =
-            Mathf.Sin(Time.time * hoverSpeed) * hoverAmplitude;
-
-        transform.position =
-            new Vector3(
-                basePosition.x,
-                basePosition.y + yOffset,
-                basePosition.z
-            );
-    }
-
-    // ==========================================
     // COLLECTION
     // ==========================================
 
@@ -215,53 +138,80 @@ public class MaterialDrop : MonoBehaviour
         if (!canBePickedUp)
             return;
 
-        RunInventory inventory =
-            player.GetComponent<RunInventory>();
+        MetaInventory meta = MetaInventory.Instance;
 
-        ActionBarController actionBar =
-            FindFirstObjectByType<ActionBarController>();
-
-        if (inventory == null)
+        if (meta == null)
             return;
 
         int remaining = amount;
 
-        bool isConsumable =
-            item.itemType == ItemType.Consumable;
-
-        // 🔥 1️⃣ INVENTARIO PRIMERO
-        bool added = inventory.AddItem(item, remaining);
-
-        if (!added)
+        // BAG FIRST
+        for (int i = 0; i < meta.bagSlots.Length && remaining > 0; i++)
         {
-            // inventario lleno
-            remaining = amount;
+            var slot = meta.bagSlots[i];
+
+            if (slot.IsEmpty())
+            {
+                int toAdd = Mathf.Min(item.maxStack, remaining);
+
+                slot.item = item;
+                slot.amount = toAdd;
+
+                remaining -= toAdd;
+            }
+            else if (slot.item == item && slot.amount < item.maxStack)
+            {
+                int space = item.maxStack - slot.amount;
+                int toAdd = Mathf.Min(space, remaining);
+
+                slot.amount += toAdd;
+                remaining -= toAdd;
+            }
         }
-        else
+
+        // SUCCESS
+        if (remaining <= 0)
         {
+            meta.NotifyInventoryChanged();
+            meta.SaveMetaInventory();
+
             StartCoroutine(CollectAnimation());
             return;
         }
 
-        // 🔥 2️⃣ SI NO CABE → ACTION BAR
-        if (isConsumable && actionBar != null)
-        {
-            remaining = actionBar.AddConsumable(item, remaining);
-
-            if (remaining <= 0)
-            {
-                StartCoroutine(CollectAnimation());
-                return;
-            }
-        }
-
-        // 🔥 si no cabe en ningún sitio
+        // NO SPACE → DROP STAYS
         isAttracting = false;
         currentAttractSpeed = attractSpeed;
+
         rb.simulated = true;
         rb.linearVelocity = Vector2.zero;
+
         basePosition = transform.position;
     }
+
+    bool CanPlayerPickUp()
+    {
+        MetaInventory meta = MetaInventory.Instance;
+
+        if (meta == null)
+            return false;
+
+        foreach (var slot in meta.bagSlots)
+        {
+            if (slot.IsEmpty())
+                return true;
+
+            if (slot.item == item &&
+                slot.amount < item.maxStack)
+                return true;
+        }
+
+        return false;
+    }
+
+    // ==========================================
+    // FX
+    // ==========================================
 
     IEnumerator CollectAnimation()
     {
@@ -296,6 +246,68 @@ public class MaterialDrop : MonoBehaviour
             player = p.transform;
     }
 
+    IEnumerator SpawnAnimation()
+    {
+        float t = 0f;
+
+        while (t < spawnScaleDuration)
+        {
+            t += Time.deltaTime;
+
+            float ease =
+                1f - Mathf.Pow(1f - t / spawnScaleDuration, 3f);
+
+            transform.localScale =
+                Vector3.Lerp(Vector3.zero, Vector3.one, ease);
+
+            yield return null;
+        }
+
+        transform.localScale = Vector3.one;
+    }
+
+    void Hover()
+    {
+        float yOffset =
+            Mathf.Sin(Time.time * hoverSpeed) * hoverAmplitude;
+
+        transform.position =
+            new Vector3(
+                basePosition.x,
+                basePosition.y + yOffset,
+                basePosition.z
+            );
+    }
+
+    void CreateGoldenOutline()
+    {
+        GameObject outlineObj = new GameObject("Outline");
+        outlineObj.transform.SetParent(transform);
+        outlineObj.transform.localPosition = Vector3.zero;
+        outlineObj.transform.localScale = Vector3.one * 1.15f;
+
+        SpriteRenderer outlineSR =
+            outlineObj.AddComponent<SpriteRenderer>();
+
+        outlineSR.sprite = sr.sprite;
+        outlineSR.sortingOrder = sr.sortingOrder - 1;
+        outlineSR.color = new Color(1f, 0.84f, 0.2f, 0.9f);
+
+        outlineTransform = outlineObj.transform;
+    }
+
+    void AnimateOutline()
+    {
+        if (outlineTransform == null)
+            return;
+
+        glowPulse =
+            Mathf.Sin(Time.time * 4f) * 0.05f;
+
+        outlineTransform.localScale =
+            Vector3.one * (1.15f + glowPulse);
+    }
+
     IEnumerator ThrowStretch()
     {
         Vector3 original = transform.localScale;
@@ -315,45 +327,5 @@ public class MaterialDrop : MonoBehaviour
         yield return new WaitForSeconds(pickupDelay);
 
         canBePickedUp = true;
-    }
-
-    bool CanPlayerPickUp()
-    {
-        if (player == null)
-            return false;
-
-        RunInventory inventory =
-            player.GetComponent<RunInventory>();
-
-        ActionBarController actionBar =
-            player.GetComponent<ActionBarController>();
-
-        if (inventory == null)
-            return false;
-
-        int remaining = amount;
-
-        // 🔥 1️⃣ INVENTARIO PRIMERO
-        if (inventory.CanAddItem(item, remaining))
-            return true;
-
-        // 🔥 2️⃣ ACTION BAR SI ES CONSUMIBLE
-        if (actionBar != null &&
-            item.itemType == ItemType.Consumable)
-        {
-            for (int i = 0; i < actionBar.slots.Length; i++)
-            {
-                var slot = actionBar.slots[i];
-
-                if (slot.IsEmpty())
-                    return true;
-
-                if (slot.item == item &&
-                    slot.amount < item.maxStack)
-                    return true;
-            }
-        }
-
-        return false;
     }
 }

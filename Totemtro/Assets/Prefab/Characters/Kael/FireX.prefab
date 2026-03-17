@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3564018365608932021}
   - component: {fileID: 1392870731749685823}
   - component: {fileID: -7303400778910887178}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FireX
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1,0 +1,2899 @@
+fileFormatVersion: 2
+guid: f9a31baca1b673b4693f5e01d811b9a8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8784205073186506932
+    second: TotemStatue_0
+  - first:
+      213: -6349348541182457664
+    second: TotemStatue_1
+  - first:
+      213: 6302013548680302253
+    second: TotemStatue_2
+  - first:
+      213: 5713083712786267437
+    second: TotemStatue_3
+  - first:
+      213: 2306668200766212254
+    second: TotemStatue_4
+  - first:
+      213: 8378275482802920000
+    second: TotemStatue_5
+  - first:
+      213: 5633428595079775098
+    second: TotemStatue_6
+  - first:
+      213: 4936220664041335179
+    second: TotemStatue_7
+  - first:
+      213: 5873814003816566111
+    second: TotemStatue_8
+  - first:
+      213: -3640298659074400037
+    second: TotemStatue_9
+  - first:
+      213: -4607643083827712256
+    second: TotemStatue_10
+  - first:
+      213: 8907241859935811202
+    second: TotemStatue_11
+  - first:
+      213: -1162407483695527884
+    second: TotemStatue_12
+  - first:
+      213: -8601752340484940191
+    second: TotemStatue_13
+  - first:
+      213: 7144424127283415585
+    second: TotemStatue_14
+  - first:
+      213: -8748867730976362139
+    second: TotemStatue_15
+  - first:
+      213: 5162985412130152106
+    second: TotemStatue_16
+  - first:
+      213: -204232207141668537
+    second: TotemStatue_17
+  - first:
+      213: -2477001290165199396
+    second: TotemStatue_18
+  - first:
+      213: 335608322327914767
+    second: TotemStatue_19
+  - first:
+      213: 5588587987262357125
+    second: TotemStatue_20
+  - first:
+      213: 327811948023571625
+    second: TotemStatue_21
+  - first:
+      213: 6799747410988919237
+    second: TotemStatue_22
+  - first:
+      213: 9017947987262557952
+    second: TotemStatue_23
+  - first:
+      213: -453111487330087123
+    second: TotemStatue_24
+  - first:
+      213: -8528264613869808526
+    second: TotemStatue_25
+  - first:
+      213: -6320516334096869967
+    second: TotemStatue_26
+  - first:
+      213: 4476672583184907666
+    second: TotemStatue_27
+  - first:
+      213: 436611112593648532
+    second: TotemStatue_28
+  - first:
+      213: -6501267117280877384
+    second: TotemStatue_29
+  - first:
+      213: -954399518757823865
+    second: TotemStatue_30
+  - first:
+      213: -5896542976825135024
+    second: TotemStatue_31
+  - first:
+      213: 8686579744165009954
+    second: TotemStatue_32
+  - first:
+      213: -5983449872384104176
+    second: TotemStatue_33
+  - first:
+      213: -6158121215939091046
+    second: TotemStatue_34
+  - first:
+      213: -2767814478974713191
+    second: TotemStatue_35
+  - first:
+      213: 2033258096100350452
+    second: TotemStatue_36
+  - first:
+      213: -1203648413797374202
+    second: TotemStatue_37
+  - first:
+      213: -2026666910907856156
+    second: TotemStatue_38
+  - first:
+      213: 4351369794129118807
+    second: TotemStatue_39
+  - first:
+      213: -607907967814693403
+    second: TotemStatue_40
+  - first:
+      213: 1320082943670311183
+    second: TotemStatue_41
+  - first:
+      213: 2444618947693463477
+    second: TotemStatue_42
+  - first:
+      213: 4511373664132265552
+    second: TotemStatue_43
+  - first:
+      213: 7443054232043793819
+    second: TotemStatue_44
+  - first:
+      213: -1044189554595753296
+    second: TotemStatue_45
+  - first:
+      213: 3043883265852676873
+    second: TotemStatue_46
+  - first:
+      213: 5609107904511993254
+    second: TotemStatue_47
+  - first:
+      213: 6076488030025914994
+    second: TotemStatue_48
+  - first:
+      213: -187309033602105168
+    second: TotemStatue_49
+  - first:
+      213: 7950191786064352708
+    second: TotemStatue_50
+  - first:
+      213: 1343239812548115265
+    second: TotemStatue_51
+  - first:
+      213: 32311190356592176
+    second: TotemStatue_52
+  - first:
+      213: 6814732246430289029
+    second: TotemStatue_53
+  - first:
+      213: -1425853247938555294
+    second: TotemStatue_54
+  - first:
+      213: -2342538786439014531
+    second: TotemStatue_55
+  - first:
+      213: -5093618757279377394
+    second: TotemStatue_56
+  - first:
+      213: -7834734321162028826
+    second: TotemStatue_57
+  - first:
+      213: -3798870061847306346
+    second: TotemStatue_58
+  - first:
+      213: -515444007989256888
+    second: TotemStatue_59
+  - first:
+      213: -5382915805191144276
+    second: TotemStatue_60
+  - first:
+      213: -4734994313251231771
+    second: TotemStatue_61
+  - first:
+      213: -928204032976136744
+    second: TotemStatue_62
+  - first:
+      213: 1403637802267987874
+    second: TotemStatue_63
+  - first:
+      213: 2681516600523118679
+    second: TotemStatue_64
+  - first:
+      213: 7036212791704305112
+    second: TotemStatue_65
+  - first:
+      213: -1278495830905083782
+    second: TotemStatue_66
+  - first:
+      213: -7335917053560799257
+    second: TotemStatue_67
+  - first:
+      213: 8869510415737667123
+    second: TotemStatue_68
+  - first:
+      213: 1908780196787856604
+    second: TotemStatue_69
+  - first:
+      213: -4478883671194603062
+    second: TotemStatue_70
+  - first:
+      213: 238480277678786151
+    second: TotemStatue_71
+  - first:
+      213: -6636426819152795053
+    second: TotemStatue_72
+  - first:
+      213: 1784731849692726048
+    second: TotemStatue_73
+  - first:
+      213: 619402050188618837
+    second: TotemStatue_74
+  - first:
+      213: -8136694416212970840
+    second: TotemStatue_75
+  - first:
+      213: 3017406266510058548
+    second: TotemStatue_76
+  - first:
+      213: 1671005914040696345
+    second: TotemStatue_77
+  - first:
+      213: 7137751469898593425
+    second: TotemStatue_78
+  - first:
+      213: -6373436749218108739
+    second: TotemStatue_79
+  - first:
+      213: -2479923304150680653
+    second: TotemStatue_80
+  - first:
+      213: 5813144371726365468
+    second: TotemStatue_81
+  - first:
+      213: -8707281143856221224
+    second: TotemStatue_82
+  - first:
+      213: 8316595973045553145
+    second: TotemStatue_83
+  - first:
+      213: -4302738128947656299
+    second: TotemStatue_84
+  - first:
+      213: 3239199880170188698
+    second: TotemStatue_85
+  - first:
+      213: 1233398431119605429
+    second: TotemStatue_86
+  - first:
+      213: 2284296881632952040
+    second: TotemStatue_87
+  - first:
+      213: 7662825160809713892
+    second: TotemStatue_88
+  - first:
+      213: 6013459922580529822
+    second: TotemStatue_89
+  - first:
+      213: -1532069658483484720
+    second: TotemStatue_90
+  - first:
+      213: 5111592983712839554
+    second: TotemStatue_91
+  - first:
+      213: -2687401558486123276
+    second: TotemStatue_92
+  - first:
+      213: -325505120777945123
+    second: TotemStatue_93
+  - first:
+      213: 1990721414083831411
+    second: TotemStatue_94
+  - first:
+      213: 4098445446010728709
+    second: TotemStatue_95
+  - first:
+      213: -7098253580432729104
+    second: TotemStatue_96
+  - first:
+      213: -2891714309148196528
+    second: TotemStatue_97
+  - first:
+      213: 4806921160882674024
+    second: TotemStatue_98
+  - first:
+      213: 8417441976807190134
+    second: TotemStatue_99
+  - first:
+      213: 441472496471615819
+    second: TotemStatue_100
+  - first:
+      213: 7107291194427965492
+    second: TotemStatue_101
+  - first:
+      213: -7634391336201593583
+    second: TotemStatue_102
+  - first:
+      213: -5141787381604373978
+    second: TotemStatue_103
+  - first:
+      213: -746133071032547605
+    second: TotemStatue_104
+  - first:
+      213: 51139384091098023
+    second: TotemStatue_105
+  - first:
+      213: 2299516586721572941
+    second: TotemStatue_106
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1024
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TotemStatue_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 187
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c47b882d60c381680800000000000000
+      internalID: -8784205073186506932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_1
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 0
+        width: 1349
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c8ccaf542592e7a0800000000000000
+      internalID: -6349348541182457664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_2
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 1008
+        width: 411
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daec9cadeef357750800000000000000
+      internalID: 6302013548680302253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_3
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 1016
+        width: 23
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2df1b81e53f84f40800000000000000
+      internalID: 5713083712786267437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_4
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 1016
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e980c51e18ee20020800000000000000
+      internalID: 2306668200766212254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_5
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 994
+        width: 102
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04a15de592d954470800000000000000
+      internalID: 8378275482802920000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_6
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 990
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a730245c575fd2e40800000000000000
+      internalID: 5633428595079775098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_7
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 992
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b89602d6a8af08440800000000000000
+      internalID: 4936220664041335179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_8
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 986
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5d833637baf38150800000000000000
+      internalID: 5873814003816566111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_9
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 991
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd02a8d18af0b7dc0800000000000000
+      internalID: -3640298659074400037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_10
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 972
+        width: 8
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00fe9a0170d5e00c0800000000000000
+      internalID: -4607643083827712256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_11
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 976
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 286b6fd6741ec9b70800000000000000
+      internalID: 8907241859935811202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_12
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 983
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43882126d8c4edfe0800000000000000
+      internalID: -1162407483695527884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_13
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 975
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16e928302df60a880800000000000000
+      internalID: -8601752340484940191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_14
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 978
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12a457714e7162360800000000000000
+      internalID: 7144424127283415585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_15
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 954
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 561b644f627c59680800000000000000
+      internalID: -8748867730976362139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_16
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 960
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aae9a8ea0eb96a740800000000000000
+      internalID: 5162985412130152106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_17
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 952
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74970a1c3eb6a2df0800000000000000
+      internalID: -204232207141668537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_18
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 959
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cddd487437cef9dd0800000000000000
+      internalID: -2477001290165199396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_19
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 944
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f092504bdf158a400800000000000000
+      internalID: 335608322327914767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_20
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 950
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58eb9c03a27ae8d40800000000000000
+      internalID: 5588587987262357125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_21
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 894
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a4e21bda3f9c8400800000000000000
+      internalID: 327811948023571625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_22
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 902
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c960626e3e8d5e50800000000000000
+      internalID: 6799747410988919237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_23
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 896
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00fcbbf4aef262d70800000000000000
+      internalID: 9017947987262557952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_24
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 884
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2f8a02c08936b9f0800000000000000
+      internalID: -453111487330087123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_25
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 876
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27491c3b48485a980800000000000000
+      internalID: -8528264613869808526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_26
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 862
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b51a15b1e30948a0800000000000000
+      internalID: -6320516334096869967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_27
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 872
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29d7778fef5502e30800000000000000
+      internalID: 4476672583184907666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_28
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 874
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49be12f5e772f0600800000000000000
+      internalID: 436611112593648532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_29
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 852
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b4ab84800cd6c5a0800000000000000
+      internalID: -6501267117280877384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_30
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 857
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78ad2aeb1ba41c2f0800000000000000
+      internalID: -954399518757823865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_31
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 863
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 050738f57654b2ea0800000000000000
+      internalID: -5896542976825135024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_32
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 846
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22a1f0cf04eec8870800000000000000
+      internalID: 8686579744165009954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_33
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 850
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0196031fa0486fca0800000000000000
+      internalID: -5983449872384104176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_34
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 836
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9567289165f98aa0800000000000000
+      internalID: -6158121215939091046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_35
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 842
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9928788556fb699d0800000000000000
+      internalID: -2767814478974713191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_36
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 819
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f99fba3775973c10800000000000000
+      internalID: 2033258096100350452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_37
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 824
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60725251528cb4fe0800000000000000
+      internalID: -1203648413797374202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_38
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 795
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ea8c49ae25dfd3e0800000000000000
+      internalID: -2026666910907856156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_39
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 814
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7564e61f5cb236c30800000000000000
+      internalID: 4351369794129118807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_40
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 790
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ed86429ce64097f0800000000000000
+      internalID: -607907967814693403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_41
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 768
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0955837170e15210800000000000000
+      internalID: 1320082943670311183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_42
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 774
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b745741bf70de120800000000000000
+      internalID: 2444618947693463477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_43
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 750
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 056f7abf17e9b9e30800000000000000
+      internalID: 4511373664132265552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_44
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 725
+        width: 8
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9d20f8936a0b4760800000000000000
+      internalID: 7443054232043793819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_45
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 719
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b29528e12b4281f0800000000000000
+      internalID: -1044189554595753296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_46
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 710
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90b97eef3bb0e3a20800000000000000
+      internalID: 3043883265852676873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_47
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 692
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a5e54bbbed87dd40800000000000000
+      internalID: 5609107904511993254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_48
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 648
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27a9b9f2ba5045450800000000000000
+      internalID: 6076488030025914994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_49
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 620
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b0cce42d6b866df0800000000000000
+      internalID: -187309033602105168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_50
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 606
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c51898be41c45e60800000000000000
+      internalID: 7950191786064352708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_51
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 566
+        width: 8
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14bb7132e7524a210800000000000000
+      internalID: 1343239812548115265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_52
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 531
+        width: 8
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 036897f3bdac27000800000000000000
+      internalID: 32311190356592176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_53
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 550
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58c80e34fdac29e50800000000000000
+      internalID: 6814732246430289029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_54
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 526
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26219c6860a563ce0800000000000000
+      internalID: -1425853247938555294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_55
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 518
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d775ab19261ad7fd0800000000000000
+      internalID: -2342538786439014531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_56
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 477
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0898173ab4df49b0800000000000000
+      internalID: -5093618757279377394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_57
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 470
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e8739525ae654390800000000000000
+      internalID: -7834734321162028826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_58
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 446
+        width: 8
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69f99b75ec3b74bc0800000000000000
+      internalID: -3798870061847306346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_59
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 422
+        width: 8
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84d523ad766c8d8f0800000000000000
+      internalID: -515444007989256888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_60
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 411
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cacfeb7589a0c45b0800000000000000
+      internalID: -5382915805191144276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_61
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 416
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e76a2952cbe94eb0800000000000000
+      internalID: -4734994313251231771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_62
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 411
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d55f5f895b5e13f0800000000000000
+      internalID: -928204032976136744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_63
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 406
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2af4e75f429ba7310800000000000000
+      internalID: 1403637802267987874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_64
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 388
+        width: 8
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7585e711429a63520800000000000000
+      internalID: 2681516600523118679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_65
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 359
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dd389d2146a5a160800000000000000
+      internalID: 7036212791704305112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_66
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 368
+        width: 8
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a78a518c0ded14ee0800000000000000
+      internalID: -1278495830905083782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_67
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 310
+        width: 10
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ef37c0ae46913a90800000000000000
+      internalID: -7335917053560799257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_68
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 350
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33ebbadfab4d61b70800000000000000
+      internalID: 8869510415737667123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_69
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 315
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd427dfc9795d7a10800000000000000
+      internalID: 1908780196787856604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_70
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 301
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac1f52cf70fc7d1c0800000000000000
+      internalID: -4478883671194603062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_71
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 296
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7660bfc8c804f4300800000000000000
+      internalID: 238480277678786151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_72
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 278
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35aa58228fca6e3a0800000000000000
+      internalID: -6636426819152795053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_73
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 286
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 023c2405924a4c810800000000000000
+      internalID: 1784731849692726048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_74
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 288
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55c24a602ee889800800000000000000
+      internalID: 619402050188618837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_75
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 280
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a2b8bbd987a41f80800000000000000
+      internalID: -8136694416212970840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_76
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 271
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 434ae52330bffd920800000000000000
+      internalID: 3017406266510058548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_77
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 272
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91ef8f3860b903710800000000000000
+      internalID: 1671005914040696345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_78
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 256
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 194f35af4236e0360800000000000000
+      internalID: 7137751469898593425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_79
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 276
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dba2f646b010d87a0800000000000000
+      internalID: -6373436749218108739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_80
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 263
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bbb2e1e4ea859dd0800000000000000
+      internalID: -2479923304150680653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_81
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 275
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c13bfc8b1007ca050800000000000000
+      internalID: 5813144371726365468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_82
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 246
+        width: 8
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d33efccee5892780800000000000000
+      internalID: -8707281143856221224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_83
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 267
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f703d969fb7a6370800000000000000
+      internalID: 8316595973045553145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_84
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 257
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 599cb86f77a9944c0800000000000000
+      internalID: -4302738128947656299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_85
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 255
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9f28060123f3fc20800000000000000
+      internalID: 3239199880170188698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_86
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 214
+        width: 11
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5be78699659ed1110800000000000000
+      internalID: 1233398431119605429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_87
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 232
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eeb34f39e373bf10800000000000000
+      internalID: 2284296881632952040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_88
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 240
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e01df562e2d75a60800000000000000
+      internalID: 7662825160809713892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_89
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 203
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e92e57c50f9147350800000000000000
+      internalID: 6013459922580529822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_90
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 158
+        width: 10
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d710fa43cefcbae0800000000000000
+      internalID: -1532069658483484720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_91
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 139
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 287359e7cb600f640800000000000000
+      internalID: 5111592983712839554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_92
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 150
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fc7a91658e64bad0800000000000000
+      internalID: -2687401558486123276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_93
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 126
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddfb57731d29b7bf0800000000000000
+      internalID: -325505120777945123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_94
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 136
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 376ea3d249670ab10800000000000000
+      internalID: 1990721414083831411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_95
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 80
+        width: 10
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50179cc2b6a90e830800000000000000
+      internalID: 4098445446010728709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_96
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 110
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fb99ac0affed7d90800000000000000
+      internalID: -7098253580432729104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_97
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 95
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 051ce4328219ed7d0800000000000000
+      internalID: -2891714309148196528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_98
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 67
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86958b1e35d95b240800000000000000
+      internalID: 4806921160882674024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_99
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 0
+        width: 11
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67eed0161e2c0d470800000000000000
+      internalID: 8417441976807190134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_100
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 24
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b49ab4285ec602600800000000000000
+      internalID: 441472496471615819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_101
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 0
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 430042f6fab22a260800000000000000
+      internalID: 7107291194427965492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_102
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 3
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11d526947813d0690800000000000000
+      internalID: -7634391336201593583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_103
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 0
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62aa2e86e93b4a8b0800000000000000
+      internalID: -5141787381604373978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_104
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be60fe1dce335a5f0800000000000000
+      internalID: -746133071032547605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_105
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 5
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ab38c6bffea5b000800000000000000
+      internalID: 51139384091098023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TotemStatue_106
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 0
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4878aaf62689ef10800000000000000
+      internalID: 2299516586721572941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TotemStatue_0: -8784205073186506932
+      TotemStatue_1: -6349348541182457664
+      TotemStatue_10: -4607643083827712256
+      TotemStatue_100: 441472496471615819
+      TotemStatue_101: 7107291194427965492
+      TotemStatue_102: -7634391336201593583
+      TotemStatue_103: -5141787381604373978
+      TotemStatue_104: -746133071032547605
+      TotemStatue_105: 51139384091098023
+      TotemStatue_106: 2299516586721572941
+      TotemStatue_11: 8907241859935811202
+      TotemStatue_12: -1162407483695527884
+      TotemStatue_13: -8601752340484940191
+      TotemStatue_14: 7144424127283415585
+      TotemStatue_15: -8748867730976362139
+      TotemStatue_16: 5162985412130152106
+      TotemStatue_17: -204232207141668537
+      TotemStatue_18: -2477001290165199396
+      TotemStatue_19: 335608322327914767
+      TotemStatue_2: 6302013548680302253
+      TotemStatue_20: 5588587987262357125
+      TotemStatue_21: 327811948023571625
+      TotemStatue_22: 6799747410988919237
+      TotemStatue_23: 9017947987262557952
+      TotemStatue_24: -453111487330087123
+      TotemStatue_25: -8528264613869808526
+      TotemStatue_26: -6320516334096869967
+      TotemStatue_27: 4476672583184907666
+      TotemStatue_28: 436611112593648532
+      TotemStatue_29: -6501267117280877384
+      TotemStatue_3: 5713083712786267437
+      TotemStatue_30: -954399518757823865
+      TotemStatue_31: -5896542976825135024
+      TotemStatue_32: 8686579744165009954
+      TotemStatue_33: -5983449872384104176
+      TotemStatue_34: -6158121215939091046
+      TotemStatue_35: -2767814478974713191
+      TotemStatue_36: 2033258096100350452
+      TotemStatue_37: -1203648413797374202
+      TotemStatue_38: -2026666910907856156
+      TotemStatue_39: 4351369794129118807
+      TotemStatue_4: 2306668200766212254
+      TotemStatue_40: -607907967814693403
+      TotemStatue_41: 1320082943670311183
+      TotemStatue_42: 2444618947693463477
+      TotemStatue_43: 4511373664132265552
+      TotemStatue_44: 7443054232043793819
+      TotemStatue_45: -1044189554595753296
+      TotemStatue_46: 3043883265852676873
+      TotemStatue_47: 5609107904511993254
+      TotemStatue_48: 6076488030025914994
+      TotemStatue_49: -187309033602105168
+      TotemStatue_5: 8378275482802920000
+      TotemStatue_50: 7950191786064352708
+      TotemStatue_51: 1343239812548115265
+      TotemStatue_52: 32311190356592176
+      TotemStatue_53: 6814732246430289029
+      TotemStatue_54: -1425853247938555294
+      TotemStatue_55: -2342538786439014531
+      TotemStatue_56: -5093618757279377394
+      TotemStatue_57: -7834734321162028826
+      TotemStatue_58: -3798870061847306346
+      TotemStatue_59: -515444007989256888
+      TotemStatue_6: 5633428595079775098
+      TotemStatue_60: -5382915805191144276
+      TotemStatue_61: -4734994313251231771
+      TotemStatue_62: -928204032976136744
+      TotemStatue_63: 1403637802267987874
+      TotemStatue_64: 2681516600523118679
+      TotemStatue_65: 7036212791704305112
+      TotemStatue_66: -1278495830905083782
+      TotemStatue_67: -7335917053560799257
+      TotemStatue_68: 8869510415737667123
+      TotemStatue_69: 1908780196787856604
+      TotemStatue_7: 4936220664041335179
+      TotemStatue_70: -4478883671194603062
+      TotemStatue_71: 238480277678786151
+      TotemStatue_72: -6636426819152795053
+      TotemStatue_73: 1784731849692726048
+      TotemStatue_74: 619402050188618837
+      TotemStatue_75: -8136694416212970840
+      TotemStatue_76: 3017406266510058548
+      TotemStatue_77: 1671005914040696345
+      TotemStatue_78: 7137751469898593425
+      TotemStatue_79: -6373436749218108739
+      TotemStatue_8: 5873814003816566111
+      TotemStatue_80: -2479923304150680653
+      TotemStatue_81: 5813144371726365468
+      TotemStatue_82: -8707281143856221224
+      TotemStatue_83: 8316595973045553145
+      TotemStatue_84: -4302738128947656299
+      TotemStatue_85: 3239199880170188698
+      TotemStatue_86: 1233398431119605429
+      TotemStatue_87: 2284296881632952040
+      TotemStatue_88: 7662825160809713892
+      TotemStatue_89: 6013459922580529822
+      TotemStatue_9: -3640298659074400037
+      TotemStatue_90: -1532069658483484720
+      TotemStatue_91: 5111592983712839554
+      TotemStatue_92: -2687401558486123276
+      TotemStatue_93: -325505120777945123
+      TotemStatue_94: 1990721414083831411
+      TotemStatue_95: 4098445446010728709
+      TotemStatue_96: -7098253580432729104
+      TotemStatue_97: -2891714309148196528
+      TotemStatue_98: 4806921160882674024
+      TotemStatue_99: 8417441976807190134
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

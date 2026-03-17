@@ -7,8 +7,22 @@ public class CameraFollow : MonoBehaviour
 
     Vector3 velocity;
 
+    void Start()
+    {
+        if (target == null)
+        {
+            var hero = FindFirstObjectByType<HeroController>();
+            if (hero != null)
+                target = hero.transform;
+        }
+    }
+
     void LateUpdate()
     {
+        if (GameIntroState.IsIntroPlaying)
+            return;
+
+
         if (target == null) return;
 
         Vector3 targetPos = new Vector3(
