@@ -215,8 +215,15 @@ public class HeroController : MonoBehaviour
 
     public void Heal(float amount)
     {
+        float before = CurrentHealth;
+
         CurrentHealth += amount;
         CurrentHealth = Mathf.Clamp(CurrentHealth, 0f, MaxHealth);
+
+        float healed = CurrentHealth - before;
+
+        if (healed > 0f)
+            CombatStatsTracker.RegisterHealing(healed);
 
         OnHealthChanged?.Invoke();
     }

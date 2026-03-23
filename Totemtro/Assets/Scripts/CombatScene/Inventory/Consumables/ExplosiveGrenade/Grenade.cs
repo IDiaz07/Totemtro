@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Grenade : MonoBehaviour
 {
     [Header("Explosion")]
     public float delay = 2f;
-    public float radius = 3f;
+    public float radius = 6f;
     public float damage = 30f;
     public float knockbackForce = 6f;
 
@@ -69,19 +70,26 @@ public class Grenade : MonoBehaviour
         // 🔥 Daño en área con falloff
         Collider2D[] hits = Physics2D.OverlapCircleAll(pos, radius);
 
+        HashSet<Enemy> hitEnemies = new HashSet<Enemy>();
+
         foreach (var hit in hits)
         {
-            float distance = Vector2.Distance(pos, hit.transform.position);
+            Enemy enemy = hit.GetComponentInParent<Enemy>();
 
-            float falloff = 1f - (distance / radius);
-            falloff = Mathf.Clamp01(falloff);
-
-            Vector2 dir = (hit.transform.position - pos).normalized;
-
-            // 🔴 ENEMIGOS
-            Enemy enemy = hit.GetComponent<Enemy>();
             if (enemy != null)
             {
+                if (hitEnemies.Contains(enemy))
+                    continue;
+
+                hitEnemies.Add(enemy);
+
+                float distance = Vector2.Distance(pos, enemy.transform.position);
+
+                float falloff = 1f - (distance / radius);
+                falloff = Mathf.Clamp01(falloff);
+
+                Vector2 dir = (enemy.transform.position - pos).normalized;
+
                 float finalDamage = damage * falloff;
 
                 enemy.TakeDamage(
@@ -89,15 +97,6 @@ public class Grenade : MonoBehaviour
                     dir * knockbackForce * falloff,
                     false
                 );
-            }
-
-            // 🌲 OBSTÁCULOS
-            DestructibleObstacle obstacle = hit.GetComponent<DestructibleObstacle>();
-            if (obstacle != null)
-            {
-                float finalDamage = damage * falloff;
-
-                obstacle.TakeDamage(finalDamage);
             }
         }
 

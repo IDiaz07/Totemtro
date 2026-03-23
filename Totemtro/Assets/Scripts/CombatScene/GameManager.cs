@@ -5,12 +5,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [SerializeField] private RunManager runManager;
-    [SerializeField] private RunSummaryUI runSummaryUI;
-
     [Header("Scene Names")]
     [SerializeField] private string hubSceneName = "HubScene";
     [SerializeField] private string combatSceneName = "CombatScene";
+    [SerializeField] private string summarySceneName = "SummaryScene";
     [SerializeField] private string loadingSceneName = "LoadingScene";
 
     void Awake()
@@ -33,7 +31,6 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(loadingSceneName);
     }
 
-
     public void StartRun()
     {
         Debug.Log("Hero before run: " + GameSessionManager.Instance.selectedHero);
@@ -44,7 +41,6 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("LoadingScene");
     }
 
-
     public void StartOnlineMatch()
     {
         LoadingManager.loadingType = LoadingType.SceneAsync;
@@ -53,34 +49,52 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("LoadingScene");
     }
 
+    // =========================================
+    // DEATH → SummaryScene (DEFEAT) — directo
+    // =========================================
+
     public void HandlePlayerDeath()
     {
-        if (runManager != null)
-            runManager.EndRunByDeath();
+        Debug.Log("🔴 Player died — triggering defeat sequence");
 
-        ShowSummary(false);
+        if (RunManager.Instance != null)
+            RunManager.Instance.EndRunByDeath();
+        else
+            Debug.LogError("RunManager.Instance is NULL");
+
+        Time.timeScale = 1f;
+
+        // Ir directo a SummaryScene sin pantalla de carga
+        SceneManager.LoadScene(summarySceneName);
     }
+
+    // =========================================
+    // EXTRACTION → SummaryScene (VICTORY) — directo
+    // =========================================
 
     public void ExtractRun()
     {
-        if (runManager != null)
-            runManager.EndRunByExtraction();
+        Debug.Log("🟢 Extraction — triggering victory sequence");
 
-        ShowSummary(true);
+        if (RunManager.Instance != null)
+            RunManager.Instance.EndRunByExtraction();
+        else
+            Debug.LogError("RunManager.Instance is NULL");
+
+        Time.timeScale = 1f;
+
+        // Ir directo a SummaryScene sin pantalla de carga
+        SceneManager.LoadScene(summarySceneName);
     }
 
-    void ShowSummary(bool extracted)
-    {
-        Time.timeScale = 0f;
-
-        if (runSummaryUI != null)
-            runSummaryUI.Show(extracted);
-    }
+    // =========================================
+    // NAVIGATION
+    // =========================================
 
     public void RestartRun()
     {
         Time.timeScale = 1f;
-        LoadSceneWithLoading(SceneManager.GetActiveScene().name);
+        LoadSceneWithLoading(combatSceneName);
     }
 
     public void ReturnToHub()
@@ -89,6 +103,12 @@ public class GameManager : MonoBehaviour
 
         if (MetaInventory.Instance != null)
             MetaInventory.Instance.SaveMetaInventory();
+
+        RunSummaryManager.Clear();
+
+        // Limpiar loadout de la run anterior
+        if (RunLoadoutSystem.Instance != null)
+            RunLoadoutSystem.Instance.ClearLoadout();
 
         LoadSceneWithLoading(hubSceneName);
     }

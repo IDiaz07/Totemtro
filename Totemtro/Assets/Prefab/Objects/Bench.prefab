@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 2236523327221433668}
   - component: {fileID: 6133397310294141776}
   - component: {fileID: 696269374839383642}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Bench
   m_TagString: Untagged
   m_Icon: {fileID: 0}

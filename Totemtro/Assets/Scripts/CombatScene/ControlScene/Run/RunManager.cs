@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class RunManager : MonoBehaviour
 {
@@ -28,7 +28,12 @@ public class RunManager : MonoBehaviour
 
     public void StartRun()
     {
+        // Resetear estados estáticos de la partida anterior
         EnemyStatsTracker.Reset();
+        CombatStatsTracker.Reset();
+        GameInputLock.Reset();
+        GamePause.Reset();
+        HeroController.OnPlayerDeath = null;
 
         if (inventory == null)
             return;
@@ -76,6 +81,7 @@ public class RunManager : MonoBehaviour
                 timeBonus,
                 penalty,
                 total,
+                false,
                 inventory);
         }
         else
@@ -96,8 +102,20 @@ public class RunManager : MonoBehaviour
             Debug.LogWarning("RunHistoryManager is NULL");
         }
 
+        // Limpieza de BAG + ACTIONBAR
+        if (RunInventoryCleaner.Instance != null)
+        {
+            RunInventoryCleaner.Instance.ClearRunInventory();
+        }
+        else
+        {
+            Debug.LogError("RunInventoryCleaner is NULL");
+        }
+
         if (inventory != null)
-            ClearRunInventory();
+        {
+            inventory.SaveMetaInventory();
+        }
     }
 
     // =========================
@@ -135,6 +153,7 @@ public class RunManager : MonoBehaviour
                 timeBonus,
                 penalty,
                 total,
+                true,
                 inventory);
         }
 

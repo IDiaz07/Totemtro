@@ -404,6 +404,9 @@ MonoBehaviour:
     maxAmount: 1
   hitParticlesPrefab: {fileID: 8306175235273709235, guid: 361d01d5c48df364bb9850610fb3342f, type: 3}
   isBoss: 0
+  minimapIconPrefab: {fileID: 2779605816841514188, guid: fcd3cab4b25d2e14eacbe03f3f046a25, type: 3}
+  headIcon: {fileID: 21300000, guid: b746aaa4f970ccc44b4968b09522a592, type: 3}
+  circleClipMaterial: {fileID: 2100000, guid: 0e4261aaa6f4c564ab18fc3efa538c04, type: 2}
 --- !u!114 &-5862324573170177698
 MonoBehaviour:
   m_ObjectHideFlags: 0

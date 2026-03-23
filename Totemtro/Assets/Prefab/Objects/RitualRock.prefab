@@ -113,7 +113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2236523327221433668}
   - component: {fileID: -2436928048794472784}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: RitualRock
   m_TagString: Untagged
   m_Icon: {fileID: 0}

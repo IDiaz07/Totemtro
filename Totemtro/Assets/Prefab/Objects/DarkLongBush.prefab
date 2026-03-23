@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 2236523327221433668}
   - component: {fileID: 1635225659990023351}
   - component: {fileID: -3321758190173728017}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: DarkLongBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -5,6 +5,18 @@ public class ConfirmRunButton : MonoBehaviour
 {
     public void OnConfirm()
     {
+        if (RunPreparationSystem.Instance == null)
+        {
+            Debug.LogError("RunPreparationSystem is NULL");
+            return;
+        }
+
+        if (RunLoadoutSystem.Instance == null)
+        {
+            Debug.LogError("RunLoadoutSystem is NULL");
+            return;
+        }
+
         bool ready =
             RunPreparationSystem.Instance.PrepareRun(
                 RunLoadoutSystem.Instance.loadoutSlots);
@@ -15,12 +27,22 @@ public class ConfirmRunButton : MonoBehaviour
             return;
         }
 
-        HubUIManager.Instance.ShowFade();
+        if (HubUIManager.Instance != null)
+            HubUIManager.Instance.ShowFade();
+
         Invoke(nameof(LoadCombat), 0.6f);
     }
 
     void LoadCombat()
     {
-        SceneManager.LoadScene("CombatScene");
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.StartRun();
+        }
+        else
+        {
+            Debug.LogError("GameManager.Instance is NULL");
+            SceneManager.LoadScene("CombatScene");
+        }
     }
 }

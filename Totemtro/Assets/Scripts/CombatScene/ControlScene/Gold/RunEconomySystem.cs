@@ -33,25 +33,6 @@ public class RunEconomySystem : MonoBehaviour
         return runTime;
     }
 
-    public int CalculateFinalReward(bool extracted)
-    {
-        float minTime = 20f;
-
-        if (!extracted && runTime < minTime)
-            return 0;
-
-        int goldCollected = GetCollectedGold();
-
-        float timeValue = runTime * 0.75f;
-
-        float baseReward = goldCollected + timeValue;
-
-        if (!extracted)
-            baseReward *= 0.25f;
-
-        return Mathf.FloorToInt(baseReward);
-    }
-
     public void ResetRun()
     {
         runTime = 0f;
@@ -61,28 +42,22 @@ public class RunEconomySystem : MonoBehaviour
     }
 
     public void GetRewardBreakdown(
-    bool extracted,
-    out int goldCollected,
-    out int timeBonus,
-    out int penalty,
-    out int finalReward)
+        bool extracted,
+        out int goldCollected,
+        out int timeBonus,
+        out int penalty,
+        out int finalReward)
     {
         goldCollected = GetCollectedGold();
 
-        timeBonus = Mathf.FloorToInt(runTime * 0.75f);
+        // 1 moneda por cada 10 segundos (ganes o pierdas)
+        timeBonus = Mathf.FloorToInt(runTime / 10f);
 
-        float baseReward = goldCollected + timeBonus;
+        // Victoria: +100 bonus
+        int victoryBonus = extracted ? 100 : 0;
 
-        if (!extracted)
-        {
-            penalty = Mathf.FloorToInt(baseReward * 0.75f);
-            baseReward *= 0.25f;
-        }
-        else
-        {
-            penalty = 0;
-        }
+        penalty = 0;
 
-        finalReward = Mathf.FloorToInt(baseReward);
+        finalReward = timeBonus + victoryBonus;
     }
 }

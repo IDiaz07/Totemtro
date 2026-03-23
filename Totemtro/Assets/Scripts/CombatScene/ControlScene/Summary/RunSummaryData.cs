@@ -9,6 +9,24 @@ public class RunSummaryData
     public int timeBonus;
     public int deathPenalty;
     public int totalReward;
+    public bool extracted;
+
+    // Stats de combate
+    public float damageDealt;
+    public float healthHealed;
+
+    // Copas
+    public int trophyDelta;
+    public int trophiesAfter;
+
+    // Maestría
+    public int masteryXPGained;
+    public int masteryXPTotal;
+    public MasteryTier masteryTierBefore;
+    public MasteryTier masteryTierAfter;
+
+    // Hero
+    public HeroType heroType;
 
     public List<InventorySlotData> collectedItems =
         new List<InventorySlotData>();

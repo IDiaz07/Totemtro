@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - PlayerFeet
+  - AimIndicator
   layers:
   - Default
   - TransparentFX
@@ -25,10 +26,10 @@ TagManager:
   - PlayerBody
   - ObstacleFeet
   - Obstacle
-  - 
-  - 
-  - 
-  - 
+  - AimIndicator
+  - Weapon
+  - WorldMap
+  - World
   - 
   - 
   - 
@@ -60,6 +61,9 @@ TagManager:
     locked: 0
   - name: Above Player
     uniqueID: 2608671815
+    locked: 0
+  - name: Map
+    uniqueID: 3714692737
     locked: 0
   m_RenderingLayers:
   - Default

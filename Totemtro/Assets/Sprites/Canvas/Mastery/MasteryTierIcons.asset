@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f42c90e77c587ef4da589e93d0e84a77, type: 3}
+  m_Name: MasteryTierIcons
+  m_EditorClassIdentifier: 
+  icons:
+  - tier: 0
+    icon: {fileID: 0}
+  - tier: 1
+    icon: {fileID: 21300000, guid: 3c3175ccb03c0d84dba95fb9d5f9a564, type: 3}
+  - tier: 2
+    icon: {fileID: 21300000, guid: c9dce4c0335954443b52260a9341fff4, type: 3}
+  - tier: 3
+    icon: {fileID: 21300000, guid: 4e6f1444074f71d439d44c9616ba369e, type: 3}
+  - tier: 4
+    icon: {fileID: 21300000, guid: 1f53fae64274be442b51ba048a88be60, type: 3}
+  - tier: 5
+    icon: {fileID: 21300000, guid: cf0ec7c9ef6214a4bb93fc47fd84af99, type: 3}
+  - tier: 6
+    icon: {fileID: 21300000, guid: 6c4ccee0dcc5a474191470f27b62f41e, type: 3}
+  - tier: 7
+    icon: {fileID: 21300000, guid: d0869d5c42269474d83173e7e6d51e76, type: 3}
+  - tier: 8
+    icon: {fileID: 21300000, guid: 8ce485d542efac94db630c153ab65b1e, type: 3}
+  - tier: 9
+    icon: {fileID: 21300000, guid: fcbbe3b1cabbe0d4cbf325426b91e7fe, type: 3}
+  - tier: 10
+    icon: {fileID: 21300000, guid: 843fbded94a2f23449ba2a5d9156161a, type: 3}
+  - tier: 11
+    icon: {fileID: 21300000, guid: e755a78f7fe17324bb9fcca6df1ebb6a, type: 3}
+  - tier: 12
+    icon: {fileID: 21300000, guid: 21bee6ca49ceac944b37231e93522964, type: 3}
+  - tier: 13
+    icon: {fileID: 21300000, guid: 8ac60160f0eb5f44c8b7662757375b90, type: 3}
+  - tier: 14
+    icon: {fileID: 21300000, guid: 06e5359282e2d5e4795b4f7aaf24182f, type: 3}
+  - tier: 15
+    icon: {fileID: 21300000, guid: 17225cb6b7820a8439d7903e2a44bbde, type: 3}
+  - tier: 16
+    icon: {fileID: 21300000, guid: 83fdedf414981374bb7e097653aeef39, type: 3}
+  - tier: 17
+    icon: {fileID: 21300000, guid: c86455b9406bc3b4c9a00a03fdc7d52a, type: 3}
+  - tier: 18
+    icon: {fileID: 21300000, guid: 610f680b77357104eabb8677372f5073, type: 3}
+  - tier: 19
+    icon: {fileID: 21300000, guid: 8d130a0f12e06b447bbc94c80d6dbd7f, type: 3}
+  - tier: 20
+    icon: {fileID: 21300000, guid: d74878033f2028f4a97da166e912b47c, type: 3}
+  - tier: 21
+    icon: {fileID: 21300000, guid: e38deeeac86f50742ba78315c33d7fc2, type: 3}

@@ -41,13 +41,10 @@ public class PlayerHealth : MonoBehaviour
         if (healthRegenPerSecond > 0f &&
             heroController.CurrentHealth < heroController.MaxHealth)
         {
-            float newHealth =
-                heroController.CurrentHealth +
-                healthRegenPerSecond * Time.deltaTime;
+            float regenAmount = healthRegenPerSecond * Time.deltaTime;
 
-            newHealth = Mathf.Min(newHealth, heroController.MaxHealth);
-
-            heroController.SetCurrentHealth(newHealth);
+            // Usar Heal() para que registre en CombatStatsTracker
+            heroController.Heal(regenAmount);
         }
     }
 

@@ -26,7 +26,6 @@ public class Enemy : MonoBehaviour
     [Header("Material Drops")]
     public EnemyDropData[] materialDrops;
 
-
     [Header("FX")]
     public GameObject hitParticlesPrefab;
 
@@ -43,11 +42,15 @@ public class Enemy : MonoBehaviour
     bool isKnocked = false;
     Coroutine knockbackRoutine;
 
-    void Awake()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        damageSpawner = GetComponent<DamageNumberSpawner>();
-    }
+    [Header("Map Icons")]
+    public GameObject minimapIconPrefab;
+    public Sprite headIcon;
+    public Material circleClipMaterial; // Asignar material con shader CircleClip
+
+    MinimapSystem minimap;
+    MinimapIcon minimapIcon;
+
+    GameObject worldMapIconInstance;
 
     void Start()
     {
@@ -56,6 +59,82 @@ public class Enemy : MonoBehaviour
         sprite = GetComponentInChildren<SpriteRenderer>();
         if (sprite != null)
             originalColor = sprite.color;
+
+        SpawnMinimapIcon();
+    }
+
+    void SpawnMinimapIcon()
+    {
+        if (minimapIconPrefab == null) return;
+
+        // =========================
+        // MINIMAP (UI — sigue igual)
+        // =========================
+        minimap = FindFirstObjectByType<MinimapSystem>();
+
+        if (minimap != null)
+        {
+            GameObject iconGO = Instantiate(
+                minimapIconPrefab,
+                minimap.iconsContainer
+            );
+
+            minimapIcon = iconGO.GetComponent<MinimapIcon>();
+            minimapIcon.Target = transform;
+
+            minimap.Register(minimapIcon);
+        }
+
+        // =========================
+        // WORLD MAP (SpriteRenderer en el mundo)
+        // =========================
+        SpawnWorldMapIcon();
+    }
+
+    void SpawnWorldMapIcon()
+    {
+        if (headIcon == null) return;
+
+        worldMapIconInstance = new GameObject("WorldMapIcon");
+        worldMapIconInstance.transform.SetParent(transform);
+        worldMapIconInstance.transform.localPosition = Vector3.zero;
+
+        int worldMapLayer = LayerMask.NameToLayer("WorldMap");
+        if (worldMapLayer >= 0)
+            worldMapIconInstance.layer = worldMapLayer;
+
+        SpriteRenderer sr = worldMapIconInstance.AddComponent<SpriteRenderer>();
+        sr.sprite = headIcon;
+        sr.sortingLayerName = "Enemies";
+        sr.sortingOrder = 100;
+
+        // Crear una INSTANCIA única del material para este enemigo
+        if (circleClipMaterial != null)
+        {
+            Material matInstance = new Material(circleClipMaterial);
+            matInstance.mainTexture = headIcon.texture;
+            sr.material = matInstance;
+        }
+
+        float desiredWorldSize = 3f;
+        float spritePixelsPerUnit = headIcon.pixelsPerUnit;
+        float spriteSize = Mathf.Max(headIcon.rect.width, headIcon.rect.height);
+        float spriteWorldSize = spriteSize / spritePixelsPerUnit;
+
+        float iconScale = desiredWorldSize / spriteWorldSize;
+
+        Vector3 parentScale = transform.lossyScale;
+        worldMapIconInstance.transform.localScale = new Vector3(
+            iconScale / Mathf.Max(parentScale.x, 0.01f),
+            iconScale / Mathf.Max(parentScale.y, 0.01f),
+            1f
+        );
+    }
+
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        damageSpawner = GetComponent<DamageNumberSpawner>();
     }
 
     // =====================================================
@@ -65,6 +144,8 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float amount, Vector2 hitDirection, bool isCritical)
     {
         currentHealth -= amount;
+
+        CombatStatsTracker.RegisterDamage(amount);
 
         SpawnHitParticles(isCritical);
 
@@ -119,7 +200,23 @@ public class Enemy : MonoBehaviour
     {
         Vector3 deathPosition = transform.position;
 
-        // 🔒 Congelar física
+        // Registrar kill
+        EnemyStatsTracker.RegisterKill();
+
+        // LIMPIAR MINIMAPA (UI)
+        if (minimap != null && minimapIcon != null)
+        {
+            minimap.Unregister(minimapIcon);
+            Destroy(minimapIcon.gameObject);
+        }
+
+        // LIMPIAR WORLD MAP ICON (mundo)
+        if (worldMapIconInstance != null)
+        {
+            Destroy(worldMapIconInstance);
+        }
+
+        // Física
         if (rb != null)
         {
             rb.linearVelocity = Vector2.zero;
@@ -327,5 +424,4 @@ public class Enemy : MonoBehaviour
             rb.AddForce(randomDir * dropForce, ForceMode2D.Impulse);
         }
     }
-
 }

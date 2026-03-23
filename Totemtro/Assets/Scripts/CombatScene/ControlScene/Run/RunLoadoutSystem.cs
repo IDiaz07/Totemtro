@@ -19,7 +19,10 @@ public class RunLoadoutSystem : MonoBehaviour
         if (Instance == null)
             Instance = this;
         else
+        {
             Destroy(gameObject);
+            return;
+        }
 
         transform.SetParent(null);
         DontDestroyOnLoad(gameObject);
@@ -28,6 +31,14 @@ public class RunLoadoutSystem : MonoBehaviour
 
         for (int i = 0; i < maxSlots; i++)
             loadoutSlots[i] = new InventorySlot(null, 0);
+    }
+
+    public void ClearLoadout()
+    {
+        for (int i = 0; i < loadoutSlots.Length; i++)
+            loadoutSlots[i].Clear();
+
+        onLoadoutChanged?.Invoke();
     }
 
     public void SetLoadoutFromMeta(MetaInventory metaInventory)

@@ -52,17 +52,8 @@ public class RunSummaryUI : MonoBehaviour
 
         var data = RunSummaryManager.Instance.LastRun;
 
-        // Header dinámico
-        if (extracted)
-        {
-            headerText.text = "EXTRACTION SUCCESSFUL";
-            headerText.color = new Color(0.6f, 1f, 0.6f);
-        }
-        else
-        {
-            headerText.text = "YOU DIED";
-            headerText.color = new Color(1f, 0.3f, 0.3f);
-        }
+        headerText.text = "EXTRACTION SUCCESSFUL";
+        headerText.color = new Color(0.6f, 1f, 0.6f);
 
         // Reset estado visual
         timeText.alpha = 0;
@@ -80,34 +71,39 @@ public class RunSummaryUI : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(0.2f);
 
-        // TIME
         timeText.text = "Time Survived\n" +
             Mathf.FloorToInt(data.timeSurvived) + "s";
 
         yield return StartCoroutine(FadeText(timeText));
-
         yield return new WaitForSecondsRealtime(numberRevealDelay);
 
-        // KILLS
         killsText.text = "Enemies Slain\n" + data.enemiesKilled;
 
         yield return StartCoroutine(FadeText(killsText));
-
         yield return new WaitForSecondsRealtime(numberRevealDelay);
 
-        // Separator
         yield return StartCoroutine(FadeImage(separator));
-
         yield return new WaitForSecondsRealtime(0.2f);
 
-        // GOLD
         yield return StartCoroutine(AnimateGold(data.totalReward));
-
-        // Final punch
         yield return StartCoroutine(PunchGold());
 
         continueButton.SetActive(true);
     }
+
+    // =========================================
+    // BUTTON CALLBACKS
+    // =========================================
+
+    public void OnContinueButton()
+    {
+        Time.timeScale = 1f;
+        GameManager.Instance.ReturnToHub();
+    }
+
+    // =========================================
+    // ANIMATIONS
+    // =========================================
 
     IEnumerator AnimatePanelIntro()
     {
@@ -120,7 +116,6 @@ public class RunSummaryUI : MonoBehaviour
         {
             t += Time.unscaledDeltaTime;
             float progress = t / panelIntroDuration;
-
             float eased = Mathf.SmoothStep(0, 1, progress);
 
             canvasGroup.alpha = eased;
@@ -172,12 +167,6 @@ public class RunSummaryUI : MonoBehaviour
         goldText.transform.localScale = original;
     }
 
-    public void OnContinueButton()
-    {
-        Time.timeScale = 1f;
-        GameManager.Instance.RestartRun();
-    }
-
     IEnumerator AnimateGold(int finalValue)
     {
         int current = 0;
@@ -188,11 +177,9 @@ public class RunSummaryUI : MonoBehaviour
         goldText.text = "Reward\n0 Gold";
         goldText.alpha = 1;
 
-        // Glow proporcional
         float glowStrength = Mathf.Clamp01(finalValue / 2000f);
         goldText.fontMaterial.SetFloat("_GlowPower", glowStrength * 0.5f);
 
-        // Configurar cono
         if (goldConeParticles != null)
         {
             var main = goldConeParticles.main;
@@ -236,7 +223,6 @@ public class RunSummaryUI : MonoBehaviour
 
     IEnumerator FinalBurst(int finalValue)
     {
-        // Intensidad según oro
         int burstCount = Mathf.Clamp(finalValue / 20, 10, 150);
 
         if (goldFinalBurstParticles != null)
@@ -244,62 +230,15 @@ public class RunSummaryUI : MonoBehaviour
             var emission = goldFinalBurstParticles.emission;
             emission.SetBursts(new ParticleSystem.Burst[]
             {
-            new ParticleSystem.Burst(0f, (short)burstCount)
+                new ParticleSystem.Burst(0f, (short)burstCount)
             });
 
             goldFinalBurstParticles.Play();
         }
 
-        // Monedas volando hacia mochila
-        int flyCoins = Mathf.Clamp(finalValue / 100, 5, 30);
-
-        for (int i = 0; i < flyCoins; i++)
-        {
-            SpawnFlyingCoin();
-            yield return new WaitForSecondsRealtime(0.02f);
-        }
-
         if (finalHitAudio != null)
             finalHitAudio.Play();
-    }
 
-    void SpawnFlyingCoin()
-    {
-        GameObject coin = new GameObject("FlyingCoin");
-        coin.transform.SetParent(transform.root);
-
-        Image img = coin.AddComponent<Image>();
-        img.sprite = goldIconSprite; // asigna sprite de moneda
-
-        RectTransform rect = coin.GetComponent<RectTransform>();
-        rect.sizeDelta = new Vector2(25, 25);
-        rect.position = goldText.transform.position;
-
-        StartCoroutine(FlyToTarget(rect));
-    }
-
-    IEnumerator FlyToTarget(RectTransform coin)
-    {
-        Vector3 start = coin.position;
-        Vector3 end = backpackTarget.position;
-
-        float duration = 0.6f;
-        float timer = 0f;
-
-        while (timer < duration)
-        {
-            timer += Time.unscaledDeltaTime;
-            float t = timer / duration;
-
-            // Curva parabólica
-            Vector3 pos = Vector3.Lerp(start, end, t);
-            pos.y += Mathf.Sin(t * Mathf.PI) * 80f;
-
-            coin.position = pos;
-
-            yield return null;
-        }
-
-        Destroy(coin.gameObject);
+        yield return new WaitForSecondsRealtime(1.5f);
     }
 }
