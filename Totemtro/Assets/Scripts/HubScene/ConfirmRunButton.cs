@@ -27,6 +27,14 @@ public class ConfirmRunButton : MonoBehaviour
             return;
         }
 
+        // Guardar el héroe seleccionado para que sobreviva entre escenas
+        if (HeroSelectionManager.Instance != null &&
+            GameSessionManager.Instance != null)
+        {
+            GameSessionManager.Instance.SetSelectedHero(
+                HeroSelectionManager.Instance.SelectedHero); 
+        }
+
         if (HubUIManager.Instance != null)
             HubUIManager.Instance.ShowFade();
 

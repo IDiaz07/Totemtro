@@ -166,21 +166,29 @@ public class RunManager : MonoBehaviour
                 true);
         }
 
-        TransferToMeta();
+        // Usar MetaInventory.Instance como fallback si inventory serializado es null
+        MetaInventory meta = inventory != null ? inventory : MetaInventory.Instance;
 
-        if (inventory != null)
-            ClearRunInventory();
+        if (meta != null)
+        {
+            TransferToMeta(meta);
+            ClearRunInventory(meta);
+        }
+        else
+        {
+            Debug.LogError("No se encontró ningún MetaInventory para transferir items");
+        }
     }
 
     // =========================
     // INTERNAL
     // =========================
 
-    void TransferToMeta()
+    void TransferToMeta(MetaInventory source)
     {
-        if (inventory == null)
+        if (source == null)
         {
-            Debug.LogError("RunInventory is NULL");
+            Debug.LogError("RunInventory source is NULL");
             return;
         }
 
@@ -190,7 +198,7 @@ public class RunManager : MonoBehaviour
             return;
         }
 
-        foreach (var slot in inventory.slots)
+        foreach (var slot in source.slots)
         {
             if (!slot.IsEmpty())
             {
@@ -201,14 +209,14 @@ public class RunManager : MonoBehaviour
         MetaInventory.Instance.SaveMetaInventory();
     }
 
-    void ClearRunInventory()
+    void ClearRunInventory(MetaInventory source)
     {
-        foreach (var slot in inventory.slots)
+        foreach (var slot in source.slots)
         {
             slot.Clear();
         }
 
-        inventory.NotifyInventoryChanged();
+        source.NotifyInventoryChanged();
     }
 
     void CopyLoadoutToRunInventory()

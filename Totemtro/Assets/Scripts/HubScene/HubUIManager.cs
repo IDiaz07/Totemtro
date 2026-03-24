@@ -67,6 +67,7 @@ public class HubUIManager : MonoBehaviour
 
     public void ShowFade()
     {
-        fadePanel.SetActive(true);
+        if (fadePanel != null)
+            fadePanel.SetActive(true);
     }
 }

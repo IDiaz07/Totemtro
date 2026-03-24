@@ -14,9 +14,15 @@ public class MapToggle : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M))
+        if (InputKeyBindings.Instance == null) return;
+
+        if (InputKeyBindings.Instance.GetKeyDown(InputKeyBindings.Action.Map))
         {
             ToggleMap();
+        }
+        else if (isOpen && InputKeyBindings.Instance.GetKeyDown(InputKeyBindings.Action.Pause))
+        {
+            ToggleMap(); // cerrar con ESC
         }
     }
 
@@ -31,7 +37,6 @@ public class MapToggle : MonoBehaviour
         {
             GamePause.Pause();
 
-            // 🔥 CAMBIO DE LUCES
             if (playerLight != null)
                 playerLight.enabled = false;
 

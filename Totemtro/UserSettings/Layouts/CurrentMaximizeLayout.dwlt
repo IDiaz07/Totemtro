@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 3943
+  controlID: 39
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 3944
+  controlID: 40
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 3945
+  controlID: 41
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -244,9 +244,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: f4c50100
       m_LastClickedID: 0
-      m_ExpandedIDs: 0afbffff9acf00003ad000006ad00000b6d00000e2d00000f4d0000016d1000080d10000d8d1000028d20000
+      m_ExpandedIDs: 88e2f7ffc8eff7ff26f2f7ffa23ef8ffea54f8ffae5bf8ff7cc6faffd6cbfaffeccdfaffd8d6ffff92d8ffff0afbfffff4ffffffa6d30000f0d3000096d40000a4d400008ed90000caf8000014f90000baf90000c8f9000016fd000066fd00003a5e01007c5f010060a7010060c30100b8c30100f6c3010090c40100a2c4010018c5010060c50100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -716,10 +716,10 @@ MonoBehaviour:
       displayed: 1
       id: Overlays/OverlayMenu
       index: 1
-      contents: '{"m_Layout":1,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":-316.0,"y":25.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":1,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      contents: '{"m_Layout":1,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":-536.0,"y":0.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":1,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
       floating: 0
       collapsed: 0
-      snapOffset: {x: -316, y: 25}
+      snapOffset: {x: -536, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 1
       layout: 1
@@ -758,12 +758,12 @@ MonoBehaviour:
       displayed: 0
       id: SceneView/CamerasOverlay
       index: 12
-      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":25.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":-254.0,"y":-184.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":3,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
       floating: 0
       collapsed: 0
-      snapOffset: {x: 24, y: 25}
+      snapOffset: {x: -254, y: -184}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
+      snapCorner: 3
       layout: 4
       size: {x: 0, y: 0}
       sizeOverridden: 0
@@ -906,9 +906,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 895.57916, y: 676.3532, z: 4.699809}
+    m_Target: {x: 1013.29425, y: 386.17465, z: 6.0030956}
     speed: 2
-    m_Value: {x: 895.57916, y: 676.3532, z: 4.699809}
+    m_Value: {x: 1023.235, y: 393.86826, z: 5.766955}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -958,9 +958,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 631.47327
+    m_Target: 501.1432
     speed: 2
-    m_Value: 631.47327
+    m_Value: 524.75726
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1310,13 +1310,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Sprites/Canvas/Mastery/Bronze
-    - Assets/Sprites/Canvas/Mastery/Champion
-    - Assets/Sprites/Canvas/Mastery/Diamond
-    - Assets/Sprites/Canvas/Mastery/Gold
-    - Assets/Sprites/Canvas/Mastery/Master
-    - Assets/Sprites/Canvas/Mastery/Silver
-    - Assets/Sprites/Canvas/Mastery/Wood
+    - Assets/Sprites/Canvas
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1326,23 +1320,17 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 44
   m_LastFolders:
-  - Assets/Sprites/Canvas/Mastery/Bronze
-  - Assets/Sprites/Canvas/Mastery/Champion
-  - Assets/Sprites/Canvas/Mastery/Diamond
-  - Assets/Sprites/Canvas/Mastery/Gold
-  - Assets/Sprites/Canvas/Mastery/Master
-  - Assets/Sprites/Canvas/Mastery/Silver
-  - Assets/Sprites/Canvas/Mastery/Wood
+  - Assets/Sprites/Canvas
   m_LastFoldersGridSize: 44
   m_LastProjectPath: C:\Users\Nitropc\Documents\GitHub\Totemtro\Totemtro
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 1149}
-    m_SelectedIDs: 7ade0000bae10000a8e1000084e10000dae1000094de000068d70000
-    m_LastClickedID: 55144
-    m_ExpandedIDs: 000000008ad600008cd600008ed6000090d6000092d6000094d6000096d6000098d600009ad600009cd600009ed60000a0d60000a2d60000a4d60000a6d60000a8d60000aad60000acd60000aed60000b0d60000b2d6000064d700006ad700006cd7000000ca9a3b
+    scrollPos: {x: 0, y: 889}
+    m_SelectedIDs: 70b00100
+    m_LastClickedID: 110704
+    m_ExpandedIDs: 0000000000e4000002e4000004e4000006e4000008e400000ae400000ce400000ee4000010e4000012e4000014e4000016e4000018e400001ae400001ce400001ee4000020e4000022e4000024e4000026e4000028e40000dee4000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1371,7 +1359,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008ad600008cd600008ed6000090d6000092d6000094d6000096d6000098d600009ad600009cd600009ed60000a0d60000a2d60000a4d60000a6d60000a8d60000aad60000acd60000aed60000b0d60000b2d6000064d700006ad700006cd7000000ca9a3b
+    m_ExpandedIDs: 0000000000e4000002e4000004e4000006e4000008e400000ae400000ce400000ee4000010e4000012e4000014e4000016e4000018e400001ae400001ce400001ee4000020e4000022e4000024e4000026e4000028e40000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1397,9 +1385,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: f4c50100
+    m_LastClickedInstanceID: 116212
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000be050100601d0100ce3b0100e83b010000000000befc00002e5601004ef6000010d9000038dd00000afa0000acd90000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1484,8 +1472,8 @@ MonoBehaviour:
     y: 0
     width: 569
     height: 933
-  m_MinSize: {x: 276, y: 76}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}

@@ -1,7 +1,7 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 /// <summary>
-/// Gestiona copas (trophies) y maestr�a por h�roe.
+/// Gestiona copas (trophies) y maestría por héroe.
 /// Persiste con PlayerPrefs.
 /// </summary>
 public class HeroMasterySystem : MonoBehaviour
@@ -41,22 +41,27 @@ public class HeroMasterySystem : MonoBehaviour
     public int ApplyTrophyResult(HeroType hero, bool extracted, float timeSurvived, int kills)
     {
         int current = GetTrophies(hero);
+
+        int timeScore = Mathf.FloorToInt(timeSurvived / 30f);
         int delta;
 
         if (extracted)
         {
-            int timeBonus = Mathf.FloorToInt(timeSurvived / 30f);
-            int killBonus = Mathf.FloorToInt(kills / 5f);
-            delta = 5 + timeBonus + killBonus;
-            delta = Mathf.Clamp(delta, 5, 40);
+            delta = 8 + timeScore;
         }
         else
         {
-            int timeReduce = Mathf.FloorToInt(timeSurvived / 60f);
-            int killReduce = Mathf.FloorToInt(kills / 10f);
-            delta = -(8 - timeReduce - killReduce);
-            delta = Mathf.Clamp(delta, -8, -1);
+            delta = -6 + timeScore;
         }
+
+        // 🧨 ANTI-GRINDEO (muertes rápidas)
+        if (!extracted && timeSurvived < 30f)
+        {
+            delta -= 3;
+        }
+
+        // Clamp para estabilidad
+        delta = Mathf.Clamp(delta, -12, 25);
 
         int newValue = Mathf.Max(0, current + delta);
         SetTrophies(hero, newValue);
@@ -95,13 +100,30 @@ public class HeroMasterySystem : MonoBehaviour
 
     public int CalculateMasteryXP(bool extracted, float timeSurvived, int kills)
     {
-        float baseXP = timeSurvived * 0.5f + kills * 2f;
+        float xp = 0f;
 
+        // Tiempo = base principal
+        xp += timeSurvived * 1.2f;
+
+        // Kills pesan menos (anti exploit)
+        xp += kills * 0.5f;
+
+        // ⭐ BONUS por performance real
+        if (kills > 100)
+        {
+            xp += 50;
+        }
+
+        // 🎯 BONUS fuerte por victoria
         if (extracted)
-            baseXP *= 1.5f;
+        {
+            xp += 120f;
+        }
         else
-            baseXP *= 0.6f;
+        {
+            xp *= 0.5f;
+        }
 
-        return Mathf.FloorToInt(Mathf.Max(1, baseXP));
+        return Mathf.FloorToInt(Mathf.Max(5, xp));
     }
 }

@@ -51,8 +51,22 @@ public class PlayerMovement : MonoBehaviour
         if (GameIntroState.IsIntroPlaying)
             return;
 
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        if (GameInputLock.IsLocked)
+        {
+            movement = Vector2.zero;
+            return;
+        }
+
+        if (InputKeyBindings.Instance != null)
+        {
+            movement.x = InputKeyBindings.Instance.GetHorizontalAxis();
+            movement.y = InputKeyBindings.Instance.GetVerticalAxis();
+        }
+        else
+        {
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+        }
 
         if (movement.sqrMagnitude > 1f)
             movement.Normalize();
@@ -72,9 +86,13 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // DASH
-        if (hasDash && Input.GetKeyDown(KeyCode.Space))
+        if (hasDash)
         {
-            if (Time.time >= lastDashTime + dashCooldown)
+            bool dashPressed = InputKeyBindings.Instance != null
+                ? InputKeyBindings.Instance.GetKeyDown(InputKeyBindings.Action.Dash)
+                : Input.GetKeyDown(KeyCode.Space);
+
+            if (dashPressed && Time.time >= lastDashTime + dashCooldown)
             {
                 PerformDash();
             }
@@ -103,75 +121,71 @@ public class PlayerMovement : MonoBehaviour
             Vector2.zero,
             pullDecay * Time.fixedDeltaTime
         );
+
+        pullForce = Vector2.ClampMagnitude(pullForce, maxPullForce);
     }
 
     void PerformDash()
     {
-        Vector2 dashDir = movement;
-
-        if (dashDir == Vector2.zero)
-        {
-            dashDir =
-                (Camera.main.ScreenToWorldPoint(Input.mousePosition)
-                - transform.position).normalized;
-        }
-
-        rb.linearVelocity = Vector2.zero;
-        rb.AddForce(dashDir.normalized * dashForce, ForceMode2D.Impulse);
-
-        // 🔥 ACTUALIZA DIRECCIÓN VISUAL AL DASH
-        if (heroController != null)
-            heroController.UpdateDirection(dashDir);
-
         lastDashTime = Time.time;
+
+        Vector2 dashDir = movement != Vector2.zero
+            ? movement.normalized
+            : Vector2.up;
+
+        rb.AddForce(dashDir * dashForce, ForceMode2D.Impulse);
     }
 
     // =========================
-    // EXTERNAL EFFECTS
+    // PUBLIC API
     // =========================
 
-    public void ApplyRecoil(Vector2 direction, float force)
+    public void AddRecoil(Vector2 force)
     {
-        recoilOffset += -direction.normalized * force;
+        recoilOffset += force;
     }
 
+    public void AddPull(Vector2 force)
+    {
+        pullForce += force;
+    }
+
+    /// <summary>
+    /// Alias de AddPull — usado por NullSphere.
+    /// </summary>
     public void ApplyPull(Vector2 force)
     {
-        pullForce = Vector2.ClampMagnitude(
-            pullForce + force,
-            maxPullForce
-        );
+        pullForce += force;
     }
 
-    public void ClearPull()
-    {
-        pullForce = Vector2.zero;
-    }
-
-    public void ApplySlow(float percent, float duration)
+    public void ApplySlow(float multiplier, float duration)
     {
         if (slowRoutine != null)
             StopCoroutine(slowRoutine);
 
-        slowRoutine = StartCoroutine(SlowRoutine(percent, duration));
+        slowRoutine = StartCoroutine(SlowRoutine(multiplier, duration));
     }
 
-    IEnumerator SlowRoutine(float percent, float duration)
+    /// <summary>
+    /// Fija el multiplicador de velocidad directamente (sin temporizador).
+    /// Usado por StatusEffectController para slow manual con control externo.
+    /// </summary>
+    public void SetSlowMultiplier(float multiplier)
     {
-        slowMultiplier = 1f - percent;
+        // Cancelar cualquier slow temporal activo
+        if (slowRoutine != null)
+        {
+            StopCoroutine(slowRoutine);
+            slowRoutine = null;
+        }
 
+        slowMultiplier = multiplier;
+    }
+
+    IEnumerator SlowRoutine(float multiplier, float duration)
+    {
+        slowMultiplier = multiplier;
         yield return new WaitForSeconds(duration);
-
         slowMultiplier = 1f;
-    }
-
-    public bool IsMoving()
-    {
-        return movement != Vector2.zero;
-    }
-
-    public void SetSlowMultiplier(float value)
-    {
-        slowMultiplier = value;
     }
 }

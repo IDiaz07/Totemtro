@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
 
         Time.timeScale = 1f;
 
-        // Ir directo a SummaryScene sin pantalla de carga
+        // Usar LoadSceneAsync para que no corte la corrutina del caller
         SceneManager.LoadScene(summarySceneName);
     }
 

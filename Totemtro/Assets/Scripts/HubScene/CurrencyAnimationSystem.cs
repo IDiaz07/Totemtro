@@ -39,7 +39,11 @@ public class CurrencyAnimationSystem : MonoBehaviour
 
     void Start()
     {
-        displayedGold = MetaCurrencySystem.Instance.Gold;
+        // Restar el reward pendiente para que el display arranque
+        // con el valor ANTERIOR y la animación haga subir el número
+        int pendingGold = SummarySceneUI.PendingGoldReward;
+
+        displayedGold = MetaCurrencySystem.Instance.Gold - pendingGold;
         displayedGems = MetaCurrencySystem.Instance.Gems;
 
         goldText.text = displayedGold.ToString("N0");
@@ -87,8 +91,14 @@ public class CurrencyAnimationSystem : MonoBehaviour
         RectTransform target,
         bool isGold)
     {
-        int visualCount = Mathf.Clamp(amount / 10, 5, 30);
-        float duration = Mathf.Lerp(0.5f, 1.6f, Mathf.Clamp01(amount / 500f));
+        // Más monedas visibles cuanto mayor sea el amount
+        int visualCount = Mathf.Clamp(amount / 5, 8, 50);
+
+        // Vuelo más lento: de 1s a 2.5s según cantidad
+        float flyDuration = Mathf.Lerp(1f, 2.5f, Mathf.Clamp01(amount / 500f));
+
+        // Delay entre spawns más pronunciado para que se vea la cascada
+        float spawnDelay = Mathf.Lerp(0.04f, 0.06f, Mathf.Clamp01(amount / 500f));
 
         Vector2 startPos = WorldToCanvasPosition(worldStartPos);
         Vector2 endPos = WorldToCanvasPosition(target.position);
@@ -101,10 +111,13 @@ public class CurrencyAnimationSystem : MonoBehaviour
             rect.anchoredPosition =
                 startPos + Random.insideUnitCircle * 40f;
 
-            StartCoroutine(MoveToTarget(rect, endPos, duration));
+            StartCoroutine(MoveToTarget(rect, endPos, flyDuration));
 
-            yield return new WaitForSeconds(0.02f);
+            yield return new WaitForSeconds(spawnDelay);
         }
+
+        // Esperar a que la última moneda llegue antes de contar
+        yield return new WaitForSeconds(flyDuration * 0.5f);
 
         yield return AnimateCounter(amount, isGold);
     }
@@ -119,8 +132,12 @@ public class CurrencyAnimationSystem : MonoBehaviour
 
         while (t < duration)
         {
+            // Ease-in para que acelere al final (más satisfactorio)
+            float progress = t / duration;
+            float eased = progress * progress;
+
             rect.anchoredPosition =
-                Vector2.Lerp(start, targetPos, t / duration);
+                Vector2.Lerp(start, targetPos, eased);
 
             t += Time.deltaTime;
             yield return null;
@@ -137,13 +154,19 @@ public class CurrencyAnimationSystem : MonoBehaviour
             ? MetaCurrencySystem.Instance.Gold
             : MetaCurrencySystem.Instance.Gems;
 
-        float duration = 0.9f;
+        // Duración del contador proporcional a la cantidad de monedas
+        // Más monedas = más tiempo subiendo el número
+        float duration = Mathf.Lerp(1.2f, 3f, Mathf.Clamp01(amount / 500f));
         float t = 0f;
 
         while (t < duration)
         {
+            // Ease-out para que suba rápido al principio y desacelere
+            float progress = t / duration;
+            float eased = 1f - (1f - progress) * (1f - progress);
+
             int current = Mathf.RoundToInt(
-                Mathf.Lerp(startValue, realValue, t / duration)
+                Mathf.Lerp(startValue, realValue, eased)
             );
 
             if (isGold)

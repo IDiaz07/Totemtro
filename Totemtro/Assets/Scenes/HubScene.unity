@@ -27040,10 +27040,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ee07898fcca324b949e8ab31b5758c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryPanel: {fileID: 0}
-  confirmationPanel: {fileID: 0}
-  fadePanel: {fileID: 0}
-  playButtonRect: {fileID: 0}
+  inventoryPanel: {fileID: 635020876}
+  confirmationPanel: {fileID: 551664310}
+  fadePanel: {fileID: 846726775}
+  playButtonRect: {fileID: 289040484}
 --- !u!1 &825990681
 GameObject:
   m_ObjectHideFlags: 0

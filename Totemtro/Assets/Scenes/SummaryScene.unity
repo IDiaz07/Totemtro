@@ -544,6 +544,8 @@ MonoBehaviour:
   masteryTierText: {fileID: 1190022462}
   masteryXPText: {fileID: 543962381}
   masteryTierIcons: {fileID: 11400000, guid: f4553a415e233394aa66c57dfb9b939c, type: 2}
+  victoryBurstParticles: {fileID: 0}
+  victoryBurstAudio: {fileID: 0}
   exitButton: {fileID: 2063703941}
   exitButtonCanvasGroup: {fileID: 2063703948}
   countTickAudio: {fileID: 0}
@@ -3402,7 +3404,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3291d954c459d89498d56dcc91322991, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6ce4cf28015f0bf4bb26ae978aff8baf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3477,7 +3479,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5600206312213581617, guid: e8ce3d72d04d05449bf9cc43983e27fd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3291d954c459d89498d56dcc91322991, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
