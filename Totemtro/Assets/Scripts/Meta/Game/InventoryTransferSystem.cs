@@ -335,6 +335,102 @@ public static class InventoryTransferSystem
             );
         }
 
+        // =========================
+        // ARMOR → META (INVENTORY)
+        // =========================
+        if (source == DragSource.Armor && target == DragSource.Meta)
+        {
+            var eqSlots = EquipmentSystem.Instance?.equipmentSlots;
+            var metaSlots = meta.slots;
+
+            if (eqSlots == null || metaSlots == null)
+                return false;
+
+            if (fromIndex < 0 || fromIndex >= eqSlots.Length)
+                return false;
+
+            var eq = eqSlots[fromIndex];
+
+            if (eq == null || eq.item == null)
+                return false;
+
+            // 🔹 STACK PRIMERO (misma durability)
+            foreach (var m in metaSlots)
+            {
+                if (m.item != eq.item || m.durability != eq.durability)
+                    continue;
+
+                int space = eq.item.maxStack - m.amount;
+                int add = Mathf.Min(space, eq.amount);
+
+                m.amount += add;
+                eq.amount -= add;
+
+                if (eq.amount <= 0)
+                    break;
+            }
+
+            // 🔹 SLOT VACÍO
+            foreach (var m in metaSlots)
+            {
+                if (eq.amount <= 0)
+                    break;
+
+                if (m.IsEmpty())
+                {
+                    m.item = eq.item;
+                    m.amount = eq.amount;
+                    m.durability = eq.durability;
+                    eq.amount = 0;
+                }
+            }
+
+            // 🔥 limpiar si ya no queda nada
+            if (eq.amount <= 0)
+            {
+                EquipmentSystem.Instance.Unequip(fromIndex);
+            }
+
+            meta.NotifyInventoryChanged();
+            return true;
+        }
+
+        // =========================
+        // ARMOR → BAG
+        // =========================
+        if (source == DragSource.Armor && target == DragSource.Bag)
+        {
+            var eq = EquipmentSystem.Instance.equipmentSlots[fromIndex];
+            var bag = meta.bagSlots;
+
+            if (eq == null || eq.item == null)
+                return false;
+
+            foreach (var b in bag)
+            {
+                if (b.IsEmpty())
+                {
+                    b.item = eq.item;
+                    b.amount = 1;
+                    b.durability = eq.durability;
+
+                    EquipmentSystem.Instance.Unequip(fromIndex);
+
+                    meta.NotifyInventoryChanged();
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        if (source == DragSource.Armor)
+        {
+            var eqSlots = EquipmentSystem.Instance?.equipmentSlots;
+
+            if (eqSlots == null || fromIndex < 0 || fromIndex >= eqSlots.Length)
+                return false;
+        }
 
         return false;
     }

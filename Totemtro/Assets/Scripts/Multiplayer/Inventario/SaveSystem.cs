@@ -8,7 +8,6 @@ public class SaveSystem : MonoBehaviour
 
     ISaveSystem saveSystem;
 
-    // Indica que el sistema está listo
     public bool IsReady { get; private set; } = false;
 
     void Awake()
@@ -24,35 +23,59 @@ public class SaveSystem : MonoBehaviour
         transform.SetParent(null);
         DontDestroyOnLoad(gameObject);
 
+        Initialize();
+    }
+
+    void Initialize()
+    {
         saveSystem = new LocalSaveSystem();
 
         IsReady = true;
-        Debug.Log("SaveSystem initialized");
+
+        Debug.Log("✅ SaveSystem initialized");
+
         OnReady?.Invoke();
     }
 
-    public void Save(string key, string data) => saveSystem.Save(key, data);
-    public string Load(string key) => saveSystem.Load(key);
-}
+    // ===============================
+    // SAVE
+    // ===============================
 
-public class MetaInventoryDiagnostics : MonoBehaviour
-{
-    void Start()
+    public void Save(string key, string data)
     {
-        Invoke(nameof(LogStatus), 0.5f);
+        if (!IsReady)
+        {
+            Debug.LogWarning("⚠️ SaveSystem not ready");
+            return;
+        }
+
+        if (string.IsNullOrEmpty(key))
+        {
+            Debug.LogError("❌ Save key is null or empty");
+            return;
+        }
+
+        saveSystem.Save(key, data);
     }
 
-    void LogStatus()
+    // ===============================
+    // LOAD
+    // ===============================
+
+    public string Load(string key)
     {
-        Debug.Log("=== MetaInventory Diagnostics ===");
-        Debug.Log("SaveSystem.Instance: " + (SaveSystem.Instance != null));
-        Debug.Log("SaveSystem.IsReady: " + (SaveSystem.Instance != null ? SaveSystem.Instance.IsReady.ToString() : "n/a"));
-        Debug.Log("ItemDatabase.Instance: " + (ItemDatabase.Instance != null));
-        Debug.Log("MetaInventory.Instance: " + (MetaInventory.Instance != null));
-        if (MetaInventory.Instance != null)
+        if (!IsReady)
         {
-            Debug.Log("MetaInventory.IsInitialized: " + MetaInventory.Instance.IsInitialized);
-            Debug.Log("MetaInventory.slots: " + (MetaInventory.Instance.slots != null ? MetaInventory.Instance.slots.Length.ToString() : "null"));
+            Debug.LogWarning("⚠️ SaveSystem not ready");
+            return null;
         }
+
+        if (string.IsNullOrEmpty(key))
+        {
+            Debug.LogError("❌ Load key is null or empty");
+            return null;
+        }
+
+        return saveSystem.Load(key);
     }
 }

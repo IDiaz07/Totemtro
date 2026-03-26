@@ -32,11 +32,14 @@ public class HubSlotUI : MonoBehaviour,
     IEnumerator Start()
     {
         yield return null;
+        yield return null;
         Refresh();
     }
 
     public int EffectiveIndex =>
-        slotType == DragSource.Armor ? (int)armorSlot : slotIndex;
+    slotType == DragSource.Armor
+        ? EquipmentSystem.Instance.GetIndex(armorSlot)
+        : slotIndex;
 
     // =====================================================
     // REFRESH UI
@@ -46,6 +49,9 @@ public class HubSlotUI : MonoBehaviour,
     {
         InventorySlot slot = GetSlot();
 
+        if (slot != null)
+            slot.EnsureDurability();
+
         if (slot == null || slot.item == null)
         {
             currentItem = null;
@@ -54,8 +60,8 @@ public class HubSlotUI : MonoBehaviour,
             if (icon != null)
             {
                 icon.sprite = null;
-                icon.color = Color.white; // ← nunca transparente
-                icon.enabled = false;     // ← la visibilidad la controla enabled
+                icon.color = Color.white;
+                icon.enabled = false;
             }
 
             if (amountText != null)
@@ -79,40 +85,48 @@ public class HubSlotUI : MonoBehaviour,
                 ? currentAmount.ToString()
                 : "";
         // ===============================
-        // DURABILITY UI
+        // DURABILITY UI (FIX COMPLETO)
         // ===============================
         if (durabilityBarRoot != null && durabilityFill != null)
         {
+            // RESET SIEMPRE (CLAVE DEL BUG)
+            durabilityBarRoot.SetActive(false);
+
             if (slot == null || slot.item == null)
-            {
-                durabilityBarRoot.SetActive(false);
                 return;
-            }
+
+            // SOLO EQUIPMENT
+            if (slot.item.itemType != ItemType.Equipment)
+                return;
 
             float max = slot.item.maxDurability;
-            float current = slot.durability;
 
             if (max <= 0)
-            {
-                durabilityBarRoot.SetActive(false);
                 return;
-            }
+
+            float current = slot.durability;
+
+            // ITEM NUEVO → NO MOSTRAR
+            if (current >= max)
+                return;
 
             float ratio = current / max;
 
-            // 🔥 SOLO MOSTRAR SI < 100%
-            if (ratio >= 1f)
-            {
-                durabilityBarRoot.SetActive(false);
-            }
-            else
-            {
-                durabilityBarRoot.SetActive(true);
-                durabilityFill.fillAmount = ratio;
+            // SI ESTÁ ROTO → NO MOSTRAR (se elimina igual)
+            if (ratio <= 0f)
+                return;
 
-                // 🔥 COLOR DINÁMICO
-                durabilityFill.color = Color.Lerp(Color.red, Color.green, ratio);
-            }
+            // ACTIVAR UI
+            durabilityBarRoot.SetActive(true);
+            durabilityFill.fillAmount = ratio;
+
+            // COLOR
+            if (ratio > 0.5f)
+                durabilityFill.color = Color.green;
+            else if (ratio > 0.15f)
+                durabilityFill.color = Color.yellow;
+            else
+                durabilityFill.color = Color.red;
         }
     }
 
@@ -270,6 +284,70 @@ public class HubSlotUI : MonoBehaviour,
         }
 
         // ===============================
+        // 👉 UNEQUIP → DRAG A OTRO SLOT
+        // ===============================
+        if (drag.source == DragSource.Armor && slotType != DragSource.Armor)
+        {
+            int armorIndex = drag.sourceIndex;
+
+            var eqSlots = EquipmentSystem.Instance.equipmentSlots;
+            var sourceSlot = eqSlots[armorIndex];
+
+            if (sourceSlot == null || sourceSlot.item == null)
+                return;
+
+            var targetSlots = GetSourceSlots(slotType);
+
+            if (targetSlots == null)
+                return;
+
+            var targetSlot = targetSlots[EffectiveIndex];
+
+            // 🔹 SI VACÍO → MOVER
+            if (targetSlot.IsEmpty())
+            {
+                targetSlot.item = sourceSlot.item;
+                targetSlot.amount = 1;
+                targetSlot.durability = sourceSlot.durability;
+
+                EquipmentSystem.Instance.Unequip(armorIndex);
+
+                MetaInventory.Instance.NotifyInventoryChanged();
+                drag.Hide();
+                return;
+            }
+
+            // 🔹 SI MISMO ITEM → STACK
+            if (targetSlot.item == sourceSlot.item &&
+                targetSlot.durability == sourceSlot.durability)
+            {
+                targetSlot.amount += 1;
+
+                EquipmentSystem.Instance.Unequip(armorIndex);
+
+                MetaInventory.Instance.NotifyInventoryChanged();
+                drag.Hide();
+                return;
+            }
+
+            // 🔹 SI OCUPADO → SWAP
+            var tempItem = targetSlot.item;
+            var tempDurability = targetSlot.durability;
+
+            targetSlot.item = sourceSlot.item;
+            targetSlot.amount = 1;
+            targetSlot.durability = sourceSlot.durability;
+
+            sourceSlot.item = tempItem;
+            sourceSlot.amount = 1;
+            sourceSlot.durability = tempDurability;
+
+            MetaInventory.Instance.NotifyInventoryChanged();
+            drag.Hide();
+            return;
+        }
+
+        // ===============================
         // NORMAL TRANSFER
         // ===============================
         InventoryTransferSystem.MoveAmount(
@@ -309,6 +387,57 @@ public class HubSlotUI : MonoBehaviour,
         // ===============================
         if (scene.Contains("HubScene"))
         {
+            // ===============================
+            // ARMOR → META (PRIORIDAD HUB)
+            // ===============================
+            if (slotType == DragSource.Armor)
+            {
+                bool success = false;
+
+                // 👉 1. INVENTORY
+                success = InventoryTransferSystem.MoveFullStack(
+                    DragSource.Armor,
+                    EffectiveIndex,
+                    DragSource.Meta
+                );
+
+                // 👉 2. BAG
+                if (!success)
+                {
+                    success = InventoryTransferSystem.MoveFullStack(
+                        DragSource.Armor,
+                        EffectiveIndex,
+                        DragSource.Bag
+                    );
+                }
+
+                // 👉 3. SHAKE
+                if (!success)
+                {
+                    var shake = FindFirstObjectByType<UIShake>();
+                    if (shake != null) shake.Play();
+                }
+
+                return;
+            }
+
+            // ===============================
+            // AUTO EQUIP (META / BAG)
+            // ===============================
+            if (slotType == DragSource.Meta || slotType == DragSource.Bag)
+            {
+                if (slot.item.itemType == ItemType.Equipment)
+                {
+                    bool equipped = TryAutoEquip(slot);
+
+                    if (equipped)
+                        return;
+                }
+            }
+
+            // ===============================
+            // NORMAL TRANSFERS
+            // ===============================
             if (slotType == DragSource.Meta)
             {
                 InventoryTransferSystem.MoveFullStack(
@@ -328,20 +457,35 @@ public class HubSlotUI : MonoBehaviour,
                 );
                 return;
             }
+        }
 
-            if (slotType == DragSource.Armor)
+        // ===============================
+        // ⚔️ COMBAT SCENE
+        // ===============================
+        if (scene.Contains("CombatScene"))
+        {
+            if (slotType == DragSource.Bag)
             {
-                InventoryTransferSystem.MoveFullStack(
-                    DragSource.Armor,
-                    EffectiveIndex,
-                    DragSource.Bag
-                );
-                return;
+                if (slot.item.itemType == ItemType.Equipment)
+                {
+                    bool equipped = TryAutoEquip(slot);
+
+                    if (!equipped)
+                    {
+                        // ❌ SLOT OCUPADO → SHAKE
+                        var shake = FindFirstObjectByType<UIShake>();
+
+                        if (shake != null)
+                            shake.Play();
+                    }
+
+                    return;
+                }
             }
         }
 
         // ===============================
-        // INVENTORY → ACTION BAR (WHEN INVENTORY OPEN)
+        // BAG → ACTION BAR (WHEN INVENTORY OPEN)
         // ===============================
         if (InventoryController.Instance != null &&
             InventoryController.Instance.IsInventoryOpen)
@@ -355,6 +499,19 @@ public class HubSlotUI : MonoBehaviour,
                 );
                 return;
             }
+        }
+
+        // ===============================
+        // ARMOR → BAG (SHIFT)
+        // ===============================
+        if (slotType == DragSource.Armor)
+        {
+            InventoryTransferSystem.MoveFullStack(
+                DragSource.Armor,
+                EffectiveIndex,
+                DragSource.Bag
+            );
+            return;
         }
 
         // ===============================
@@ -394,10 +551,16 @@ public class HubSlotUI : MonoBehaviour,
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        var drag = MetaDragUI.Instance;
+        var slot = GetSlot();
 
-        if (drag != null && drag.IsDragging)
-            drag.RegisterHoveredSlot(this);
+        if (slot == null || slot.item == null)
+            return;
+
+        ItemTooltipUI.Instance.Show(
+            slot.item,
+            slot,
+            transform as RectTransform
+        );
     }
 
     public void OnPointerExit(PointerEventData eventData) { }
@@ -431,6 +594,16 @@ public class HubSlotUI : MonoBehaviour,
                     StartCoroutine(WaitForRunLoadoutAndSubscribe());
             }
         }
+
+        if (slotType == DragSource.Armor)
+        {
+            if (EquipmentSystem.Instance != null)
+                EquipmentSystem.Instance.onEquipmentChanged += Refresh;
+
+            // 🔥 FIX: forzar refresh después de suscribirse
+            StartCoroutine(ForceRefreshNextFrame());
+        }
+
         else
         {
             if (MetaInventory.Instance != null)
@@ -462,6 +635,13 @@ public class HubSlotUI : MonoBehaviour,
             if (RunLoadoutSystem.Instance != null)
                 RunLoadoutSystem.Instance.onLoadoutChanged -= Refresh;
         }
+
+        if (slotType == DragSource.Armor)
+        {
+            if (EquipmentSystem.Instance != null)
+                EquipmentSystem.Instance.onEquipmentChanged -= Refresh;
+        }
+
         else
         {
             if (MetaInventory.Instance != null)
@@ -524,4 +704,47 @@ public class HubSlotUI : MonoBehaviour,
         }
     }
 
+    public InventorySlot GetSlotForTooltip()
+    {
+        return GetSlot();
+    }
+
+    bool TryAutoEquip(InventorySlot sourceSlot)
+    {
+        if (sourceSlot == null || sourceSlot.item == null)
+            return false;
+
+        if (sourceSlot.item.itemType != ItemType.Equipment)
+            return false;
+
+        var eq = EquipmentSystem.Instance;
+
+        if (eq == null)
+            return false;
+
+        int index = eq.GetIndex(sourceSlot.item.equipmentSlotType);
+
+        if (index < 0)
+            return false;
+
+        var targetSlot = eq.equipmentSlots[index];
+
+        // 🟢 SLOT VACÍO → EQUIPAR
+        if (targetSlot.item == null)
+        {
+            eq.EquipItem(sourceSlot, index);
+            sourceSlot.Clear();
+
+            MetaInventory.Instance?.NotifyInventoryChanged();
+            return true;
+        }
+
+        return false; // ocupado
+    }
+
+    IEnumerator ForceRefreshNextFrame()
+    {
+        yield return null; // espera 1 frame
+        Refresh();
+    }
 }

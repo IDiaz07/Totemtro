@@ -226,16 +226,15 @@ public class PlayerHealth : MonoBehaviour
             if (slot.item == null)
                 continue;
 
-            // 🔥 desgaste proporcional
-            int durabilityLoss = Mathf.Max(1, damage / 5);
+            int durabilityLoss = Mathf.Max(1, damage / 20);
 
             slot.durability -= durabilityLoss;
 
-            // 🔥 item roto
-            if (slot.durability <= 0)
+            slot.durability = Mathf.Max(0, slot.durability);
+
+            if (slot.durability == 0)
             {
                 Debug.Log("Item roto: " + slot.item.name);
-
                 slot.Clear();
             }
         }

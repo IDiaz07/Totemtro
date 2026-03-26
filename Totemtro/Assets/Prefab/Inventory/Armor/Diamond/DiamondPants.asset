@@ -26,7 +26,7 @@ MonoBehaviour:
   showHealing: 0
   healingAmount: 0
   stackable: 1
-  maxStack: 99
+  maxStack: 1
   usableInActionBar: 0
   cooldown: 0
   worldPrefab: {fileID: 0}
@@ -34,3 +34,5 @@ MonoBehaviour:
   isConsumableInLoadout: 0
   equipmentSlotType: 3
   damageReduction: 0.06
+  maxDurability: 300
+  durabilityResistance: 0.5

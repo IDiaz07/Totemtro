@@ -78,17 +78,26 @@ public class EquipmentSystem : MonoBehaviour
                     {
                         b.item = current.item;
                         b.amount = 1;
-                        b.durability = current.durability; // 🔥 FIX
+                        b.durability = current.durability > 0
+                            ? current.durability
+                            : current.item.maxDurability;
                         break;
                     }
                 }
             }
         }
 
-        // 🔥 EQUIPAR (manteniendo durability real)
-        current.item = sourceSlot.item;
+        sourceSlot.EnsureDurability();
+
+        // 🔥 FIX CLAVE: asegurar durability válida
+        int durabilityToSet = sourceSlot.durability > 0
+            ? sourceSlot.durability
+            : item.maxDurability;
+
+        // 🔥 EQUIPAR
+        current.item = item;
         current.amount = 1;
-        current.durability = sourceSlot.durability;
+        current.durability = durabilityToSet;
 
         onEquipmentChanged?.Invoke();
 
@@ -115,4 +124,35 @@ public class EquipmentSystem : MonoBehaviour
 
         MetaInventory.Instance?.NotifyInventoryChanged();
     }
+
+    // =====================================================
+    // ARMOR
+    // =====================================================
+
+    public int GetTotalArmor()
+    {
+        float total = 0f;
+
+        foreach (var slot in equipmentSlots)
+        {
+            if (slot == null || slot.item == null)
+                continue;
+
+            total += slot.item.damageReduction;
+        }
+
+        return Mathf.RoundToInt(total * 100f); // 0.26 → 26
+    }
+
+    public float GetArmorNormalized()
+    {
+        return GetTotalArmor() / 30f;
+    }
 }
+
+[System.Serializable]
+public class ArmorSlotData
+{
+    public string id;
+    public int durability;
+}   

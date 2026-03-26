@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System.Collections.Generic;
@@ -27,6 +27,13 @@ public class ItemTooltipUI : MonoBehaviour
     public float startX = -50f;
     public float spacing = 100f;
 
+    [Header("Armor Stats")]
+    public GameObject durabilityLine;
+    public TextMeshProUGUI durabilityText;
+
+    public GameObject resistanceLine;
+    public TextMeshProUGUI resistanceText;
+
     void Awake()
     {
         Instance = this;
@@ -38,7 +45,7 @@ public class ItemTooltipUI : MonoBehaviour
     // SHOW TOOLTIP
     // ===============================
 
-    public void Show(ItemData item, RectTransform slot)
+    public void Show(ItemData item, InventorySlot slot, RectTransform slotUI)
     {
         panel.SetActive(true);
 
@@ -80,9 +87,41 @@ public class ItemTooltipUI : MonoBehaviour
             activeStats.Add(damageLine);
         }
 
+        durabilityLine.SetActive(false);
+        resistanceLine.SetActive(false);
+
+        // ===============================
+        // ARMOR STATS
+        // ===============================
+
+        if (item.itemType == ItemType.Equipment)
+        {
+            // DURABILITY %
+            if (item.maxDurability > 0 && slot != null)
+            {
+                float currentDurability = slot.durability;
+
+                // 🔥 FIX: si viene a 0, asumir item nuevo
+                if (currentDurability <= 0)
+                    currentDurability = item.maxDurability;
+
+                float ratio = currentDurability / item.maxDurability;
+                int percent = Mathf.RoundToInt(ratio * 100f);
+
+                durabilityLine.SetActive(true);
+                durabilityText.text = "Durability: " + percent + "%";
+            }
+
+            // ARMOR
+            int armor = Mathf.RoundToInt(item.damageReduction * 100f);
+
+            resistanceLine.SetActive(true);
+            resistanceText.text = $"Resistance: + {armor}";
+        }
+
         LayoutStats(activeStats);
 
-        PositionTooltip(slot);
+        PositionTooltip(slotUI);
     }
 
     // ===============================

@@ -61,6 +61,7 @@ public class ItemData : ScriptableObject
 
     [Header("Durability")]
     public int maxDurability = 100;
+    public float durabilityResistance = 1f;
 
     public virtual void Use(GameObject user)
     {

@@ -105,6 +105,11 @@ public class MetaInventory : MonoBehaviour
 
         LoadMetaInventory();
 
+        while (EquipmentSystem.Instance == null)
+            yield return null;
+
+        ApplyLoadedArmor();
+
         int count = GetSlotCount();
 
         if (slots == null || slots.Length == 0)
@@ -458,20 +463,21 @@ public class MetaInventory : MonoBehaviour
         }
 
         // =====================================
-        // ARMOR
+        // ARMOR (GUARDAR)
         // =====================================
-        // 🔥 SINCRONIZAR EQUIPMENT → ARMOR SLOTS
-        if (EquipmentSystem.Instance != null)
+        data.armorSlots = new SlotSaveData[ARMOR_SIZE];
+
+        var eq = EquipmentSystem.Instance;
+
+        for (int i = 0; i < ARMOR_SIZE; i++)
         {
-            var eq = EquipmentSystem.Instance.equipmentSlots;
+            data.armorSlots[i] = new SlotSaveData();
 
-            for (int i = 0; i < eq.Length; i++)
+            if (eq != null && eq.equipmentSlots[i] != null && eq.equipmentSlots[i].item != null)
             {
-                if (armorSlots[i] == null)
-                    armorSlots[i] = new InventorySlot(null, 0);
-
-                armorSlots[i].item = eq[i].item;
-                armorSlots[i].amount = eq[i].amount;
+                data.armorSlots[i].id = eq.equipmentSlots[i].item.itemID;
+                data.armorSlots[i].amount = 1;
+                data.armorSlots[i].durability = eq.equipmentSlots[i].durability; // 🔥 IMPORTANTE
             }
         }
 
@@ -608,17 +614,33 @@ public class MetaInventory : MonoBehaviour
         // =====================================
         // ARMOR
         // =====================================
-        // 🔥 APLICAR ARMOR A EQUIPMENT SYSTEM
         if (EquipmentSystem.Instance != null)
         {
-            for (int i = 0; i < armorSlots.Length; i++)
-            {
-                var slot = armorSlots[i];
+            var eq = EquipmentSystem.Instance.equipmentSlots;
 
-                if (slot != null && slot.item != null)
+            for (int i = 0; i < eq.Length; i++)
+            {
+                eq[i].Clear();
+
+                if (data.armorSlots == null || i >= data.armorSlots.Length)
+                    continue;
+
+                var saved = data.armorSlots[i];
+
+                if (string.IsNullOrEmpty(saved.id))
+                    continue;
+
+                ItemData item = ItemDatabase.Instance.GetItemById(saved.id);
+
+                if (item != null)
                 {
-                    EquipmentSystem.Instance.equipmentSlots[i].item = slot.item;
-                    EquipmentSystem.Instance.equipmentSlots[i].amount = slot.amount;
+                    eq[i].item = item;
+                    eq[i].amount = 1;
+                    eq[i].durability = saved.durability > 0
+                        ? saved.durability
+                        : item.maxDurability;
+
+                    Debug.Log("Loaded armor: " + item.name + " in slot " + i);
                 }
             }
 
@@ -651,4 +673,48 @@ public class MetaInventory : MonoBehaviour
     {
         IsInitialized = true;
     }
+
+    void ApplyLoadedArmor()
+    {
+        string json = SaveSystem.Instance.Load("MetaInventory");
+
+        if (string.IsNullOrEmpty(json))
+            return;
+
+        MetaSaveData data = JsonUtility.FromJson<MetaSaveData>(json);
+
+        if (data == null || data.armorSlots == null)
+            return;
+
+        var eq = EquipmentSystem.Instance.equipmentSlots;
+
+        for (int i = 0; i < eq.Length; i++)
+        {
+            eq[i].Clear();
+
+            if (i >= data.armorSlots.Length)
+                continue;
+
+            var saved = data.armorSlots[i];
+
+            if (string.IsNullOrEmpty(saved.id))
+                continue;
+
+            ItemData item = ItemDatabase.Instance.GetItemById(saved.id);
+
+            if (item != null)
+            {
+                eq[i].item = item;
+                eq[i].amount = 1;
+                eq[i].durability = saved.durability > 0
+                    ? saved.durability
+                    : item.maxDurability;
+
+                Debug.Log("🔥 APPLY ARMOR: " + item.name + " slot " + i);
+            }
+        }
+
+        EquipmentSystem.Instance.onEquipmentChanged?.Invoke();
+    }
+
 }

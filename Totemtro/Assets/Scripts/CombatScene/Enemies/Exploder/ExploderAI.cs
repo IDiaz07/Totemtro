@@ -105,6 +105,9 @@ public class ExploderAI : MonoBehaviour
 
     void Explode()
     {
+        if (!gameObject.scene.isLoaded)
+            return;
+
         float damage = triggeredByProximity
             ? damageOnProximity
             : damageOnDeath;
@@ -135,19 +138,21 @@ public class ExploderAI : MonoBehaviour
 
         CameraShake.ShakeCamera(0.2f, 0.2f);
 
-        Destroy(gameObject);
+        GetComponent<ExploderAI>()?.Die();
     }
 
     // =====================================================
     // MUERTE NORMAL
     // =====================================================
 
-    void OnDestroy()
+    public void Die()
     {
-        if (!isExploding)
-        {
-            // murió sin activarse → explosión débil
-            Explode();
-        }
+        if (isExploding)
+            return;
+
+        // explosión débil si muere sin trigger
+        triggeredByProximity = false;
+
+        Explode();
     }
 }

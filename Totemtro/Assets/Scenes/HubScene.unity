@@ -26691,6 +26691,7 @@ MonoBehaviour:
   loadoutSlots:
   - item: {fileID: 11400000, guid: 65ea00ddceffd0f4aa21ac68087d04e2, type: 2}
     amount: 5
+    durability: 0
   maxSlots: 15
 --- !u!1 &804623205
 GameObject:
@@ -34410,6 +34411,14 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4724285605773014996, guid: 904d808a981ef854c883b10e2d4e5e46, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4724285605773014996, guid: 904d808a981ef854c883b10e2d4e5e46, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 5218381854769786579, guid: 904d808a981ef854c883b10e2d4e5e46, type: 3}
       propertyPath: m_Pivot.x
       value: 0.1
@@ -34489,6 +34498,14 @@ PrefabInstance:
     - target: {fileID: 5218381854769786579, guid: 904d808a981ef854c883b10e2d4e5e46, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5475487712570074553, guid: 904d808a981ef854c883b10e2d4e5e46, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8426887356972124379, guid: 904d808a981ef854c883b10e2d4e5e46, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9078842689436754563, guid: 904d808a981ef854c883b10e2d4e5e46, type: 3}
       propertyPath: m_Name
@@ -37890,8 +37907,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95cea8b11037e2c4ba3fe2364b0437e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testItem: {fileID: 11400000, guid: 692c128cd28df094ab7509bd2bf58bd6, type: 2}
-  amount: 8
+  testItem: {fileID: 11400000, guid: e7d0fc4e0afe08c4281f5c3b0e95f8a4, type: 2}
+  amount: 1
 --- !u!1 &1536737850
 GameObject:
   m_ObjectHideFlags: 0
@@ -42563,12 +42580,16 @@ MonoBehaviour:
   equipmentSlots:
   - item: {fileID: 0}
     amount: 0
+    durability: 0
   - item: {fileID: 0}
     amount: 0
+    durability: 0
   - item: {fileID: 0}
     amount: 0
+    durability: 0
   - item: {fileID: 0}
     amount: 0
+    durability: 0
 --- !u!1 &1845639779
 GameObject:
   m_ObjectHideFlags: 0

@@ -43,6 +43,19 @@ public class ItemHoverTooltip : MonoBehaviour,
     }
 
     // ===============================
+    // GET SLOT
+    // ===============================
+
+    InventorySlot GetSlot()
+    {
+        HubSlotUI hub = GetComponentInParent<HubSlotUI>();
+        if (hub != null)
+            return hub.GetSlotForTooltip(); // 👈 ahora lo creamos
+
+        return null;
+    }
+
+    // ===============================
     // POINTER ENTER
     // ===============================
 
@@ -64,14 +77,15 @@ public class ItemHoverTooltip : MonoBehaviour,
 
     IEnumerator HoverDelay(ItemData item)
     {
-
-        yield return new WaitForSecondsRealtime(0.5f); // ← Realtime, ignora timeScale
+        yield return new WaitForSecondsRealtime(0.5f);
 
         if (ItemTooltipUI.Instance == null)
             yield break;
 
         RectTransform slotRect = GetSlotRect();
-        ItemTooltipUI.Instance.Show(item, slotRect);
+        InventorySlot slot = GetSlot();
+
+        ItemTooltipUI.Instance.Show(item, slot, slotRect);
     }
 
     // ===============================

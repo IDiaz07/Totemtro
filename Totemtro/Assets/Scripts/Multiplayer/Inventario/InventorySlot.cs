@@ -17,6 +17,21 @@ public class InventorySlot
             durability = item.maxDurability;
     }
 
+    public void SetItem(ItemData newItem, int newAmount)
+    {
+        item = newItem;
+        amount = newAmount;
+
+        if (item != null)
+            durability = item.maxDurability;
+    }
+
+    public void EnsureDurability()
+    {
+        if (item != null && durability <= 0)
+            durability = item.maxDurability;
+    }
+
     public bool IsEmpty()
     {
         return item == null || amount <= 0;
@@ -26,5 +41,6 @@ public class InventorySlot
     {
         item = null;
         amount = 0;
+        durability = 0;
     }
 }

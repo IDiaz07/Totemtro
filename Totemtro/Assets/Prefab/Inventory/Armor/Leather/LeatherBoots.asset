@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: leatherboots
   itemName: Leather Boots
-  icon: {fileID: 7813337302945611845, guid: a4116c75dd0c04449a374e42dcd0c7a1, type: 3}
+  icon: {fileID: 21300000, guid: a4116c75dd0c04449a374e42dcd0c7a1, type: 3}
   itemType: 2
   description: Rough leather leggings. Designed for mobility over protection.
   showDamage: 0
@@ -26,7 +26,7 @@ MonoBehaviour:
   showHealing: 0
   healingAmount: 0
   stackable: 1
-  maxStack: 99
+  maxStack: 1
   usableInActionBar: 0
   cooldown: 0
   worldPrefab: {fileID: 0}
@@ -34,3 +34,5 @@ MonoBehaviour:
   isConsumableInLoadout: 0
   equipmentSlotType: 4
   damageReduction: 0.02
+  maxDurability: 60
+  durabilityResistance: 1.3
