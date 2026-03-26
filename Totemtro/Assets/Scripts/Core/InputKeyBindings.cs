@@ -37,7 +37,7 @@ public class InputKeyBindings : MonoBehaviour
         { Action.MoveRight,   KeyCode.D },
         { Action.Inventory,   KeyCode.E },
         { Action.Map,         KeyCode.M },
-        { Action.Extraction,  KeyCode.F },
+        { Action.Extraction,  KeyCode.R },
         { Action.Dash,        KeyCode.Space },
         { Action.Pause,       KeyCode.Escape },
         { Action.Interact,    KeyCode.F },

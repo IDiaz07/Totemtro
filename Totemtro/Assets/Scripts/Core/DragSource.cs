@@ -8,5 +8,6 @@ public enum DragSource
 
     // Combat Scene
     Inventory,
-    ActionBar
+    ActionBar,
+    Chest
 }

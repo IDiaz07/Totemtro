@@ -12,12 +12,20 @@ public class InventoryController : MonoBehaviour
     public Weapon playerWeapon;
 
     bool isOpen = false;
+    public static InventoryController Instance;
 
     void Start()
     {
         // Empieza activado para que Awake/Start de los hijos corran,
         // luego lo cerramos por código
         CloseAll();
+    }
+
+    public bool IsInventoryOpen => inventoryPanel != null && inventoryPanel.activeSelf;
+
+    void Awake()
+    {
+        Instance = this;
     }
 
     void Update()

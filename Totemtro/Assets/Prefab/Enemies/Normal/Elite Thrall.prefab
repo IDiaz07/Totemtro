@@ -391,23 +391,24 @@ MonoBehaviour:
   dropForce: 6
   materialDrops:
   - item: {fileID: 11400000, guid: 443520074ed9dda429863a2801d36146, type: 2}
-    dropChance: 0.25
+    dropChance: 0.05
     minAmount: 1
     maxAmount: 1
   - item: {fileID: 11400000, guid: 692c128cd28df094ab7509bd2bf58bd6, type: 2}
-    dropChance: 0.5
+    dropChance: 0.2
     minAmount: 1
     maxAmount: 2
   - item: {fileID: 11400000, guid: 1e5f40d0d7799a341a66ceb71fe66d5b, type: 2}
-    dropChance: 0.3
+    dropChance: 0.12
     minAmount: 1
     maxAmount: 1
   - item: {fileID: 11400000, guid: 59c1134ffbf737d4683cdc2370315a81, type: 2}
-    dropChance: 0.1
+    dropChance: 0.04
     minAmount: 1
     maxAmount: 1
   hitParticlesPrefab: {fileID: 8306175235273709235, guid: 361d01d5c48df364bb9850610fb3342f, type: 3}
   isBoss: 0
+  healthBarPrefab: {fileID: 5667458826574176871, guid: 7a053446cfaf9d5479e34610a9cfdab2, type: 3}
   minimapIconPrefab: {fileID: 2779605816841514188, guid: f5cde86c385dbe04d9893345a36bc813, type: 3}
   headIcon: {fileID: 21300000, guid: e6a65951964795540aca149b02f6afd5, type: 3}
   circleClipMaterial: {fileID: 2100000, guid: 0e4261aaa6f4c564ab18fc3efa538c04, type: 2}

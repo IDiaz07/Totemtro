@@ -391,19 +391,20 @@ MonoBehaviour:
   dropForce: 3
   materialDrops:
   - item: {fileID: 11400000, guid: 8a06c484467ee634fb5de2622d7e22d9, type: 2}
-    dropChance: 0.45
+    dropChance: 0.18
     minAmount: 1
     maxAmount: 1
   - item: {fileID: 11400000, guid: db9a34a9db390164bbce944ec62b3032, type: 2}
-    dropChance: 0.2
+    dropChance: 0.08
     minAmount: 1
     maxAmount: 1
   - item: {fileID: 11400000, guid: 0456ca0d716c2db4ca40380b32fe42ee, type: 2}
-    dropChance: 0.3
+    dropChance: 0.03
     minAmount: 1
     maxAmount: 1
   hitParticlesPrefab: {fileID: 8306175235273709235, guid: 361d01d5c48df364bb9850610fb3342f, type: 3}
   isBoss: 0
+  healthBarPrefab: {fileID: 5667458826574176871, guid: 7a053446cfaf9d5479e34610a9cfdab2, type: 3}
   minimapIconPrefab: {fileID: 2779605816841514188, guid: fcd3cab4b25d2e14eacbe03f3f046a25, type: 3}
   headIcon: {fileID: 21300000, guid: b746aaa4f970ccc44b4968b09522a592, type: 3}
   circleClipMaterial: {fileID: 2100000, guid: 0e4261aaa6f4c564ab18fc3efa538c04, type: 2}
@@ -434,7 +435,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3.5
   explosionRadius: 2
-  explosionDamage: 30
+  damageOnDeath: 10
+  damageOnProximity: 30
+  triggerRange: 1.5
+  explosionDelay: 1
+  explosionFX: {fileID: 4249707904169643455, guid: 54fd124b2cfd6af4598287c1c5dd5481, type: 3}
 --- !u!114 &2555473213123058253
 MonoBehaviour:
   m_ObjectHideFlags: 0

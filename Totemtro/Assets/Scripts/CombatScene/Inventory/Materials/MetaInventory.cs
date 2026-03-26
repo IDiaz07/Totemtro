@@ -460,16 +460,18 @@ public class MetaInventory : MonoBehaviour
         // =====================================
         // ARMOR
         // =====================================
-        data.armorSlots = new SlotSaveData[armorSlots != null ? armorSlots.Length : 0];
-
-        for (int i = 0; i < data.armorSlots.Length; i++)
+        // 🔥 SINCRONIZAR EQUIPMENT → ARMOR SLOTS
+        if (EquipmentSystem.Instance != null)
         {
-            data.armorSlots[i] = new SlotSaveData();
+            var eq = EquipmentSystem.Instance.equipmentSlots;
 
-            if (!armorSlots[i].IsEmpty())
+            for (int i = 0; i < eq.Length; i++)
             {
-                data.armorSlots[i].id = armorSlots[i].item.itemID;
-                data.armorSlots[i].amount = armorSlots[i].amount;
+                if (armorSlots[i] == null)
+                    armorSlots[i] = new InventorySlot(null, 0);
+
+                armorSlots[i].item = eq[i].item;
+                armorSlots[i].amount = eq[i].amount;
             }
         }
 
@@ -606,25 +608,21 @@ public class MetaInventory : MonoBehaviour
         // =====================================
         // ARMOR
         // =====================================
-        armorSlots = new InventorySlot[ARMOR_SIZE];
-
-        for (int i = 0; i < ARMOR_SIZE; i++)
+        // 🔥 APLICAR ARMOR A EQUIPMENT SYSTEM
+        if (EquipmentSystem.Instance != null)
         {
-            armorSlots[i] = new InventorySlot(null, 0);
-
-            if (data.armorSlots == null || i >= data.armorSlots.Length)
-                continue;
-
-            if (string.IsNullOrEmpty(data.armorSlots[i].id))
-                continue;
-
-            ItemData item = ItemDatabase.Instance.GetItemById(data.armorSlots[i].id);
-
-            if (item != null)
+            for (int i = 0; i < armorSlots.Length; i++)
             {
-                armorSlots[i].item = item;
-                armorSlots[i].amount = data.armorSlots[i].amount;
+                var slot = armorSlots[i];
+
+                if (slot != null && slot.item != null)
+                {
+                    EquipmentSystem.Instance.equipmentSlots[i].item = slot.item;
+                    EquipmentSystem.Instance.equipmentSlots[i].amount = slot.amount;
+                }
             }
+
+            EquipmentSystem.Instance.onEquipmentChanged?.Invoke();
         }
 
         Debug.Log("MetaInventory loaded successfully");

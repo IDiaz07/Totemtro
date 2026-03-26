@@ -5528,7 +5528,6 @@ GameObject:
   - component: {fileID: 1619803794}
   - component: {fileID: 1619803793}
   - component: {fileID: 1619803792}
-  - component: {fileID: 1619803791}
   - component: {fileID: 1619803790}
   - component: {fileID: 1619803789}
   m_Layer: 0
@@ -5615,21 +5614,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1619803791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1619803787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50d4e4f31c6bc664ca7598335b2b864e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxRotation: 5
-  swaySpeed: 6
-  smooth: 10
 --- !u!114 &1619803792
 MonoBehaviour:
   m_ObjectHideFlags: 0

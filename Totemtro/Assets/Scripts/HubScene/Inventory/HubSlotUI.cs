@@ -18,8 +18,7 @@ public class HubSlotUI : MonoBehaviour,
     public DragSource slotType = DragSource.Meta;
     public int slotIndex;
 
-    public enum ArmorSlotType { Helmet = 0, Chest = 1, Pants = 2, Boots = 3 }
-    public ArmorSlotType armorSlot = ArmorSlotType.Helmet;
+    public EquipmentSlotType armorSlot = EquipmentSlotType.Helmet;
 
     ItemData currentItem;
     int currentAmount;
@@ -92,10 +91,22 @@ public class HubSlotUI : MonoBehaviour,
                 return MetaInventory.Instance?.bagSlots?[slotIndex];
 
             case DragSource.Armor:
-                return MetaInventory.Instance?.armorSlots?[(int)armorSlot];
+                if (EquipmentSystem.Instance == null)
+                    return null;
+
+                int index = EquipmentSystem.Instance.GetIndex(armorSlot);
+
+                if (index < 0 || index >= EquipmentSystem.Instance.equipmentSlots.Length)
+                    return null;
+
+                return EquipmentSystem.Instance.equipmentSlots[index];
 
             case DragSource.Loadout:
                 return RunLoadoutSystem.Instance?.loadoutSlots?[slotIndex];
+
+            case DragSource.Chest:
+                return ChestUI.CurrentChest?.slots?[slotIndex];
+
         }
 
         return null;
@@ -132,6 +143,84 @@ public class HubSlotUI : MonoBehaviour,
         if (drag == null || !drag.IsDragging)
             return;
 
+        // ===============================
+        // ARMOR SLOT
+        // ===============================
+        if (slotType == DragSource.Armor)
+        {
+            if (EquipmentSystem.Instance == null)
+                return;
+
+            int index = EquipmentSystem.Instance.GetIndex(armorSlot);
+
+            if (index < 0 || index >= EquipmentSystem.Instance.equipmentSlots.Length)
+                return;
+
+            ItemData item = drag.draggedItem;
+
+            // 👉 EQUIPAR
+            if (item != null && item.itemType == ItemType.Equipment)
+            {
+                // validar tipo correcto
+                if (item.equipmentSlotType != armorSlot)
+                {
+                    Debug.Log("Item slot: " + item.equipmentSlotType + " = " + (int)item.equipmentSlotType);
+                    Debug.Log("UI slot: " + armorSlot + " = " + (int)armorSlot);
+                    return;
+                }
+
+                // 🔥 EQUIPAR
+                EquipmentSystem.Instance.EquipItem(item, index);
+
+                // 🔥 eliminar del origen
+                var sourceSlots = GetSourceSlots(drag.source);
+
+                if (sourceSlots != null &&
+                    drag.sourceIndex >= 0 &&
+                    drag.sourceIndex < sourceSlots.Length)
+                {
+                    sourceSlots[drag.sourceIndex].Clear();
+                }
+
+                MetaInventory.Instance?.NotifyInventoryChanged();
+
+                drag.Hide();
+                return;
+            }
+
+            // 👉 DESEQUIPAR (drag desde armor a otro lado)
+            var eq = EquipmentSystem.Instance.equipmentSlots[index];
+
+            if (eq == null || eq.item == null)
+                return;
+
+            var bag = MetaInventory.Instance?.bagSlots;
+
+            if (bag == null)
+                return;
+
+            // meter en bag
+            foreach (var b in bag)
+            {
+                if (b.IsEmpty())
+                {
+                    b.item = eq.item;
+                    b.amount = 1;
+                    break;
+                }
+            }
+
+            EquipmentSystem.Instance.Unequip(index);
+
+            MetaInventory.Instance.NotifyInventoryChanged();
+
+            drag.Hide();
+            return;
+        }
+
+        // ===============================
+        // NORMAL TRANSFER
+        // ===============================
         InventoryTransferSystem.MoveAmount(
             drag.source,
             drag.sourceIndex,
@@ -152,8 +241,9 @@ public class HubSlotUI : MonoBehaviour,
         if (eventData.button != PointerEventData.InputButton.Left)
             return;
 
-        if (!Input.GetKey(KeyCode.LeftShift) &&
-            !Input.GetKey(KeyCode.RightShift))
+        bool shift = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+
+        if (!shift)
             return;
 
         var slot = GetSlot();
@@ -200,9 +290,10 @@ public class HubSlotUI : MonoBehaviour,
         }
 
         // ===============================
-        // COMBAT SCENE
+        // INVENTORY → ACTION BAR (WHEN INVENTORY OPEN)
         // ===============================
-        if (scene.Contains("CombatScene"))
+        if (InventoryController.Instance != null &&
+            InventoryController.Instance.IsInventoryOpen)
         {
             if (slotType == DragSource.Bag)
             {
@@ -210,6 +301,36 @@ public class HubSlotUI : MonoBehaviour,
                     DragSource.Bag,
                     EffectiveIndex,
                     DragSource.ActionBar
+                );
+                return;
+            }
+        }
+
+        // ===============================
+        // CHEST SYSTEM (WHEN UI OPEN)
+        // ===============================
+        var chestUI = FindFirstObjectByType<ChestUI>(FindObjectsInactive.Include);
+
+        if (chestUI != null && chestUI.IsOpen && ChestUI.CurrentChest != null)
+        {
+            // BAG → CHEST
+            if (slotType == DragSource.Bag)
+            {
+                InventoryTransferSystem.MoveFullStack(
+                    DragSource.Bag,
+                    EffectiveIndex,
+                    DragSource.Chest
+                );
+                return;
+            }
+
+            // CHEST → BAG
+            if (slotType == DragSource.Chest)
+            {
+                InventoryTransferSystem.MoveFullStack(
+                    DragSource.Chest,
+                    EffectiveIndex,
+                    DragSource.Bag
                 );
                 return;
             }
@@ -236,6 +357,16 @@ public class HubSlotUI : MonoBehaviour,
 
     void OnEnable()
     {
+        if (slotType == DragSource.Chest)
+        {
+            if (ChestUI.CurrentChest != null)
+            {
+                ChestUI.CurrentChest.onChestChanged += Refresh;
+                StartCoroutine(DelayedRefresh());
+            }
+        }
+        
+
         if (slotType == DragSource.Loadout)
         {
             if (RunLoadoutSystem.Instance != null)
@@ -266,6 +397,12 @@ public class HubSlotUI : MonoBehaviour,
 
     void OnDisable()
     {
+        if (slotType == DragSource.Chest)
+        {
+            if (ChestUI.CurrentChest != null)
+                ChestUI.CurrentChest.onChestChanged -= Refresh;
+        }
+
         if (delayedSubscribeCoroutine != null)
             StopCoroutine(delayedSubscribeCoroutine);
 
@@ -313,6 +450,27 @@ public class HubSlotUI : MonoBehaviour,
             return null;
 
         return slot.item;
+    }
+
+    InventorySlot[] GetSourceSlots(DragSource src)
+    {
+        switch (src)
+        {
+            case DragSource.Meta:
+                return MetaInventory.Instance?.slots;
+
+            case DragSource.Bag:
+                return MetaInventory.Instance?.bagSlots;
+
+            case DragSource.Armor:
+                return EquipmentSystem.Instance?.equipmentSlots;
+
+            case DragSource.Chest:
+                return ChestUI.CurrentChest?.slots;
+
+            default:
+                return null;
+        }
     }
 
 }

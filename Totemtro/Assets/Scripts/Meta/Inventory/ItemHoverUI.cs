@@ -48,9 +48,7 @@ public class ItemHoverTooltip : MonoBehaviour,
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log($"ENTER: {gameObject.name} | pointerPos: {eventData.position} | presser: {eventData.pointerPress}");
         ItemData item = GetItem();
-        Debug.Log("ITEM: " + (item != null ? item.itemName : "NULL"));
 
         if (item == null) return;
 
@@ -66,18 +64,14 @@ public class ItemHoverTooltip : MonoBehaviour,
 
     IEnumerator HoverDelay(ItemData item)
     {
-        Debug.Log("[Tooltip] Corrutina iniciada para: " + item.itemName);
 
         yield return new WaitForSecondsRealtime(0.5f); // ← Realtime, ignora timeScale
-
-        Debug.Log("[Tooltip] Despues del delay - Instance: " + (ItemTooltipUI.Instance != null ? "OK" : "NULL"));
 
         if (ItemTooltipUI.Instance == null)
             yield break;
 
         RectTransform slotRect = GetSlotRect();
         ItemTooltipUI.Instance.Show(item, slotRect);
-        Debug.Log("[Tooltip] Show() llamado");
     }
 
     // ===============================
@@ -86,7 +80,6 @@ public class ItemHoverTooltip : MonoBehaviour,
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("[Tooltip] OnPointerExit: " + gameObject.name);
 
         if (hoverRoutine != null)
         {

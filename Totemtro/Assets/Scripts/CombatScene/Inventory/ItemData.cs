@@ -55,6 +55,10 @@ public class ItemData : ScriptableObject
 
     public EquipmentSlotType equipmentSlotType;
 
+    [Header("Armor")]
+    [Range(0f, 1f)]
+    public float damageReduction;
+
     public virtual void Use(GameObject user)
     {
         Debug.Log("Use llamado");

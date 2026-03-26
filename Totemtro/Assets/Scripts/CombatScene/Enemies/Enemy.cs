@@ -32,6 +32,11 @@ public class Enemy : MonoBehaviour
     [Header("Boss")]
     public bool isBoss = false;
 
+    [Header("Health Bar")]
+    public GameObject healthBarPrefab;
+
+    EnemyHealthBar healthBarInstance;
+
     float currentHealth;
 
     DamageNumberSpawner damageSpawner;
@@ -59,6 +64,13 @@ public class Enemy : MonoBehaviour
         sprite = GetComponentInChildren<SpriteRenderer>();
         if (sprite != null)
             originalColor = sprite.color;
+
+        if (healthBarPrefab != null)
+        {
+            GameObject bar = Instantiate(healthBarPrefab);
+            healthBarInstance = bar.GetComponent<EnemyHealthBar>();
+            healthBarInstance.Initialize(transform);
+        }
 
         SpawnMinimapIcon();
     }
@@ -161,6 +173,11 @@ public class Enemy : MonoBehaviour
 
         if (damageSpawner != null)
             damageSpawner.SpawnDamage(amount, isCritical);
+
+        if (healthBarInstance != null)
+        {
+            healthBarInstance.SetHealth(currentHealth, maxHealth);
+        }
 
         if (currentHealth <= 0f)
         {

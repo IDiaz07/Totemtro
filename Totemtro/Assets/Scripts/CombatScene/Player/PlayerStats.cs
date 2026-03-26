@@ -116,6 +116,8 @@ public class PlayerStats : MonoBehaviour
             ApplyTotem(totem);
         }
 
+        ApplyEquipmentArmor();
+
         ApplyToCharacter();
     }
 
@@ -237,5 +239,25 @@ public class PlayerStats : MonoBehaviour
     {
         speedMultiplier = multiplier;
         ApplyToCharacter();
+    }
+
+    void ApplyEquipmentArmor()
+    {
+        if (EquipmentSystem.Instance == null) return;
+
+        foreach (var slot in EquipmentSystem.Instance.equipmentSlots)
+        {
+            if (slot.item == null) continue;
+
+            ItemData item = slot.item;
+
+            if (item.itemType != ItemType.Equipment) continue;
+
+            health.damageReductionPercent += item.damageReduction;
+        }
+
+        // CAP opcional (recomendado)
+        health.damageReductionPercent =
+            Mathf.Clamp(health.damageReductionPercent, 0f, 0.75f);
     }
 }

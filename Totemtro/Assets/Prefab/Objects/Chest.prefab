@@ -191,6 +191,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2236523327221433668}
   - component: {fileID: 1876988671031549914}
+  - component: {fileID: 7185029573311233277}
+  - component: {fileID: 8604804365547393581}
+  - component: {fileID: -6655892559442390140}
   m_Layer: 17
   m_Name: Chest
   m_TagString: Untagged
@@ -231,6 +234,197 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sortPoint: {fileID: 2901390768039536128}
   fadeDistance: 3
+--- !u!114 &7185029573311233277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5667458826574176871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76919cd848032e3449c4f22173a204d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactRange: 2
+  interactUI: {fileID: 9078842689436754563, guid: 999f10386d56d5c49b99cf07825b3289, type: 3}
+  hasGeneratedLoot: 0
+--- !u!114 &8604804365547393581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5667458826574176871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf6076a76c0327c48a7ce07d01842753, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootTable:
+  - item: {fileID: 11400000, guid: 1d3d2d0c4167671409658e894ef56e5a, type: 2}
+    dropChance: 0.18
+    minAmount: 1
+    maxAmount: 3
+  - item: {fileID: 11400000, guid: bfed6ad257d2c6f4fb4a93344fc1a981, type: 2}
+    dropChance: 0.1
+    minAmount: 1
+    maxAmount: 2
+  - item: {fileID: 11400000, guid: 6b1edf775e5b0bc419563844ecd6b487, type: 2}
+    dropChance: 0.1
+    minAmount: 1
+    maxAmount: 3
+  - item: {fileID: 11400000, guid: df9680b2637e813439756709b8d332dd, type: 2}
+    dropChance: 0.2
+    minAmount: 1
+    maxAmount: 4
+  - item: {fileID: 11400000, guid: db9a34a9db390164bbce944ec62b3032, type: 2}
+    dropChance: 0.14
+    minAmount: 1
+    maxAmount: 2
+  - item: {fileID: 11400000, guid: 443520074ed9dda429863a2801d36146, type: 2}
+    dropChance: 0.1
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: 8a06c484467ee634fb5de2622d7e22d9, type: 2}
+    dropChance: 0.22
+    minAmount: 1
+    maxAmount: 3
+  - item: {fileID: 11400000, guid: 3340fe0b93a6fd64caf274b237bb765c, type: 2}
+    dropChance: 0.1
+    minAmount: 1
+    maxAmount: 3
+  - item: {fileID: 11400000, guid: b509db28a7a11fd4ab1027f3bce5eaae, type: 2}
+    dropChance: 0.14
+    minAmount: 1
+    maxAmount: 2
+  - item: {fileID: 11400000, guid: 59c1134ffbf737d4683cdc2370315a81, type: 2}
+    dropChance: 0.1
+    minAmount: 1
+    maxAmount: 2
+  - item: {fileID: 11400000, guid: f69bddb6e7374aa489dbb897679e57ba, type: 2}
+    dropChance: 0.18
+    minAmount: 1
+    maxAmount: 3
+  - item: {fileID: 11400000, guid: 65ea00ddceffd0f4aa21ac68087d04e2, type: 2}
+    dropChance: 0.09
+    minAmount: 1
+    maxAmount: 2
+  - item: {fileID: 11400000, guid: ff12f1fdffac2894f93736ff219bbbe3, type: 2}
+    dropChance: 0.22
+    minAmount: 1
+    maxAmount: 4
+  - item: {fileID: 11400000, guid: 1e5f40d0d7799a341a66ceb71fe66d5b, type: 2}
+    dropChance: 0.3
+    minAmount: 1
+    maxAmount: 5
+  - item: {fileID: 11400000, guid: c524df777da64504285fcc38074ac75c, type: 2}
+    dropChance: 0.12
+    minAmount: 1
+    maxAmount: 2
+  - item: {fileID: 11400000, guid: a35145adf02f1544bb3919604c868db8, type: 2}
+    dropChance: 0.18
+    minAmount: 1
+    maxAmount: 3
+  - item: {fileID: 11400000, guid: 7c22e2bc9b3fcf44e8a626a41af670ab, type: 2}
+    dropChance: 0.1
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: 0456ca0d716c2db4ca40380b32fe42ee, type: 2}
+    dropChance: 0.09
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: df6f34357bd6500498fc503e3f82ff60, type: 2}
+    dropChance: 0.04
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: ed725340184e4f1499a07cf79aa6d0ba, type: 2}
+    dropChance: 0.04
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: b34060b589a3e074d8c415905f0aebbf, type: 2}
+    dropChance: 0.04
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: 3843e82ffaf60404996b735ecf4b6deb, type: 2}
+    dropChance: 0.04
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: 1f29bcf8a6239dd4d8f0c4f4e59c5a14, type: 2}
+    dropChance: 0.02
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: 26c18c0adfd5d664cb24b351b578b90e, type: 2}
+    dropChance: 0.02
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: 035312fb71fa6844981e2de8d541f2a1, type: 2}
+    dropChance: 0.02
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: 220b658fe616a7a43bc9b7661e04a469, type: 2}
+    dropChance: 0.02
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: e7d0fc4e0afe08c4281f5c3b0e95f8a4, type: 2}
+    dropChance: 0.005
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: 220b658fe616a7a43bc9b7661e04a469, type: 2}
+    dropChance: 0.005
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: 220b658fe616a7a43bc9b7661e04a469, type: 2}
+    dropChance: 0.005
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: 220b658fe616a7a43bc9b7661e04a469, type: 2}
+    dropChance: 0.005
+    minAmount: 1
+    maxAmount: 1
+--- !u!114 &-6655892559442390140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5667458826574176871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 420a487424e7d95498808c362b5b2ffa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slots:
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
 --- !u!1 &7288534075079496186
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,7 +560,7 @@ Transform:
   m_GameObject: {fileID: 9052305856906294880}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.058, z: 0}
+  m_LocalPosition: {x: 0, y: 0.177, z: 0}
   m_LocalScale: {x: 0.16666667, y: 0.16666667, z: 0.16666667}
   m_ConstrainProportionsScale: 0
   m_Children: []

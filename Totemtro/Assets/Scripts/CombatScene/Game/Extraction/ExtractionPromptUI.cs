@@ -44,7 +44,7 @@ public class ExtractionPromptUI : MonoBehaviour
     public void SetKeyText(string key)
     {
         if (keyText != null)
-            keyText.text = "[" + key + "]";
+            keyText.text = key;
     }
 
     public void Hide()

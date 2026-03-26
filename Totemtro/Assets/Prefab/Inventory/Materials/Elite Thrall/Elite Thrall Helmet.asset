@@ -18,6 +18,14 @@ MonoBehaviour:
   itemType: 0
   description: Forged for the elite enforcers of the Thrall Legion, this reinforced
     helmet offers superior protection while bearing the insignia of absolute obedience.
+  showDamage: 0
+  damage: 0
+  showDPS: 0
+  damagePerSecond: 0
+  showFinalDamage: 0
+  finalDamage: 0
+  showHealing: 0
+  healingAmount: 0
   stackable: 1
   maxStack: 8
   usableInActionBar: 0
@@ -26,3 +34,4 @@ MonoBehaviour:
   ability: {fileID: 0}
   isConsumableInLoadout: 0
   equipmentSlotType: 1
+  damageReduction: 0

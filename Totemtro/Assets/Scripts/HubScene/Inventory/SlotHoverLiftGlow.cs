@@ -82,7 +82,7 @@ public class SlotHoverLiftGlow : MonoBehaviour,
     public void OnPointerEnter(PointerEventData eventData)
     {
         Initialize();
-        Debug.Log($"[Scale] Enter - icon: {(icon != null ? icon.name : "NULL")} | targetValue -> 1");
+
         targetValue = 1f;
     }
 
@@ -93,7 +93,6 @@ public class SlotHoverLiftGlow : MonoBehaviour,
 
     void ApplyVisuals(float t)
     {
-        Debug.Log($"[Scale] ApplyVisuals t={t} | icon={(icon != null ? icon.name : "NULL")}");
 
         // LIFT — mueve el icono, no el slotRoot
         if (icon != null)

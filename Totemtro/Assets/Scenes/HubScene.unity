@@ -2878,7 +2878,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 692c128cd28df094ab7509bd2bf58bd6, type: 2}
   - {fileID: 11400000, guid: 97982d2921885cf4389c799da4fc5094, type: 2}
   - {fileID: 11400000, guid: 98003f869e78c414c971189951bcf019, type: 2}
-  - {fileID: 11400000, guid: 0456ca0d716c2db4ca40380b32fe42ee, type: 2}
+  - {fileID: 11400000, guid: 3843e82ffaf60404996b735ecf4b6deb, type: 2}
+  - {fileID: 11400000, guid: df6f34357bd6500498fc503e3f82ff60, type: 2}
+  - {fileID: 11400000, guid: ed725340184e4f1499a07cf79aa6d0ba, type: 2}
+  - {fileID: 11400000, guid: b34060b589a3e074d8c415905f0aebbf, type: 2}
+  - {fileID: 11400000, guid: 1f29bcf8a6239dd4d8f0c4f4e59c5a14, type: 2}
+  - {fileID: 11400000, guid: 26c18c0adfd5d664cb24b351b578b90e, type: 2}
+  - {fileID: 11400000, guid: 035312fb71fa6844981e2de8d541f2a1, type: 2}
+  - {fileID: 11400000, guid: 220b658fe616a7a43bc9b7661e04a469, type: 2}
+  - {fileID: 11400000, guid: e7d0fc4e0afe08c4281f5c3b0e95f8a4, type: 2}
+  - {fileID: 11400000, guid: f45609ddbda3f2649beee6db94b6e020, type: 2}
+  - {fileID: 11400000, guid: 6fa665981802c594d94e2f973e9d8cb0, type: 2}
+  - {fileID: 11400000, guid: 671e581d177ee9f4a9bd37696287272b, type: 2}
 --- !u!4 &146787356
 Transform:
   m_ObjectHideFlags: 0
@@ -5282,7 +5293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3363258280283619210, guid: e3c70bac1b97ec9489f6bd78a6912b39, type: 3}
       propertyPath: armorSlot
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3919257133129118449, guid: e3c70bac1b97ec9489f6bd78a6912b39, type: 3}
       propertyPath: slotIndex
@@ -5432,7 +5443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -27792,6 +27803,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArmorSlot
       objectReference: {fileID: 0}
+    - target: {fileID: 3363258280283619210, guid: e3c70bac1b97ec9489f6bd78a6912b39, type: 3}
+      propertyPath: armorSlot
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8413792562320361707, guid: e3c70bac1b97ec9489f6bd78a6912b39, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -31422,7 +31437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3363258280283619210, guid: e3c70bac1b97ec9489f6bd78a6912b39, type: 3}
       propertyPath: armorSlot
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3919257133129118449, guid: e3c70bac1b97ec9489f6bd78a6912b39, type: 3}
       propertyPath: slotIndex
@@ -32164,7 +32179,6 @@ GameObject:
   - component: {fileID: 1138103358}
   - component: {fileID: 1138103363}
   - component: {fileID: 1138103362}
-  - component: {fileID: 1138103361}
   - component: {fileID: 1138103366}
   - component: {fileID: 1138103365}
   m_Layer: 0
@@ -32246,21 +32260,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1138103356}
   m_CullTransparentMesh: 1
---- !u!114 &1138103361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138103356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50d4e4f31c6bc664ca7598335b2b864e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxRotation: 5
-  swaySpeed: 6
-  smooth: 10
 --- !u!114 &1138103362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42675,7 +42674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3363258280283619210, guid: e3c70bac1b97ec9489f6bd78a6912b39, type: 3}
       propertyPath: armorSlot
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3919257133129118449, guid: e3c70bac1b97ec9489f6bd78a6912b39, type: 3}
       propertyPath: slotIndex

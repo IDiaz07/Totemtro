@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EquipmentSystem : MonoBehaviour
 {
@@ -8,6 +8,8 @@ public class EquipmentSystem : MonoBehaviour
 
     public System.Action onEquipmentChanged;
 
+    PlayerStats playerStats;
+
     void Awake()
     {
         Instance = this;
@@ -16,9 +18,15 @@ public class EquipmentSystem : MonoBehaviour
 
         for (int i = 0; i < equipmentSlots.Length; i++)
             equipmentSlots[i] = new InventorySlot(null, 0);
+
+        playerStats = FindFirstObjectByType<PlayerStats>();
     }
 
-    int GetSlotIndex(EquipmentSlotType type)
+    // =====================================================
+    // ENUM → INDEX
+    // =====================================================
+
+    public int GetIndex(EquipmentSlotType type)
     {
         switch (type)
         {
@@ -30,22 +38,70 @@ public class EquipmentSystem : MonoBehaviour
         }
     }
 
-    public bool EquipItem(ItemData item)
+    // =====================================================
+    // EQUIP
+    // =====================================================
+
+    public bool EquipItem(ItemData item, int slotIndex)
     {
+        if (item == null)
+            return false;
+
         if (item.itemType != ItemType.Equipment)
             return false;
 
-        int index = GetSlotIndex(item.equipmentSlotType);
-
-        if (index == -1)
+        if (slotIndex < 0 || slotIndex >= equipmentSlots.Length)
             return false;
 
-        equipmentSlots[index].item = item;
-        equipmentSlots[index].amount = 1;
+        // 🔥 VALIDACIÓN CORRECTA (FIX CLAVE)
+        int correctIndex = GetIndex(item.equipmentSlotType);
+
+        if (correctIndex != slotIndex)
+        {
+            Debug.LogWarning("Intentando equipar item en slot incorrecto");
+            return false;
+        }
+
+        InventorySlot current = equipmentSlots[slotIndex];
+
+        // 🔥 SWAP AUTOMÁTICO
+        if (current.item != null)
+        {
+            var bag = MetaInventory.Instance?.bagSlots;
+
+            if (bag != null)
+            {
+                foreach (var b in bag)
+                {
+                    if (b.IsEmpty())
+                    {
+                        b.item = current.item;
+                        b.amount = 1;
+                        break;
+                    }
+                }
+            }
+        }
+
+        // 🔥 EQUIPAR
+        current.item = item;
+        current.amount = 1;
 
         onEquipmentChanged?.Invoke();
+
+        // 🔥 RECALCULAR STATS
+        if (playerStats != null)
+            playerStats.Recalculate();
+
+        // 🔥 REFRESH UI GLOBAL
+        MetaInventory.Instance?.NotifyInventoryChanged();
+
         return true;
     }
+
+    // =====================================================
+    // UNEQUIP
+    // =====================================================
 
     public void Unequip(int index)
     {
@@ -53,6 +109,9 @@ public class EquipmentSystem : MonoBehaviour
             return;
 
         equipmentSlots[index].Clear();
+
         onEquipmentChanged?.Invoke();
+
+        MetaInventory.Instance?.NotifyInventoryChanged();
     }
 }

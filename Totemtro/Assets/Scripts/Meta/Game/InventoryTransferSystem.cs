@@ -13,10 +13,14 @@ public static class InventoryTransferSystem
                 return MetaInventory.Instance?.bagSlots;
 
             case DragSource.Armor:
-                return MetaInventory.Instance?.armorSlots;
-        }
+                return EquipmentSystem.Instance?.equipmentSlots;
 
-        return null;
+            case DragSource.Chest:
+                return ChestUI.CurrentChest?.slots;
+
+            default:
+                return null;
+        }
     }
 
     // ===================================
@@ -100,6 +104,13 @@ public static class InventoryTransferSystem
 
         if (meta == null)
             return false;
+
+        // ❌ BLOQUEAR uso normal en armor
+        if (target == DragSource.Armor || source == DragSource.Armor)
+        {
+            Debug.Log("Use Equip system instead of TransferSystem for armor");
+            return false;
+        }
 
         var srcSlots = GetSlotsFor(source);
         var dstSlots = GetSlotsFor(target);
@@ -214,6 +225,64 @@ public static class InventoryTransferSystem
         }
 
         // =========================
+        // ACTION BAR → BAG
+        // =========================
+        if (source == DragSource.ActionBar && target == DragSource.Bag)
+        {
+            var slot = actionBar.slots[fromIndex];
+
+            if (slot == null || slot.item == null)
+                return false;
+
+            var bag = meta.bagSlots;
+
+            ItemData item = slot.item;
+            int amount = slot.amount;
+
+            // 🔹 STACK FIRST
+            foreach (var b in bag)
+            {
+                if (b.item != item)
+                    continue;
+
+                int space = item.maxStack - b.amount;
+                int add = Mathf.Min(space, amount);
+
+                b.amount += add;
+                amount -= add;
+
+                if (amount <= 0)
+                    break;
+            }
+
+            // 🔹 EMPTY SLOT
+            foreach (var b in bag)
+            {
+                if (amount <= 0)
+                    break;
+
+                if (b.IsEmpty())
+                {
+                    b.item = item;
+                    b.amount = amount;
+                    amount = 0;
+                }
+            }
+
+            // 🔹 UPDATE ACTION BAR
+            slot.amount = amount;
+
+            if (slot.amount <= 0)
+            {
+                slot.item = null;
+                slot.amount = 0;
+            }
+
+            meta.NotifyInventoryChanged();
+            return true;
+        }
+
+        // =========================
         // INVENTORY → BAG
         // =========================
 
@@ -238,6 +307,30 @@ public static class InventoryTransferSystem
                 meta.slots
             );
         }
+        // =========================
+        // CHEST → BAG
+        // =========================
+        if (source == DragSource.Chest && target == DragSource.Bag)
+        {
+            return TransferStack(
+                ChestUI.CurrentChest?.slots,
+                fromIndex,
+                meta.bagSlots
+            );
+        }
+
+        // =========================
+        // BAG → CHEST
+        // =========================
+        if (source == DragSource.Bag && target == DragSource.Chest)
+        {
+            return TransferStack(
+                meta.bagSlots,
+                fromIndex,
+                ChestUI.CurrentChest?.slots
+            );
+        }
+
 
         return false;
     }
