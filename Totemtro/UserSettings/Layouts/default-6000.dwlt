@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 49531
+  controlID: 110
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 49480
+  controlID: 40
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 49481
+  controlID: 41
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -192,8 +192,8 @@ MonoBehaviour:
     y: 0
     width: 328
     height: 671
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 226}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -273,8 +273,8 @@ MonoBehaviour:
     y: 0
     width: 460
     height: 933
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -422,21 +422,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 78956aff0a986affc6dc71ff40e171ff1c1d80ff6a1d80fff01d80ff2c7a86ff5a9386ff50598effe2abbfff8257c4ff40ddc6ffc8facfffa2fdcffff6ffcfff8aabf1ff8cabf1ff90abf1ff94abf1ff50c8f1ffaacbf1ffcecbf1ffe840f4ff64aef8ff6aaef8ff2a0efbff8e0efbffaa10fbffc41afbffc046fdffd2d0ffff0afbfffff4ffffffa0f2000040f40000a2f50000b8f600007ef8000008ae02008a140300061a030020740300ea900400fa910400a0920400ae92040026930400ba940400089504001c9604004c960400689604001e9704009497040078de0500bce305009ee40500c6e50500eee50500b6e70500c2f405006af70500b4f7050068f80500c2fa050006fc0500b83806004e390600e8390600fa390600
+      m_ExpandedIDs: eeefffffc2f2ffff0afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: SlotVisual
+        m_OriginalName: SlotVisual
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 71094
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 4
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
         m_ClientGUIView: {fileID: 8}
@@ -1056,7 +1056,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: 307.1125, y: -103.65515, z: 0}
     speed: 2
-    m_Value: {x: 307.11258, y: -103.65508, z: -0.0000007469735}
+    m_Value: {x: 960, y: 540, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1108,7 +1108,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 0.71414286
     speed: 2
-    m_Value: 0.7142187
+    m_Value: 113.137085
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1431,7 +1431,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Sprites/Armor
+    - Assets/Prefab/Hub/Inventory
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1441,17 +1441,17 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 44
   m_LastFolders:
-  - Assets/Sprites/Armor
+  - Assets/Prefab/Hub/Inventory
   m_LastFoldersGridSize: 44
   m_LastProjectPath: C:\Users\Nitropc\Documents\GitHub\Totemtro\Totemtro
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 1496}
-    m_SelectedIDs: 5a740400
-    m_LastClickedID: 291930
-    m_ExpandedIDs: 0000000014e4000016e4000018e400001ae400001ce400001ee4000020e4000022e4000024e4000026e4000028e400002ae400002ce400002ee4000030e4000032e4000034e4000036e4000038e400003ae400003ce400003ee4000040e4000042e4000044e4000046e40000a6e4000060e5000098e9000000ca9a3b
+    scrollPos: {x: 0, y: 152}
+    m_SelectedIDs: e8e50000
+    m_LastClickedID: 58856
+    m_ExpandedIDs: 0000000064e4000066e4000068e400006ae400006ce400006ee4000070e4000072e4000074e4000076e4000078e400007ae400007ce400007ee4000080e4000082e4000084e4000086e4000088e400008ae400008ce400008ee4000090e4000092e4000094e4000096e40000f2e40000c8e5000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1480,7 +1480,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000014e4000016e4000018e400001ae400001ce400001ee4000020e4000022e4000024e4000026e4000028e400002ae400002ce400002ee4000030e4000032e4000034e4000036e4000038e400003ae400003ce400003ee4000040e4000042e4000044e4000046e4000000ca9a3b
+    m_ExpandedIDs: 0000000064e4000066e4000068e400006ae400006ce400006ee4000070e4000072e4000074e4000076e4000078e400007ae400007ce400007ee4000080e4000082e4000084e4000086e4000088e400008ae400008ce400008ee4000090e4000092e4000094e4000096e40000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 [System.Serializable]
 public class InventorySlot
@@ -6,10 +6,15 @@ public class InventorySlot
     public ItemData item;
     public int amount;
 
+    public int durability;
+
     public InventorySlot(ItemData item, int amount)
     {
         this.item = item;
         this.amount = amount;
+
+        if (item != null)
+            durability = item.maxDurability;
     }
 
     public bool IsEmpty()

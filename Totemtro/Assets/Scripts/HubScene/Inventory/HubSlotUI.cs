@@ -23,6 +23,10 @@ public class HubSlotUI : MonoBehaviour,
     ItemData currentItem;
     int currentAmount;
 
+    [Header("Durability UI")]
+    public GameObject durabilityBarRoot;
+    public Image durabilityFill;
+
     Coroutine delayedSubscribeCoroutine;
 
     IEnumerator Start()
@@ -74,6 +78,42 @@ public class HubSlotUI : MonoBehaviour,
             amountText.text = (slotType != DragSource.Armor && currentAmount > 1)
                 ? currentAmount.ToString()
                 : "";
+        // ===============================
+        // DURABILITY UI
+        // ===============================
+        if (durabilityBarRoot != null && durabilityFill != null)
+        {
+            if (slot == null || slot.item == null)
+            {
+                durabilityBarRoot.SetActive(false);
+                return;
+            }
+
+            float max = slot.item.maxDurability;
+            float current = slot.durability;
+
+            if (max <= 0)
+            {
+                durabilityBarRoot.SetActive(false);
+                return;
+            }
+
+            float ratio = current / max;
+
+            // 🔥 SOLO MOSTRAR SI < 100%
+            if (ratio >= 1f)
+            {
+                durabilityBarRoot.SetActive(false);
+            }
+            else
+            {
+                durabilityBarRoot.SetActive(true);
+                durabilityFill.fillAmount = ratio;
+
+                // 🔥 COLOR DINÁMICO
+                durabilityFill.color = Color.Lerp(Color.red, Color.green, ratio);
+            }
+        }
     }
 
     // =====================================================
@@ -158,7 +198,9 @@ public class HubSlotUI : MonoBehaviour,
 
             ItemData item = drag.draggedItem;
 
+            // =====================================================
             // 👉 EQUIPAR
+            // =====================================================
             if (item != null && item.itemType == ItemType.Equipment)
             {
                 // validar tipo correcto
@@ -169,18 +211,23 @@ public class HubSlotUI : MonoBehaviour,
                     return;
                 }
 
-                // 🔥 EQUIPAR
-                EquipmentSystem.Instance.EquipItem(item, index);
-
-                // 🔥 eliminar del origen
                 var sourceSlots = GetSourceSlots(drag.source);
 
-                if (sourceSlots != null &&
-                    drag.sourceIndex >= 0 &&
-                    drag.sourceIndex < sourceSlots.Length)
-                {
-                    sourceSlots[drag.sourceIndex].Clear();
-                }
+                if (sourceSlots == null ||
+                    drag.sourceIndex < 0 ||
+                    drag.sourceIndex >= sourceSlots.Length)
+                    return;
+
+                var sourceSlot = sourceSlots[drag.sourceIndex];
+
+                if (sourceSlot == null || sourceSlot.item == null)
+                    return;
+
+                // 🔥 EQUIPAR (CON DURABILITY)
+                EquipmentSystem.Instance.EquipItem(sourceSlot, index);
+
+                // 🔥 limpiar origen
+                sourceSlot.Clear();
 
                 MetaInventory.Instance?.NotifyInventoryChanged();
 
@@ -188,7 +235,9 @@ public class HubSlotUI : MonoBehaviour,
                 return;
             }
 
-            // 👉 DESEQUIPAR (drag desde armor a otro lado)
+            // =====================================================
+            // 👉 DESEQUIPAR (drag desde armor)
+            // =====================================================
             var eq = EquipmentSystem.Instance.equipmentSlots[index];
 
             if (eq == null || eq.item == null)
@@ -199,17 +248,19 @@ public class HubSlotUI : MonoBehaviour,
             if (bag == null)
                 return;
 
-            // meter en bag
+            // 🔥 meter en bag CONSERVANDO DURABILITY
             foreach (var b in bag)
             {
                 if (b.IsEmpty())
                 {
                     b.item = eq.item;
                     b.amount = 1;
+                    b.durability = eq.durability; // 🔥 CLAVE
                     break;
                 }
             }
 
+            // 🔥 quitar del equipo
             EquipmentSystem.Instance.Unequip(index);
 
             MetaInventory.Instance.NotifyInventoryChanged();

@@ -42,10 +42,12 @@ public class EquipmentSystem : MonoBehaviour
     // EQUIP
     // =====================================================
 
-    public bool EquipItem(ItemData item, int slotIndex)
+    public bool EquipItem(InventorySlot sourceSlot, int slotIndex)
     {
-        if (item == null)
+        if (sourceSlot == null || sourceSlot.item == null)
             return false;
+
+        ItemData item = sourceSlot.item;
 
         if (item.itemType != ItemType.Equipment)
             return false;
@@ -53,7 +55,6 @@ public class EquipmentSystem : MonoBehaviour
         if (slotIndex < 0 || slotIndex >= equipmentSlots.Length)
             return false;
 
-        // 🔥 VALIDACIÓN CORRECTA (FIX CLAVE)
         int correctIndex = GetIndex(item.equipmentSlotType);
 
         if (correctIndex != slotIndex)
@@ -64,7 +65,7 @@ public class EquipmentSystem : MonoBehaviour
 
         InventorySlot current = equipmentSlots[slotIndex];
 
-        // 🔥 SWAP AUTOMÁTICO
+        // 🔥 SWAP → devolver item actual al inventario (con durability)
         if (current.item != null)
         {
             var bag = MetaInventory.Instance?.bagSlots;
@@ -77,23 +78,23 @@ public class EquipmentSystem : MonoBehaviour
                     {
                         b.item = current.item;
                         b.amount = 1;
+                        b.durability = current.durability; // 🔥 FIX
                         break;
                     }
                 }
             }
         }
 
-        // 🔥 EQUIPAR
-        current.item = item;
+        // 🔥 EQUIPAR (manteniendo durability real)
+        current.item = sourceSlot.item;
         current.amount = 1;
+        current.durability = sourceSlot.durability;
 
         onEquipmentChanged?.Invoke();
 
-        // 🔥 RECALCULAR STATS
         if (playerStats != null)
             playerStats.Recalculate();
 
-        // 🔥 REFRESH UI GLOBAL
         MetaInventory.Instance?.NotifyInventoryChanged();
 
         return true;

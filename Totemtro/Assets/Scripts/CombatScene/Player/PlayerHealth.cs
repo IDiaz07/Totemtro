@@ -88,6 +88,7 @@ public class PlayerHealth : MonoBehaviour
         damage *= (1f - damageReductionPercent);
 
         heroController.ApplyDamage(damage);
+        DamageArmor((int)damage);
 
         if (damageSpawner != null)
             damageSpawner.SpawnDamage(damage, false);
@@ -211,5 +212,35 @@ public class PlayerHealth : MonoBehaviour
         if (heroController == null) return 1f;
 
         return heroController.CurrentHealth / heroController.MaxHealth;
+    }
+
+    void DamageArmor(int damage)
+    {
+        var eq = EquipmentSystem.Instance;
+
+        if (eq == null)
+            return;
+
+        foreach (var slot in eq.equipmentSlots)
+        {
+            if (slot.item == null)
+                continue;
+
+            // 🔥 desgaste proporcional
+            int durabilityLoss = Mathf.Max(1, damage / 5);
+
+            slot.durability -= durabilityLoss;
+
+            // 🔥 item roto
+            if (slot.durability <= 0)
+            {
+                Debug.Log("Item roto: " + slot.item.name);
+
+                slot.Clear();
+            }
+        }
+
+        eq.onEquipmentChanged?.Invoke();
+        MetaInventory.Instance?.NotifyInventoryChanged();
     }
 }

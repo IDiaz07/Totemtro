@@ -51,7 +51,7 @@ public static class InventoryTransferSystem
         // STACK FIRST
         foreach (var slot in target)
         {
-            if (slot.item != item)
+            if (slot.item != item || slot.durability != src.durability)
                 continue;
 
             int space = item.maxStack - slot.amount;
@@ -74,6 +74,7 @@ public static class InventoryTransferSystem
             {
                 slot.item = item;
                 slot.amount = remaining;
+                slot.durability = src.durability;
                 remaining = 0;
             }
         }
@@ -132,7 +133,8 @@ public static class InventoryTransferSystem
 
         int moveAmount = Mathf.Min(amount, src.amount);
 
-        if (dst.item != null && dst.item == src.item)
+        // 🔥 STACK (solo si misma durability)
+        if (dst.item != null && dst.item == src.item && dst.durability == src.durability)
         {
             int space = dst.item.maxStack - dst.amount;
             int toAdd = Mathf.Min(space, moveAmount);
@@ -147,6 +149,7 @@ public static class InventoryTransferSystem
         {
             dst.item = src.item;
             dst.amount = moveAmount;
+            dst.durability = src.durability; // 🔥 FIX
 
             src.amount -= moveAmount;
 
@@ -155,18 +158,19 @@ public static class InventoryTransferSystem
         }
         else
         {
+            // 🔥 SWAP COMPLETO
             var tempItem = dst.item;
             var tempAmount = dst.amount;
+            var tempDurability = dst.durability;
 
             dst.item = src.item;
             dst.amount = src.amount;
+            dst.durability = src.durability;
 
             src.item = tempItem;
             src.amount = tempAmount;
+            src.durability = tempDurability;
         }
-
-        srcSlots[fromIndex] = src;
-        dstSlots[toIndex] = dst;
 
         meta.NotifyInventoryChanged();
         meta.SaveMetaInventory();

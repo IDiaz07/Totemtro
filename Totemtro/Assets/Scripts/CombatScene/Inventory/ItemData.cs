@@ -59,6 +59,9 @@ public class ItemData : ScriptableObject
     [Range(0f, 1f)]
     public float damageReduction;
 
+    [Header("Durability")]
+    public int maxDurability = 100;
+
     public virtual void Use(GameObject user)
     {
         Debug.Log("Use llamado");
