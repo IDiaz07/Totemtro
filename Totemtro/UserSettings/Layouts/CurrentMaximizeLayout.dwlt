@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 30211
+  controlID: 356
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 30212
+  controlID: 357
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 30213
+  controlID: 358
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -244,9 +244,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: cc0f0100
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 32eec1ff8af3c1fffef3c1ff38f4c1ff0ef5c1ff92f5c1ff0c1fc8ff261fc8ffea21c8ff903ec8fff842c8ff0643c8ff6c43c8ff7a43c8ff7044c8ff7e44c8ffaa44c8ffb844c8ff5645c8ff0a7aceff187aceff9e7bceff5e98ceff7ca0ceffb6a0ceff38a1ceff72a1ceffa4a2ceff5e56d7ff6456d7ffda56d7ffc457d7ffdcadddff30caf2ffc4cff2ff1436f9ff328fffff368fffff468fffff508fffffa493ffff0afbffff5c01010040060100fc0b01007c400100e242010004780100d6880100bc8901003c8b010024010200342f0200da2f0200e82f02006c3102004032020084330200d233020022340200389503004e9a0300049b0300569b0300e69b0300209e0300589e0300a2af030008b203005cc90300f4ca03002ecd030066cd030098cf0300aed4030064d50300b6d5030046d6030080d803002efe030044030400fa0304004c040400dc040400160704004e07040068120400
+      m_ExpandedIDs: 0afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -290,8 +290,8 @@ MonoBehaviour:
     y: 0
     width: 1132
     height: 671
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 226}
+  m_MaxSize: {x: 4002, y: 4026}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 8}
@@ -1310,7 +1310,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts/CombatScene/Inventory/Consumables/ExplosiveGrenade
+    - Assets
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1320,17 +1320,17 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 44
   m_LastFolders:
-  - Assets/Scripts/CombatScene/Inventory/Consumables/ExplosiveGrenade
+  - Assets
   m_LastFoldersGridSize: 44
   m_LastProjectPath: C:\Users\Nitropc\Documents\GitHub\Totemtro\Totemtro
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 904}
-    m_SelectedIDs: 84e50000
-    m_LastClickedID: 58756
-    m_ExpandedIDs: 00000000c4e40000c6e40000c8e40000cae40000cce40000cee40000d0e40000d2e40000d4e40000d6e40000d8e40000dae40000dce40000dee40000e0e40000e2e40000e4e40000e6e40000e8e40000eae40000ece40000eee40000f0e40000f2e40000f4e40000f6e4000052e50000eee50000f0e50000d2000100b8ef020000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: f8e40000
+    m_LastClickedID: 58616
+    m_ExpandedIDs: 00000000f8e40000fae40000fce40000fee4000000e5000002e5000004e5000006e5000008e500000ae500000ce500000ee5000010e5000012e5000014e5000016e5000018e500001ae500001ce500001ee5000020e5000022e5000024e5000026e5000028e500002ae5000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1359,7 +1359,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c4e40000c6e40000c8e40000cae40000cce40000cee40000d0e40000d2e40000d4e40000d6e40000d8e40000dae40000dce40000dee40000e0e40000e2e40000e4e40000e6e40000e8e40000eae40000ece40000eee40000f0e40000f2e40000f4e40000f6e4000000ca9a3b
+    m_ExpandedIDs: 00000000f8e40000fae40000fce40000fee4000000e5000002e5000004e5000006e5000008e500000ae500000ce500000ee5000010e5000012e5000014e5000016e5000018e500001ae500001ce500001ee5000020e5000022e5000024e5000026e5000028e500002ae5000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1385,8 +1385,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: cc0f0100
-    m_LastClickedInstanceID: 69580
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000be050100601d0100ce3b0100e83b010000000000befc00002e5601004ef6000010d9000038dd00000afa0000acd9000094e00000e8e0000048dc0000
     m_RenameOverlay:

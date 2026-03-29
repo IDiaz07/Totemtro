@@ -309,7 +309,7 @@ MonoBehaviour:
   xpPrefab: {fileID: 6255059052769338757, guid: 01d5839b84bcf4c4f9d05fa5983bd479, type: 3}
   goldPrefab: {fileID: 2986144199003916069, guid: 531c7b8b765812e438b54e339552727b, type: 3}
   xpAmount: 3
-  goldAmount: 1
+  goldAmount: 2
   dropForce: 3
   materialDrops:
   - item: {fileID: 11400000, guid: 692c128cd28df094ab7509bd2bf58bd6, type: 2}
