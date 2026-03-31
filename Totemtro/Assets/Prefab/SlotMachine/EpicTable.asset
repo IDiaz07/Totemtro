@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac2f2574e35ae054a9b211c17ededefa, type: 3}
+  m_Name: EpicTable
+  m_EditorClassIdentifier: 
+  items:
+  - item: {fileID: 11400000, guid: 1d3d2d0c4167671409658e894ef56e5a, type: 2}
+    chance: 18
+    minAmount: 3
+    maxAmount: 5
+  - item: {fileID: 11400000, guid: bfed6ad257d2c6f4fb4a93344fc1a981, type: 2}
+    chance: 15
+    minAmount: 1
+    maxAmount: 2
+  - item: {fileID: 11400000, guid: 6b1edf775e5b0bc419563844ecd6b487, type: 2}
+    chance: 18
+    minAmount: 1
+    maxAmount: 2
+  - item: {fileID: 11400000, guid: df9680b2637e813439756709b8d332dd, type: 2}
+    chance: 20
+    minAmount: 3
+    maxAmount: 6
+  - item: {fileID: 11400000, guid: db9a34a9db390164bbce944ec62b3032, type: 2}
+    chance: 21
+    minAmount: 1
+    maxAmount: 2
+  - item: {fileID: 11400000, guid: 8a06c484467ee634fb5de2622d7e22d9, type: 2}
+    chance: 22
+    minAmount: 3
+    maxAmount: 5
+  - item: {fileID: 11400000, guid: 3340fe0b93a6fd64caf274b237bb765c, type: 2}
+    chance: 15
+    minAmount: 1
+    maxAmount: 3
+  - item: {fileID: 11400000, guid: b509db28a7a11fd4ab1027f3bce5eaae, type: 2}
+    chance: 21
+    minAmount: 1
+    maxAmount: 2
+  - item: {fileID: 11400000, guid: 443520074ed9dda429863a2801d36146, type: 2}
+    chance: 15
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: 59c1134ffbf737d4683cdc2370315a81, type: 2}
+    chance: 15
+    minAmount: 1
+    maxAmount: 2
+  - item: {fileID: 11400000, guid: f69bddb6e7374aa489dbb897679e57ba, type: 2}
+    chance: 18
+    minAmount: 3
+    maxAmount: 5
+  - item: {fileID: 11400000, guid: 65ea00ddceffd0f4aa21ac68087d04e2, type: 2}
+    chance: 14
+    minAmount: 1
+    maxAmount: 2
+  - item: {fileID: 11400000, guid: ff12f1fdffac2894f93736ff219bbbe3, type: 2}
+    chance: 22
+    minAmount: 3
+    maxAmount: 6
+  - item: {fileID: 11400000, guid: c524df777da64504285fcc38074ac75c, type: 2}
+    chance: 18
+    minAmount: 1
+    maxAmount: 2
+  - item: {fileID: 11400000, guid: 7c22e2bc9b3fcf44e8a626a41af670ab, type: 2}
+    chance: 15
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: 692c128cd28df094ab7509bd2bf58bd6, type: 2}
+    chance: 22
+    minAmount: 3
+    maxAmount: 6
+  - item: {fileID: 11400000, guid: 97982d2921885cf4389c799da4fc5094, type: 2}
+    chance: 18
+    minAmount: 1
+    maxAmount: 2
+  - item: {fileID: 11400000, guid: 98003f869e78c414c971189951bcf019, type: 2}
+    chance: 18
+    minAmount: 3
+    maxAmount: 5
+  - item: {fileID: 11400000, guid: 0456ca0d716c2db4ca40380b32fe42ee, type: 2}
+    chance: 14
+    minAmount: 1
+    maxAmount: 3
+  - item: {fileID: 11400000, guid: 1f29bcf8a6239dd4d8f0c4f4e59c5a14, type: 2}
+    chance: 16
+    minAmount: 1
+    maxAmount: 1
+  - item: {fileID: 11400000, guid: 0456ca0d716c2db4ca40380b32fe42ee, type: 2}
+    chance: 14
+    minAmount: 1
+    maxAmount: 3
+  - item: {fileID: 11400000, guid: 0456ca0d716c2db4ca40380b32fe42ee, type: 2}
+    chance: 14
+    minAmount: 1
+    maxAmount: 3
+  - item: {fileID: 11400000, guid: 0456ca0d716c2db4ca40380b32fe42ee, type: 2}
+    chance: 14
+    minAmount: 1
+    maxAmount: 3
+  - item: {fileID: 11400000, guid: 0456ca0d716c2db4ca40380b32fe42ee, type: 2}
+    chance: 14
+    minAmount: 1
+    maxAmount: 3
+  - item: {fileID: 11400000, guid: 0456ca0d716c2db4ca40380b32fe42ee, type: 2}
+    chance: 14
+    minAmount: 1
+    maxAmount: 3
+  - item: {fileID: 11400000, guid: 0456ca0d716c2db4ca40380b32fe42ee, type: 2}
+    chance: 14
+    minAmount: 1
+    maxAmount: 3
+  - item: {fileID: 11400000, guid: 0456ca0d716c2db4ca40380b32fe42ee, type: 2}
+    chance: 14
+    minAmount: 1
+    maxAmount: 3
