@@ -6,6 +6,8 @@ public class InventoryController : MonoBehaviour
     public GameObject inventoryPanel;
     public GameObject totemPanel;
     public GameObject craftingPanel;
+    public GameObject chestPanel;
+    public GameObject slotMachinePanel;
 
     [Header("Player")]
     public MonoBehaviour playerMovement;
@@ -28,13 +30,47 @@ public class InventoryController : MonoBehaviour
         Instance = this;
     }
 
+    void OpenInventory()
+    {
+        isOpen = true;
+        UILayerManager.Open(UILayerManager.Layer.Inventory);
+        PauseGame();
+        ShowInventory();
+    }
+
+    public void CloseAll()
+    {
+        isOpen = false;
+        UILayerManager.Close(UILayerManager.Layer.Inventory);
+        inventoryPanel.SetActive(false);
+        totemPanel.SetActive(false);
+        craftingPanel.SetActive(false);
+        ResumeGame();
+    }
+
     void Update()
     {
-        if (GameInputLock.IsLocked)
-            return;
+        if (GameInputLock.IsLocked) return;
 
-        if (Input.GetKeyDown(KeyCode.E))
-            ToggleInventory();
+        if (InputKeyBindings.Instance != null)
+        {
+            if (InputKeyBindings.Instance.GetKeyDown(InputKeyBindings.Action.Inventory))
+                ToggleInventory();
+
+            // Escape cierra el inventario si está abierto
+            if (InputKeyBindings.Instance.GetKeyDown(InputKeyBindings.Action.Pause)
+                && UILayerManager.IsOpen(UILayerManager.Layer.Inventory))
+            {
+                CloseAll();
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.E)) ToggleInventory();
+            if (Input.GetKeyDown(KeyCode.Escape)
+                && UILayerManager.IsOpen(UILayerManager.Layer.Inventory))
+                CloseAll();
+        }
     }
 
     public void ToggleInventory()
@@ -43,22 +79,6 @@ public class InventoryController : MonoBehaviour
             OpenInventory();
         else
             CloseAll();
-    }
-
-    void OpenInventory()
-    {
-        isOpen = true;
-        PauseGame();
-        ShowInventory();
-    }
-
-    public void CloseAll()
-    {
-        isOpen = false;
-        inventoryPanel.SetActive(false);
-        totemPanel.SetActive(false);
-        craftingPanel.SetActive(false);
-        ResumeGame();
     }
 
     public void ShowInventory()

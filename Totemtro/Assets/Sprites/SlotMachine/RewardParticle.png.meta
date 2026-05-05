@@ -1,0 +1,4121 @@
+fileFormatVersion: 2
+guid: 6b2ea2bd9d696884b8161b666579e7b7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1649466554579089103
+    second: RewardParticle_0
+  - first:
+      213: 3029952100470307848
+    second: RewardParticle_1
+  - first:
+      213: 4398611981146147710
+    second: RewardParticle_2
+  - first:
+      213: 5755352253621117090
+    second: RewardParticle_3
+  - first:
+      213: 150611112612590123
+    second: RewardParticle_4
+  - first:
+      213: -7256545221050554937
+    second: RewardParticle_5
+  - first:
+      213: 3065767623748773856
+    second: RewardParticle_6
+  - first:
+      213: 2023849408428601405
+    second: RewardParticle_7
+  - first:
+      213: 2001916224625784650
+    second: RewardParticle_8
+  - first:
+      213: 8111459057537275109
+    second: RewardParticle_9
+  - first:
+      213: 77960723736178349
+    second: RewardParticle_10
+  - first:
+      213: -3600856011547519458
+    second: RewardParticle_11
+  - first:
+      213: -6876934328455639859
+    second: RewardParticle_12
+  - first:
+      213: 2159184633966083864
+    second: RewardParticle_13
+  - first:
+      213: -7865588909884091375
+    second: RewardParticle_14
+  - first:
+      213: 2619186407520024880
+    second: RewardParticle_15
+  - first:
+      213: 7625241370538598504
+    second: RewardParticle_16
+  - first:
+      213: -6655348681103953049
+    second: RewardParticle_17
+  - first:
+      213: -5891538883040027096
+    second: RewardParticle_18
+  - first:
+      213: 990868401514498236
+    second: RewardParticle_19
+  - first:
+      213: -3047948952248898518
+    second: RewardParticle_20
+  - first:
+      213: -3943871832340357934
+    second: RewardParticle_21
+  - first:
+      213: -4615686905208826552
+    second: RewardParticle_22
+  - first:
+      213: -1721793238098922561
+    second: RewardParticle_23
+  - first:
+      213: -1646946587155791730
+    second: RewardParticle_24
+  - first:
+      213: -1532383960031159361
+    second: RewardParticle_25
+  - first:
+      213: -5392867102191497290
+    second: RewardParticle_26
+  - first:
+      213: 1626600933643171710
+    second: RewardParticle_27
+  - first:
+      213: -8324121498527367403
+    second: RewardParticle_28
+  - first:
+      213: 8375853366866809574
+    second: RewardParticle_29
+  - first:
+      213: -3688354476698889505
+    second: RewardParticle_30
+  - first:
+      213: -8655384944703012239
+    second: RewardParticle_31
+  - first:
+      213: 5052459984931687151
+    second: RewardParticle_32
+  - first:
+      213: 2152682089536548243
+    second: RewardParticle_33
+  - first:
+      213: 3833505989713565885
+    second: RewardParticle_34
+  - first:
+      213: 1261853168632745225
+    second: RewardParticle_35
+  - first:
+      213: 7167335656157983048
+    second: RewardParticle_36
+  - first:
+      213: -1482399976058328743
+    second: RewardParticle_37
+  - first:
+      213: -4219164850420476021
+    second: RewardParticle_38
+  - first:
+      213: 9183866742771994296
+    second: RewardParticle_39
+  - first:
+      213: 220476414504310145
+    second: RewardParticle_40
+  - first:
+      213: 7900616611551828969
+    second: RewardParticle_41
+  - first:
+      213: 6505342389545188204
+    second: RewardParticle_42
+  - first:
+      213: 8256302247335580439
+    second: RewardParticle_43
+  - first:
+      213: 7057421356744073811
+    second: RewardParticle_44
+  - first:
+      213: 8913287975941549334
+    second: RewardParticle_45
+  - first:
+      213: -7686940640292605920
+    second: RewardParticle_46
+  - first:
+      213: 3845074456068140462
+    second: RewardParticle_47
+  - first:
+      213: -3068957515667736864
+    second: RewardParticle_48
+  - first:
+      213: 2817278888557401868
+    second: RewardParticle_49
+  - first:
+      213: -5892379814488669122
+    second: RewardParticle_50
+  - first:
+      213: 1744878985341881765
+    second: RewardParticle_51
+  - first:
+      213: 411307760780246103
+    second: RewardParticle_52
+  - first:
+      213: -6535781215711214293
+    second: RewardParticle_53
+  - first:
+      213: -8959130617875132255
+    second: RewardParticle_54
+  - first:
+      213: 7058619677747340619
+    second: RewardParticle_55
+  - first:
+      213: -2250439265255210928
+    second: RewardParticle_56
+  - first:
+      213: -5580995757362136681
+    second: RewardParticle_57
+  - first:
+      213: -9078363041579376405
+    second: RewardParticle_58
+  - first:
+      213: -8548247933186536728
+    second: RewardParticle_59
+  - first:
+      213: -4036625432159208779
+    second: RewardParticle_60
+  - first:
+      213: 348441650144687621
+    second: RewardParticle_61
+  - first:
+      213: -7959396101167239015
+    second: RewardParticle_62
+  - first:
+      213: 4336457501684239580
+    second: RewardParticle_63
+  - first:
+      213: 452126657273437268
+    second: RewardParticle_64
+  - first:
+      213: -625051412451581249
+    second: RewardParticle_65
+  - first:
+      213: 2246266719763118468
+    second: RewardParticle_66
+  - first:
+      213: 8516642331861022752
+    second: RewardParticle_67
+  - first:
+      213: -9034242662691295775
+    second: RewardParticle_68
+  - first:
+      213: 3648281646803085443
+    second: RewardParticle_69
+  - first:
+      213: -2057325433083035697
+    second: RewardParticle_70
+  - first:
+      213: 1446172787439131799
+    second: RewardParticle_71
+  - first:
+      213: 6590888877296277468
+    second: RewardParticle_72
+  - first:
+      213: 7587214540667856607
+    second: RewardParticle_73
+  - first:
+      213: 3938614085802050439
+    second: RewardParticle_74
+  - first:
+      213: -7348969635274340649
+    second: RewardParticle_75
+  - first:
+      213: 831085050959188205
+    second: RewardParticle_76
+  - first:
+      213: -7515711971915052494
+    second: RewardParticle_77
+  - first:
+      213: 7051450615320729087
+    second: RewardParticle_78
+  - first:
+      213: 7465755761647411000
+    second: RewardParticle_79
+  - first:
+      213: 3905989320601887289
+    second: RewardParticle_80
+  - first:
+      213: -829806707362510387
+    second: RewardParticle_81
+  - first:
+      213: -4409038774848365921
+    second: RewardParticle_82
+  - first:
+      213: 3878885157890801
+    second: RewardParticle_83
+  - first:
+      213: 7656721057957645259
+    second: RewardParticle_84
+  - first:
+      213: -7922753505001210648
+    second: RewardParticle_85
+  - first:
+      213: 8268429498141056953
+    second: RewardParticle_86
+  - first:
+      213: 9113997465897042700
+    second: RewardParticle_87
+  - first:
+      213: -4752409212434742462
+    second: RewardParticle_88
+  - first:
+      213: -8608695014321961406
+    second: RewardParticle_89
+  - first:
+      213: -9200752667553929764
+    second: RewardParticle_90
+  - first:
+      213: -6085891104974852538
+    second: RewardParticle_91
+  - first:
+      213: 1258889999840353130
+    second: RewardParticle_92
+  - first:
+      213: -1131069216750594660
+    second: RewardParticle_93
+  - first:
+      213: -7961265937926337733
+    second: RewardParticle_94
+  - first:
+      213: 7089822736316932349
+    second: RewardParticle_95
+  - first:
+      213: 4612469747271098447
+    second: RewardParticle_96
+  - first:
+      213: 3665784183333375762
+    second: RewardParticle_97
+  - first:
+      213: -3566956130032346659
+    second: RewardParticle_98
+  - first:
+      213: 2672093258785218696
+    second: RewardParticle_99
+  - first:
+      213: -8195777005770889374
+    second: RewardParticle_100
+  - first:
+      213: 7325344271859310397
+    second: RewardParticle_101
+  - first:
+      213: 3614964818442640565
+    second: RewardParticle_102
+  - first:
+      213: 8344725182257920943
+    second: RewardParticle_103
+  - first:
+      213: -533909991531153932
+    second: RewardParticle_104
+  - first:
+      213: 118451671858861270
+    second: RewardParticle_105
+  - first:
+      213: -3319835562605836122
+    second: RewardParticle_106
+  - first:
+      213: 708843852187689761
+    second: RewardParticle_107
+  - first:
+      213: -1480751880862126463
+    second: RewardParticle_108
+  - first:
+      213: 6551511690199346786
+    second: RewardParticle_109
+  - first:
+      213: 5127064718894274302
+    second: RewardParticle_110
+  - first:
+      213: 3209096468399875134
+    second: RewardParticle_111
+  - first:
+      213: -4485076436744490716
+    second: RewardParticle_112
+  - first:
+      213: 7321882650794385626
+    second: RewardParticle_113
+  - first:
+      213: 5220230733313652956
+    second: RewardParticle_114
+  - first:
+      213: 5195925126572444891
+    second: RewardParticle_115
+  - first:
+      213: -515561592903806666
+    second: RewardParticle_116
+  - first:
+      213: -1456547971938931393
+    second: RewardParticle_117
+  - first:
+      213: -9198655137725606903
+    second: RewardParticle_118
+  - first:
+      213: -4645060047502497980
+    second: RewardParticle_119
+  - first:
+      213: 5565907287472274403
+    second: RewardParticle_120
+  - first:
+      213: -8547819695626359355
+    second: RewardParticle_121
+  - first:
+      213: -3854346960431159168
+    second: RewardParticle_122
+  - first:
+      213: 6734024097801923542
+    second: RewardParticle_123
+  - first:
+      213: -5918684453657652021
+    second: RewardParticle_124
+  - first:
+      213: -7212918746865355314
+    second: RewardParticle_125
+  - first:
+      213: 4437311370925703662
+    second: RewardParticle_126
+  - first:
+      213: 3022129403601565128
+    second: RewardParticle_127
+  - first:
+      213: 6821187598008943449
+    second: RewardParticle_128
+  - first:
+      213: -7121824402869358753
+    second: RewardParticle_129
+  - first:
+      213: 4755524465616783269
+    second: RewardParticle_130
+  - first:
+      213: 8400664265933689901
+    second: RewardParticle_131
+  - first:
+      213: 283322826690803733
+    second: RewardParticle_132
+  - first:
+      213: -6652634334165623700
+    second: RewardParticle_133
+  - first:
+      213: -6342263671156076361
+    second: RewardParticle_134
+  - first:
+      213: -7788505655271673337
+    second: RewardParticle_135
+  - first:
+      213: -2542484997772653572
+    second: RewardParticle_136
+  - first:
+      213: -5312538327248500029
+    second: RewardParticle_137
+  - first:
+      213: 5767884340378780722
+    second: RewardParticle_138
+  - first:
+      213: 8188655677688254990
+    second: RewardParticle_139
+  - first:
+      213: -6743469547642538040
+    second: RewardParticle_140
+  - first:
+      213: -4628297693982349403
+    second: RewardParticle_141
+  - first:
+      213: 5353578476373635920
+    second: RewardParticle_142
+  - first:
+      213: -6751404965842111159
+    second: RewardParticle_143
+  - first:
+      213: -6569689909199900528
+    second: RewardParticle_144
+  - first:
+      213: 2491021159782596121
+    second: RewardParticle_145
+  - first:
+      213: 4122972074159850416
+    second: RewardParticle_146
+  - first:
+      213: 7972300286127981193
+    second: RewardParticle_147
+  - first:
+      213: -1730511170248348732
+    second: RewardParticle_148
+  - first:
+      213: 840674826684048398
+    second: RewardParticle_149
+  - first:
+      213: 7579028705330316356
+    second: RewardParticle_150
+  - first:
+      213: -6316067599749965530
+    second: RewardParticle_151
+  - first:
+      213: -6148509510361812787
+    second: RewardParticle_152
+  - first:
+      213: 4601918157715080802
+    second: RewardParticle_153
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1024
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RewardParticle_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 1019
+        height: 1019
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1390d6968eaeb19e0800000000000000
+      internalID: -1649466554579089103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 584
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80c3bfac16d8c0a20800000000000000
+      internalID: 3029952100470307848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_2
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 494
+        width: 49
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7b4ef0ca420b0d30800000000000000
+      internalID: 4398611981146147710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 633
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a0a45aa16e1fdf40800000000000000
+      internalID: 5755352253621117090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_4
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 578
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b22ff7a4204171200800000000000000
+      internalID: 150611112612590123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_5
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 394
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c529ba71929b4b90800000000000000
+      internalID: -7256545221050554937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_6
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 479
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e76071296bcb8a20800000000000000
+      internalID: 3065767623748773856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_7
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 592
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d30754c6058261c10800000000000000
+      internalID: 2023849408428601405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_8
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 662
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4739ee133c38cb10800000000000000
+      internalID: 2001916224625784650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_9
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 628
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e452a65901b19070800000000000000
+      internalID: 8111459057537275109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_10
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 441
+        width: 51
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dae2abc7dd8f41100800000000000000
+      internalID: 77960723736178349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_11
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 608
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1651602980370ec0800000000000000
+      internalID: -3600856011547519458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_12
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 519
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcc46b0f9a83090a0800000000000000
+      internalID: -6876934328455639859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_13
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 722
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81fb7081cf6f6fd10800000000000000
+      internalID: 2159184633966083864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_14
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 586
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1145b156f80d7d290800000000000000
+      internalID: -7865588909884091375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_15
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 647
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03933cc1928395420800000000000000
+      internalID: 2619186407520024880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_16
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 535
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 860e09150ac42d960800000000000000
+      internalID: 7625241370538598504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_17
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 631
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7633f66d2a373a3a0800000000000000
+      internalID: -6655348681103953049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_18
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 560
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82e5fffb99c0d3ea0800000000000000
+      internalID: -5891538883040027096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_19
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 402
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb84e63bf8540cd00800000000000000
+      internalID: 990868401514498236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_20
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 490
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2c2eaf939283b5d0800000000000000
+      internalID: -3047948952248898518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_21
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 595
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dc1fa9c67d8449c0800000000000000
+      internalID: -3943871832340357934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_22
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 335
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8451b94f639c1ffb0800000000000000
+      internalID: -4615686905208826552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_23
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 551
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb3b1722c26fa18e0800000000000000
+      internalID: -1721793238098922561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_24
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 531
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e80898c0eced429e0800000000000000
+      internalID: -1646946587155791730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_25
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 308
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbb16d248e0ebbae0800000000000000
+      internalID: -1532383960031159361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_26
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 727
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bf4cf471ffa825b0800000000000000
+      internalID: -5392867102191497290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_27
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 448
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e77be195ee8d29610800000000000000
+      internalID: 1626600933643171710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_28
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 576
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51f7515a997ca7c80800000000000000
+      internalID: -8324121498527367403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_29
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 611
+        width: 45
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e21bde82420d3470800000000000000
+      internalID: 8375853366866809574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_30
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 464
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd214aa252550dcc0800000000000000
+      internalID: -3688354476698889505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_31
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 351
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17286b04045e1e780800000000000000
+      internalID: -8655384944703012239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_32
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 381
+        width: 24
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fea8ab35691fd1640800000000000000
+      internalID: 5052459984931687151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_33
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 583
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39deb2d74fcdfdd10800000000000000
+      internalID: 2152682089536548243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_34
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 486
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db895390369533530800000000000000
+      internalID: 3833505989713565885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_35
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 440
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90d4e0375c0038110800000000000000
+      internalID: 1261853168632745225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_36
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 499
+        width: 58
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 841b94b1ecd777360800000000000000
+      internalID: 7167335656157983048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_37
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 691
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 959eefb63157d6be0800000000000000
+      internalID: -1482399976058328743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_38
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 440
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b879fd13ce38275c0800000000000000
+      internalID: -4219164850420476021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_39
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 496
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bec273f426a37f70800000000000000
+      internalID: 9183866742771994296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_40
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 471
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18591ef712a4f0300800000000000000
+      internalID: 220476414504310145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_41
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 456
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ebd81ee2f0a4ad60800000000000000
+      internalID: 7900616611551828969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_42
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 554
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6bb12fbf6e974a50800000000000000
+      internalID: 6505342389545188204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_43
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 439
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71352b27627449270800000000000000
+      internalID: 8256302247335580439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_44
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 283
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3526cf6055ff0f160800000000000000
+      internalID: 7057421356744073811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_45
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 423
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61da1c2803c52bb70800000000000000
+      internalID: 8913287975941549334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_46
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 621
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02078ddf630825590800000000000000
+      internalID: -7686940640292605920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_47
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 388
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eadaed088d27c5530800000000000000
+      internalID: 3845074456068140462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_48
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 316
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e6fbd7466fd865d0800000000000000
+      internalID: -3068957515667736864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_49
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 631
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c07dba9f83cf81720800000000000000
+      internalID: 2817278888557401868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_50
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 495
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3488b327cf0a3ea0800000000000000
+      internalID: -5892379814488669122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_51
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 338
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5adc851413e073810800000000000000
+      internalID: 1744878985341881765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_52
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 538
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75cfaaeaa3245b500800000000000000
+      internalID: 411307760780246103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_53
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 751
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b25ccd3cc9d3c45a0800000000000000
+      internalID: -6535781215711214293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_54
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 344
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a01a39ab26caa380800000000000000
+      internalID: -8959130617875132255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_55
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 471
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4566b0e23145f160800000000000000
+      internalID: 7058619677747340619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_56
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 346
+        width: 27
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0504fdd5965d4c0e0800000000000000
+      internalID: -2250439265255210928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_57
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 509
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 799b7759de15c82b0800000000000000
+      internalID: -5580995757362136681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_58
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 328
+        width: 383
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be060a4b9ec230280800000000000000
+      internalID: -9078363041579376405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_59
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 607
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ea037a9bc58e5980800000000000000
+      internalID: -8548247933186536728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_60
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 563
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bab7d07e860bf7c0800000000000000
+      internalID: -4036625432159208779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_61
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 695
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50633dda5d9e5d400800000000000000
+      internalID: 348441650144687621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_62
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 681
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9903c4baa6b8a8190800000000000000
+      internalID: -7959396101167239015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_63
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 332
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdc877b4f113e2c30800000000000000
+      internalID: 4336457501684239580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_64
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 415
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45c9440acc6464600800000000000000
+      internalID: 452126657273437268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_65
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 295
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb2a7725d0f5357f0800000000000000
+      internalID: -625051412451581249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_66
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 281
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 489334e2ea75c2f10800000000000000
+      internalID: 2246266719763118468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_67
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 296
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02871a5e311313670800000000000000
+      internalID: 8516642331861022752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_68
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 341
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ed2b9be92cef9280800000000000000
+      internalID: -9034242662691295775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_69
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 317
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 388664e04dc41a230800000000000000
+      internalID: 3648281646803085443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_70
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 274
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcf75b53b69e273e0800000000000000
+      internalID: -2057325433083035697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_71
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 263
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79c552fec76d11410800000000000000
+      internalID: 1446172787439131799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_72
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 267
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd7515d838a877b50800000000000000
+      internalID: 6590888877296277468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_73
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 248
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd6af2b0d633b4960800000000000000
+      internalID: 7587214540667856607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_74
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 302
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 783c493b4a4c8a630800000000000000
+      internalID: 3938614085802050439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_75
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 332
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d64750ad07330a90800000000000000
+      internalID: -7348969635274340649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_76
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 297
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de05f88537b988b00800000000000000
+      internalID: 831085050959188205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_77
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 314
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23a4adf08c3d2b790800000000000000
+      internalID: -7515711971915052494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_78
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 247
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff5d66579f8cbd160800000000000000
+      internalID: 7051450615320729087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_79
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 297
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83fd1d85f41bb9760800000000000000
+      internalID: 7465755761647411000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_80
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 295
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 932e1fe979cd43630800000000000000
+      internalID: 3905989320601887289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_81
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 227
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc9cb67323feb74f0800000000000000
+      internalID: -829806707362510387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_82
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 299
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9a5d382892ffc2c0800000000000000
+      internalID: -4409038774848365921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_83
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 327
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fae5f353d7cd0000800000000000000
+      internalID: 3878885157890801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_84
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 333
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcb81d33c33224a60800000000000000
+      internalID: 7656721057957645259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_85
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 306
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ecfb6be9a9bc0290800000000000000
+      internalID: -7922753505001210648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_86
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 330
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bf1f0f02dc5fb270800000000000000
+      internalID: 8268429498141056953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_87
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 280
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c038a9e386c6b7e70800000000000000
+      internalID: 9113997465897042700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_88
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 197
+        width: 20
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2438889200d0c0eb0800000000000000
+      internalID: -4752409212434742462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_89
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 279
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 246c9abce75c78880800000000000000
+      internalID: -8608695014321961406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_90
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 319
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd56830523c505080800000000000000
+      internalID: -9200752667553929764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_91
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 617
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64ea342d8429a8ba0800000000000000
+      internalID: -6085891104974852538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_92
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 543
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6b96c3f8c9787110800000000000000
+      internalID: 1258889999840353130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_93
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 472
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c95933f3a82ad40f0800000000000000
+      internalID: -1131069216750594660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_94
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 325
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3bcb7f5fc6e38190800000000000000
+      internalID: -7961265937926337733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_95
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 401
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df0a8a6173c146260800000000000000
+      internalID: 7089822736316932349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_96
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 756
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4064571cc8c20040800000000000000
+      internalID: 4612469747271098447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_97
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 361
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21fc4d6ea4b7fd230800000000000000
+      internalID: 3665784183333375762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_98
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 503
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd9150c5c40af7ec0800000000000000
+      internalID: -3566956130032346659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_99
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 455
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 880eb9859ae251520800000000000000
+      internalID: 2672093258785218696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_100
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 694
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26726b08c30c24e80800000000000000
+      internalID: -8195777005770889374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_101
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 631
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3fdd9dcdc9d8a560800000000000000
+      internalID: 7325344271859310397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_102
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 479
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bcdec6795fea2230800000000000000
+      internalID: 3614964818442640565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_103
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 426
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fab7dbc475b6ec370800000000000000
+      internalID: 8344725182257920943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_104
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 391
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f5f0c401bb2798f0800000000000000
+      internalID: -533909991531153932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_105
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 599
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d4d2300b23d4a100800000000000000
+      internalID: 118451671858861270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_106
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 482
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a88b2225239de1d0800000000000000
+      internalID: -3319835562605836122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_107
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 306
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 123edda5ab156d900800000000000000
+      internalID: 708843852187689761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_108
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 524
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18ea8bc7200537be0800000000000000
+      internalID: -1480751880862126463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_109
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 571
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26ea62cbb25abea50800000000000000
+      internalID: 6551511690199346786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_110
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 481
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef6912e823ef62740800000000000000
+      internalID: 5127064718894274302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_111
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 459
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e346fe84c30098c20800000000000000
+      internalID: 3209096468399875134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_112
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 615
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 421be556ebec1c1c0800000000000000
+      internalID: -4485076436744490716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_113
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 423
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad0e1b75a7d8c9560800000000000000
+      internalID: 7321882650794385626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_114
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 647
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd8bcb8a13cf17840800000000000000
+      internalID: 5220230733313652956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_115
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 587
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdc80e89f52ab1840800000000000000
+      internalID: 5195925126572444891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_116
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 312
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 631522b767b58d8f0800000000000000
+      internalID: -515561592903806666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_117
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 471
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3da34e265d49cbe0800000000000000
+      internalID: -1456547971938931393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_118
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 471
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9041b8883efc75080800000000000000
+      internalID: -9198655137725606903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_119
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 415
+        width: 47
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44721445f7e698fb0800000000000000
+      internalID: -4645060047502497980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_120
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 263
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ebfa8240331e3d40800000000000000
+      internalID: 5565907287472274403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_121
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 621
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cd6a1e664b006980800000000000000
+      internalID: -8547819695626359355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_122
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 331
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 088e4665cdb928ac0800000000000000
+      internalID: -3854346960431159168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_123
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 519
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6db67621d3f047d50800000000000000
+      internalID: 6734024097801923542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_124
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 488
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc4db1219db9cdda0800000000000000
+      internalID: -5918684453657652021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_125
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 712
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec5b55b8d9096eb90800000000000000
+      internalID: -7212918746865355314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_126
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 571
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee104d59e2f749d30800000000000000
+      internalID: 4437311370925703662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_127
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 376
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c53fee3ea2c0f920800000000000000
+      internalID: 3022129403601565128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_128
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 547
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9538f9deaf9b9ae50800000000000000
+      internalID: 6821187598008943449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_129
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 475
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5f634a40723a2d90800000000000000
+      internalID: -7121824402869358753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_130
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 520
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a784cd3e440ff140800000000000000
+      internalID: 4755524465616783269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_131
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 562
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d249b4824a7259470800000000000000
+      internalID: 8400664265933689901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_132
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 543
+        width: 30
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5183aa91c909ee300800000000000000
+      internalID: 283322826690803733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_133
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 456
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6c9d7bf1581da3a0800000000000000
+      internalID: -6652634334165623700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_134
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 407
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b090e83bc0cbf7a0800000000000000
+      internalID: -6342263671156076361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_135
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 441
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 702396e2f5ba9e390800000000000000
+      internalID: -7788505655271673337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_136
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 663
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfb400d7d5747bcd0800000000000000
+      internalID: -2542484997772653572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_137
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 607
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ca84b4d9821646b0800000000000000
+      internalID: -5312538327248500029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_138
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 457
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 234c0dd7f34ab0050800000000000000
+      internalID: 5767884340378780722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_139
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 459
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e02189814f2f3a170800000000000000
+      internalID: 8188655677688254990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_140
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 345
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c73a13cc226a62a0800000000000000
+      internalID: -6743469547642538040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_141
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 541
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a72c63e4cbf4cfb0800000000000000
+      internalID: -4628297693982349403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_142
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 600
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0537d61824bbb4a40800000000000000
+      internalID: 5353578476373635920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_143
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 538
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9453c2c34f03e42a0800000000000000
+      internalID: -6751404965842111159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_144
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 663
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 090fba5d5d5c3d4a0800000000000000
+      internalID: -6569689909199900528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_145
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 384
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91eb2dcfb82e19220800000000000000
+      internalID: 2491021159782596121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_146
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 629
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b3472bc14db73930800000000000000
+      internalID: 4122972074159850416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_147
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 680
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98247650fdc43ae60800000000000000
+      internalID: 7972300286127981193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_148
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 733
+        width: 26
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cb6081624dfbf7e0800000000000000
+      internalID: -1730511170248348732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_149
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 567
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e04ad100d4daaab00800000000000000
+      internalID: 840674826684048398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_150
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 563
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 444c3bbb37e1e2960800000000000000
+      internalID: 7579028705330316356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_151
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 529
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6299c836bf1d858a0800000000000000
+      internalID: -6316067599749965530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_152
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 639
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc0f5c03d2b1caaa0800000000000000
+      internalID: -6148509510361812787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RewardParticle_153
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 678
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2660704be2c4ddf30800000000000000
+      internalID: 4601918157715080802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      RewardParticle_0: -1649466554579089103
+      RewardParticle_1: 3029952100470307848
+      RewardParticle_10: 77960723736178349
+      RewardParticle_100: -8195777005770889374
+      RewardParticle_101: 7325344271859310397
+      RewardParticle_102: 3614964818442640565
+      RewardParticle_103: 8344725182257920943
+      RewardParticle_104: -533909991531153932
+      RewardParticle_105: 118451671858861270
+      RewardParticle_106: -3319835562605836122
+      RewardParticle_107: 708843852187689761
+      RewardParticle_108: -1480751880862126463
+      RewardParticle_109: 6551511690199346786
+      RewardParticle_11: -3600856011547519458
+      RewardParticle_110: 5127064718894274302
+      RewardParticle_111: 3209096468399875134
+      RewardParticle_112: -4485076436744490716
+      RewardParticle_113: 7321882650794385626
+      RewardParticle_114: 5220230733313652956
+      RewardParticle_115: 5195925126572444891
+      RewardParticle_116: -515561592903806666
+      RewardParticle_117: -1456547971938931393
+      RewardParticle_118: -9198655137725606903
+      RewardParticle_119: -4645060047502497980
+      RewardParticle_12: -6876934328455639859
+      RewardParticle_120: 5565907287472274403
+      RewardParticle_121: -8547819695626359355
+      RewardParticle_122: -3854346960431159168
+      RewardParticle_123: 6734024097801923542
+      RewardParticle_124: -5918684453657652021
+      RewardParticle_125: -7212918746865355314
+      RewardParticle_126: 4437311370925703662
+      RewardParticle_127: 3022129403601565128
+      RewardParticle_128: 6821187598008943449
+      RewardParticle_129: -7121824402869358753
+      RewardParticle_13: 2159184633966083864
+      RewardParticle_130: 4755524465616783269
+      RewardParticle_131: 8400664265933689901
+      RewardParticle_132: 283322826690803733
+      RewardParticle_133: -6652634334165623700
+      RewardParticle_134: -6342263671156076361
+      RewardParticle_135: -7788505655271673337
+      RewardParticle_136: -2542484997772653572
+      RewardParticle_137: -5312538327248500029
+      RewardParticle_138: 5767884340378780722
+      RewardParticle_139: 8188655677688254990
+      RewardParticle_14: -7865588909884091375
+      RewardParticle_140: -6743469547642538040
+      RewardParticle_141: -4628297693982349403
+      RewardParticle_142: 5353578476373635920
+      RewardParticle_143: -6751404965842111159
+      RewardParticle_144: -6569689909199900528
+      RewardParticle_145: 2491021159782596121
+      RewardParticle_146: 4122972074159850416
+      RewardParticle_147: 7972300286127981193
+      RewardParticle_148: -1730511170248348732
+      RewardParticle_149: 840674826684048398
+      RewardParticle_15: 2619186407520024880
+      RewardParticle_150: 7579028705330316356
+      RewardParticle_151: -6316067599749965530
+      RewardParticle_152: -6148509510361812787
+      RewardParticle_153: 4601918157715080802
+      RewardParticle_16: 7625241370538598504
+      RewardParticle_17: -6655348681103953049
+      RewardParticle_18: -5891538883040027096
+      RewardParticle_19: 990868401514498236
+      RewardParticle_2: 4398611981146147710
+      RewardParticle_20: -3047948952248898518
+      RewardParticle_21: -3943871832340357934
+      RewardParticle_22: -4615686905208826552
+      RewardParticle_23: -1721793238098922561
+      RewardParticle_24: -1646946587155791730
+      RewardParticle_25: -1532383960031159361
+      RewardParticle_26: -5392867102191497290
+      RewardParticle_27: 1626600933643171710
+      RewardParticle_28: -8324121498527367403
+      RewardParticle_29: 8375853366866809574
+      RewardParticle_3: 5755352253621117090
+      RewardParticle_30: -3688354476698889505
+      RewardParticle_31: -8655384944703012239
+      RewardParticle_32: 5052459984931687151
+      RewardParticle_33: 2152682089536548243
+      RewardParticle_34: 3833505989713565885
+      RewardParticle_35: 1261853168632745225
+      RewardParticle_36: 7167335656157983048
+      RewardParticle_37: -1482399976058328743
+      RewardParticle_38: -4219164850420476021
+      RewardParticle_39: 9183866742771994296
+      RewardParticle_4: 150611112612590123
+      RewardParticle_40: 220476414504310145
+      RewardParticle_41: 7900616611551828969
+      RewardParticle_42: 6505342389545188204
+      RewardParticle_43: 8256302247335580439
+      RewardParticle_44: 7057421356744073811
+      RewardParticle_45: 8913287975941549334
+      RewardParticle_46: -7686940640292605920
+      RewardParticle_47: 3845074456068140462
+      RewardParticle_48: -3068957515667736864
+      RewardParticle_49: 2817278888557401868
+      RewardParticle_5: -7256545221050554937
+      RewardParticle_50: -5892379814488669122
+      RewardParticle_51: 1744878985341881765
+      RewardParticle_52: 411307760780246103
+      RewardParticle_53: -6535781215711214293
+      RewardParticle_54: -8959130617875132255
+      RewardParticle_55: 7058619677747340619
+      RewardParticle_56: -2250439265255210928
+      RewardParticle_57: -5580995757362136681
+      RewardParticle_58: -9078363041579376405
+      RewardParticle_59: -8548247933186536728
+      RewardParticle_6: 3065767623748773856
+      RewardParticle_60: -4036625432159208779
+      RewardParticle_61: 348441650144687621
+      RewardParticle_62: -7959396101167239015
+      RewardParticle_63: 4336457501684239580
+      RewardParticle_64: 452126657273437268
+      RewardParticle_65: -625051412451581249
+      RewardParticle_66: 2246266719763118468
+      RewardParticle_67: 8516642331861022752
+      RewardParticle_68: -9034242662691295775
+      RewardParticle_69: 3648281646803085443
+      RewardParticle_7: 2023849408428601405
+      RewardParticle_70: -2057325433083035697
+      RewardParticle_71: 1446172787439131799
+      RewardParticle_72: 6590888877296277468
+      RewardParticle_73: 7587214540667856607
+      RewardParticle_74: 3938614085802050439
+      RewardParticle_75: -7348969635274340649
+      RewardParticle_76: 831085050959188205
+      RewardParticle_77: -7515711971915052494
+      RewardParticle_78: 7051450615320729087
+      RewardParticle_79: 7465755761647411000
+      RewardParticle_8: 2001916224625784650
+      RewardParticle_80: 3905989320601887289
+      RewardParticle_81: -829806707362510387
+      RewardParticle_82: -4409038774848365921
+      RewardParticle_83: 3878885157890801
+      RewardParticle_84: 7656721057957645259
+      RewardParticle_85: -7922753505001210648
+      RewardParticle_86: 8268429498141056953
+      RewardParticle_87: 9113997465897042700
+      RewardParticle_88: -4752409212434742462
+      RewardParticle_89: -8608695014321961406
+      RewardParticle_9: 8111459057537275109
+      RewardParticle_90: -9200752667553929764
+      RewardParticle_91: -6085891104974852538
+      RewardParticle_92: 1258889999840353130
+      RewardParticle_93: -1131069216750594660
+      RewardParticle_94: -7961265937926337733
+      RewardParticle_95: 7089822736316932349
+      RewardParticle_96: 4612469747271098447
+      RewardParticle_97: 3665784183333375762
+      RewardParticle_98: -3566956130032346659
+      RewardParticle_99: 2672093258785218696
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

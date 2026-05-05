@@ -4031,7 +4031,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: WOOD III
+  m_text: UNRANKED
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b45182c79812f754ba82358ad696e331, type: 2}
   m_sharedMaterial: {fileID: -8408710567862440160, guid: b45182c79812f754ba82358ad696e331, type: 2}

@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PauseMenuController : MonoBehaviour
 {
@@ -31,24 +31,25 @@ public class PauseMenuController : MonoBehaviour
     {
         if (InputKeyBindings.Instance == null) return;
 
-        if (InputKeyBindings.Instance.GetKeyDown(InputKeyBindings.Action.Pause))
+        if (!InputKeyBindings.Instance.GetKeyDown(InputKeyBindings.Action.Pause)) return;
+
+        // Si la SlotMachine está abierta → no hacer nada (ella gestiona su propio cierre)
+        if (UILayerManager.IsOpen(UILayerManager.Layer.SlotMachine))
+            return;
+
+        // Si el inventario está abierto → no hacer nada (InventoryController lo cierra)
+        if (UILayerManager.IsOpen(UILayerManager.Layer.Inventory))
+            return;
+
+        // Si hay un subpanel abierto dentro del pause menu → cerrar subpanel
+        if (isPaused && IsSubPanelOpen())
         {
-            // Si un sub-panel est� abierto, volver al men� principal
-            if (isPaused && IsSubPanelOpen())
-            {
-                CloseAllSubPanels();
-                return;
-            }
-
-            // Si el inventario est� abierto, cerrar inventario primero
-            if (GameStateManager.Instance != null &&
-                GameStateManager.Instance.CurrentState == GameState.Inventory)
-            {
-                return;
-            }
-
-            TogglePause();
+            CloseAllSubPanels();
+            return;
         }
+
+        // Si no hay nada abierto → toggle pause menu
+        TogglePause();
     }
 
     // =========================================
@@ -58,18 +59,18 @@ public class PauseMenuController : MonoBehaviour
     public void TogglePause()
     {
         isPaused = !isPaused;
-
-        if (gameMenuPanel != null)
-            gameMenuPanel.SetActive(isPaused);
+        if (gameMenuPanel != null) gameMenuPanel.SetActive(isPaused);
 
         if (isPaused)
         {
             CloseAllSubPanels();
+            UILayerManager.Open(UILayerManager.Layer.PauseMenu);
             GamePause.Pause();
         }
         else
         {
             CloseAllSubPanels();
+            UILayerManager.Close(UILayerManager.Layer.PauseMenu);
             GamePause.Resume();
         }
     }
