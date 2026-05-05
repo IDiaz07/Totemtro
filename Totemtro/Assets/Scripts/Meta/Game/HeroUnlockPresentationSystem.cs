@@ -149,16 +149,16 @@ public class HeroUnlockPresentationSystem : MonoBehaviour
 
         // -------- STATS --------
         yield return StartCoroutine(
-            AnimateStat(healthFill, healthValueText, hero.maxHealth, 500f, 0.6f));
+            AnimateStat(healthFill, healthValueText, hero.maxHealth, 300f, 0.6f));
 
         yield return StartCoroutine(
-            AnimateStat(damageFill, damageValueText, hero.damage, 200f, 0.6f));
+            AnimateStat(damageFill, damageValueText, hero.damage, 50f, 0.6f));
 
         yield return StartCoroutine(
             AnimateStat(speedFill, speedValueText, hero.moveSpeed, 15f, 0.6f));
 
         yield return StartCoroutine(
-            AnimateStat(fireRateFill, fireRateValueText, hero.fireRate, 10f, 0.6f));
+            AnimateStat(fireRateFill, fireRateValueText, hero.fireRate, 5f, 0.6f));
 
         continueButton.gameObject.SetActive(true);
         continueButton.onClick.RemoveAllListeners();
